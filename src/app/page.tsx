@@ -50,7 +50,7 @@ export default function Home() {
                     className="rounded-full"
                   />
                 </div>
-                <div className="inline-flex items-center gap-4 mb-2">
+                <div className="inline-flex flex-wrap items-center gap-4 mb-2">
                   <h1 className="text-3xl tracking-tight font-semibold text-transparent bg-clip-text bg-blue-400">
                     Paul T. Newsam
                   </h1>

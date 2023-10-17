@@ -38,7 +38,7 @@ const IconLink = ({
 
 export const Footer = () => (
   <TooltipProvider>
-    <footer className="inline-flex items-center flex-col fixed bottom-16 z-50 bg-white left-[50%] -translate-x-[50%] shadow-lg rounded-[48px] border border-zinc-300 px-4 py-2">
+    <footer className="inline-flex items-center flex-col fixed bottom-8 z-50 bg-white left-[50%] -translate-x-[50%] shadow-lg rounded-[48px] border border-zinc-300 px-4 py-2">
       <div className="inline-flex gap-4">
         <IconLink
           href="https://github.com/pnewsam"
