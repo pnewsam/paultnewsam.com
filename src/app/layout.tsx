@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${dmSans.className} bg-neutral-50`}>{children}</body>
+      <body className={`${dmSans.className} bg-zinc-50`}>{children}</body>
       <Footer></Footer>
     </html>
   );
