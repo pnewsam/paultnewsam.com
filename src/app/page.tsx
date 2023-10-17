@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import headshot from "../../public/headshot.jpg";
 import { RadioTower } from "lucide-react";
-import { ProjectCard } from "@/components/ProjectCard";
 import { OnWorkingTogether } from "@/components/OnWorkingTogether";
 import { MySkills } from "@/components/MySkills";
 import { Projects } from "@/components/Projects";
