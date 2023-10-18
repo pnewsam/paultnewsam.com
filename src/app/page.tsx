@@ -1,97 +1,151 @@
-import Image from "next/image";
-
-import headshot from "../../public/headshot.jpg";
-import { RadioTower } from "lucide-react";
-import { OnWorkingTogether } from "@/components/OnWorkingTogether";
-import { MySkills } from "@/components/MySkills";
+import {
+  RadioTower,
+  Bird,
+  Twitter,
+  Linkedin,
+  Github,
+  Mail,
+} from "lucide-react";
+import { ReactNode } from "react";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { Work } from "@/components/Work";
+import { IconLink } from "@/components/IconLink";
 import { Projects } from "@/components/Projects";
-import { MoreAboutMe } from "@/components/MoreAboutMe";
+
+const Left = ({ children }: { children: ReactNode }) => (
+  <div className="pt-16 pb-8 md:py-32 px-8 lg:px-16 border-b md:border-r border-stone-300 bg-stone-100">
+    <div className="w-full">{children}</div>
+  </div>
+);
+
+const Right = ({ children }: { children: ReactNode }) => (
+  <div className="py-8 md:py-32 px-8 lg:px-16 md:h-screen md:overflow-y-scroll">
+    <div className="w-full">{children}</div>
+  </div>
+);
 
 export default function Home() {
   return (
-    <main className="bg-zinc-50">
-      <div className="w-full absolute top-0 overflow-hidden">
-        <svg
-          className="inset"
-          width="1728"
-          height="480"
-          viewBox="0 0 1728 480"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M1728 0H0V480L1728 0Z" fill="url(#paint0_linear_49_7)" />
-          <defs>
-            <linearGradient
-              id="paint0_linear_49_7"
-              x1="864"
-              y1="0"
-              x2="864"
-              y2="480"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#EFF6FF" />
-              <stop offset="1" stopColor="#BFDBFE" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-
-      <div className="max-w-[1080px] mx-auto my-16 px-4 md:px-16 relative z-10 bg-white border border-zinc-200 rounded-xl">
-        <div className="py-20">
-          <div>
-            <div className="flex justify-between">
-              <div>
-                <div className="w-40 h-40 bg-gradient-to-tr from-blue-50 to-blue-100 rounded-full shadow-md shadow-blue-300/50 border border-zinc-200 mb-8">
-                  <Image
-                    src={headshot}
-                    alt="Paul Newsam"
-                    width={400}
-                    height={400}
-                    className="rounded-full"
-                  />
-                </div>
-                <div className="inline-flex flex-wrap items-center gap-4 mb-2">
-                  <h1 className="text-3xl tracking-tight font-semibold text-transparent bg-clip-text bg-blue-400">
-                    Paul T. Newsam
-                  </h1>
-                  <p className="inline-flex gap-2 text-xs text-zinc-400 border border-zinc-300 rounded-lg px-2 py-1 font-medium">
-                    <RadioTower className="w-4 h-4 text-red-600/50" />
-                    <span className="text-red-600/50">Remote</span>
-                    <span> - San Diego, CA</span>
-                  </p>
-                </div>
-                <h2 className="text-4xl font-semibold tracking-tight text-zinc-700 mb-4">
-                  Frontend Developer
-                </h2>
-              </div>
-            </div>
-
-            {/* <div className="text-lg text-zinc-500 w-full italic mb-4 rounded">
-              <p>Frontend developer striving to use technology to do good.</p>
-            </div> */}
-
-            {/* <hr className="my-8 border-zinc-300" /> */}
-            <p className="text-lg text-zinc-500 leading-relaxed mb-8">
-              I&apos;m a frontend developer. Currently I&apos;m working at a
-              company called Iterable. Before that I was at Accenture. And
-              before that I worked as a biologist, doing bird surveys in
-              different parts of the U.S. I worked for outfits like USGS, Point
-              zinc, and Bird Conservancy of the Rockies.
+    <main className="bg-stone-50">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 min-h-screen">
+        <Left>
+          <div className="inline-flex flex-wrap items-center gap-4 mb-2">
+            <h1 className="text-3xl tracking-tight font-semibold text-stone-400">
+              Paul T. Newsam
+            </h1>
+            <p className="inline-flex gap-2 text-xs border border-stone-300 rounded-lg px-2 py-1 font-medium">
+              <RadioTower className="w-4 h-4 text-red-600/50" />
+              <span className="text-red-600/50">Remote</span>
+              <span className="text-stone-400"> - San Diego, CA</span>
             </p>
-            <p className="text-lg text-zinc-500 leading-relaxed mb-8">
-              When I&apos;m not working, I love to go hiking and birdwatching,
-              learn jiu jitsu, and spend time with my friends and family.
-            </p>
-
-            {/* <hr /> */}
-
-            {/* <MySkills /> */}
-            {/* <Projects /> */}
-            <br className="py-8" />
-            {/* <OnWorkingTogether /> */}
-            {/* <MoreAboutMe /> */}
           </div>
-        </div>
+
+          <h2 className="text-4xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-tr from-stone-700 to-stone-900 mb-4">
+            Frontend Developer
+          </h2>
+          <div className="mb-4">
+            <p className="text-stone-500 leading-relaxed mb-3">
+              Frontend developer with a background in biology. Inspired by
+              ambitious mission statements, and passionate about building great
+              user experiences.
+            </p>
+
+            <p className="text-stone-500 leading-relaxed mb-3">
+              <b>Bullish on</b>:&nbsp;
+              <a
+                className="underline underline-offset-2"
+                href="https://tailwindcss.com/"
+              >
+                Tailwind
+              </a>
+              ,&nbsp;
+              <a
+                className="underline underline-offset-2"
+                href="https://ui.shadcn.com/"
+              >
+                shadcn/ui
+              </a>
+              ,&nbsp;Chinese cuisine,&nbsp;
+              <a
+                className="underline underline-offset-2"
+                href="https://thenetworkstate.com/"
+              >
+                Network States
+              </a>
+              , Podcasts, AI Copilots, Grayscale color schemes, Yves
+              Tumor&apos;s legacy
+            </p>
+            <p className="text-stone-500 leading-relaxed mb-2">
+              <b>Bearish on</b>: Quantitative easing
+            </p>
+          </div>
+
+          <div className="flex gap-4">
+            <TooltipProvider>
+              <IconLink
+                href="https://github.com/pnewsam"
+                tooltipText="View on Github"
+              >
+                <Github className="w-6 h-6 stroke-[1.5px]" />
+                <span className="text-xs sr-only">GitHub</span>
+              </IconLink>
+              <IconLink
+                className="inline-flex items-center flex-col"
+                tooltipText="View on LinkedIn"
+                href="https://linkedin.com/in/paul-newsam"
+              >
+                <Linkedin className="w-6 h-6 stroke-[1.5px]" />
+                <span className="text-xs sr-only">LinkedIn</span>
+              </IconLink>
+              <IconLink
+                className="inline-flex items-center flex-col"
+                href="https://twitter.com/paultakuma"
+                tooltipText="View on Twitter"
+              >
+                <Twitter className="w-6 h-6 stroke-[1.5px]" />
+                <span className="text-xs sr-only">Twitter</span>
+              </IconLink>
+              <IconLink
+                className="inline-flex items-center flex-col"
+                href="mailto:paul.newsam@gmail.com"
+                tooltipText="Send Email"
+              >
+                <Mail className="w-6 h-6 stroke-[1.5px]" />
+                <span className="text-xs sr-only">Email</span>
+              </IconLink>
+              <IconLink
+                className="inline-flex items-center flex-col"
+                href="https://ebird.org/profile/NzUyMzMz/US"
+                tooltipText="View eBird Profile"
+              >
+                <Bird className="w-6 h-6 stroke-[1.5px]" />
+                <span className="text-xs sr-only">eBird</span>
+              </IconLink>
+            </TooltipProvider>
+          </div>
+        </Left>
+        <Right>
+          {/* <p className="text-stone-500 leading-relaxed mb-4">
+            It started with a few lines of Ruby, and a few years down the road.
+          </p> */}
+          {/* <div className="mb-8">
+            <p className="text-stone-500 leading-relaxed mb-4">
+              I came to software pretty late. I was 29 when I first starting
+              learning to code. I spent much of my twenties working as a field
+              biologist, doing bird surveys in different parts of the U.S.
+            </p>
+            <p className="text-stone-500 leading-relaxed mb-4">
+              There are days when I miss working outdoors, but working in tech
+              has been a gift. Technology is eating the world (to borrow a
+              phrase), and I know that continuing to define our relationship
+              with technology will be very important. As a frontend developer, I
+              get to work at the interface intermediating between humans and
+              computers, and that has been a thrill.
+            </p>
+          </div> */}
+          <Work className="mb-8" />
+          <Projects />
+        </Right>
       </div>
     </main>
   );
