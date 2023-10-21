@@ -89,6 +89,7 @@ export const Work = ({ className }: { className?: string }) => (
     <Job
       title="Data Processing Lead"
       company="Sourcery Technologies"
+      companyHref="https://getsourcery.com/"
       description="
         My first technology job was at Sourcery Technologies, where I did data entry for the team.
         The team was in the process of pivoting from a sourcing model, and I helped onboard customers
