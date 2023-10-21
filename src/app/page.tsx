@@ -34,8 +34,8 @@ export default function Home() {
               Paul T. Newsam
             </h1>
             <p className="inline-flex gap-2 text-xs border border-stone-300 rounded-lg px-2 py-1 font-medium">
-              <RadioTower className="w-4 h-4 text-red-600/50" />
-              <span className="text-red-600/50">Remote</span>
+              <RadioTower className="w-4 h-4 text-red-500/75" />
+              <span className="text-red-500/75">Remote</span>
               <span className="text-stone-400"> - San Diego, CA</span>
             </p>
           </div>
@@ -76,7 +76,7 @@ export default function Home() {
               Tumor&apos;s legacy
             </p>
             <p className="text-stone-500 leading-relaxed mb-2">
-              <b>Bearish on</b>: Quantitative easing
+              <b>Bearish on</b>: Quantitative easing, Superhero movies
             </p>
           </div>
 
@@ -125,24 +125,24 @@ export default function Home() {
           </div>
         </Left>
         <Right>
-          {/* <p className="text-stone-500 leading-relaxed mb-4">
-            It started with a few lines of Ruby, and a few years down the road.
-          </p> */}
-          {/* <div className="mb-8">
-            <p className="text-stone-500 leading-relaxed mb-4">
-              I came to software pretty late. I was 29 when I first starting
-              learning to code. I spent much of my twenties working as a field
-              biologist, doing bird surveys in different parts of the U.S.
-            </p>
-            <p className="text-stone-500 leading-relaxed mb-4">
-              There are days when I miss working outdoors, but working in tech
-              has been a gift. Technology is eating the world (to borrow a
-              phrase), and I know that continuing to define our relationship
-              with technology will be very important. As a frontend developer, I
-              get to work at the interface intermediating between humans and
-              computers, and that has been a thrill.
-            </p>
-          </div> */}
+          <p className="text-stone-500 leading-relaxed mb-4">
+            I&apos;ve always been a curious person. Sometimes that&apos;s gotten
+            me into trouble, but it&apos;s also led me to some interesting
+            places.
+          </p>
+          <p className="text-stone-500 leading-relaxed mb-4">
+            I&apos;ve worked as a field biologist, a barista, a software
+            engineer, a ticket-taker, an Uber driver. I&apos;ve lived in San
+            Francisco, San Diego, and Boston - and for a while when I was doing
+            fieldwork, I lived out of a truck. I&apos;ve visited 23 countries
+            and worked in 9 different states.
+          </p>
+          <p className="text-stone-500 leading-relaxed mb-4">
+            These days, I spend my hours building frontends for web apps. I
+            think that definining the relationship between humans and computers
+            is only going to become more important, and I&apos;m grateful that I
+            get to play a small part in that.
+          </p>
           <Work className="mb-8" />
           <Projects />
         </Right>
