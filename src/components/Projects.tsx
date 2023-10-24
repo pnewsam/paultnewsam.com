@@ -38,7 +38,7 @@ export const Projects = () => (
     <div className="relative">
       <ProjectCard
         className="mb-4"
-        href="https://www.synesthetic.xyz"
+        href="https://www.synesthetic.io"
         title="Synesthetic Labs"
         description="Scratching my design itch by building an agency to make designs for podcasters."
       />
