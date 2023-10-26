@@ -21,7 +21,7 @@ export default function Downloads() {
       </Left>
       <Right>
         <h2 className="text-3xl tracking-tight font-semibold text-stone-700 mb-4">
-          &quot;Gitmaster&quot; Resume Template - $19
+          &quot;Gitmaster&quot; Resume Template - $5
         </h2>
         <p className="text-stone-500 leading-relaxed mb-3">
           Obviously, there are tons of resume templates out there that you can
@@ -37,7 +37,7 @@ export default function Downloads() {
         </p>
         <p className="text-stone-500 leading-relaxed mb-3">
           But if you happen to like my resume, you&apos;re welcome to use it
-          too. I&apos;ve put it up as a paid download on Gumroad for $19.
+          too. I&apos;ve put it up as a paid download on Gumroad for $5.
         </p>
 
         <a
