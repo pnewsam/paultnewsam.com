@@ -9,7 +9,7 @@ export const Work = ({ className }: { className?: string }) => (
       <h3 className="font-bold uppercase tracking-widest text-red-500/75">
         Work
       </h3>
-      <a href="resume.pdf" download="Paul Newsam - Resume - October 2023.pdf">
+      <a href="resume.pdf" download="Paul_Newsam_-_Resume_-_October_2023.pdf">
         <Button className="gap-2" size="sm" variant="outline">
           <span className="text-xs">Download resume</span>
           <FileDown className="w-5 h-5" />
