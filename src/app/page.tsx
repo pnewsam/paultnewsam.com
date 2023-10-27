@@ -121,7 +121,7 @@ export default function Home() {
           I&apos;ve worked as a field biologist, a barista, a software engineer,
           a ticket-taker, an Uber driver. I&apos;ve lived in San Francisco, San
           Diego, and Boston - and for a while when I was doing fieldwork, I
-          lived out of a truck. I&apos;ve visited 23 countries and worked in 9
+          lived out of a truck. I&apos;ve visited 23 countries and worked in 8
           different states.
         </p>
         <p className="text-stone-500 leading-relaxed mb-4">

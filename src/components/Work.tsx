@@ -22,7 +22,7 @@ export const Work = ({ className }: { className?: string }) => (
       title="Senior Software Engineer, Frontend"
       company="Iterable"
       description="
-        At Iterable we help our customers stay connected with their own customers
+        At Iterable we help our customers stay connected with their customers
         by enabling marketers to set up and send sophisticated messaging campaigns.
         As a frontend engineer on the Platform group, I build the UIs for our
         deliverability services, integrations, and data management features.
