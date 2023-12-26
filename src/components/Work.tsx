@@ -6,9 +6,7 @@ import { Job } from "./Work.sub";
 export const Work = ({ className }: { className?: string }) => (
   <div id="work" className={cn(className)}>
     <div className="flex items-center justify-between mb-4">
-      <h3 className="font-bold uppercase tracking-widest text-red-500/75">
-        Work
-      </h3>
+      <h3 className="font-bold uppercase tracking-widest text-red-600">Work</h3>
       <a
         href="Paul_Newsam-Resume-October_2023.pdf"
         download="Paul_Newsam-Resume-October_2023.pdf"
@@ -58,25 +56,22 @@ export const Work = ({ className }: { className?: string }) => (
       title="Seasonal Biologist"
       company="Various"
       description={
-        <p className="text-base leading-relaxed text-stone-500">
+        <p className="text-base tracking-tight leading-relaxed text-stone-600">
           During my 20s, I worked on-and-off as a field biologist for various
           government and non-profit organizations, including&nbsp;
-          <a
-            className="group-hover:text-red-500/75"
-            href="https://www.usgs.gov/"
-          >
+          <a className="group-hover:text-red-600" href="https://www.usgs.gov/">
             USGS
           </a>
           ,&nbsp;
           <a
-            className="group-hover:text-red-500/75"
+            className="group-hover:text-red-600"
             href="https://www.pointblue.org/"
           >
             Point Blue Conservation Science
           </a>
           , and&nbsp;
           <a
-            className="group-hover:text-red-500/75"
+            className="group-hover:text-red-600"
             href="https://www.birdconservancy.org"
           >
             Bird Conservancy of the Rockies

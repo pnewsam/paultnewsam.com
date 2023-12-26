@@ -17,14 +17,16 @@ export const ProjectCard = ({
   <a
     href={href}
     className={cn(
-      "border border-stone-200 rounded-sm py-4 px-6 shadow-sm shadow-stone-200/50 transition hover:shadow-md hover:shadow-stone-200/50 hover:-translate-y-[2px] hover:-translate-x-[2px] hover:border-stone-300 grid gap-6 grid-cols-[40px_1fr_24px] items-center",
+      "border border-stone-200 rounded-sm py-4 px-6 shadow-sm shadow-stone-200/50 transition hover:shadow-md hover:shadow-stone-200/50 hover:border-stone-300 grid gap-6 grid-cols-[48px_1fr_24px] items-center",
       className
     )}
   >
     <Image className="mt-[4px]" src={synesthetic} alt="Synesthetic Labs" />
     <div>
-      <p className="font-semibold text-lg text-stone-700">{title}</p>
-      <p className="text-stone-500">{description}</p>
+      <p className="font-semibold text-base text-stone-700 mb-1">{title}</p>
+      <p className="text-stone-600 text-sm leading-snug tracking-tight">
+        {description}
+      </p>
     </div>
     <ArrowUpRightSquare className="w-6 h-6 text-stone-700" />
   </a>
@@ -32,7 +34,7 @@ export const ProjectCard = ({
 
 export const Projects = () => (
   <div id="projects">
-    <h3 className="font-bold uppercase tracking-widest text-red-500/75 mb-4">
+    <h3 className="font-bold uppercase tracking-widest text-red-600 mb-4">
       Projects
     </h3>
     <div className="relative">
