@@ -21,7 +21,7 @@ export const IconLink = ({
     <TooltipTrigger>
       <a
         className={cn(
-          "inline-flex items-center flex-col text-stone-600 hover:bg-stone-200/50 hover:shadow-inner rounded-full p-3 transition",
+          "inline-flex items-center flex-col text-stone-600 hover:bg-stone-200/50 hover:shadow-inner rounded-full p-2 transition",
           className
         )}
         href={href}
