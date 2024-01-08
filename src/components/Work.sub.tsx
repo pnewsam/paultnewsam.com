@@ -30,7 +30,7 @@ export const Job = ({
       )}
     >
       <div className="flex flex-col items-center">
-        <CircleDot className="w-4 h-4 translate-y-[5px] text-stone-600 group-hover:text-red-600 transition" />
+        <CircleDot className="w-4 h-4 translate-y-[5px] text-stone-600 group-hover:text-blue-500 transition" />
         <div className="h-full border translate-y-[5px]" />
       </div>
       <div className="pr-4">
@@ -38,11 +38,13 @@ export const Job = ({
           <h4 className="text-stone-700 text-lg font-semibold tracking-tight">
             {title}
           </h4>
-          <span className="text-sm font-semibold text-red-600">{timespan}</span>
+          <span className="text-sm font-semibold text-blue-500">
+            {timespan}
+          </span>
         </div>
         {companyHref ? (
           <a href={companyHref}>
-            <h5 className="inline-block text-stone-700 text-lg font-semibold tracking-tight mb-2 group-hover:text-red-600 transition">
+            <h5 className="inline-block text-stone-700 text-lg font-semibold tracking-tight mb-2 group-hover:text-blue-500 transition">
               {company}
             </h5>
           </a>

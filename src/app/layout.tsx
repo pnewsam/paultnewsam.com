@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { SideNav } from "@/components/SideNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,10 @@ export default function RootLayout({
       <body className={`${inter.className} bg-stone-50`}>
         <main>
           <div className="w-full grid grid-cols-1 md:grid-cols-[300px_1fr] min-h-screen">
-            {children}
+            <SideNav />
+            <div className="py-16 px-8  md:h-screen md:overflow-y-scroll">
+              <div className="w-full">{children}</div>
+            </div>
           </div>
         </main>
       </body>

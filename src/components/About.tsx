@@ -1,11 +1,6 @@
 export const About = () => {
   return (
     <>
-      {/* <p className="inline-flex gap-2 text-xs border border-stone-300 rounded-lg px-2 py-1 font-medium">
-            <RadioTower className="w-4 h-4 text-red-600" />
-            <span className="text-red-600">Remote</span>
-            <span className="text-stone-400"> - San Diego, CA</span>
-          </p> */}
       <p className="text-stone-600 tracking-tight leading-relaxed mb-3">
         Frontend developer with a background in biology. Inspired by ambitious
         mission statements, and passionate about building great user
