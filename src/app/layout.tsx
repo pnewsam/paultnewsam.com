@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { Footer } from "@/components/Footer";
+import { SideNav } from "@/components/SideNav";
 
-const dmSans = DM_Sans({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Paul T. Newsam | Frontend Developer",
@@ -17,14 +17,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${dmSans.className} bg-stone-50`}>
-        <main className="bg-stone-50">
-          <div className="w-full grid grid-cols-1 md:grid-cols-2 min-h-screen">
-            {children}
+      <body className={`${inter.className} bg-stone-50`}>
+        <main>
+          <div className="w-full max-w-[960px] mx-auto grid grid-cols-1 md:grid-cols-[300px_1fr] md:min-h-screen">
+            <SideNav />
+            <div className="py-8 md:py-16 px-8 md:h-screen md:overflow-y-scroll">
+              <div className="w-full">{children}</div>
+            </div>
           </div>
         </main>
       </body>
-      <Footer />
     </html>
   );
 }

@@ -34,7 +34,7 @@ export const ProjectCard = ({
 
 export const Projects = () => (
   <div id="projects">
-    <h3 className="font-bold uppercase tracking-widest text-red-600 mb-4">
+    <h3 className="font-bold uppercase tracking-widest text-blue-500 mb-4">
       Projects
     </h3>
     <div className="relative">
