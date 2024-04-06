@@ -6,7 +6,7 @@ export default function Home() {
       <h2 className="text-2xl font-medium tracking-tight mb-4">
         Hey, I&apos;m Paul.
       </h2>
-      <p className="mb-4">
+      <p className="mb-8 leading-relaxed">
         I currently work as a frontend engineer at{" "}
         <ExternalLink href="https://iterable.com/">Iterable</ExternalLink>, a
         marketing automation platform. I&apos;ve been working in the tech
@@ -24,13 +24,13 @@ export default function Home() {
         . I also had some odd jobs. I worked as a barista, a ticket-taker, and
         even drove Uber (for about a week).
       </p>
-      <p className="mb-4">
+      <p className="mb-8 leading-relaxed">
         Outside of work, besides scheming about the products I&apos;d like to
         build, I love to run, hike, read, and train jiu jitsu. I&apos;ve lived
         in a few different cities, but as of 2020, I&apos;m back in my home town
         of San Diego, CA.
       </p>
-      <p>
+      <p className="leading-relaxed">
         Feel free to send me an email or connect with me using the links.
         I&apos;d love to hear from you.
       </p>
