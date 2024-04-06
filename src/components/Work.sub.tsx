@@ -35,21 +35,19 @@ export const Job = ({
       </div>
       <div className="pr-4">
         <div className="flex items-center gap-1 justify-between">
-          <h4 className="text-stone-700 text-lg font-semibold tracking-tight">
+          <h4 className="text-stone-700 text-lg font-medium tracking-tight">
             {title}
           </h4>
-          <span className="text-sm font-semibold text-blue-500">
-            {timespan}
-          </span>
+          <span className="text-sm font-medium text-blue-500">{timespan}</span>
         </div>
         {companyHref ? (
           <a href={companyHref}>
-            <h5 className="inline-block text-stone-700 text-lg font-semibold tracking-tight mb-2 group-hover:text-blue-500 transition">
+            <h5 className="inline-block text-stone-700 text-lg font-medium tracking-tight mb-2 group-hover:text-blue-500 transition">
               {company}
             </h5>
           </a>
         ) : (
-          <h5 className="inline-block text-stone-700 text-lg font-semibold tracking-tight mb-2">
+          <h5 className="inline-block text-stone-700 text-lg font-medium tracking-tight mb-2">
             {company}
           </h5>
         )}
