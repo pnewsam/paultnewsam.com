@@ -28,8 +28,8 @@ export default function BookshelfPage() {
       </p>
       <div>
         <ul className="list-disc text-neutral-700 pl-4 mb-4 space-y-4">
-          {nonfictionBooks
-            .toSorted((a, b) => {
+          {[...nonfictionBooks]
+            .sort((a, b) => {
               const lastNameA = a.name.split(" ").slice(-1)[0];
               const lastNameB = b.name.split(" ").slice(-1)[0];
               return lastNameA.localeCompare(lastNameB);
@@ -59,8 +59,8 @@ export default function BookshelfPage() {
         of the ones that have stuck around.
       </p>
       <ul className="list-disc text-neutral-700 pl-4 mb-4 space-y-4">
-        {fictionBooks
-          .toSorted((a, b) => {
+        {[...fictionBooks]
+          .sort((a, b) => {
             const lastNameA = a.name.split(" ").slice(-1)[0];
             const lastNameB = b.name.split(" ").slice(-1)[0];
             return lastNameA.localeCompare(lastNameB);
