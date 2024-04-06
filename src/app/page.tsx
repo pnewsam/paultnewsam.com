@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <>
       <h2 className="text-2xl font-semibold tracking-tight mb-4">
-        Hey! I&apos;m Paul.
+        Hey, I&apos;m Paul.
       </h2>
       <p className="mb-4">
         I work as a frontend developer. This is my website, where I track some
