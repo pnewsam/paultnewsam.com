@@ -17,9 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-stone-50`}>
-        <main>
-          <div className="w-full max-w-[960px] mx-auto grid grid-cols-1 md:grid-cols-[300px_1fr] md:min-h-screen">
+      <body className={`${inter.className} bg-neutral-100`}>
+        <main className="">
+          <div className="w-full max-w-[960px] bg-white mx-auto grid grid-cols-1 md:grid-cols-[300px_1fr] md:min-h-screen">
             <SideNav />
             <div className="py-8 md:py-16 px-8 md:h-screen md:overflow-y-scroll">
               <div className="w-full">{children}</div>

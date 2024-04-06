@@ -1,4 +1,5 @@
 import { Bird, Twitter, Linkedin, Github, Mail, FileDown } from "lucide-react";
+import { ExternalLink, InternalLink } from "@/components/typography";
 import Link from "next/link";
 
 export const SideNav = () => {
@@ -13,79 +14,64 @@ export const SideNav = () => {
         <div className="flex gap-1 mb-4">
           <ul>
             <li>
-              <a
-                className="text-blue-400 transition font-medium hover:text-blue-500 inline-flex items-center gap-2"
-                href="https://github.com/pnewsam"
-              >
+              <ExternalLink href="https://github.com/pnewsam">
                 <Github className="w-4 h-4" />
                 <span className="text-sm">GitHub</span>
-              </a>
+              </ExternalLink>
             </li>
             <li>
-              <a
-                className="text-blue-400 transition font-medium hover:text-blue-500 inline-flex items-center gap-2"
-                href="https://linkedin.com/in/paul-newsam"
-              >
+              <ExternalLink href="https://linkedin.com/in/paul-newsam">
                 <Linkedin className="w-4 h-4" />
                 <span className="text-sm">LinkedIn</span>
-              </a>
+              </ExternalLink>
             </li>
             <li>
-              <a
-                className="text-blue-400 transition font-medium hover:text-blue-500 inline-flex items-center gap-2"
-                href="https://twitter.com/paultakuma"
-              >
+              <ExternalLink href="https://twitter.com/paultakuma">
                 <Twitter className="w-4 h-4" />
                 <span className="text-sm">Twitter</span>
-              </a>
+              </ExternalLink>
             </li>
             <li>
-              <a
-                className="text-blue-400 transition font-medium hover:text-blue-500 inline-flex items-center gap-2"
-                href="mailto:paul.newsam@gmail.com"
-              >
+              <ExternalLink href="mailto:paul.newsam@gmail.com">
                 <Mail className="w-4 h-4" />
                 <span className="text-sm">Email</span>
-              </a>
+              </ExternalLink>
             </li>
             <li>
-              <a
-                className="text-blue-400 transition font-medium hover:text-blue-500 inline-flex items-center gap-2"
-                href="https://ebird.org/profile/NzUyMzMz/US"
-              >
+              <ExternalLink href="https://ebird.org/profile/NzUyMzMz/US">
                 <Bird className="w-4 h-4" />
                 <span className="text-sm">eBird</span>
-              </a>
+              </ExternalLink>
             </li>
           </ul>
         </div>
-        {/* <ul className="mb-4">
-          <li className="text-blue-400 transition hover:text-blue-500">
-            <Link href="/blog">All blog posts</Link>
-          </li>
-          <li className="text-blue-400 transition hover:text-blue-500">
-            <Link href="/blog/post-1">Blog post</Link>
-          </li>
-          <li className="text-blue-400 transition hover:text-blue-500">
-            <Link href="/blog/post-2">Blog post</Link>
-          </li>
-        </ul> */}
-        <ul>
-          <li className="text-blue-400 text-sm transition hover:text-blue-500">
-            <Link href="/">Home</Link>
-          </li>
-          <li className="text-blue-400 text-sm transition hover:text-blue-500">
-            <Link href="/about">About me</Link>
+        <ul className="mb-4">
+          <li>
+            <InternalLink className="text-sm" href="/">
+              Home
+            </InternalLink>
           </li>
           <li>
-            <a
-              className="inline-flex text-blue-400 text-sm transition hover:text-blue-500 items-center gap-2"
+            <InternalLink className="text-sm" href="/about">
+              About me
+            </InternalLink>
+          </li>
+          <li>
+            <InternalLink className="text-sm" href="/bookshelf">
+              Bookshelf
+            </InternalLink>
+          </li>
+        </ul>
+        <ul className="mb-4">
+          <li>
+            <ExternalLink
+              className="text-sm"
               href="Paul_Newsam-Resume-January_2024.pdf"
               download="Paul_Newsam-Resume-January_2024.pdf"
             >
               <span>Download resume</span>
               <FileDown className="w-4 h-4" />
-            </a>
+            </ExternalLink>
           </li>
         </ul>
       </div>
