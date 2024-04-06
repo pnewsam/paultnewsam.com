@@ -7,7 +7,7 @@ export default function BookshelfPage() {
     <div>
       <div className="mb-8">
         <h1 className="text-2xl font-medium tracking-tight mb-4">Bookshelf</h1>
-        <p className="text-neutral-700 mb-4">
+        <p className="text-neutral-700 leading-relaxed mb-4">
           I love&nbsp;
           <a
             className="text-blue-400"
@@ -22,13 +22,13 @@ export default function BookshelfPage() {
         </p>
       </div>
       <h2 className="text-xl font-medium tracking-tight mb-4">Non-fiction</h2>
-      <p className="text-neutral-700 mb-4">
+      <p className="text-neutral-700 leading-relaxed mb-4">
         I especially value simply written, carefully-crafted books that explain
         a lot about the world. I put a ★ next to the books that I found
         especially beautiful, or meaningfully changed the way I understand the
         world.
       </p>
-      <ul className="list-disc text-neutral-700 pl-4 mb-8 space-y-4">
+      <ul className="list-disc text-neutral-700 leading-relaxed pl-4 mb-8 space-y-4">
         {[...nonfictionBooks]
           .sort((a, b) => {
             const lastNameA = a.name.split(" ").slice(-1)[0];
@@ -52,13 +52,13 @@ export default function BookshelfPage() {
           ))}
       </ul>{" "}
       <h2 className="text-xl font-medium tracking-tight mb-4">Fiction</h2>
-      <p className="text-neutral-700 mb-4">
+      <p className="text-neutral-700 leading-relaxed mb-4">
         For a long time I wanted to be a writer, and only read fiction. Over the
         years I&apos;ve gotten rid of the books I didn&apos;t have some
         sentimental attachment to or see myself re-reading. These are the some
         of the ones that have stuck around.
       </p>
-      <ul className="list-disc text-neutral-700 pl-4 mb-4 space-y-4">
+      <ul className="list-disc text-neutral-700 leading-relaxed pl-4 mb-4 space-y-4">
         {[...fictionBooks]
           .sort((a, b) => {
             const lastNameA = a.name.split(" ").slice(-1)[0];

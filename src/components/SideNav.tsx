@@ -32,8 +32,8 @@ export const SideNav = () => {
           <li>
             <ExternalLink
               className="text-sm"
-              href="Paul_Newsam-Resume-January_2024.pdf"
-              download="Paul_Newsam-Resume-January_2024.pdf"
+              href="Paul_Newsam-Resume-April_2024.pdf"
+              download="Paul_Newsam-Resume-April_2024.pdf"
             >
               <span>Download resume</span>
               <FileDown className="w-4 h-4" />
