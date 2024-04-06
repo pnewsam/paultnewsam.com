@@ -17,11 +17,11 @@ export const SideNav = () => {
               Home
             </InternalLink>
           </li>
-          <li>
+          {/* <li>
             <InternalLink className="text-sm" href="/about">
               About me
             </InternalLink>
-          </li>
+          </li> */}
           <li>
             <InternalLink className="text-sm" href="/bookshelf">
               Bookshelf
