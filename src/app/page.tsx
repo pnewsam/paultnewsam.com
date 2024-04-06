@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <h2 className="text-2xl font-semibold tracking-tight mb-4">
+      <h2 className="text-2xl font-medium tracking-tight mb-4">
         Hey, I&apos;m Paul.
       </h2>
       <p className="mb-4">

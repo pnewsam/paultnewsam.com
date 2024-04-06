@@ -23,7 +23,7 @@ export const ProjectCard = ({
   >
     <Image className="mt-[4px]" src={synesthetic} alt="Synesthetic Labs" />
     <div>
-      <p className="font-semibold text-base text-stone-700 mb-1">{title}</p>
+      <p className="font-medium text-base text-stone-700 mb-1">{title}</p>
       <p className="text-stone-600 text-sm leading-snug tracking-tight">
         {description}
       </p>
