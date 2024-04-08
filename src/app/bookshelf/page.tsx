@@ -1,34 +1,32 @@
-import { ExternalLink } from "@/components/typography";
+import { ExternalLink, Body, H1, H2, Ul, Li } from "@/components/typography";
 import { fictionBooks } from "./__constants/fiction";
 import { nonfictionBooks } from "./__constants/nonFiction";
 
 export default function BookshelfPage() {
   return (
     <div>
-      <div className="mb-8">
-        <h1 className="text-2xl font-medium tracking-tight mb-4">Bookshelf</h1>
-        <p className="text-neutral-700 leading-relaxed mb-4">
-          I love&nbsp;
-          <a
-            className="text-blue-400"
-            href="https://patrickcollison.com/bookshelf"
-          >
-            Patrick Collison&apos;s bookshelf page
-          </a>
-          . So I thought I&apos;d take a page from his book and track the books
-          I keep around. Some of these, I haven&apos;t finished reading. But I
-          keep them around so I can to read a chapter here or there. And others,
-          I keep around because they remind me of important lessons.
-        </p>
-      </div>
-      <h2 className="text-xl font-medium tracking-tight mb-4">Non-fiction</h2>
-      <p className="text-neutral-700 leading-relaxed mb-4">
+      <H1 className="mb-4">Bookshelf</H1>
+      <Body className="mb-8">
+        I love&nbsp;
+        <a
+          className="text-blue-400"
+          href="https://patrickcollison.com/bookshelf"
+        >
+          Patrick Collison&apos;s bookshelf page
+        </a>
+        . So I thought I&apos;d take a page from his book and track the books I
+        keep around. Some of these, I haven&apos;t finished reading. But I keep
+        them around so I can to read a chapter here or there. And others, I keep
+        around because they remind me of important lessons.
+      </Body>
+      <H2 className="mb-4">Non-fiction</H2>
+      <Body className="mb-8">
         I especially value simple, well-crafted books that explain a lot about
         the world in a simple way. I put a ★ next to the books that I found
         especially beautiful, or meaningfully changed my views or
         understandings.
-      </p>
-      <ul className="list-disc text-neutral-700 leading-relaxed pl-4 mb-8 space-y-4">
+      </Body>
+      <Ul className="mb-8">
         {[...nonfictionBooks]
           .sort((a, b) => {
             const lastNameA = a.name.split(" ").slice(-1)[0];
@@ -36,7 +34,7 @@ export default function BookshelfPage() {
             return lastNameA.localeCompare(lastNameB);
           })
           .map((author, i) => (
-            <li className="ml-2" key={`${author.name}-${i}`}>
+            <Li key={`${author.name}-${i}`}>
               {author.books.map((book, i) => (
                 <>
                   <ExternalLink key={book.title} href={book.href}>
@@ -48,17 +46,17 @@ export default function BookshelfPage() {
               ))}{" "}
               by {author.name}{" "}
               {author.starred && <span className="ml-1 mb-1">★</span>}
-            </li>
+            </Li>
           ))}
-      </ul>{" "}
-      <h2 className="text-xl font-medium tracking-tight mb-4">Fiction</h2>
-      <p className="text-neutral-700 leading-relaxed mb-4">
+      </Ul>{" "}
+      <H2 className="mb-4">Fiction</H2>
+      <Body className="mb-8">
         For a long time I wanted to be a writer, and only read fiction. Over the
         years I&apos;ve gotten rid of the books I didn&apos;t have some
         sentimental attachment to or see myself re-reading. These are the some
         of the ones that have stuck around.
-      </p>
-      <ul className="list-disc text-neutral-700 leading-relaxed pl-4 mb-4 space-y-4">
+      </Body>
+      <Ul className="mb-8">
         {[...fictionBooks]
           .sort((a, b) => {
             const lastNameA = a.name.split(" ").slice(-1)[0];
@@ -66,7 +64,7 @@ export default function BookshelfPage() {
             return lastNameA.localeCompare(lastNameB);
           })
           .map((author, i) => (
-            <li className="ml-2" key={`${author.name}-${i}`}>
+            <Li key={`${author.name}-${i}`}>
               {author.books.map((book, i) => (
                 <>
                   <ExternalLink key={book.title} href={book.href}>
@@ -77,9 +75,9 @@ export default function BookshelfPage() {
                 </>
               ))}{" "}
               by {author.name}{" "}
-            </li>
+            </Li>
           ))}
-      </ul>{" "}
+      </Ul>{" "}
     </div>
   );
 }
