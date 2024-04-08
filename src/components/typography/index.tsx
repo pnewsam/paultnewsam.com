@@ -6,6 +6,7 @@ export const InternalLink = ({
   href,
   children,
   className,
+  ...props
 }: {
   href: string;
   children: React.ReactNode;
@@ -17,6 +18,7 @@ export const InternalLink = ({
       className
     )}
     href={href}
+    {...props}
   >
     {children}
   </Link>

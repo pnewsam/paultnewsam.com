@@ -23,10 +23,10 @@ export default function BookshelfPage() {
       </div>
       <h2 className="text-xl font-medium tracking-tight mb-4">Non-fiction</h2>
       <p className="text-neutral-700 leading-relaxed mb-4">
-        I especially value simply written, carefully-crafted books that explain
-        a lot about the world. I put a ★ next to the books that I found
-        especially beautiful, or meaningfully changed the way I understand the
-        world.
+        I especially value simple, well-crafted books that explain a lot about
+        the world in a simple way. I put a ★ next to the books that I found
+        especially beautiful, or meaningfully changed my views or
+        understandings.
       </p>
       <ul className="list-disc text-neutral-700 leading-relaxed pl-4 mb-8 space-y-4">
         {[...nonfictionBooks]
@@ -35,8 +35,8 @@ export default function BookshelfPage() {
             const lastNameB = b.name.split(" ").slice(-1)[0];
             return lastNameA.localeCompare(lastNameB);
           })
-          .map((author) => (
-            <li className="ml-2" key={author.name}>
+          .map((author, i) => (
+            <li className="ml-2" key={`${author.name}-${i}`}>
               {author.books.map((book, i) => (
                 <>
                   <ExternalLink key={book.title} href={book.href}>
@@ -65,8 +65,8 @@ export default function BookshelfPage() {
             const lastNameB = b.name.split(" ").slice(-1)[0];
             return lastNameA.localeCompare(lastNameB);
           })
-          .map((author) => (
-            <li className="ml-2" key={author.name}>
+          .map((author, i) => (
+            <li className="ml-2" key={`${author.name}-${i}`}>
               {author.books.map((book, i) => (
                 <>
                   <ExternalLink key={book.title} href={book.href}>
