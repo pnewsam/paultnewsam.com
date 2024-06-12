@@ -126,7 +126,7 @@ export const fictionBooks = [
     books: [
       {
         title: "Frankenstein",
-        href: "https://www.amazon.com/Frankenstein-Prometheus-Vintage-Wollstonecraft-Hardcover/dp/B01181VZTE/ref=sr_1_4?crid=1J7KY3QNFO5H3&dib=eyJ2IjoiMSJ9.oj6Y25sgcDrgLmaUpcdP3Yfiq9xT6b1KKxPG4q-UTKW4PsEHRcwEqK_XQSfpTBVi2yrd7rkdgmqwcq99EPuzvU9yprNMYERy1ifbTfnfJQco0yQeMjaX5q6hKGY2pqGFLjvjJlOvLHWtazWrhGRrKZaD5B6SxgbwGDJEk38OUBqrWHbFL0CPbzyaqrahPoJcsIGWDxF82fdiDB79J9SymqDkgKYijha7zH4YUiYK7ZM.BsopI5cdWtVrWk59OzdJnrvEirqTJ7KTXWjOP07QoFg&dib_tag=se&keywords=everyman%27s+library+frankenstein&qid=1712369634&sprefix=everyman%27s+library+franke%2Caps%2C150&sr=8-4",
+        href: "https://www.amazon.com/Frankenstein-Prometheus-Vintage-Wollneutralcraft-Hardcover/dp/B01181VZTE/ref=sr_1_4?crid=1J7KY3QNFO5H3&dib=eyJ2IjoiMSJ9.oj6Y25sgcDrgLmaUpcdP3Yfiq9xT6b1KKxPG4q-UTKW4PsEHRcwEqK_XQSfpTBVi2yrd7rkdgmqwcq99EPuzvU9yprNMYERy1ifbTfnfJQco0yQeMjaX5q6hKGY2pqGFLjvjJlOvLHWtazWrhGRrKZaD5B6SxgbwGDJEk38OUBqrWHbFL0CPbzyaqrahPoJcsIGWDxF82fdiDB79J9SymqDkgKYijha7zH4YUiYK7ZM.BsopI5cdWtVrWk59OzdJnrvEirqTJ7KTXWjOP07QoFg&dib_tag=se&keywords=everyman%27s+library+frankenstein&qid=1712369634&sprefix=everyman%27s+library+franke%2Caps%2C150&sr=8-4",
       },
     ],
   },

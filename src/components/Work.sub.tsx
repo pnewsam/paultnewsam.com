@@ -25,34 +25,34 @@ export const Job = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-[50px_1fr] hover:bg-stone-100 border border-transparent hover:border-stone-200/75 rounded-sm transition group py-4",
+        "grid grid-cols-[50px_1fr] hover:bg-neutral-100 border border-transparent hover:border-neutral-200/75 rounded-sm transition group py-4",
         className
       )}
     >
       <div className="flex flex-col items-center">
-        <CircleDot className="w-4 h-4 translate-y-[5px] text-stone-600 group-hover:text-blue-500 transition" />
+        <CircleDot className="w-4 h-4 translate-y-[5px] text-neutral-600 group-hover:text-blue-500 transition" />
         <div className="h-full border translate-y-[5px]" />
       </div>
       <div className="pr-4">
         <div className="flex items-center gap-1 justify-between">
-          <h4 className="text-stone-700 text-lg font-medium tracking-tight">
+          <h4 className="text-neutral-800 text-lg font-medium tracking-tight">
             {title}
           </h4>
           <span className="text-sm font-medium text-blue-500">{timespan}</span>
         </div>
         {companyHref ? (
           <a href={companyHref}>
-            <h5 className="inline-block text-stone-700 text-lg font-medium tracking-tight mb-2 group-hover:text-blue-500 transition">
+            <h5 className="inline-block text-neutral-800 text-lg font-medium tracking-tight mb-2 group-hover:text-blue-500 transition">
               {company}
             </h5>
           </a>
         ) : (
-          <h5 className="inline-block text-stone-700 text-lg font-medium tracking-tight mb-2">
+          <h5 className="inline-block text-neutral-800 text-lg font-medium tracking-tight mb-2">
             {company}
           </h5>
         )}
         {typeof description === "string" ? (
-          <p className="text-base tracking-tight leading-relaxed text-stone-600 mb-3">
+          <p className="text-base tracking-tight leading-relaxed text-neutral-600 mb-3">
             {description}
           </p>
         ) : (

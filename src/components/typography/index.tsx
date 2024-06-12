@@ -9,7 +9,7 @@ export const Body = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <div className={cn("text-neutral-700 leading-relaxed", className)}>
+  <div className={cn("text-neutral-800 leading-relaxed", className)}>
     {children}
   </div>
 );
@@ -23,7 +23,7 @@ export const Ul = ({
 }) => (
   <ul
     className={cn(
-      "list-disc text-neutral-700 leading-relaxed pl-4 space-y-4",
+      "list-disc text-neutral-800 leading-relaxed pl-4 space-y-4",
       className
     )}
   >
