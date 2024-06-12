@@ -305,8 +305,8 @@ export const fictionBooks = [
     name: "John Williams",
     books: [
       {
-        title: "neutralr",
-        href: "https://www.amazon.com/neutralr-York-Review-Books-Classics/dp/1590171993/ref=sr_1_1?crid=1YJQYGKDGXUGU&dib=eyJ2IjoiMSJ9.MevN2PxTnU5H7uhAL5OSwOyUUN3PW8gzjJgNtmoc7ghSrqhSjo4UwDWyJVRs7pwzCqgjR5nfEAxD-0t2NI2L39IpN_wFuLSNRkWk2r_uAmmO664U5llStDzPeQy6EJW2cAZNl-dNXpQrorcBFQOnVPQCl7iNvngBr1dZfvVMP0ZQFepQgJ79nvIKcSpqvWPsZlIj5Cqpzm2hSTfO3257QOjjin2SN1Kr0T5wlmakWCQ.2jqFJ0FqdMKjUr1zHIIJaqWf3pwdfeIni8v4qxN_7Ds&dib_tag=se&keywords=john+williams+neutralr&qid=1712370079&sprefix=john+williams+st%2Caps%2C158&sr=8-1",
+        title: "Stoner",
+        href: "https://www.amazon.com/Stoner-York-Review-Books-Classics/dp/1590171993/ref=sr_1_1?crid=1YJQYGKDGXUGU&dib=eyJ2IjoiMSJ9.MevN2PxTnU5H7uhAL5OSwOyUUN3PW8gzjJgNtmoc7ghSrqhSjo4UwDWyJVRs7pwzCqgjR5nfEAxD-0t2NI2L39IpN_wFuLSNRkWk2r_uAmmO664U5llStDzPeQy6EJW2cAZNl-dNXpQrorcBFQOnVPQCl7iNvngBr1dZfvVMP0ZQFepQgJ79nvIKcSpqvWPsZlIj5Cqpzm2hSTfO3257QOjjin2SN1Kr0T5wlmakWCQ.2jqFJ0FqdMKjUr1zHIIJaqWf3pwdfeIni8v4qxN_7Ds&dib_tag=se&keywords=john+williams+stoner&qid=1712370079&sprefix=john+williams+st%2Caps%2C158&sr=8-1",
       },
       {
         title: "Butcher's Crossing",
