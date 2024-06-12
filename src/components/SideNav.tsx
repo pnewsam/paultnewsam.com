@@ -6,7 +6,7 @@ export const SideNav = () => {
   return (
     <div className="py-8 md:py-16 px-8 border-b md:border-r border-stone-200">
       <div className="w-full">
-        <h1 className="text-2xl tracking-tight text-stone-800 font-medium mb-2">
+        <h1 className="text-2xl tracking-tight text-stone-800 font-semibold mb-2">
           <Link className="transition hover:text-stone-600" href="/">
             Paul T. Newsam
           </Link>
@@ -32,8 +32,8 @@ export const SideNav = () => {
           <li>
             <ExternalLink
               className="text-sm"
-              href="Paul_Newsam-Resume-April_2024.pdf"
-              download="Paul_Newsam-Resume-April_2024.pdf"
+              href="https://storage.paultnewsam.cc/Paul-Newsam_Resume-June-2024.pdf"
+              download="Paul-Newsam_Resume-June-2024.pdf"
             >
               <span>Download resume</span>
               <FileDown className="w-4 h-4" />

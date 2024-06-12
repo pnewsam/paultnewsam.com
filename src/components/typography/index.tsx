@@ -46,7 +46,7 @@ export const H1 = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <h1 className={cn("text-2xl font-medium tracking-tight", className)}>
+  <h1 className={cn("text-2xl font-semibold tracking-tight", className)}>
     {children}
   </h1>
 );
@@ -58,7 +58,7 @@ export const H2 = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <h2 className={cn("text-xl font-medium tracking-tight", className)}>
+  <h2 className={cn("text-xl font-semibold tracking-tight", className)}>
     {children}
   </h2>
 );
