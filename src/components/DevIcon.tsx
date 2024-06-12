@@ -69,9 +69,9 @@ export const DevIcon = ({ className, name }: Props) => {
   const Icon = iconsByName[name];
   return (
     <div
-      className={`bg-gradient-to-tr from-white to-stone-50 border p-8 rounded-lg shadow shadow-stone-300/50 ${className}`}
+      className={`bg-gradient-to-tr from-white to-neutral-50 border p-8 rounded-lg shadow shadow-neutral-300/50 ${className}`}
     >
-      <svg className="w-24 h-24 fill-stone-400" viewBox="0 0 128 128">
+      <svg className="w-24 h-24 fill-neutral-400" viewBox="0 0 128 128">
         <Icon />
       </svg>
     </div>

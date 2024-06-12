@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { TopNav } from "@/components/TopNav";
 import "./globals.css";
-import { SideNav } from "@/components/SideNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-neutral-100`}>
+      <body className={`${inter.className} bg-white`}>
         <main className="">
-          <div className="w-full max-w-[960px] bg-white mx-auto grid grid-cols-1 md:grid-cols-[300px_1fr] md:min-h-screen">
-            <SideNav />
-            <div className="py-8 md:py-16 px-8 md:h-screen md:overflow-y-scroll">
+          <div className="w-full max-w-[960px] mx-auto">
+            <TopNav />
+            <div className="py-8 px-8">
               <div className="w-full">{children}</div>
             </div>
           </div>
