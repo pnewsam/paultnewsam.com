@@ -65,8 +65,8 @@ export default function Home() {
             buttonVariants({ variant: "outline", size: "sm" }),
             "border-blue-400 hover:text-blue-400 hover:bg-blue-100"
           )}
-          href="https://storage.paultnewsam.cc/Paul-Newsam_Resume-June-2024.pdf"
-          download="Paul-Newsam_Resume-June-2024.pdf"
+          href="https://storage.paultnewsam.cc/Paul-Newsam_Resume-July-2024.pdf"
+          download="Paul-Newsam_Resume-July-2024.pdf"
         >
           <span>Download resume</span>
           <FileDown className="w-4 h-4" />

@@ -10,8 +10,8 @@ export const Work = ({ className }: { className?: string }) => (
         Work
       </h3>
       <a
-        href="Paul_Newsam-Resume-January_2024.pdf"
-        download="Paul_Newsam-Resume-January_2024.pdf"
+        href="Paul_Newsam-Resume-July_2024.pdf"
+        download="Paul_Newsam-Resume-July_2024.pdf"
       >
         <Button className="gap-2" size="sm" variant="outline">
           <span className="text-xs">Download resume</span>
