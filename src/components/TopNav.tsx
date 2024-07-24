@@ -11,11 +11,11 @@ export const TopNav = () => {
         >
           Paul T. Newsam
         </Link>
-        {/* <div className="inline-flex items-center gap-4">
-          <InternalLink className="text-sm" href="/about">
-            About
-          </InternalLink>
-        </div> */}
+        <div className="inline-flex items-center gap-4">
+          {/* <InternalLink className="text-sm" href="/bookshelf">
+            Bookshelf
+          </InternalLink> */}
+        </div>
       </div>
     </div>
   );

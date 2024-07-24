@@ -9,9 +9,9 @@ export const Body = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <div className={cn("text-neutral-800 leading-relaxed", className)}>
+  <p className={cn("text-neutral-800 leading-relaxed", className)}>
     {children}
-  </div>
+  </p>
 );
 
 export const Ul = ({
@@ -75,7 +75,7 @@ export const InternalLink = ({
 }) => (
   <Link
     className={cn(
-      "text-blue-400 transition hover:text-blue-500 inline-flex items-center gap-2",
+      "text-blue-400 transition hover:text-blue-500 items-center gap-2",
       className
     )}
     href={href}
@@ -97,7 +97,7 @@ export const ExternalLink = ({
 } & React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
   <a
     className={cn(
-      "text-blue-400 transition hover:text-blue-500 inline-flex items-center gap-2",
+      "text-blue-400 transition hover:text-blue-500 items-center gap-2",
       className
     )}
     href={href}

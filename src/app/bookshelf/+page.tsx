@@ -15,9 +15,7 @@ export default function BookshelfPage() {
           Patrick Collison&apos;s bookshelf page
         </a>
         . So I thought I&apos;d take a page from his book and track the books I
-        keep around. Some of these, I haven&apos;t finished reading. But I keep
-        them around so I can to read a chapter here or there. And others, I keep
-        around because they remind me of important lessons.
+        keep around. I haven&apos;t necessarily read these books.
       </Body>
       <H2 className="mb-4">Non-fiction</H2>
       <Body className="mb-8">

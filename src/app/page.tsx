@@ -9,12 +9,17 @@ export default function Home() {
     <div>
       <H1 className="mb-4">Hi, I&apos;m Paul.</H1>
       <Body className="mb-8">
-        I currently work as a frontend engineer at{" "}
-        <ExternalLink href="https://iterable.com/">Iterable</ExternalLink>, a
-        marketing automation platform. I&apos;ve been working in software for
-        about 6 years now. Before that, I worked on and off as a field
-        biologist, doing bird surveys for organizations like&nbsp;
-        <ExternalLink href="https://www.usgs.gov/">USGS</ExternalLink>,{" "}
+        I&apos;m a software developer. I used to work at{" "}
+        <ExternalLink href="https://www.iterable.com/">Iterable</ExternalLink>{" "}
+        and at{" "}
+        <ExternalLink href="https://www.accenture.com/">Accenture</ExternalLink>{" "}
+        before that. I&apos;ve been working in software for about 6 years now.
+        Before that, I worked on and off as a field biologist, doing bird
+        surveys for organizations like&nbsp;
+        <ExternalLink href="https://www.usgs.gov/">
+          U.S. Geological Survey
+        </ExternalLink>
+        ,{" "}
         <ExternalLink href="https://www.pointblue.org/">
           Point Blue
         </ExternalLink>
@@ -27,8 +32,8 @@ export default function Home() {
       </Body>
       <Body className="mb-8">
         Outside of work, besides tinkering on projects, I love to run, hike,
-        read, and train jiu jitsu. I&apos;ve lived in a few different cities,
-        but as of 2020, I&apos;m back in my home town of San Diego, CA.
+        read, and bird. I&apos;ve lived in a few different cities, but as of
+        2020, I&apos;m back in my home town of San Diego, CA.
       </Body>
       <Body className="mb-8">
         Feel free to send me an email or connect with me using the links.
