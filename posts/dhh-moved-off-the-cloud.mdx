@@ -1,0 +1,33 @@
+---
+title: DHH moved off the cloud. Let's talk about it.
+date: "2024-09-03"
+description: If you’re looking for a defense of cloud on technical grounds, you’re not going to get that here. It’s not what I’m interested in and it’s not what I’m setting out to do...
+---
+
+If you’re looking for a defense of cloud on technical grounds, you’re not going to get that here. It’s not what I’m interested in and it’s not what I’m setting out to do. What I’m trying to do here, instead, is intuit some of the macro trends that might have contributed to his decisions. After all DHH is, like anyone, an imperfect communicator. Even if he’s talked about his decisions — which of course, he has (because actually he’s a pretty damned good communicator) — he can’t perfectly communicate his inputs or his world model.
+
+So what did DHH see that we’re not seeing? Is there an overarching logic governing his decision-making? What macro trends are we seeing today that might be contributing?
+
+Well let’s start by laying out some of his decisions. First we had “moving off the cloud”. This, he said, was a way to stave off rising cloud costs. Then we had “killing Typescript.” He made off-hand comments about unnecessarily complex Typescript code. And then we had the big “move to Linux.” There’s video of him shouting, to a sea of confused race-fans at a Nascar rally, “2024 is the year of Linux on Desktop!!!”. (Legend).
+
+These decisions have something in common. They’re all moves to eliminate dependencies. Cloud providers, besides charging higher taxes, have been guilty of some pretty high profile outages recently, leaving SaaS companies with SLAs holding the bag. Typescript, besides adding code that isn’t strictly necessary, incurs a build step and transpilation cost. And Linux… Well, if the production servers are running on Linux, moving to Linux eliminates that pesky MacOS dependency. (Reconciling environments, anyone knows, is no small thing!)
+
+So, fewer dependencies. Great.
+
+But then the question becomes, why now? Is this just plain-old operant conditioning? You know, “we touched the stove and got burnt, so we’re not doing that again?” Or have the preconditions changed? After all, if the thesis is that fewer dependencies are better, why were those dependencies taken on in the first place?
+
+I’d argue that the preconditions HAVE changed. Let me speculate.
+
+First is cost of compute. In the early days of cloud computing, the cost savings accrued to the big players who could leverage economies of scale were so massive that moving over and outsourcing that work was a no brainer. The costs of actually managing physical racks probably hasn’t changed all that much (although maybe energy is cheaper on net), but because the hardware has gotten so much more performant, you don’t actually need as much metal as before. Ergo, you can manage your own racks.
+
+Second is AI. (Yeah, big surprise.) You just can’t underestimate AI’s breadth of impact.
+
+Take the Typescript move for example. I’d be the first to say, Typescript was a godsend when I started using it. Type hints make it so much easier to refactor frontend code without breaking it. But — why do you need types if you’re coding with a copilot? Let’s be perfectly rigorous about it: if you had to choose between type hints and AI, which would you choose? Which one is going to catch more bugs?
+
+For me, it’s a no brainer. It’s AI, hands down. And obviously, it’s not actually zero sum. In most cases you’re going to use both. But the marginal value of types in a world of AI copilots, is a lot lower.
+
+The Linux story is similar. Obviously there are switching costs in moving from MacOS to Linux. Those costs might have been so high, as to be prohibitive. DHH is running a company, after all. But AI is also making huge inroads on those costs. Run into an install issue? Spin up the ChatGPT. Can’t figure out the right command? Tab over to Claude.
+
+The point is, AI makes it a lot easier for primary actors to take action on their decisions. And DHH is the prime example of someone who actually makes decisions. No cost-benefit analyses, no TIGER teams, no tucked-away research arms. Just decisions and iterations.
+
+Action is the word. Let’s take it to heart.

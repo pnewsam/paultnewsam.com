@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-
 import localFont from "next/font/local";
-import { TopNav } from "@/components/TopNav";
+import { ThemeProvider } from "@/contexts/ThemeContext";
+import { Layout } from "@/components/Layout";
 import "./globals.css";
 
 const satoshi = localFont({
   src: "./Satoshi-Variable.woff2",
   display: "swap",
+  weight: "200 800",
 });
 
 export const metadata: Metadata = {
@@ -20,16 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${satoshi.className} bg-white`}>
-        <main className="">
-          <div className="w-full max-w-[960px] mx-auto">
-            <TopNav />
-            <div className="py-8 px-8">
-              <div className="w-full">{children}</div>
-            </div>
-          </div>
-        </main>
+    <html lang="en" className="h-full">
+      <body
+        className={`${satoshi.className} text-stone-900 dark:text-stone-50 flex flex-col min-h-screen bg-stone-50 dark:bg-stone-900`}
+      >
+        <ThemeProvider>
+          <Layout>{children}</Layout>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,13 +1,13 @@
 export const About = () => {
   return (
     <>
-      <p className="text-neutral-600 tracking-tight leading-relaxed mb-3">
+      <p className="text-stone-600 tracking-tight leading-relaxed mb-3">
         Frontend developer with a background in biology. Inspired by ambitious
         mission statements, and passionate about building great user
         experiences.
       </p>
 
-      <p className="text-neutral-600 tracking-tight leading-relaxed mb-3">
+      <p className="text-stone-600 tracking-tight leading-relaxed mb-3">
         <b>Bullish on</b>:&nbsp;
         <a
           className="underline underline-offset-2"
@@ -32,7 +32,7 @@ export const About = () => {
         , Podcasts, AI Copilots, Grayscale color schemes, Yves Tumor&apos;s
         legacy
       </p>
-      <p className="text-neutral-600 tracking-tight leading-relaxed mb-2">
+      <p className="text-stone-600 tracking-tight leading-relaxed mb-2">
         <b>Bearish on</b>: Quantitative easing, Superhero movies
       </p>
     </>

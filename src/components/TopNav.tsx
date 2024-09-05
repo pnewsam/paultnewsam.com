@@ -1,22 +1,46 @@
-import { InternalLink } from "@/components/typography";
 import Link from "next/link";
+import { InternalLink } from "@/components/typography";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { Menu } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export const TopNav = () => {
   return (
-    <div className="py-8 md:py-16 px-8">
-      <div className="w-full flex justify-between gap-4">
-        <Link
-          className="text-lg text-neutral-800 font-bold mb-2 transition hover:text-neutral-600"
-          href="/"
-        >
-          Paul T. Newsam
-        </Link>
-        <div className="inline-flex items-center gap-4">
-          {/* <InternalLink className="text-sm" href="/bookshelf">
-            Bookshelf
-          </InternalLink> */}
-        </div>
+    <nav className="flex justify-between items-center py-4">
+      <Link
+        className="text-lg text-stone-900 dark:text-white font-bold transition hover:text-stone-600 dark:hover:text-stone-300"
+        href="/"
+      >
+        Paul T. Newsam
+      </Link>
+      <div className="hidden md:flex items-center space-x-4">
+        <InternalLink href="/">Home</InternalLink>
+        <InternalLink href="/blog">Blog</InternalLink>
+        <ThemeToggle />
       </div>
-    </div>
+      <div className="md:hidden">
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon" className="h-9 w-9">
+              <Menu className="h-5 w-5" />
+              <span className="sr-only">Open menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-[240px] sm:w-[300px]">
+            <div className="flex flex-col space-y-4 mt-4">
+              <InternalLink href="/">Home</InternalLink>
+              <InternalLink href="/blog">Blog</InternalLink>
+              <div className="flex items-center space-x-2">
+                <span className="text-sm text-stone-500 dark:text-stone-400">
+                  Theme
+                </span>
+                <ThemeToggle />
+              </div>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
+    </nav>
   );
 };

@@ -9,7 +9,12 @@ export const Body = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <p className={cn("text-xl text-neutral-800 leading-8", className)}>
+  <p
+    className={cn(
+      "text-base text-stone-700 dark:text-stone-300 leading-relaxed",
+      className
+    )}
+  >
     {children}
   </p>
 );
@@ -23,7 +28,7 @@ export const Ul = ({
 }) => (
   <ul
     className={cn(
-      "list-disc text-neutral-800 leading-relaxed pl-4 space-y-4",
+      "list-disc text-stone-700 dark:text-stone-300 leading-relaxed pl-5 space-y-2",
       className
     )}
   >
@@ -45,7 +50,16 @@ export const H1 = ({
 }: {
   children: React.ReactNode;
   className?: string;
-}) => <h1 className={cn("text-2xl font-bold", className)}>{children}</h1>;
+}) => (
+  <h1
+    className={cn(
+      "text-4xl font-bold text-neutral-900 dark:text-white mb-4",
+      className
+    )}
+  >
+    {children}
+  </h1>
+);
 
 export const H2 = ({
   children,
@@ -53,7 +67,33 @@ export const H2 = ({
 }: {
   children: React.ReactNode;
   className?: string;
-}) => <h2 className={cn("text-xl font-bold", className)}>{children}</h2>;
+}) => (
+  <h2
+    className={cn(
+      "text-2xl font-semibold text-neutral-800 dark:text-neutral-100 mb-3",
+      className
+    )}
+  >
+    {children}
+  </h2>
+);
+
+export const H3 = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => (
+  <h3
+    className={cn(
+      "text-xl font-semibold text-stone-900 dark:text-white",
+      className
+    )}
+  >
+    {children}
+  </h3>
+);
 
 export const InternalLink = ({
   href,
@@ -67,7 +107,7 @@ export const InternalLink = ({
 }) => (
   <Link
     className={cn(
-      "text-blue-400 transition hover:text-blue-500 items-center gap-2",
+      "text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200 underline underline-offset-2",
       className
     )}
     href={href}
@@ -89,12 +129,38 @@ export const ExternalLink = ({
 } & React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
   <a
     className={cn(
-      "text-blue-400 transition hover:text-blue-500 items-center gap-2",
+      "text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200 underline underline-offset-2",
       className
     )}
     href={href}
+    target="_blank"
+    rel="noopener noreferrer"
     {...props}
   >
     {children}
   </a>
+);
+
+export const Subtitle = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => (
+  <p className={cn("text-lg text-stone-600 dark:text-stone-400", className)}>
+    {children}
+  </p>
+);
+
+export const SmallText = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => (
+  <p className={cn("text-sm text-stone-500 dark:text-stone-500", className)}>
+    {children}
+  </p>
 );

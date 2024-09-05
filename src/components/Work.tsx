@@ -58,7 +58,7 @@ export const Work = ({ className }: { className?: string }) => (
       title="Seasonal Biologist"
       company="Various"
       description={
-        <p className="text-base tracking-tight leading-relaxed text-neutral-600">
+        <p className="text-base tracking-tight leading-relaxed text-stone-600">
           During my 20s, I worked on-and-off as a field biologist for various
           government and non-profit organizations, including&nbsp;
           <a className="group-hover:text-blue-500" href="https://www.usgs.gov/">
