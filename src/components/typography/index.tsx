@@ -9,7 +9,7 @@ export const Body = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <p className={cn("text-neutral-800 leading-relaxed", className)}>
+  <p className={cn("text-xl text-neutral-800 leading-8", className)}>
     {children}
   </p>
 );
@@ -45,11 +45,7 @@ export const H1 = ({
 }: {
   children: React.ReactNode;
   className?: string;
-}) => (
-  <h1 className={cn("text-2xl font-semibold tracking-tight", className)}>
-    {children}
-  </h1>
-);
+}) => <h1 className={cn("text-2xl font-bold", className)}>{children}</h1>;
 
 export const H2 = ({
   children,
@@ -57,11 +53,7 @@ export const H2 = ({
 }: {
   children: React.ReactNode;
   className?: string;
-}) => (
-  <h2 className={cn("text-xl font-semibold tracking-tight", className)}>
-    {children}
-  </h2>
-);
+}) => <h2 className={cn("text-xl font-bold", className)}>{children}</h2>;
 
 export const InternalLink = ({
   href,

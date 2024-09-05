@@ -6,7 +6,7 @@ export const TopNav = () => {
     <div className="py-8 md:py-16 px-8">
       <div className="w-full flex justify-between gap-4">
         <Link
-          className="text-lg tracking-tight text-neutral-800 font-semibold mb-2transition hover:text-neutral-600"
+          className="text-lg text-neutral-800 font-bold mb-2 transition hover:text-neutral-600"
           href="/"
         >
           Paul T. Newsam

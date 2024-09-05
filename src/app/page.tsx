@@ -7,7 +7,7 @@ import { IconLink } from "@/components/IconLink";
 export default function Home() {
   return (
     <div>
-      <H1 className="mb-4">Hi, I&apos;m Paul.</H1>
+      <H1 className="mb-8">Hi, I&apos;m Paul.</H1>
       <Body className="mb-8">
         I&apos;m a software developer. I used to work at{" "}
         <ExternalLink href="https://www.iterable.com/">Iterable</ExternalLink>{" "}

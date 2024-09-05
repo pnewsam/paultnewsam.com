@@ -16,7 +16,7 @@ export const IconLink = ({
       className="rounded-full w-12 h-12 p-2 inline-flex justify-center hover:bg-blue-100"
     >
       <Icon className="w-6 h-6 stroke-[1.5]" />
-      <span className="text-sm sr-only">{text}</span>
+      <span className="text-base sr-only">{text}</span>
     </ExternalLink>
   );
 };

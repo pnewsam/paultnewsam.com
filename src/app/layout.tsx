@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
+import localFont from "next/font/local";
 import { TopNav } from "@/components/TopNav";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const satoshi = localFont({
+  src: "./Satoshi-Variable.woff2",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Paul T. Newsam | Frontend Developer",
@@ -17,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-white`}>
+      <body className={`${satoshi.className} bg-white`}>
         <main className="">
           <div className="w-full max-w-[960px] mx-auto">
             <TopNav />
