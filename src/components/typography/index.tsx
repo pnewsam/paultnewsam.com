@@ -11,7 +11,7 @@ export const Body = ({
 }) => (
   <p
     className={cn(
-      "text-base text-stone-700 dark:text-stone-300 leading-relaxed",
+      "text-base text-neutral-700 dark:text-neutral-300 leading-relaxed",
       className
     )}
   >
@@ -28,7 +28,7 @@ export const Ul = ({
 }) => (
   <ul
     className={cn(
-      "list-disc text-stone-700 dark:text-stone-300 leading-relaxed pl-5 space-y-2",
+      "list-disc text-neutral-700 dark:text-neutral-300 leading-relaxed pl-5 space-y-2",
       className
     )}
   >
@@ -87,7 +87,7 @@ export const H3 = ({
 }) => (
   <h3
     className={cn(
-      "text-xl font-semibold text-stone-900 dark:text-white",
+      "text-xl font-semibold text-neutral-900 dark:text-white",
       className
     )}
   >
@@ -148,7 +148,9 @@ export const Subtitle = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <p className={cn("text-lg text-stone-600 dark:text-stone-400", className)}>
+  <p
+    className={cn("text-lg text-neutral-600 dark:text-neutral-400", className)}
+  >
     {children}
   </p>
 );
@@ -160,7 +162,9 @@ export const SmallText = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <p className={cn("text-sm text-stone-500 dark:text-stone-500", className)}>
+  <p
+    className={cn("text-sm text-neutral-500 dark:text-neutral-500", className)}
+  >
     {children}
   </p>
 );

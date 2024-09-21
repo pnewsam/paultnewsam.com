@@ -1,13 +1,6 @@
 import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
-import { H1, Body } from "@/components/typography";
+import { H1, H2, Body } from "@/components/typography";
 
 export default function BlogPage() {
   const posts = allPosts.sort(
@@ -17,28 +10,24 @@ export default function BlogPage() {
   return (
     <div className="space-y-16 pt-8 w-full min-h-[calc(100vh-184px)]">
       <section>
-        <H1>Blog</H1>
+        <H1 className="mb-6">Blog</H1>
         <div className="space-y-6">
           {posts.map((post) => (
-            <Card key={post._id}>
-              <CardHeader>
-                <CardTitle>
-                  <Link href={post.slug} className="hover:underline">
-                    {post.title}
-                  </Link>
-                </CardTitle>
-                <CardDescription>
-                  {new Date(post.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Body>{post.description}</Body>
-              </CardContent>
-            </Card>
+            <div key={post._id} className="space-y-2">
+              <H2>
+                <Link href={post.slug} className="hover:underline">
+                  {post.title}
+                </Link>
+              </H2>
+              <Body>
+                {new Date(post.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </Body>
+              <Body>{post.description}</Body>
+            </div>
           ))}
         </div>
       </section>

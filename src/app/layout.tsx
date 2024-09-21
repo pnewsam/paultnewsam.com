@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${satoshi.className} text-stone-900 dark:text-stone-50 flex flex-col min-h-screen bg-stone-50 dark:bg-stone-900`}
+        className={`${satoshi.className} text-neutral-900 dark:text-neutral-50 flex flex-col min-h-screen bg-white dark:bg-neutral-900`}
       >
         <ThemeProvider>
           <Layout>{children}</Layout>

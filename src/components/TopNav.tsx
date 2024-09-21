@@ -9,7 +9,7 @@ export const TopNav = () => {
   return (
     <nav className="flex justify-between items-center py-4">
       <Link
-        className="text-lg text-stone-900 dark:text-white font-bold transition hover:text-stone-600 dark:hover:text-stone-300"
+        className="text-lg text-neutral-900 dark:text-white font-bold transition hover:text-neutral-600 dark:hover:text-neutral-300"
         href="/"
       >
         Paul T. Newsam
@@ -32,7 +32,7 @@ export const TopNav = () => {
               <InternalLink href="/">Home</InternalLink>
               <InternalLink href="/blog">Blog</InternalLink>
               <div className="flex items-center space-x-2">
-                <span className="text-sm text-stone-500 dark:text-stone-400">
+                <span className="text-sm text-neutral-500 dark:text-neutral-400">
                   Theme
                 </span>
                 <ThemeToggle />

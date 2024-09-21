@@ -126,7 +126,7 @@ export const fictionBooks = [
     books: [
       {
         title: "Frankenstein",
-        href: "https://www.amazon.com/Frankenstein-Prometheus-Vintage-Wollstonecraft-Hardcover/dp/B01181VZTE/ref=sr_1_4?crid=1J7KY3QNFO5H3&dib=eyJ2IjoiMSJ9.oj6Y25sgcDrgLmaUpcdP3Yfiq9xT6b1KKxPG4q-UTKW4PsEHRcwEqK_XQSfpTBVi2yrd7rkdgmqwcq99EPuzvU9yprNMYERy1ifbTfnfJQco0yQeMjaX5q6hKGY2pqGFLjvjJlOvLHWtazWrhGRrKZaD5B6SxgbwGDJEk38OUBqrWHbFL0CPbzyaqrahPoJcsIGWDxF82fdiDB79J9SymqDkgKYijha7zH4YUiYK7ZM.BsopI5cdWtVrWk59OzdJnrvEirqTJ7KTXWjOP07QoFg&dib_tag=se&keywords=everyman%27s+library+frankenstein&qid=1712369634&sprefix=everyman%27s+library+franke%2Caps%2C150&sr=8-4",
+        href: "https://www.amazon.com/Frankenstein-Prometheus-Vintage-Wollneutralcraft-Hardcover/dp/B01181VZTE/ref=sr_1_4?crid=1J7KY3QNFO5H3&dib=eyJ2IjoiMSJ9.oj6Y25sgcDrgLmaUpcdP3Yfiq9xT6b1KKxPG4q-UTKW4PsEHRcwEqK_XQSfpTBVi2yrd7rkdgmqwcq99EPuzvU9yprNMYERy1ifbTfnfJQco0yQeMjaX5q6hKGY2pqGFLjvjJlOvLHWtazWrhGRrKZaD5B6SxgbwGDJEk38OUBqrWHbFL0CPbzyaqrahPoJcsIGWDxF82fdiDB79J9SymqDkgKYijha7zH4YUiYK7ZM.BsopI5cdWtVrWk59OzdJnrvEirqTJ7KTXWjOP07QoFg&dib_tag=se&keywords=everyman%27s+library+frankenstein&qid=1712369634&sprefix=everyman%27s+library+franke%2Caps%2C150&sr=8-4",
       },
     ],
   },
@@ -305,8 +305,8 @@ export const fictionBooks = [
     name: "John Williams",
     books: [
       {
-        title: "Stoner",
-        href: "https://www.amazon.com/Stoner-York-Review-Books-Classics/dp/1590171993/ref=sr_1_1?crid=1YJQYGKDGXUGU&dib=eyJ2IjoiMSJ9.MevN2PxTnU5H7uhAL5OSwOyUUN3PW8gzjJgNtmoc7ghSrqhSjo4UwDWyJVRs7pwzCqgjR5nfEAxD-0t2NI2L39IpN_wFuLSNRkWk2r_uAmmO664U5llStDzPeQy6EJW2cAZNl-dNXpQrorcBFQOnVPQCl7iNvngBr1dZfvVMP0ZQFepQgJ79nvIKcSpqvWPsZlIj5Cqpzm2hSTfO3257QOjjin2SN1Kr0T5wlmakWCQ.2jqFJ0FqdMKjUr1zHIIJaqWf3pwdfeIni8v4qxN_7Ds&dib_tag=se&keywords=john+williams+stoner&qid=1712370079&sprefix=john+williams+st%2Caps%2C158&sr=8-1",
+        title: "neutralr",
+        href: "https://www.amazon.com/neutralr-York-Review-Books-Classics/dp/1590171993/ref=sr_1_1?crid=1YJQYGKDGXUGU&dib=eyJ2IjoiMSJ9.MevN2PxTnU5H7uhAL5OSwOyUUN3PW8gzjJgNtmoc7ghSrqhSjo4UwDWyJVRs7pwzCqgjR5nfEAxD-0t2NI2L39IpN_wFuLSNRkWk2r_uAmmO664U5llStDzPeQy6EJW2cAZNl-dNXpQrorcBFQOnVPQCl7iNvngBr1dZfvVMP0ZQFepQgJ79nvIKcSpqvWPsZlIj5Cqpzm2hSTfO3257QOjjin2SN1Kr0T5wlmakWCQ.2jqFJ0FqdMKjUr1zHIIJaqWf3pwdfeIni8v4qxN_7Ds&dib_tag=se&keywords=john+williams+neutralr&qid=1712370079&sprefix=john+williams+st%2Caps%2C158&sr=8-1",
       },
       {
         title: "Butcher's Crossing",
