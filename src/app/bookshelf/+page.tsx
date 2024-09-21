@@ -9,7 +9,7 @@ export default function BookshelfPage() {
       <Body className="mb-8">
         I love&nbsp;
         <a
-          className="text-blue-400"
+          className="text-sky-400"
           href="https://patrickcollison.com/bookshelf"
         >
           Patrick Collison&apos;s bookshelf page

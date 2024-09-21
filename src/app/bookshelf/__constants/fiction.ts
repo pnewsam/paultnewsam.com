@@ -20,7 +20,7 @@ export const fictionBooks = [
       },
       {
         title: "Crime and Punishment",
-        href: "https://www.amazon.com/Punishment-Everymans-Library-Fyodor-Dostoyevsky/dp/0679420290/ref=bmx_dp_3haerarn_d_sccl_3_2/147-7053671-0068057?pd_rd_w=LaOqS&content-id=amzn1.sym.628e3119-8afd-4af2-be6b-18415b51e649&pf_rd_p=628e3119-8afd-4af2-be6b-18415b51e649&pf_rd_r=CN3AJ06RC8VYEKF6BP71&pd_rd_wg=Sc87N&pd_rd_r=f74d3cbf-b1ef-4121-a081-1390d00d5b73&pd_rd_i=0679420290&psc=1",
+        href: "https://www.amazon.com/Punishment-Everymans-Library-Fyodor-Dostoyevcyan/dp/0679420290/ref=bmx_dp_3haerarn_d_sccl_3_2/147-7053671-0068057?pd_rd_w=LaOqS&content-id=amzn1.sym.628e3119-8afd-4af2-be6b-18415b51e649&pf_rd_p=628e3119-8afd-4af2-be6b-18415b51e649&pf_rd_r=CN3AJ06RC8VYEKF6BP71&pd_rd_wg=Sc87N&pd_rd_r=f74d3cbf-b1ef-4121-a081-1390d00d5b73&pd_rd_i=0679420290&psc=1",
       },
     ],
   },

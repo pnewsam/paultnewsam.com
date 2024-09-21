@@ -107,7 +107,7 @@ export const InternalLink = ({
 }) => (
   <Link
     className={cn(
-      "text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200 underline underline-offset-2",
+      "text-sky-600 dark:text-sky-400 hover:text-sky-800 dark:hover:text-sky-300 transition-colors duration-200 underline underline-offset-2",
       className
     )}
     href={href}
@@ -129,7 +129,7 @@ export const ExternalLink = ({
 } & React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
   <a
     className={cn(
-      "text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200 underline underline-offset-2",
+      "text-sky-600 dark:text-sky-400 hover:text-sky-800 dark:hover:text-sky-300 transition-colors duration-200 underline underline-offset-2",
       className
     )}
     href={href}

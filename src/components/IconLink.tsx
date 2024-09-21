@@ -13,7 +13,7 @@ export const IconLink = ({
   return (
     <ExternalLink
       href={href}
-      className="rounded-full w-12 h-12 p-2 inline-flex justify-center hover:bg-blue-100"
+      className="rounded-full w-12 h-12 p-2 inline-flex justify-center hover:bg-sky-100"
     >
       <Icon className="w-6 h-6 stroke-[1.5]" />
       <span className="text-base sr-only">{text}</span>

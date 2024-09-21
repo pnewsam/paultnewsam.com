@@ -21,7 +21,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   const Content = getMDXComponent(post.body.code);
 
   return (
-    <article className="space-y-8 pt-8">
+    <article className="space-y-8">
       <header>
         <H1>{post.title}</H1>
         <Body>

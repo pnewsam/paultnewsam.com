@@ -8,7 +8,7 @@ export default function BlogPage() {
   );
 
   return (
-    <div className="space-y-16 pt-8 w-full min-h-[calc(100vh-184px)]">
+    <div className="space-y-16 w-full min-h-[calc(100vh-184px)]">
       <section>
         <H1 className="mb-6">Blog</H1>
         <div className="space-y-6">
