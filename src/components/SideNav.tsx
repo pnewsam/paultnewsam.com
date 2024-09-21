@@ -7,15 +7,17 @@ import { Github, Linkedin, Mail, Twitter, FileText } from "lucide-react";
 export const SideNav = () => {
   return (
     <div>
-      <Avatar className="w-32 h-32 mb-4">
-        <AvatarImage src="/avatar.png" alt="Paul Newsam" />
-        <AvatarFallback>PN</AvatarFallback>
-      </Avatar>
-      <H1 className="mb-2">Paul T. Newsam</H1>
-      <Body className="mb-6">
-        Focused on creating efficient and user-centric web applications.
-      </Body>
-      <div className="flex justify-start items-center space-x-4 mb-6">
+      <div className="flex flex-col items-center text-center">
+        <Avatar className="w-32 h-32 mb-4">
+          <AvatarImage src="/avatar.png" alt="Paul Newsam" />
+          <AvatarFallback>PN</AvatarFallback>
+        </Avatar>
+        <H1 className="mb-2">Paul T. Newsam</H1>
+        <Body className="mb-6">
+          Focused on creating efficient and user-centric web applications.
+        </Body>
+      </div>
+      <div className="flex justify-center items-center space-x-4 mb-6">
         <ExternalLink href="https://github.com/pnewsam">
           <Github className="h-5 w-5" />
           <span className="sr-only">GitHub</span>
@@ -33,7 +35,7 @@ export const SideNav = () => {
           <span className="sr-only">Twitter</span>
         </ExternalLink>
       </div>
-      <div className="mb-4">
+      <div className="mb-4 flex justify-center">
         <Button variant="outline" asChild>
           <ExternalLink
             href="https://storage.paultnewsam.cc/Paul-Newsam_Resume-July-2024.pdf"
@@ -45,7 +47,7 @@ export const SideNav = () => {
         </Button>
       </div>
       <hr className="my-6 block" />
-      <div className="flex flex-col space-y-4 mt-4">
+      <div className="flex flex-col space-y-4 mt-4 justify-center items-center">
         <InternalLink href="/">Home</InternalLink>
         <InternalLink href="/blog">Blog</InternalLink>
       </div>
