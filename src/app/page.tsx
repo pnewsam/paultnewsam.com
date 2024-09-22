@@ -1,5 +1,12 @@
 import { ArrowRight } from "lucide-react";
-import { H1, H2, H3, Body, InternalLink } from "@/components/typography";
+import {
+  H1,
+  H2,
+  H3,
+  Body,
+  ExternalLink,
+  InternalLink,
+} from "@/components/typography";
 import { buttonVariants } from "@/components/ui/button";
 import { allPosts } from "contentlayer/generated";
 import { cn } from "@/lib/utils";
@@ -12,16 +19,22 @@ export default function Home() {
   return (
     <div className="space-y-16 min-h-screen">
       <section>
-        <H1 className="mb-4">About Me</H1>
-        <Body>
-          I&apos;m a frontend engineer with six years of experience in
-          developing web applications. My focus is on creating intuitive user
-          interfaces and optimizing application performance. I bring a
-          comprehensive approach to software engineering, drawing from my
-          background in both frontend and full-stack development. Outside of
-          work, I enjoy outdoor activities which often provide fresh
-          perspectives on problem-solving in tech.
+        <H1 className="mb-8">Hey, I&apos;m Paul!</H1>
+        <Body className="mb-4">
+          I&apos;m a web developer based in San Diego, CA. I build websites with
+          my web design company&nbsp;
+          <ExternalLink href="https://uxadvantage.com/">
+            UX Advantage
+          </ExternalLink>
+          . If you&apos;re looking for help with a website, let me know!
         </Body>
+        <Body className="mb-4">
+          Before getting into tech, I moved around a lot. I spent a good chunk
+          of time doing bird and vegetation surveys in the field as a seasonal
+          biological technician. I also worked in a few coffee shops, a movie
+          theater, and spent all of a week driving Uber.
+        </Body>
+        <Body>In my spare time I love to hike, run, cook.</Body>
       </section>
 
       <section>
@@ -45,21 +58,10 @@ export default function Home() {
                   "inline-flex items-center"
                 )}
               >
-                Read more <ArrowRight className="ml-2 h-4 w-4" />
+                Read this post <ArrowRight className="ml-2 h-4 w-4" />
               </InternalLink>
             </div>
           ))}
-        </div>
-        <div className="mt-6">
-          <InternalLink
-            href="/blog"
-            className={cn(
-              buttonVariants({ variant: "outline" }),
-              "inline-flex items-center"
-            )}
-          >
-            View all posts <ArrowRight className="ml-2 h-4 w-4" />
-          </InternalLink>
         </div>
       </section>
     </div>

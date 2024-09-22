@@ -13,9 +13,7 @@ export const SideNav = () => {
           <AvatarFallback>PN</AvatarFallback>
         </Avatar>
         <H1 className="mb-2">Paul T. Newsam</H1>
-        <Body className="mb-6">
-          Focused on creating efficient and user-centric web applications.
-        </Body>
+        <Body className="mb-6">Web developer based in San Diego, CA.</Body>
       </div>
       <div className="flex justify-center items-center space-x-4 mb-6">
         <ExternalLink href="https://github.com/pnewsam">
