@@ -60,13 +60,13 @@ export default function Home() {
               <Globe className="w-4 h-4" />
               Website
             </a>
-            <a
+            {/* <a
               className="inline-flex font-medium text-sm items-center gap-2 text-blue-400 transition-colors hover:text-blue-500 border border-blue-400 rounded px-2 py-1 hover:bg-blue-100/75"
               href=""
             >
               <Github className="w-4 h-4" />
               Github
-            </a>
+            </a> */}
           </div>
         </div>
 
