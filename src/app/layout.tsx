@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { ThemeProvider } from "@/contexts/ThemeContext";
-import { Layout } from "@/components/Layout";
 import "./globals.css";
 
 const satoshi = localFont({
@@ -11,7 +9,7 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Paul T. Newsam | Frontend Developer",
+  title: "Paul T. Newsam",
   description: "Personal website of Paul T. Newsam",
 };
 
@@ -22,12 +20,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full">
-      <body
-        className={`${satoshi.className} text-neutral-900 dark:text-neutral-50 flex flex-col min-h-screen bg-white dark:bg-neutral-900`}
-      >
-        <ThemeProvider>
-          <Layout>{children}</Layout>
-        </ThemeProvider>
+      <body className={`${satoshi.className} bg-white text-neutral-800`}>
+        <main className="">{children}</main>
       </body>
     </html>
   );
