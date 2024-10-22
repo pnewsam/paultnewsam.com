@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full" suppressHydrationWarning>
+    <html lang="en" className="dark h-full" suppressHydrationWarning>
       <body className={erode.className}>
         <Navbar />
         <main>{children}</main>
