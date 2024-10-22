@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
 
-const satoshi = localFont({
-  src: "./Satoshi-Variable.woff2",
+const erode = localFont({
+  src: "./Erode-Variable.woff2",
   display: "swap",
   weight: "200 800",
 });
@@ -19,9 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full">
-      <body className={`${satoshi.className} bg-white text-neutral-800`}>
-        <main className="">{children}</main>
+    <html lang="en" className="h-full" suppressHydrationWarning>
+      <body className={erode.className}>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );
