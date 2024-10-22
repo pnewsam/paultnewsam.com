@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
 
 const erode = localFont({
   src: "./Erode-Variable.woff2",
@@ -22,9 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
       <body className={erode.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
-          <main>{children}</main>
-        </ThemeProvider>
+        <Navbar />
+        <main>{children}</main>
       </body>
     </html>
   );

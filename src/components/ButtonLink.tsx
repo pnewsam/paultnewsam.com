@@ -12,7 +12,11 @@ export const ButtonLink = ({
 }) => (
   <a
     href={href}
-    className={cn(buttonVariants({ variant: "secondary" }), "gap-2", className)}
+    className={cn(
+      buttonVariants({ variant: "secondary" }),
+      "gap-2 font-light text-base",
+      className
+    )}
   >
     {children}
   </a>
