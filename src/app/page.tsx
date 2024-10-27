@@ -19,7 +19,7 @@ export default function Home() {
       <p className="text-2xl/relaxed md:text-3xl/relaxed mb-16">
         Sometimes I build websites under my brand,{" "}
         <a
-          className="text-orange-400 hover:text-orange-300 transition-colors"
+          className="text-cyan-400 hover:text-cyan-300 transition-colors"
           href="https://uxadvantage.com"
         >
           UX Advantage
@@ -27,7 +27,7 @@ export default function Home() {
         . And I&apos;m always working on some project or other. Right now
         I&apos;m working on a Link in Bio tool for Podcasters called&nbsp;
         <a
-          className="text-orange-400 hover:text-orange-300 transition-colors"
+          className="text-cyan-400 hover:text-cyan-300 transition-colors"
           href="https://podsleeve.com"
         >
           PodSleeve
