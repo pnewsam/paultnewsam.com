@@ -14,7 +14,7 @@ export const ButtonLink = ({
     href={href}
     className={cn(
       buttonVariants({ variant: "secondary" }),
-      "gap-2 font-light text-base",
+      "gap-2 font-medium text-base hover:bg-neutral-200 dark:hover:bg-neutral-700",
       className
     )}
   >

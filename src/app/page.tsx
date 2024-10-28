@@ -10,16 +10,16 @@ export default function Home() {
       <h1 className="font-medium text-4xl md:text-5xl mb-4 md:mb-8">
         Hey, I&apos;m Paul.
       </h1>
-      <p className="text-2xl/relaxed md:text-3xl/relaxed mb-8">
+      <p className="text-xl/relaxed md:text-2xl/relaxed mb-8 text-neutral-600 dark:text-neutral-300">
         I&apos;m a frontend developer currently based in San Diego, CA. Mostly I
         work with Typescript{" "}
         <Typescript className="w-8 h-8 inline -translate-y-1 mr-1" /> and React{" "}
         <React className="w-8 h-8 inline -translate-y-1 mr-1" />.
       </p>
-      <p className="text-2xl/relaxed md:text-3xl/relaxed mb-16">
+      <p className="text-xl/relaxed md:text-2xl/relaxed mb-16 text-neutral-600 dark:text-neutral-300">
         Sometimes I build websites under my brand,{" "}
         <a
-          className="text-cyan-400 hover:text-cyan-300 transition-colors"
+          className="text-sky-300 hover:text-sky-500 transition-colors"
           href="https://uxadvantage.com"
         >
           UX Advantage
@@ -27,7 +27,7 @@ export default function Home() {
         . And I&apos;m always working on some project or other. Right now
         I&apos;m working on a Link in Bio tool for Podcasters called&nbsp;
         <a
-          className="text-cyan-400 hover:text-cyan-300 transition-colors"
+          className="text-sky-300 hover:text-sky-500 transition-colors"
           href="https://podsleeve.com"
         >
           PodSleeve
