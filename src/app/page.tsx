@@ -52,7 +52,7 @@ export default function Home() {
             text: "Twitter",
           },
           {
-            href: "https://storage.paultnewsam.cc/Paul-Newsam_Resume-July-2024.pdf",
+            href: "https://storage.paultnewsam.com/Paul-Newsam_Resume-October-2024.pdf",
             icon: File,
             text: "Download resume",
           },
