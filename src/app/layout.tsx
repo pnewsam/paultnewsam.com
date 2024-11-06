@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 const erode = localFont({
-  src: "./Satoshi-Variable.woff2",
+  src: "./Erode-Variable.woff2",
   display: "swap",
   weight: "200 800",
 });

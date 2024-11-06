@@ -1,5 +1,4 @@
 import { Github, Linkedin, Twitter, Globe, File } from "lucide-react";
-import Navbar from "@/components/Navbar";
 import { Typescript } from "@/components/Typescript";
 import { React } from "@/components/React";
 import { ButtonLink } from "@/components/ButtonLink";
