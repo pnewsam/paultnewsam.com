@@ -1,0 +1,71 @@
+---
+title: Heap and Stack in Javascript Memory Management
+date: "2024-11-24"
+description: Like all other programs, Javascript programs use a stack and a heap to manage memory. But how should that influence how we write code?
+---
+
+## Memory Management
+
+When we code in Javascript, we don't have to think too much about memory. That's one of Javascripts main advantages -- memory management can be laborious and error-prone, so leaving that work to the engine means we can focus on application logic. However, the engine isn't perfect, and it's possible to write code that impedes the engine's work. So it's helpful to understand some practical details about how memory management happens.
+
+### Heap and Stack
+
+As with all other programs, memory in Javascript programs is managed in two areas: the **stack** and the **heap**. In Javascript's case, the **stack** manages the execution context of the running code, as well as primitive values and object references. The **heap** stores basically everything else, so: all non-primitives such as objects, arrays, and functions. (Note that in practice, both arrays and functions are actually objects too.) Here are some examples of values stored on the **stack** and **heap** respectively:
+
+```javascript
+// Stack storage
+let number = 42; // Primitive stored directly
+let str = "hello"; // Primitive stored directly
+let obj = { name: "John" }; // Reference stored (object in heap)
+
+// Heap allocations
+let array = new Array(1000); // Large array in heap
+let obj = {
+  // Object in heap
+  data: new ArrayBuffer(1000), // Large buffer in heap
+};
+```
+
+Mostly we can ignore this as an implementation detail. But there are a couple of cases where you might want to take note of distinction. One is **memory leaks**. Stack-allocated data is automatically freed when it goes out of scope, but heap-allocated data is not. So it's fairly common to create memory leaks by neglecting to free references to heap-allocated objects.
+
+```javascript
+function doMath() {
+  let x = 1;
+  let y = 2;
+  return x + y;
+}
+
+// Potential memory leak - heap allocated objects not being cleaned up
+function addHandler() {
+  const bigData = {
+    /* lots of data */
+  };
+  element.addEventListener("click", () => {
+    console.log(bigData); // bigData can't be garbage collected
+    // while this handler exists
+  });
+}
+```
+
+The second is **caching**. If you're having to frequently access heap-allocated data, you can limit your overhead by caching it on the stack.
+
+```javascript
+// Less efficient - repeated heap access
+function sum(obj) {
+  let sum = 0;
+  for (let i = 0; i < 1000; i++) {
+    sum += obj.value; // accessing heap each time
+  }
+  return sum;
+}
+
+// More efficient - single heap access
+function sum(obj) {
+  let sum = 0;
+  const value = obj.value; // cache heap value in stack
+  for (let i = 0; i < 1000; i++) {
+    sum += value;
+  }
+  return sum;
+}
+```

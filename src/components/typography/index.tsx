@@ -11,7 +11,7 @@ export const Body = ({
 }) => (
   <p
     className={cn(
-      "text-base text-neutral-700 dark:text-neutral-300 leading-relaxed",
+      "text-xl/relaxed md:text-2xl/relaxed mb-8 text-neutral-600 dark:text-neutral-300",
       className
     )}
   >
@@ -53,7 +53,7 @@ export const H1 = ({
 }) => (
   <h1
     className={cn(
-      "text-4xl font-bold text-neutral-900 dark:text-white mb-4",
+      "text-5xl font-medium text-neutral-900 dark:text-white mb-4",
       className
     )}
   >
@@ -70,7 +70,7 @@ export const H2 = ({
 }) => (
   <h2
     className={cn(
-      "text-2xl font-semibold text-neutral-800 dark:text-neutral-100 mb-3",
+      "text-3xl font-medium text-neutral-800 dark:text-neutral-100 mb-3",
       className
     )}
   >
@@ -87,7 +87,7 @@ export const H3 = ({
 }) => (
   <h3
     className={cn(
-      "text-xl font-semibold text-neutral-900 dark:text-white",
+      "text-2xl font-medium text-neutral-900 dark:text-white",
       className
     )}
   >

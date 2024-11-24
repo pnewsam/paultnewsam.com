@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
 import { H1, H2, Body } from "@/components/typography";
+import Container from "@/components/Container";
 
 export default function BlogPage() {
   const posts = allPosts.sort(
@@ -8,9 +9,15 @@ export default function BlogPage() {
   );
 
   return (
-    <div className="space-y-16 w-full min-h-[calc(100vh-184px)]">
-      <section>
+    <Container>
+      <section className="py-12 md:py-24">
         <H1 className="mb-6">Blog</H1>
+        <Body>
+          I started writing this blog in order to develop a better understanding
+          of topics that interest me, and keep myself accountable to continuous
+          learning. More likely than not, you&apos;ll be able to find better
+          explanations of the topics I write about elsewhere.
+        </Body>
         <div className="space-y-6">
           {posts.map((post) => (
             <div key={post._id} className="space-y-2">
@@ -19,18 +26,10 @@ export default function BlogPage() {
                   {post.title}
                 </Link>
               </H2>
-              <Body>
-                {new Date(post.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </Body>
-              <Body>{post.description}</Body>
             </div>
           ))}
         </div>
       </section>
-    </div>
+    </Container>
   );
 }
