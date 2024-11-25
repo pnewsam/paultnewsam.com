@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <div className="">
       <nav className="container max-w-screen-lg mx-auto px-8 flex justify-end py-8 gap-4">
-        <div className="flex items-center gap-4">
+        {/* <div className="flex items-center gap-4">
           <Link
             className="hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-md px-2 py-1"
             href="/"
@@ -17,7 +17,7 @@ export default function Navbar() {
           >
             Blog
           </Link>
-        </div>
+        </div> */}
         <ThemeToggle />
       </nav>
     </div>
