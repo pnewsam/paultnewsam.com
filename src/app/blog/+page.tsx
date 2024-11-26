@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
-import { H1, H2, Body } from "@/components/typography";
+import { H1 } from "@/components/typography/H1";
+import { H2 } from "@/components/typography/H2";
+import { Body } from "@/components/typography/Body";
 import Container from "@/components/Container";
 
 export default function BlogPage() {

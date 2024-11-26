@@ -1,9 +1,10 @@
-import { Github, Linkedin, Twitter, Globe, File } from "lucide-react";
+import { Github, Linkedin, Twitter, File } from "lucide-react";
 import { Typescript } from "@/components/Typescript";
 import { React } from "@/components/React";
 import { ButtonLink } from "@/components/ButtonLink";
 import Container from "@/components/Container";
-import { H1, Body } from "@/components/typography";
+import { H1 } from "@/components/typography/H1";
+import { Body } from "@/components/typography/Body";
 
 export default function Home() {
   return (

@@ -32,27 +32,21 @@ const LinkCard = ({
   </Link>
 );
 
-export default function SandboxPage() {
+export default function NotesPage() {
   return (
     <Container>
       <section className="py-12 md:py-24">
         <PageHeader
-          title="Sandbox"
+          title="Notes"
           tags={[]}
-          description="This is where I play around with ideas. Here are some of the things I've built."
+          description="I collect notes here that I find interesting or useful."
         />
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           <LinkCard
-            href="/sandbox/whiteboard"
-            tags={["HTML", "Javascript"]}
-            title="Whiteboard"
-            description="A very basic whiteboard with HTML Canvas."
-          />
-          <LinkCard
-            href="/sandbox/infinite-scroll"
-            tags={["Javascript"]}
-            title="Infinite Scroll"
-            description="A simple infinite scroll implementation."
+            href="/notes/min-heap"
+            tags={["Data Structures", "Typescript"]}
+            title="Min Heap"
+            description="A min heap implementation in Typescript."
           />
         </div>
       </section>
