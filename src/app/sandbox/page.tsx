@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { H1, H3, Body, BodySmall } from "@/components/typography";
+import { H3, BodySmall } from "@/components/typography";
 import Container from "@/components/Container";
 import Badge from "@/components/Badge";
 import PageHeader from "@/components/PageHeader";

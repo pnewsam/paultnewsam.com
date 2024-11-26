@@ -12,8 +12,8 @@ export default function PageHeader({
 }) {
   return (
     <>
-      <H1>{title}</H1>
-      <div className="flex items-center gap-2 mb-4">
+      <H1 className="mb-6">{title}</H1>
+      <div className="flex items-center gap-2 mb-6">
         {tags.map((tag) => (
           <Badge key={tag}>{tag}</Badge>
         ))}
