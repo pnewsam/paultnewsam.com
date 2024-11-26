@@ -19,6 +19,23 @@ export const Body = ({
   </p>
 );
 
+export const BodySmall = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => (
+  <p
+    className={cn(
+      "text-lg md:text-xl text-neutral-600 dark:text-neutral-300",
+      className
+    )}
+  >
+    {children}
+  </p>
+);
+
 export const Ul = ({
   children,
   className,
