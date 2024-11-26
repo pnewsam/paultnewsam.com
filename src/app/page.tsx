@@ -3,38 +3,31 @@ import { Typescript } from "@/components/Typescript";
 import { React } from "@/components/React";
 import { ButtonLink } from "@/components/ButtonLink";
 import Container from "@/components/Container";
+import { H1, Body } from "@/components/typography";
 
 export default function Home() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <h1 className="font-medium text-4xl md:text-5xl mb-4 md:mb-8">
-          Hey, I&apos;m Paul.
-        </h1>
-        <p className="text-xl/relaxed md:text-2xl/relaxed mb-8 text-neutral-600 dark:text-neutral-300">
+        <H1 className="mb-8">Hey, I&apos;m Paul.</H1>
+        <Body>
           I&apos;m a frontend developer currently based in San Diego, CA. Mostly
           I work with Typescript{" "}
           <Typescript className="w-8 h-8 inline -translate-y-1 mr-1" /> and
           React <React className="w-8 h-8 inline -translate-y-1 mr-1" />.
-        </p>
-        <p className="text-xl/relaxed md:text-2xl/relaxed mb-16 text-neutral-600 dark:text-neutral-300">
-          Sometimes I build websites under the name,{" "}
+          Sometimes I build websites with my business{" "}
           <a
-            className="text-sky-300 hover:text-sky-500 transition-colors"
+            className="text-cyan-400 dark:text-cyan-400 hover:text-cyan-500 dark:hover:text-cyan-300 transition-colors"
             href="https://uxadvantage.com"
           >
             UX Advantage
           </a>
-          . And I&apos;m always working on some project or other. Right now
-          I&apos;m working on a Link in Bio tool for Podcasters called&nbsp;
-          <a
-            className="text-sky-300 hover:text-sky-500 transition-colors"
-            href="https://podsleeve.com"
-          >
-            PodSleeve
-          </a>
           .
-        </p>
+        </Body>
+        <Body>
+          In my spare time I like to read, go hiking, and spend time with my
+          family and two cats.
+        </Body>
         <div className="flex flex-wrap gap-3 items-center">
           {[
             {

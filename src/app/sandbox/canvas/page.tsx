@@ -19,7 +19,7 @@ export default function CanvasPage() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <H1>Canvas Whiteboard</H1>
+        <H1>Whiteboard</H1>
         <Body>
           I&apos;d spent some time with SVGs but I&apos;d never used HTML{" "}
           <code className="bg-neutral-100 dark:bg-neutral-800 rounded-md p-1">
