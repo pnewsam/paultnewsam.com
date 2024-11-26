@@ -2,6 +2,7 @@ import Link from "next/link";
 import { H1, H3, Body, BodySmall } from "@/components/typography";
 import Container from "@/components/Container";
 import Badge from "@/components/Badge";
+import PageHeader from "@/components/PageHeader";
 
 const LinkCard = ({
   href,
@@ -34,21 +35,21 @@ export default function SandboxPage() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <H1 className="mb-6">Sandbox</H1>
-        <Body>
-          This is where I play around with ideas. Here are some of the things
-          I&apos;ve built.
-        </Body>
+        <PageHeader
+          title="Sandbox"
+          tags={[]}
+          description="This is where I play around with ideas. Here are some of the things I've built."
+        />
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           <LinkCard
-            href="/sandbox/canvas"
-            tags={["Vanilla Javascript"]}
+            href="/sandbox/whiteboard"
+            tags={["HTML", "Javascript"]}
             title="Whiteboard"
             description="A very basic whiteboard with HTML Canvas."
           />
           <LinkCard
             href="/sandbox/infinite-scroll"
-            tags={["Vanilla Javascript", "UI Pattern"]}
+            tags={["Javascript"]}
             title="Infinite Scroll"
             description="A simple infinite scroll implementation."
           />
