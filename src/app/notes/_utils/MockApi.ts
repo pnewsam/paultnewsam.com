@@ -1,4 +1,4 @@
-import { names } from "../_mocks/names";
+import { names } from "./MockApi.data";
 
 type Person = {
   id: number;

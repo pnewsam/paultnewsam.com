@@ -30,12 +30,12 @@ export default function NotesPage() {
             title="Min Heap"
             description="A min heap implementation in Typescript."
           />
-          {/* <LinkCard
+          <LinkCard
             href="/notes/binary-tree"
             tags={["Data Structures", "Typescript"]}
             title="Binary Tree"
-            description="A binary tree implementation in Typescript."
-          /> */}
+            description="A basic binary tree implementation in Typescript."
+          />
         </div>
       </section>
     </Container>

@@ -1,10 +1,4 @@
-import CodeSnippet from "@/components/CodeSnippet";
-import Container from "@/components/Container";
-import { Body } from "@/components/typography/Body";
-import { H3 } from "@/components/typography/H3";
-import PageHeader from "@/components/PageHeader";
-
-const insertSnippet = `class TreeNode {
+class TreeNode {
   value: number;
   left: TreeNode | null;
   right: TreeNode | null;
@@ -58,9 +52,9 @@ function insert(tree: Tree, value: number) {
 const tree = new Tree(null);
 insert(tree, 5);
 insert(tree, 8);
-insert(tree, 3);`;
+insert(tree, 3);
 
-const traversalSnippet = `function inOrder(node: TreeNode | null): void {
+function inOrder(node: TreeNode | null): void {
   if (node !== null) {
     inOrder(node.left);
     console.log(node.value);
@@ -71,40 +65,15 @@ const traversalSnippet = `function inOrder(node: TreeNode | null): void {
 function preOrder(node: TreeNode | null): void {
   if (node !== null) {
     console.log(node.value);
-    inOrder(node.left);
-    inOrder(node.right);
+    preOrder(node.left);
+    preOrder(node.right);
   }
 }
 
 function postOrder(node: TreeNode | null): void {
   if (node !== null) {
-    inOrder(node.left);
-    inOrder(node.right);
+    postOrder(node.left);
+    postOrder(node.right);
     console.log(node.value);
   }
-}`;
-
-export default function BinaryTreeTraversalPage() {
-  return (
-    <Container>
-      <section className="py-12 md:py-24">
-        <PageHeader
-          title="Binary Tree"
-          tags={["Data Structures", "Typescript"]}
-          description="A binary tree implementation in Typescript."
-        />
-        <div className="mb-8">
-          <CodeSnippet code={insertSnippet} language="typescript" />
-        </div>
-
-        <H3 className="mb-4">Traversal</H3>
-        <Body>
-          Traversal can happen in in-order, pre-order, or post-order. In a&nbsp;
-          <b>binary search tree</b>, in-order traversal will return the items in
-          the proper order.
-        </Body>
-        <CodeSnippet code={traversalSnippet} language="typescript" />
-      </section>
-    </Container>
-  );
 }
