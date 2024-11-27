@@ -36,6 +36,12 @@ export default function NotesPage() {
             title="Binary Tree"
             description="A basic binary tree implementation in Typescript."
           />
+          <LinkCard
+            href="/notes/latency-numbers"
+            tags={["Performance"]}
+            title="Latency Numbers"
+            description="A table of latency numbers for various operations."
+          />
         </div>
       </section>
     </Container>
