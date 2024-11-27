@@ -45,12 +45,6 @@ export default function MinHeapPage() {
           tags={["Data Structures", "Typescript"]}
           description="A min heap implementation in Typescript."
         />
-        {/* 
-        <H2>What is a min heap?</H2>
-        <Body>
-          A min heap is a binary tree where each node is less than or equal to
-          its children.
-        </Body> */}
         <CodeSnippet code={snippet} language="typescript" />
       </section>
     </Container>

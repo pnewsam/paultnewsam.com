@@ -1,4 +1,5 @@
 import ThemeToggle from "./ThemeToggle";
+import Link from "next/link";
 import BackLink from "./BackLink";
 
 export default function Navbar() {
@@ -9,20 +10,20 @@ export default function Navbar() {
           <BackLink />
         </div>
         <div className="flex items-center gap-4">
-          {/* <Link
+          <Link
             className="hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-md px-2 py-1"
             href="/"
           >
             Home
-          </Link> */}
-          {/* <Link
+          </Link>
+          <Link
             className="hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-md px-2 py-1"
-            href="/sandbox"
+            href="/notes"
           >
-            Sandbox
-          </Link> */}
+            Notes
+          </Link>
+          <ThemeToggle />
         </div>
-        <ThemeToggle />
       </nav>
     </div>
   );

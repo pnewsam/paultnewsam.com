@@ -7,6 +7,7 @@ import PageHeader from "@/components/PageHeader";
 import InfiniteScroll from "../_components/InfiniteScroll";
 import Button from "@/components/Button";
 import { api } from "../_utils/MockApi";
+import { Loader2 } from "lucide-react";
 
 type Person = {
   id: number;
@@ -20,8 +21,11 @@ export default function InfiniteScrollPage() {
 
   const fetchPeople = useCallback(
     async (page: number) => {
+      setLoading(true);
       const newPeople = await api.fetchPeople({ page });
       setPeople((prevPeople) => [...prevPeople, ...newPeople]);
+      setLoading(false);
+      setPage((prevPage) => prevPage + 1);
     },
     [setPeople]
   );
@@ -31,10 +35,7 @@ export default function InfiniteScrollPage() {
   }, []);
 
   const handleLoadMore = async () => {
-    setLoading(true);
     await fetchPeople(page);
-    setPage((prevPage) => prevPage + 1);
-    setLoading(false);
   };
 
   return (
@@ -42,13 +43,16 @@ export default function InfiniteScrollPage() {
       <section className="py-12 md:py-24">
         <PageHeader
           title="Infinite Scroll"
-          tags={["Javascript"]}
+          tags={["Typescript"]}
           description="Infinite scroll is a common UI pattern used to load content as the user scrolls. It's often used on blogs, news sites, and social media platforms."
         />
         <Card>
           <div className="bg-neutral-200 dark:bg-neutral-700 border-b p-4 flex gap-4 rounded-t-md items-center justify-between">
             {loading ? (
-              <span>Loading...</span>
+              <div className="inline-flex gap-2 items-center">
+                <Loader2 className="w-4 h-4 animate-spin" />
+                Loading...
+              </div>
             ) : (
               <span> {people.length} people</span>
             )}

@@ -8,12 +8,6 @@ const isSubpage = (pathname: string, page: string) =>
   pathname.includes(page) && pathname !== page;
 
 const getLinkProps = (pathname: string) => {
-  if (["/sandbox", "/notes"].includes(pathname))
-    return { href: "/", label: "Home" };
-
-  if (isSubpage(pathname, "/sandbox"))
-    return { href: "/sandbox", label: "Sandbox" };
-
   if (isSubpage(pathname, "/notes")) return { href: "/notes", label: "Notes" };
 
   return {};

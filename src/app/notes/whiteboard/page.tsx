@@ -23,8 +23,8 @@ export default function WhiteboardPage() {
       <section className="py-12 md:py-24">
         <PageHeader
           title="Whiteboard"
-          tags={["HTML", "Javascript"]}
-          description="I'd spent some time with SVGs but I'd never used HTML <canvas />. I thought I'd give it a shot. This is a simple whiteboard. You can click and drag to draw."
+          tags={["HTML", "Typescript"]}
+          description="A basic whiteboard using HTML <canvas />. Click and drag to draw."
         />
         <Card className="relative">
           <span className="absolute top-0 right-0 text-base uppercase tracking-widest font-medium p-4 text-neutral-500 dark:text-neutral-400 flex items-center gap-2 bg-neutral-100 dark:bg-neutral-800 rounded-tr-md rounded-bl-md border-t border-r border-neutral-200 dark:border-neutral-800">
