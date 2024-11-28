@@ -1,6 +1,7 @@
 import CodeSnippet from "@/components/CodeSnippet";
 import Container from "@/components/Container";
 import PageHeader from "@/components/PageHeader";
+import { Body } from "@/components/typography/Body";
 
 const snippet = `function buildMinHeap(heap: number[]) {
   const len = heap.length;
@@ -40,11 +41,8 @@ export default function MinHeapPage() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <PageHeader
-          title="Min Heap"
-          tags={["Data Structures", "Typescript"]}
-          description="A min heap implementation in Typescript."
-        />
+        <PageHeader title="Min Heap" tags={["Data Structures", "Typescript"]} />
+        <Body>A min heap implementation in Typescript.</Body>
         <CodeSnippet code={snippet} language="typescript" />
       </section>
     </Container>

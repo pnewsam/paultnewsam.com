@@ -91,8 +91,8 @@ export default function BinaryTreeTraversalPage() {
         <PageHeader
           title="Binary Tree"
           tags={["Data Structures", "Typescript"]}
-          description="A binary tree implementation in Typescript."
         />
+        <Body>A binary tree implementation in Typescript.</Body>
         <div className="mb-8">
           <CodeSnippet code={insertSnippet} language="typescript" />
         </div>

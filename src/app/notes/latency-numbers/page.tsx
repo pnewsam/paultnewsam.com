@@ -1,5 +1,6 @@
 import Container from "@/components/Container";
 import PageHeader from "@/components/PageHeader";
+import { Body } from "@/components/typography/Body";
 import Card from "@/components/Card";
 
 const logScale = (value: number) => {
@@ -103,11 +104,8 @@ export default function LatencyNumbersPage() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <PageHeader
-          title="Latency Numbers"
-          tags={["Performance"]}
-          description="A table of latency numbers for various operations. Squares are scaled in size logarithmically."
-        />
+        <PageHeader title="Latency Numbers" tags={["Performance"]} />
+        <Body>Squares are scaled in size logarithmically.</Body>
 
         <Card className="overflow-x-auto">
           <table className="w-full text-lg">
