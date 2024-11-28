@@ -10,7 +10,7 @@ export default function Navbar() {
           <BackLink />
         </div>
         <div className="flex items-center gap-4">
-          <Link
+          {/* <Link
             className="hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-md px-2 py-1"
             href="/"
           >
@@ -21,7 +21,7 @@ export default function Navbar() {
             href="/notes"
           >
             Notes
-          </Link>
+          </Link> */}
           <ThemeToggle />
         </div>
       </nav>
