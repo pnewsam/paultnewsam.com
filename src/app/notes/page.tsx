@@ -7,6 +7,34 @@ import { H2 } from "@/components/typography/H2";
 
 const showDsaNotes = process.env.SHOW_DSA_NOTES === "true";
 
+const Problems = ({
+  problems,
+}: {
+  problems: {
+    title: string;
+    url: string;
+    status?: "done" | "attempted" | "not done";
+  }[];
+}) => (
+  <ul className="list-disc list-inside">
+    {problems.map((problem) => (
+      <li key={problem.url} className="">
+        <a
+          className="hover:text-cyan-500 dark:hover:text-cyan-400"
+          href={problem.url}
+        >
+          <span className="underline">{problem.title}</span>&nbsp;&nbsp;
+          <span className="text-green-500 dark:text-green-400">
+            {problem.status === "done" && "✅"}
+            {problem.status === "attempted" && "🔄"}
+            {problem.status === "not done" && "❌"}
+          </span>
+        </a>
+      </li>
+    ))}
+  </ul>
+);
+
 export default function NotesPage() {
   return (
     <Container>
@@ -49,7 +77,7 @@ export default function NotesPage() {
                   <tr className="text-left text-xl">
                     <th className="p-4">Topic</th>
                     <th className="p-4">Key Concepts</th>
-                    <th className="p-4">Problems</th>
+                    <th className="p-4">Problems (40 total)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -59,14 +87,36 @@ export default function NotesPage() {
                         Arrays and Hashing
                       </TextLink>
                     </td>
-                    <td className="p-4">Hash tables, Arrays</td>
                     <td className="p-4">
-                      <ul className="list-disc list-inside">
-                        <li>Two Sum</li>
-                        <li>Longest Substring Without Repeating Characters</li>
-                        <li>Maximum Subarray</li>
-                        <li>Product of Array Except Self</li>
-                      </ul>
+                      Sliding window; two-pointer technique; hashing for fast
+                      lookups
+                    </td>
+                    <td className="p-4">
+                      <Problems
+                        problems={[
+                          {
+                            title: "1. Two Sum",
+                            url: "https://leetcode.com/problems/two-sum/",
+                            status: "done",
+                          },
+                          {
+                            title:
+                              "3. Longest Substring Without Repeating Characters",
+                            url: "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+                            status: "done",
+                          },
+                          {
+                            title: "53. Maximum Subarray",
+                            url: "https://leetcode.com/problems/maximum-subarray/",
+                            status: "done",
+                          },
+                          {
+                            title: "238. Product of Array Except Self",
+                            url: "https://leetcode.com/problems/product-of-array-except-self/",
+                            status: "done",
+                          },
+                        ]}
+                      />
                     </td>
                   </tr>
                   <tr className="border-t">
@@ -75,14 +125,34 @@ export default function NotesPage() {
                         Binary Search
                       </TextLink>
                     </td>
-                    <td className="p-4">Divide & Conquer, Search Space</td>
                     <td className="p-4">
-                      <ul className="list-disc list-inside">
-                        <li>Binary Search</li>
-                        <li>Search a 2D Matrix</li>
-                        <li>Find Minimum in Rotated Sorted Array</li>
-                        <li>Median of Two Sorted Arrays</li>
-                      </ul>
+                      Divide and conquer; variations of binary search
+                    </td>
+                    <td className="p-4">
+                      <Problems
+                        problems={[
+                          {
+                            title: "704. Binary Search",
+                            url: "https://leetcode.com/problems/binary-search/",
+                            status: "not done",
+                          },
+                          {
+                            title: "74. Search a 2D Matrix",
+                            url: "https://leetcode.com/problems/search-a-2d-matrix/",
+                            status: "not done",
+                          },
+                          {
+                            title: "153. Find Minimum in Rotated Sorted Array",
+                            url: "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+                            status: "done",
+                          },
+                          {
+                            title: "4. Median of Two Sorted Arrays",
+                            url: "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+                            status: "not done",
+                          },
+                        ]}
+                      />
                     </td>
                   </tr>
                   <tr className="border-t">
@@ -95,12 +165,30 @@ export default function NotesPage() {
                       Pointer manipulation; reversing lists
                     </td>
                     <td className="p-4">
-                      <ul className="list-disc list-inside">
-                        <li>Reverse Linked List</li>
-                        <li>Merge Two Sorted Lists</li>
-                        <li>Linked List Cycle</li>
-                        <li>Reorder List</li>
-                      </ul>
+                      <Problems
+                        problems={[
+                          {
+                            title: "206. Reverse Linked List",
+                            url: "https://leetcode.com/problems/reverse-linked-list/",
+                            status: "done",
+                          },
+                          {
+                            title: "83. Merge Two Sorted Lists",
+                            url: "https://leetcode.com/problems/merge-two-sorted-lists/",
+                            status: "done",
+                          },
+                          {
+                            title: "141. Linked List Cycle",
+                            url: "https://leetcode.com/problems/linked-list-cycle/",
+                            status: "done",
+                          },
+                          {
+                            title: "143. Reorder List",
+                            url: "https://leetcode.com/problems/reorder-list/",
+                            status: "not done",
+                          },
+                        ]}
+                      />
                     </td>
                   </tr>
                   <tr className="border-t">
@@ -109,14 +197,34 @@ export default function NotesPage() {
                         Stacks and Queues
                       </TextLink>
                     </td>
-                    <td className="p-4">LIFO, FIFO</td>
                     <td className="p-4">
-                      <ul className="list-disc list-inside">
-                        <li>20. Valid Parentheses</li>
-                        <li>155. Min Stack</li>
-                        <li>739. Daily Temperatures</li>
-                        <li>232. Implement Queue using Stacks</li>
-                      </ul>
+                      Stack for backtracking; monotonic stack; queue for BFS
+                    </td>
+                    <td className="p-4">
+                      <Problems
+                        problems={[
+                          {
+                            title: "20. Valid Parentheses",
+                            url: "https://leetcode.com/problems/valid-parentheses/",
+                            status: "done",
+                          },
+                          {
+                            title: "155. Min Stack",
+                            url: "https://leetcode.com/problems/min-stack/",
+                            status: "attempted",
+                          },
+                          {
+                            title: "739. Daily Temperatures",
+                            url: "https://leetcode.com/problems/daily-temperatures/",
+                            status: "attempted",
+                          },
+                          {
+                            title: "232. Implement Queue using Stacks",
+                            url: "https://leetcode.com/problems/implement-queue-using-stacks/",
+                            status: "not done",
+                          },
+                        ]}
+                      />
                     </td>
                   </tr>
                   <tr className="border-t">
@@ -125,16 +233,33 @@ export default function NotesPage() {
                         Trees
                       </TextLink>
                     </td>
-                    <td className="p-4">Tree Traversal, Binary Trees</td>
+                    <td className="p-4">DFS; BFS; recursion</td>
                     <td className="p-4">
-                      <ul className="list-disc list-inside">
-                        <li>94. Binary Tree Inorder Traversal</li>
-                        <li>104. Maximum Depth of Binary Tree</li>
-                        <li>
-                          235. Lowest Common Ancestor of a Binary Search Tree
-                        </li>
-                        <li>98. Validate Binary Search Tree</li>
-                      </ul>
+                      <Problems
+                        problems={[
+                          {
+                            title: "94. Binary Tree Inorder Traversal",
+                            url: "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+                            status: "done",
+                          },
+                          {
+                            title: "104. Maximum Depth of Binary Tree",
+                            url: "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+                            status: "done",
+                          },
+                          {
+                            title:
+                              "235. Lowest Common Ancestor of a Binary Search Tree",
+                            url: "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+                            status: "not done",
+                          },
+                          {
+                            title: "98. Validate Binary Search Tree",
+                            url: "https://leetcode.com/problems/validate-binary-search-tree/",
+                            status: "done",
+                          },
+                        ]}
+                      />
                     </td>
                   </tr>
                   <tr className="border-t">
@@ -143,14 +268,32 @@ export default function NotesPage() {
                         Graphs
                       </TextLink>
                     </td>
-                    <td className="p-4">DFS, BFS, Adjacency List</td>
+                    <td className="p-4">DFS; BFS; Adjacency List</td>
                     <td className="p-4">
-                      <ul className="list-disc list-inside">
-                        <li>200. Number of Islands</li>
-                        <li>133. Clone Graph</li>
-                        <li>207. Course Schedule</li>
-                        <li>127. Word Ladder</li>
-                      </ul>
+                      <Problems
+                        problems={[
+                          {
+                            title: "200. Number of Islands",
+                            url: "https://leetcode.com/problems/number-of-islands/",
+                            status: "done",
+                          },
+                          {
+                            title: "133. Clone Graph",
+                            url: "https://leetcode.com/problems/clone-graph/",
+                            status: "done",
+                          },
+                          {
+                            title: "207. Course Schedule",
+                            url: "https://leetcode.com/problems/course-schedule/",
+                            status: "not done",
+                          },
+                          {
+                            title: "127. Word Ladder",
+                            url: "https://leetcode.com/problems/word-ladder/",
+                            status: "not done",
+                          },
+                        ]}
+                      />
                     </td>
                   </tr>
                   <tr className="border-t">
@@ -159,14 +302,32 @@ export default function NotesPage() {
                         Dynamic Programming
                       </TextLink>
                     </td>
-                    <td className="p-4">Memoization, Tabulation</td>
+                    <td className="p-4">Bottom-up vs top-down; memoization</td>
                     <td className="p-4">
-                      <ul className="list-disc list-inside">
-                        <li>70. Climbing Stairs</li>
-                        <li>198. House Robber</li>
-                        <li>322. Coin Change</li>
-                        <li>1143. Longest Common Subsequence</li>
-                      </ul>
+                      <Problems
+                        problems={[
+                          {
+                            title: "70. Climbing Stairs",
+                            url: "https://leetcode.com/problems/climbing-stairs/",
+                            status: "done",
+                          },
+                          {
+                            title: "198. House Robber",
+                            url: "https://leetcode.com/problems/house-robber/",
+                            status: "done",
+                          },
+                          {
+                            title: "322. Coin Change",
+                            url: "https://leetcode.com/problems/coin-change/",
+                            status: "attempted",
+                          },
+                          {
+                            title: "1143. Longest Common Subsequence",
+                            url: "https://leetcode.com/problems/longest-common-subsequence/",
+                            status: "not done",
+                          },
+                        ]}
+                      />
                     </td>
                   </tr>
                   <tr className="border-t">
@@ -175,13 +336,28 @@ export default function NotesPage() {
                         Greedy Algorithms
                       </TextLink>
                     </td>
-                    <td className="p-4">Local Optimum</td>
+                    <td className="p-4">Local optimum; global optimum</td>
                     <td className="p-4">
-                      <ul className="list-disc list-inside">
-                        <li>56. Merge Intervals</li>
-                        <li>435. Non-overlapping Intervals</li>
-                        <li>452. Minimum Number of Arrows to Burst Balloons</li>
-                      </ul>
+                      <Problems
+                        problems={[
+                          {
+                            title: "56. Merge Intervals",
+                            url: "https://leetcode.com/problems/merge-intervals/",
+                            status: "not done",
+                          },
+                          {
+                            title: "435. Non-overlapping Intervals",
+                            url: "https://leetcode.com/problems/non-overlapping-intervals/",
+                            status: "not done",
+                          },
+                          {
+                            title:
+                              "452. Minimum Number of Arrows to Burst Balloons",
+                            url: "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/",
+                            status: "not done",
+                          },
+                        ]}
+                      />
                     </td>
                   </tr>
                   <tr className="border-t">
@@ -190,14 +366,32 @@ export default function NotesPage() {
                         Backtracking
                       </TextLink>
                     </td>
-                    <td className="p-4">State Space Tree, Pruning</td>
+                    <td className="p-4">Recursion with constraints; pruning</td>
                     <td className="p-4">
-                      <ul className="list-disc list-inside">
-                        <li>78. Subsets</li>
-                        <li>46. Permutations</li>
-                        <li>39. Combination Sum</li>
-                        <li>37. Sudoku Solver</li>
-                      </ul>
+                      <Problems
+                        problems={[
+                          {
+                            title: "78. Subsets",
+                            url: "https://leetcode.com/problems/subsets/",
+                            status: "not done",
+                          },
+                          {
+                            title: "46. Permutations",
+                            url: "https://leetcode.com/problems/permutations/",
+                            status: "not done",
+                          },
+                          {
+                            title: "39. Combination Sum",
+                            url: "https://leetcode.com/problems/combination-sum/",
+                            status: "not done",
+                          },
+                          {
+                            title: "37. Sudoku Solver",
+                            url: "https://leetcode.com/problems/sudoku-solver/",
+                            status: "not done",
+                          },
+                        ]}
+                      />
                     </td>
                   </tr>
                   <tr className="border-t">
@@ -206,12 +400,24 @@ export default function NotesPage() {
                         Tries
                       </TextLink>
                     </td>
-                    <td className="p-4">Prefix Trees, Character Search</td>
                     <td className="p-4">
-                      <ul className="list-disc list-inside">
-                        <li>208. Implement Trie</li>
-                        <li>212. Word Search II</li>
-                      </ul>
+                      Prefix trees; character-by-character search
+                    </td>
+                    <td className="p-4">
+                      <Problems
+                        problems={[
+                          {
+                            title: "208. Implement Trie",
+                            url: "https://leetcode.com/problems/implement-trie-prefix-tree/",
+                            status: "not done",
+                          },
+                          {
+                            title: "212. Word Search II",
+                            url: "https://leetcode.com/problems/word-search-ii/",
+                            status: "not done",
+                          },
+                        ]}
+                      />
                     </td>
                   </tr>
                   <tr className="border-t">
@@ -222,13 +428,29 @@ export default function NotesPage() {
                     </td>
                     <td className="p-4">Binary Heap, Priority Queue</td>
                     <td className="p-4">
-                      <ul className="list-disc list-inside">
-                        <li>215. Kth Largest Element</li>
-                        <li>23. Merge K Sorted Lists</li>
-                      </ul>
+                      <Problems
+                        problems={[
+                          {
+                            title: "215. Kth Largest Element",
+                            url: "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+                            status: "done",
+                          },
+                          {
+                            title: "23. Merge K Sorted Lists",
+                            url: "https://leetcode.com/problems/merge-k-sorted-lists/",
+                            status: "not done",
+                          },
+                        ]}
+                      />
                     </td>
                   </tr>
                 </tbody>
+                <tfoot className="border-t">
+                  <tr>
+                    <td colSpan={2} className="p-4" />
+                    <td className="p-4">Completed: 17/40</td>
+                  </tr>
+                </tfoot>
               </table>
             </div>
           </div>
