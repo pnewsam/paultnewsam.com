@@ -3,6 +3,9 @@ import Container from "@/components/Container";
 import { Body } from "@/components/typography/Body";
 import { H3 } from "@/components/typography/H3";
 import PageHeader from "@/components/PageHeader";
+import Callout from "../../_components/Callout";
+import Card from "@/components/Card";
+import { H2 } from "@/components/typography/H2";
 
 const insertSnippet = `class TreeNode {
   value: number;
@@ -104,6 +107,50 @@ export default function BinaryTreeTraversalPage() {
           the proper order.
         </Body>
         <CodeSnippet code={traversalSnippet} language="typescript" />
+
+        <Callout title="Key Concepts" className="mb-8">
+          <em className="not-italic font-medium">DFS</em>;&nbsp;
+          <em className="not-italic font-medium">BFS</em>;&nbsp;
+          <em className="not-italic font-medium">recursion</em>
+        </Callout>
+
+        <Card className="p-12">
+          <H2 className="mb-8">Problems to Solve</H2>
+          <ul className="list-disc list-inside text-xl/relaxed md:text-2xl/relaxed">
+            <li className="mb-4">
+              <a
+                className="text-cyan-500 dark:text-cyan-400 hover:underline"
+                href="https://leetcode.com/problems/binary-tree-inorder-traversal/"
+              >
+                94. Binary Tree Inorder Traversal
+              </a>
+            </li>
+            <li className="mb-4">
+              <a
+                className="text-cyan-500 dark:text-cyan-400 hover:underline"
+                href="https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+              >
+                104. Maximum Depth of Binary Tree
+              </a>
+            </li>
+            <li className="mb-4">
+              <a
+                className="text-cyan-500 dark:text-cyan-400 hover:underline"
+                href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"
+              >
+                235. Lowest Common Ancestor of a Binary Search Tree
+              </a>
+            </li>
+            <li className="mb-4">
+              <a
+                className="text-cyan-500 dark:text-cyan-400 hover:underline"
+                href="https://leetcode.com/problems/validate-binary-search-tree/"
+              >
+                98. Validate Binary Search Tree
+              </a>
+            </li>
+          </ul>
+        </Card>
       </section>
     </Container>
   );

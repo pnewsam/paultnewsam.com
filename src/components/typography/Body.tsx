@@ -7,6 +7,7 @@ export const Body = ({
 }: {
   children: React.ReactNode;
   className?: string;
+  spaced?: boolean;
 }) => (
   <p
     className={cn(
