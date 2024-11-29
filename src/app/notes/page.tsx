@@ -13,7 +13,7 @@ const Problems = ({
   problems: {
     title: string;
     url: string;
-    status?: "done" | "attempted" | "not done";
+    status?: "done" | "attempted" | "not done" | "unknown";
   }[];
 }) => (
   <ul className="list-disc list-inside">
@@ -28,6 +28,7 @@ const Problems = ({
             {problem.status === "done" && "✅"}
             {problem.status === "attempted" && "🔄"}
             {problem.status === "not done" && "❌"}
+            {problem.status === "unknown" && "❓"}
           </span>
         </a>
       </li>
@@ -77,7 +78,8 @@ export default function NotesPage() {
                   <tr className="text-left text-xl">
                     <th className="p-4">Topic</th>
                     <th className="p-4">Key Concepts</th>
-                    <th className="p-4">Problems (40 total)</th>
+                    <th className="p-4">Problems</th>
+                    <th className="p-4">Review</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -118,6 +120,32 @@ export default function NotesPage() {
                         ]}
                       />
                     </td>
+                    <td className="p-4">
+                      <Problems
+                        problems={[
+                          {
+                            title: "36. Valid Sudoku",
+                            url: "https://leetcode.com/problems/valid-sudoku/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "1. Contains Duplicate",
+                            url: "https://leetcode.com/problems/contains-duplicate/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "49. Group Anagrams",
+                            url: "https://leetcode.com/problems/group-anagrams/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "560. Subarray Sum Equals K",
+                            url: "https://leetcode.com/problems/subarray-sum-equals-k/",
+                            status: "unknown",
+                          },
+                        ]}
+                      />
+                    </td>
                   </tr>
                   <tr className="border-t">
                     <td className="p-4">
@@ -150,6 +178,33 @@ export default function NotesPage() {
                             title: "4. Median of Two Sorted Arrays",
                             url: "https://leetcode.com/problems/median-of-two-sorted-arrays/",
                             status: "not done",
+                          },
+                        ]}
+                      />
+                    </td>
+                    <td className="p-4">
+                      <Problems
+                        problems={[
+                          {
+                            title: "162. Find Peak Element",
+                            url: "https://leetcode.com/problems/find-peak-element/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "33. Search in Rotated Sorted Array",
+                            url: "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+                            status: "unknown",
+                          },
+                          {
+                            title:
+                              "702. Search in a Sorted Array of Unknown Size (binary search on an unbounded array)",
+                            url: "https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "240. Search a 2D Matrix II",
+                            url: "https://leetcode.com/problems/search-a-2d-matrix-ii/",
+                            status: "unknown",
                           },
                         ]}
                       />
@@ -190,6 +245,27 @@ export default function NotesPage() {
                         ]}
                       />
                     </td>
+                    <td className="p-4">
+                      <Problems
+                        problems={[
+                          {
+                            title: "23. Merge k Sorted Lists",
+                            url: "https://leetcode.com/problems/merge-k-sorted-lists/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "160. Intersection of Two Linked Lists",
+                            url: "https://leetcode.com/problems/intersection-of-two-linked-lists/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "19. Remove Nth Node From End of List",
+                            url: "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+                            status: "unknown",
+                          },
+                        ]}
+                      />
+                    </td>
                   </tr>
                   <tr className="border-t">
                     <td className="p-4">
@@ -222,6 +298,32 @@ export default function NotesPage() {
                             title: "232. Implement Queue using Stacks",
                             url: "https://leetcode.com/problems/implement-queue-using-stacks/",
                             status: "not done",
+                          },
+                        ]}
+                      />
+                    </td>
+                    <td className="p-4">
+                      <Problems
+                        problems={[
+                          {
+                            title: "225. Implement Stack using Queues",
+                            url: "https://leetcode.com/problems/implement-stack-using-queues/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "394. Decode String",
+                            url: "https://leetcode.com/problems/decode-string/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "316. Remove Duplicate Letters",
+                            url: "https://leetcode.com/problems/remove-duplicate-letters/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "844. Backspace String Compare",
+                            url: "https://leetcode.com/problems/backspace-string-compare/",
+                            status: "unknown",
                           },
                         ]}
                       />
@@ -261,6 +363,34 @@ export default function NotesPage() {
                         ]}
                       />
                     </td>
+                    <td className="p-4">
+                      <Problems
+                        problems={[
+                          {
+                            title: "101. Symmetric Tree",
+                            url: "https://leetcode.com/problems/symmetric-tree/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "102. Binary Tree Level Order Traversal",
+                            url: "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+                            status: "unknown",
+                          },
+                          {
+                            title:
+                              "105. Construct Binary Tree from Preorder and Inorder Traversal",
+                            url: "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+                            status: "unknown",
+                          },
+                          {
+                            title:
+                              "236. Lowest Common Ancestor of a Binary Tree",
+                            url: "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+                            status: "unknown",
+                          },
+                        ]}
+                      />
+                    </td>
                   </tr>
                   <tr className="border-t">
                     <td className="p-4">
@@ -291,6 +421,33 @@ export default function NotesPage() {
                             title: "127. Word Ladder",
                             url: "https://leetcode.com/problems/word-ladder/",
                             status: "not done",
+                          },
+                        ]}
+                      />
+                    </td>
+                    <td className="p-4">
+                      <Problems
+                        problems={[
+                          {
+                            title:
+                              "323. Number of Connected Components in an Undirected Graph",
+                            url: "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "695. Max Area of Island",
+                            url: "https://leetcode.com/problems/max-area-of-island/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "417. Pacific Atlantic Water Flow",
+                            url: "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "210. Course Schedule II",
+                            url: "https://leetcode.com/problems/course-schedule-ii/",
+                            status: "unknown",
                           },
                         ]}
                       />
@@ -329,6 +486,32 @@ export default function NotesPage() {
                         ]}
                       />
                     </td>
+                    <td>
+                      <Problems
+                        problems={[
+                          {
+                            title: "53. Maximum Subarray",
+                            url: "https://leetcode.com/problems/maximum-subarray/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "300. Longest Increasing Subsequence",
+                            url: "https://leetcode.com/problems/palindromic-substrings/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "647. Palindromic Substrings",
+                            url: "https://leetcode.com/problems/palindromic-substrings/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "518. Coin Change II",
+                            url: "https://leetcode.com/problems/coin-change-ii/",
+                            status: "unknown",
+                          },
+                        ]}
+                      />
+                    </td>
                   </tr>
                   <tr className="border-t">
                     <td className="p-4">
@@ -355,6 +538,32 @@ export default function NotesPage() {
                               "452. Minimum Number of Arrows to Burst Balloons",
                             url: "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/",
                             status: "not done",
+                          },
+                        ]}
+                      />
+                    </td>
+                    <td>
+                      <Problems
+                        problems={[
+                          {
+                            title: "406. Queue Reconstruction by Height",
+                            url: "https://leetcode.com/problems/queue-reconstruction-by-height/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "763. Partition Labels",
+                            url: "https://leetcode.com/problems/gas-station/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "134. Gas Station",
+                            url: "https://leetcode.com/problems/gas-station/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "621. Task Scheduler",
+                            url: "https://leetcode.com/problems/task-scheduler/",
+                            status: "unknown",
                           },
                         ]}
                       />
@@ -393,6 +602,32 @@ export default function NotesPage() {
                         ]}
                       />
                     </td>
+                    <td>
+                      <Problems
+                        problems={[
+                          {
+                            title: "77. Combinations",
+                            url: "https://leetcode.com/problems/combinations/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "79. Word Search",
+                            url: "https://leetcode.com/problems/subsets-ii/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "90. Subsets II",
+                            url: "https://leetcode.com/problems/subsets-ii/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "51. N-Queens",
+                            url: "https://leetcode.com/problems/n-queens/",
+                            status: "unknown",
+                          },
+                        ]}
+                      />
+                    </td>
                   </tr>
                   <tr className="border-t">
                     <td className="p-4">
@@ -419,6 +654,33 @@ export default function NotesPage() {
                         ]}
                       />
                     </td>
+                    <td>
+                      <Problems
+                        problems={[
+                          {
+                            title:
+                              "211. Design Add and Search Words Data Structure",
+                            url: "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "14. Longest Common Prefix",
+                            url: "https://leetcode.com/problems/longest-common-prefix/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "1268. Search Suggestions System",
+                            url: "https://leetcode.com/problems/search-suggestions-system/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "676. Implement Magic Dictionary",
+                            url: "https://leetcode.com/problems/implement-magic-dictionary/",
+                            status: "unknown",
+                          },
+                        ]}
+                      />
+                    </td>
                   </tr>
                   <tr className="border-t">
                     <td className="p-4">
@@ -439,6 +701,32 @@ export default function NotesPage() {
                             title: "23. Merge K Sorted Lists",
                             url: "https://leetcode.com/problems/merge-k-sorted-lists/",
                             status: "not done",
+                          },
+                        ]}
+                      />
+                    </td>
+                    <td>
+                      <Problems
+                        problems={[
+                          {
+                            title: "347. Top K Frequent Elements",
+                            url: "https://leetcode.com/problems/top-k-frequent-elements/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "973. K Closest Points to Origin",
+                            url: "https://leetcode.com/problems/k-closest-points-to-origin/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "295. Find Median from Data Stream",
+                            url: "https://leetcode.com/problems/find-median-from-data-stream/",
+                            status: "unknown",
+                          },
+                          {
+                            title: "658. Find K Closest Elements",
+                            url: "https://leetcode.com/problems/find-k-closest-elements/",
+                            status: "unknown",
                           },
                         ]}
                       />
