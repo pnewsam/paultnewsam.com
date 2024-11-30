@@ -3,6 +3,8 @@ import Container from "@/components/Container";
 import PageHeader from "@/components/PageHeader";
 import { Summary } from "../../_components/Summary";
 import { Body } from "@/components/typography/Body";
+import { firstHalf } from "@/utils/array";
+import { heapsAndPriorityQueues } from "@/constants/problems";
 
 const snippet = `function buildMinHeap(heap: number[]) {
   const len = heap.length;
@@ -51,16 +53,7 @@ export default function HeapsAndPriorityQueuesPage() {
 
         <Summary
           title="Problems to Solve"
-          problems={[
-            {
-              title: "215. Kth Largest Element in an Array",
-              url: "https://leetcode.com/problems/kth-largest-element-in-an-array/",
-            },
-            {
-              title: "23. Merge K Sorted Lists",
-              url: "https://leetcode.com/problems/merge-k-sorted-lists/",
-            },
-          ]}
+          problems={firstHalf(heapsAndPriorityQueues)}
         />
       </section>
     </Container>

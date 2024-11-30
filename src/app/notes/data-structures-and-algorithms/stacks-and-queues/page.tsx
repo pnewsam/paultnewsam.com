@@ -2,6 +2,8 @@ import Container from "@/components/Container";
 import PageHeader from "@/components/PageHeader";
 import Callout from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
+import { firstHalf } from "@/utils/array";
+import { stacksAndQueues } from "@/constants/problems";
 
 export default function Page() {
   return (
@@ -20,24 +22,7 @@ export default function Page() {
 
         <Summary
           title="Problems to Solve"
-          problems={[
-            {
-              title: "20. Valid Parentheses",
-              url: "https://leetcode.com/problems/valid-parentheses/",
-            },
-            {
-              title: "155. Min Stack",
-              url: "https://leetcode.com/problems/min-stack/",
-            },
-            {
-              title: "739. Daily Temperatures",
-              url: "https://leetcode.com/problems/daily-temperatures/",
-            },
-            {
-              title: "232. Implement Queue using Stacks",
-              url: "https://leetcode.com/problems/implement-queue-using-stacks/",
-            },
-          ]}
+          problems={firstHalf(stacksAndQueues)}
         />
       </section>
     </Container>

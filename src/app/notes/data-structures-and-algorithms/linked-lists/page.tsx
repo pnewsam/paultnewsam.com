@@ -2,6 +2,8 @@ import Container from "@/components/Container";
 import PageHeader from "@/components/PageHeader";
 import { Summary } from "../../_components/Summary";
 import Callout from "../../_components/Callout";
+import { firstHalf } from "@/utils/array";
+import { linkedLists } from "@/constants/problems";
 
 export default function Page() {
   return (
@@ -18,27 +20,7 @@ export default function Page() {
           <em className="not-italic font-medium">reversing lists</em>
         </Callout>
 
-        <Summary
-          title="Problems to Solve"
-          problems={[
-            {
-              title: "206. Reverse Linked List",
-              url: "https://leetcode.com/problems/reverse-linked-list/",
-            },
-            {
-              title: "21. Merge Two Sorted Lists",
-              url: "https://leetcode.com/problems/merge-two-sorted-lists/",
-            },
-            {
-              title: "141. Linked List Cycle",
-              url: "https://leetcode.com/problems/linked-list-cycle/",
-            },
-            {
-              title: "143. Reorder List",
-              url: "https://leetcode.com/problems/reorder-list/",
-            },
-          ]}
-        />
+        <Summary title="Problems to Solve" problems={firstHalf(linkedLists)} />
       </section>
     </Container>
   );

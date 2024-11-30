@@ -4,6 +4,9 @@ import Callout from "../../_components/Callout";
 import { Body } from "@/components/typography/Body";
 import { H2 } from "@/components/typography/H2";
 import { Summary } from "../../_components/Summary";
+import { arraysAndHashing } from "@/constants/problems";
+import { firstHalf } from "@/utils/array";
+import { Mark } from "@/components/Mark";
 
 export default function Page() {
   return (
@@ -21,8 +24,11 @@ export default function Page() {
         </Callout>
 
         <Body>
-          Arrays are a fundamental data structure in computer science,
-          representing a collection of elements identified by index or key.
+          When it comes to data structures, arrays are about as fundamental as
+          it gets. And whereas many data structures are <Mark>abstract</Mark> --
+          meaning the underlying data structures can be implemented in many
+          different ways across languages -- array implementations are pretty
+          much the same across languages.
         </Body>
 
         <H2 className="mb-8">Sliding Window</H2>
@@ -39,24 +45,7 @@ export default function Page() {
 
         <Summary
           title="Problems to Solve"
-          problems={[
-            {
-              title: "1. Two Sum",
-              url: "https://leetcode.com/problems/two-sum/",
-            },
-            {
-              title: "3. Longest Substring Without Repeating Characters",
-              url: "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
-            },
-            {
-              title: "53. Maximum Subarray (Kadane’s Algorithm)",
-              url: "https://leetcode.com/problems/maximum-subarray/",
-            },
-            {
-              title: "238. Product of Array Except Self",
-              url: "https://leetcode.com/problems/product-of-array-except-self/",
-            },
-          ]}
+          problems={firstHalf(arraysAndHashing)}
         />
       </section>
     </Container>

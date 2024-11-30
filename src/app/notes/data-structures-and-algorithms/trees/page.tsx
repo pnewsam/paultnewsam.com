@@ -5,6 +5,8 @@ import { H3 } from "@/components/typography/H3";
 import PageHeader from "@/components/PageHeader";
 import Callout from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
+import { firstHalf } from "@/utils/array";
+import { trees } from "@/constants/problems";
 
 const insertSnippet = `class TreeNode {
   value: number;
@@ -111,27 +113,7 @@ export default function BinaryTreeTraversalPage() {
         </Body>
         <CodeSnippet code={traversalSnippet} language="typescript" />
 
-        <Summary
-          title="Problems to Solve"
-          problems={[
-            {
-              title: "94. Binary Tree Inorder Traversal",
-              url: "https://leetcode.com/problems/binary-tree-inorder-traversal/",
-            },
-            {
-              title: "104. Maximum Depth of Binary Tree",
-              url: "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
-            },
-            {
-              title: "235. Lowest Common Ancestor of a Binary Search Tree",
-              url: "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
-            },
-            {
-              title: "98. Validate Binary Search Tree",
-              url: "https://leetcode.com/problems/validate-binary-search-tree/",
-            },
-          ]}
-        />
+        <Summary title="Problems to Solve" problems={firstHalf(trees)} />
       </section>
     </Container>
   );

@@ -2,6 +2,8 @@ import Container from "@/components/Container";
 import PageHeader from "@/components/PageHeader";
 import Callout from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
+import { firstHalf } from "@/utils/array";
+import { dynamicProgramming } from "@/constants/problems";
 
 export default function Page() {
   return (
@@ -19,24 +21,7 @@ export default function Page() {
 
         <Summary
           title="Problems to Solve"
-          problems={[
-            {
-              title: "70. Climbing Stairs",
-              url: "https://leetcode.com/problems/climbing-stairs/",
-            },
-            {
-              title: "198. House Robber",
-              url: "https://leetcode.com/problems/house-robber/",
-            },
-            {
-              title: "322. Coin Change",
-              url: "https://leetcode.com/problems/coin-change/",
-            },
-            {
-              title: "1143. Longest Common Subsequence",
-              url: "https://leetcode.com/problems/longest-common-subsequence/",
-            },
-          ]}
+          problems={firstHalf(dynamicProgramming)}
         />
       </section>
     </Container>

@@ -3,6 +3,8 @@ import PageHeader from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
 import Callout from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
+import { firstHalf } from "@/utils/array";
+import { backtracking } from "@/constants/problems";
 
 export default function Backtracking() {
   return (
@@ -21,27 +23,7 @@ export default function Backtracking() {
           <em className="not-italic font-medium">pruning</em>
         </Callout>
 
-        <Summary
-          title="Problems to Solve"
-          problems={[
-            {
-              title: "78. Subsets",
-              url: "https://leetcode.com/problems/subsets/",
-            },
-            {
-              title: "46. Permutations",
-              url: "https://leetcode.com/problems/permutations/",
-            },
-            {
-              title: "39. Combination Sum",
-              url: "https://leetcode.com/problems/combination-sum/",
-            },
-            {
-              title: "37. Sudoku Solver",
-              url: "https://leetcode.com/problems/sudoku-solver/",
-            },
-          ]}
-        />
+        <Summary title="Problems to Solve" problems={firstHalf(backtracking)} />
       </section>
     </Container>
   );

@@ -5,6 +5,8 @@ import { Body } from "@/components/typography/Body";
 import { Code } from "@/components/typography/Code";
 import CodeSnippet from "@/components/CodeSnippet";
 import { Summary } from "../../_components/Summary";
+import { firstHalf } from "@/utils/array";
+import { binarySearch } from "@/constants/problems";
 
 const snippet = `function binarySearch(nums: number[], target: number) {
   let low = 0;
@@ -48,17 +50,18 @@ export default function Page() {
 
         <Body>
           That&apos;s basically binary search - except that in the canonical
-          sense, binary search always bisects the remaining search space (rather
+          sense, binary search always bisects the remaining search space rather
           than, say, making a good guess where the name is going to be and going
-          there). It seems like an obvious way to search, but sometimes we
-          forget the obvious things when we&apos;re coding.
+          there. It seems like an obvious way to search, but sometimes we forget
+          the obvious things when we&apos;re coding.
         </Body>
 
         <Body>
           In practice, binary search works pretty much the way you&apos;d think.
-          You grab the middle value, check if it&apos;s too big or too small, or
-          just right. Then you adjust. If it&apos;s too small, you go right. If
-          it&apos;s too big, you go left.
+          You grab the middle value, check if it&apos;s too big or too small.
+          Then you adjust. If it&apos;s too small, you go right. If it&apos;s
+          too big, you go left. Eventually you find what you&apos;re looking
+          for, and you return it.
         </Body>
 
         <CodeSnippet className="mb-8" code={snippet} language="typescript" />
@@ -71,27 +74,7 @@ export default function Page() {
           <Code>Math.floor</Code> and stick with it.
         </Body>
 
-        <Summary
-          title="Problems to Solve"
-          problems={[
-            {
-              title: "704. Binary Search (basic)",
-              url: "https://leetcode.com/problems/binary-search/",
-            },
-            {
-              title: "74. Search a 2D Matrix",
-              url: "https://leetcode.com/problems/search-a-2d-matrix/",
-            },
-            {
-              title: "153. Find Minimum in Rotated Sorted Array",
-              url: "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
-            },
-            {
-              title: "4. Median of Two Sorted Arrays",
-              url: "https://leetcode.com/problems/median-of-two-sorted-arrays/",
-            },
-          ]}
-        />
+        <Summary title="Problems to Solve" problems={firstHalf(binarySearch)} />
       </section>
     </Container>
   );

@@ -2,6 +2,8 @@ import Container from "@/components/Container";
 import PageHeader from "@/components/PageHeader";
 import Callout from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
+import { firstHalf } from "@/utils/array";
+import { tries } from "@/constants/problems";
 
 export default function Page() {
   return (
@@ -15,19 +17,7 @@ export default function Page() {
           </em>
         </Callout>
 
-        <Summary
-          title="Problems to Solve"
-          problems={[
-            {
-              title: "208. Implement Trie (Prefix Tree)",
-              url: "https://leetcode.com/problems/implement-trie-prefix-tree/",
-            },
-            {
-              title: "212. Word Search II",
-              url: "https://leetcode.com/problems/word-search-ii/",
-            },
-          ]}
-        />
+        <Summary title="Problems to Solve" problems={firstHalf(tries)} />
       </section>
     </Container>
   );
