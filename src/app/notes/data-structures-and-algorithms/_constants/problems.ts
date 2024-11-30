@@ -1,0 +1,510 @@
+export const problems = [
+  {
+    title: "1. Two Sum",
+    url: "https://leetcode.com/problems/two-sum/",
+    status: "done",
+    category: "Arrays and Hashing",
+  },
+  {
+    title: "3. Longest Substring Without Repeating Characters",
+    url: "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    status: "done",
+    category: "Arrays and Hashing",
+  },
+  {
+    title: "53. Maximum Subarray",
+    url: "https://leetcode.com/problems/maximum-subarray/",
+    status: "done",
+    category: "Arrays and Hashing",
+  },
+  {
+    title: "238. Product of Array Except Self",
+    url: "https://leetcode.com/problems/product-of-array-except-self/",
+    status: "done",
+    category: "Arrays and Hashing",
+  },
+
+  {
+    title: "36. Valid Sudoku",
+    url: "https://leetcode.com/problems/valid-sudoku/",
+    status: "unknown",
+    category: "Arrays and Hashing",
+  },
+  {
+    title: "1. Contains Duplicate",
+    url: "https://leetcode.com/problems/contains-duplicate/",
+    status: "unknown",
+    category: "Arrays and Hashing",
+  },
+  {
+    title: "49. Group Anagrams",
+    url: "https://leetcode.com/problems/group-anagrams/",
+    status: "unknown",
+    category: "Arrays and Hashing",
+  },
+  {
+    title: "560. Subarray Sum Equals K",
+    url: "https://leetcode.com/problems/subarray-sum-equals-k/",
+    status: "unknown",
+    category: "Arrays and Hashing",
+  },
+
+  {
+    title: "704. Binary Search",
+    url: "https://leetcode.com/problems/binary-search/",
+    status: "not done",
+    category: "Binary Search",
+  },
+  {
+    title: "74. Search a 2D Matrix",
+    url: "https://leetcode.com/problems/search-a-2d-matrix/",
+    status: "not done",
+    category: "Binary Search",
+  },
+  {
+    title: "153. Find Minimum in Rotated Sorted Array",
+    url: "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+    status: "done",
+    category: "Binary Search",
+  },
+  {
+    title: "4. Median of Two Sorted Arrays",
+    url: "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+    status: "not done",
+    category: "Binary Search",
+  },
+
+  {
+    title: "162. Find Peak Element",
+    url: "https://leetcode.com/problems/find-peak-element/",
+    status: "unknown",
+    category: "Binary Search",
+  },
+
+  {
+    title: "33. Search in Rotated Sorted Array",
+    url: "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+    status: "unknown",
+    category: "Binary Search",
+  },
+  {
+    title:
+      "702. Search in a Sorted Array of Unknown Size (binary search on an unbounded array)",
+    url: "https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size/",
+    status: "unknown",
+    category: "Binary Search",
+  },
+  {
+    title: "240. Search a 2D Matrix II",
+    url: "https://leetcode.com/problems/search-a-2d-matrix-ii/",
+    status: "unknown",
+    category: "Binary Search",
+  },
+
+  {
+    title: "206. Reverse Linked List",
+    url: "https://leetcode.com/problems/reverse-linked-list/",
+    status: "done",
+    category: "Linked Lists",
+  },
+  {
+    title: "83. Merge Two Sorted Lists",
+    url: "https://leetcode.com/problems/merge-two-sorted-lists/",
+    status: "done",
+    category: "Linked Lists",
+  },
+  {
+    title: "141. Linked List Cycle",
+    url: "https://leetcode.com/problems/linked-list-cycle/",
+    status: "done",
+    category: "Linked Lists",
+  },
+  {
+    title: "143. Reorder List",
+    url: "https://leetcode.com/problems/reorder-list/",
+    status: "not done",
+    category: "Linked Lists",
+  },
+
+  {
+    title: "23. Merge k Sorted Lists",
+    url: "https://leetcode.com/problems/merge-k-sorted-lists/",
+    status: "unknown",
+    category: "Linked Lists",
+  },
+  {
+    title: "160. Intersection of Two Linked Lists",
+    url: "https://leetcode.com/problems/intersection-of-two-linked-lists/",
+    status: "unknown",
+    category: "Linked Lists",
+  },
+  {
+    title: "19. Remove Nth Node From End of List",
+    url: "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+    status: "unknown",
+    category: "Linked Lists",
+  },
+
+  {
+    title: "20. Valid Parentheses",
+    url: "https://leetcode.com/problems/valid-parentheses/",
+    status: "done",
+    category: "Stacks and Queues",
+  },
+  {
+    title: "155. Min Stack",
+    url: "https://leetcode.com/problems/min-stack/",
+    status: "attempted",
+    category: "Stacks and Queues",
+  },
+  {
+    title: "739. Daily Temperatures",
+    url: "https://leetcode.com/problems/daily-temperatures/",
+    status: "attempted",
+    category: "Stacks and Queues",
+  },
+  {
+    title: "232. Implement Queue using Stacks",
+    url: "https://leetcode.com/problems/implement-queue-using-stacks/",
+    status: "not done",
+    category: "Stacks and Queues",
+  },
+  {
+    title: "225. Implement Stack using Queues",
+    url: "https://leetcode.com/problems/implement-stack-using-queues/",
+    status: "unknown",
+    category: "Stacks and Queues",
+  },
+  {
+    title: "394. Decode String",
+    url: "https://leetcode.com/problems/decode-string/",
+    status: "unknown",
+    category: "Stacks and Queues",
+  },
+  {
+    title: "316. Remove Duplicate Letters",
+    url: "https://leetcode.com/problems/remove-duplicate-letters/",
+    status: "unknown",
+    category: "Stacks and Queues",
+  },
+  {
+    title: "844. Backspace String Compare",
+    url: "https://leetcode.com/problems/backspace-string-compare/",
+    status: "unknown",
+    category: "Stacks and Queues",
+  },
+
+  {
+    title: "94. Binary Tree Inorder Traversal",
+    url: "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+    status: "done",
+    category: "Trees",
+  },
+  {
+    title: "104. Maximum Depth of Binary Tree",
+    url: "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+    status: "done",
+    category: "Trees",
+  },
+  {
+    title: "235. Lowest Common Ancestor of a Binary Search Tree",
+    url: "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+    status: "not done",
+    category: "Trees",
+  },
+  {
+    title: "98. Validate Binary Search Tree",
+    url: "https://leetcode.com/problems/validate-binary-search-tree/",
+    status: "done",
+    category: "Trees",
+  },
+
+  {
+    title: "101. Symmetric Tree",
+    url: "https://leetcode.com/problems/symmetric-tree/",
+    status: "unknown",
+    category: "Trees",
+  },
+  {
+    title: "102. Binary Tree Level Order Traversal",
+    url: "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+    status: "unknown",
+    category: "Trees",
+  },
+  {
+    title: "105. Construct Binary Tree from Preorder and Inorder Traversal",
+    url: "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+    status: "unknown",
+    category: "Trees",
+  },
+  {
+    title: "236. Lowest Common Ancestor of a Binary Tree",
+    url: "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+    status: "unknown",
+    category: "Trees",
+  },
+
+  {
+    title: "200. Number of Islands",
+    url: "https://leetcode.com/problems/number-of-islands/",
+    status: "done",
+    category: "Graphs",
+  },
+  {
+    title: "133. Clone Graph",
+    url: "https://leetcode.com/problems/clone-graph/",
+    status: "done",
+    category: "Graphs",
+  },
+  {
+    title: "207. Course Schedule",
+    url: "https://leetcode.com/problems/course-schedule/",
+    status: "not done",
+    category: "Graphs",
+  },
+  {
+    title: "127. Word Ladder",
+    url: "https://leetcode.com/problems/word-ladder/",
+    status: "not done",
+    category: "Graphs",
+  },
+
+  {
+    title: "323. Number of Connected Components in an Undirected Graph",
+    url: "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/",
+    status: "unknown",
+    category: "Graphs",
+  },
+  {
+    title: "695. Max Area of Island",
+    url: "https://leetcode.com/problems/max-area-of-island/",
+    status: "unknown",
+    category: "Graphs",
+  },
+  {
+    title: "417. Pacific Atlantic Water Flow",
+    url: "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+    status: "unknown",
+    category: "Graphs",
+  },
+  {
+    title: "210. Course Schedule II",
+    url: "https://leetcode.com/problems/course-schedule-ii/",
+    status: "unknown",
+    category: "Graphs",
+  },
+
+  {
+    title: "70. Climbing Stairs",
+    url: "https://leetcode.com/problems/climbing-stairs/",
+    status: "done",
+    category: "Dynamic Programming",
+  },
+  {
+    title: "198. House Robber",
+    url: "https://leetcode.com/problems/house-robber/",
+    status: "done",
+    category: "Dynamic Programming",
+  },
+  {
+    title: "322. Coin Change",
+    url: "https://leetcode.com/problems/coin-change/",
+    status: "attempted",
+    category: "Dynamic Programming",
+  },
+  {
+    title: "1143. Longest Common Subsequence",
+    url: "https://leetcode.com/problems/longest-common-subsequence/",
+    status: "not done",
+    category: "Dynamic Programming",
+  },
+  {
+    title: "53. Maximum Subarray",
+    url: "https://leetcode.com/problems/maximum-subarray/",
+    status: "unknown",
+    category: "Dynamic Programming",
+  },
+  {
+    title: "300. Longest Increasing Subsequence",
+    url: "https://leetcode.com/problems/palindromic-substrings/",
+    status: "unknown",
+    category: "Dynamic Programming",
+  },
+  {
+    title: "647. Palindromic Substrings",
+    url: "https://leetcode.com/problems/palindromic-substrings/",
+    status: "unknown",
+    category: "Dynamic Programming",
+  },
+  {
+    title: "518. Coin Change II",
+    url: "https://leetcode.com/problems/coin-change-ii/",
+    status: "unknown",
+    category: "Dynamic Programming",
+  },
+
+  {
+    title: "56. Merge Intervals",
+    url: "https://leetcode.com/problems/merge-intervals/",
+    status: "not done",
+    category: "Greedy Algorithms",
+  },
+  {
+    title: "435. Non-overlapping Intervals",
+    url: "https://leetcode.com/problems/non-overlapping-intervals/",
+    status: "not done",
+    category: "Greedy Algorithms",
+  },
+  {
+    title: "452. Minimum Number of Arrows to Burst Balloons",
+    url: "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/",
+    status: "not done",
+    category: "Greedy Algorithms",
+  },
+  {
+    title: "406. Queue Reconstruction by Height",
+    url: "https://leetcode.com/problems/queue-reconstruction-by-height/",
+    status: "unknown",
+    category: "Greedy Algorithms",
+  },
+  {
+    title: "763. Partition Labels",
+    url: "https://leetcode.com/problems/gas-station/",
+    status: "unknown",
+    category: "Greedy Algorithms",
+  },
+  {
+    title: "134. Gas Station",
+    url: "https://leetcode.com/problems/gas-station/",
+    status: "unknown",
+    category: "Greedy Algorithms",
+  },
+  {
+    title: "621. Task Scheduler",
+    url: "https://leetcode.com/problems/task-scheduler/",
+    status: "unknown",
+    category: "Greedy Algorithms",
+  },
+  {
+    title: "78. Subsets",
+    url: "https://leetcode.com/problems/subsets/",
+    status: "not done",
+    category: "Backtracking",
+  },
+  {
+    title: "46. Permutations",
+    url: "https://leetcode.com/problems/permutations/",
+    status: "not done",
+    category: "Backtracking",
+  },
+  {
+    title: "39. Combination Sum",
+    url: "https://leetcode.com/problems/combination-sum/",
+    status: "not done",
+    category: "Backtracking",
+  },
+  {
+    title: "37. Sudoku Solver",
+    url: "https://leetcode.com/problems/sudoku-solver/",
+    status: "not done",
+    category: "Backtracking",
+  },
+  {
+    title: "77. Combinations",
+    url: "https://leetcode.com/problems/combinations/",
+    status: "unknown",
+    category: "Backtracking",
+  },
+  {
+    title: "79. Word Search",
+    url: "https://leetcode.com/problems/subsets-ii/",
+    status: "unknown",
+    category: "Backtracking",
+  },
+  {
+    title: "90. Subsets II",
+    url: "https://leetcode.com/problems/subsets-ii/",
+    status: "unknown",
+    category: "Backtracking",
+  },
+  {
+    title: "51. N-Queens",
+    url: "https://leetcode.com/problems/n-queens/",
+    status: "unknown",
+    category: "Backtracking",
+  },
+
+  {
+    title: "208. Implement Trie",
+    url: "https://leetcode.com/problems/implement-trie-prefix-tree/",
+    status: "not done",
+    category: "Tries",
+  },
+  {
+    title: "212. Word Search II",
+    url: "https://leetcode.com/problems/word-search-ii/",
+    status: "not done",
+  },
+
+  {
+    title: "211. Design Add and Search Words Data Structure",
+    url: "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
+    status: "unknown",
+    category: "Tries",
+  },
+  {
+    title: "14. Longest Common Prefix",
+    url: "https://leetcode.com/problems/longest-common-prefix/",
+    status: "unknown",
+    category: "Tries",
+  },
+  {
+    title: "1268. Search Suggestions System",
+    url: "https://leetcode.com/problems/search-suggestions-system/",
+    status: "unknown",
+    category: "Tries",
+  },
+  {
+    title: "676. Implement Magic Dictionary",
+    url: "https://leetcode.com/problems/implement-magic-dictionary/",
+    status: "unknown",
+    category: "Tries",
+  },
+
+  {
+    title: "215. Kth Largest Element",
+    url: "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+    status: "done",
+    category: "Heaps",
+  },
+  {
+    title: "23. Merge K Sorted Lists",
+    url: "https://leetcode.com/problems/merge-k-sorted-lists/",
+    status: "not done",
+    category: "Heaps",
+  },
+  {
+    title: "347. Top K Frequent Elements",
+    url: "https://leetcode.com/problems/top-k-frequent-elements/",
+    status: "unknown",
+    category: "Heaps",
+  },
+  {
+    title: "973. K Closest Points to Origin",
+    url: "https://leetcode.com/problems/k-closest-points-to-origin/",
+    status: "unknown",
+    category: "Heaps",
+  },
+  {
+    title: "295. Find Median from Data Stream",
+    url: "https://leetcode.com/problems/find-median-from-data-stream/",
+    status: "unknown",
+    category: "Heaps",
+  },
+  {
+    title: "658. Find K Closest Elements",
+    url: "https://leetcode.com/problems/find-k-closest-elements/",
+    status: "unknown",
+    category: "Heaps",
+  },
+];
