@@ -14,15 +14,14 @@ export default function CodeSnippet({
   className?: string;
 }) {
   return (
-    <SyntaxHighlighter
-      className={cn(
-        "block rounded-md border border-neutral-200 dark:border-neutral-800",
-        className
-      )}
-      language={language}
-      style={oneDark}
-    >
-      {code}
-    </SyntaxHighlighter>
+    <div className={cn("", className)}>
+      <SyntaxHighlighter
+        className="rounded-md border border-neutral-200 dark:border-neutral-800"
+        language={language}
+        style={oneDark}
+      >
+        {code}
+      </SyntaxHighlighter>
+    </div>
   );
 }

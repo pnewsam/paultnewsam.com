@@ -52,7 +52,7 @@ export const problems = [
   {
     title: "704. Binary Search",
     url: "https://leetcode.com/problems/binary-search/",
-    status: "not done",
+    status: "done",
     category: "Binary Search",
   },
   {

@@ -1,14 +1,18 @@
 import { Body } from "@/components/typography/Body";
+import { Info } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Card from "@/components/Card";
+
 export default function Callout({
   title,
   children,
   className,
+  type = "default",
 }: {
   title?: string;
   children: React.ReactNode;
   className?: string;
+  type?: "default" | "info" | "warning";
 }) {
   return (
     <Card
@@ -19,6 +23,7 @@ export default function Callout({
     >
       {title && (
         <Body className="text-neutral-800 dark:text-neutral-100 font-semibold mb-0">
+          {type === "info" && <Info className="inline-block mr-4" />}
           {title}
         </Body>
       )}

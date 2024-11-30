@@ -162,7 +162,7 @@ export default function NotesPage() {
                           {
                             title: "704. Binary Search",
                             url: "https://leetcode.com/problems/binary-search/",
-                            status: "not done",
+                            status: "done",
                           },
                           {
                             title: "74. Search a 2D Matrix",
