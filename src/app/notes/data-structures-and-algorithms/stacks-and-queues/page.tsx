@@ -1,8 +1,7 @@
 import Container from "@/components/Container";
 import PageHeader from "@/components/PageHeader";
 import Callout from "../../_components/Callout";
-import Card from "@/components/Card";
-import { H2 } from "@/components/typography/H2";
+import { Summary } from "../../_components/Summary";
 
 export default function Page() {
   return (
@@ -19,43 +18,27 @@ export default function Page() {
           <em className="not-italic font-medium">queue for BFS</em>
         </Callout>
 
-        <Card className="p-12">
-          <H2 className="mb-8">Problems to Solve</H2>
-          <ul className="list-disc list-inside text-xl/relaxed md:text-2xl/relaxed">
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/valid-parentheses/"
-              >
-                20. Valid Parentheses
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/min-stack/"
-              >
-                155. Min Stack
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/daily-temperatures/"
-              >
-                739. Daily Temperatures
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/implement-queue-using-stacks/"
-              >
-                232. Implement Queue using Stacks
-              </a>
-            </li>
-          </ul>
-        </Card>
+        <Summary
+          title="Problems to Solve"
+          problems={[
+            {
+              title: "20. Valid Parentheses",
+              url: "https://leetcode.com/problems/valid-parentheses/",
+            },
+            {
+              title: "155. Min Stack",
+              url: "https://leetcode.com/problems/min-stack/",
+            },
+            {
+              title: "739. Daily Temperatures",
+              url: "https://leetcode.com/problems/daily-temperatures/",
+            },
+            {
+              title: "232. Implement Queue using Stacks",
+              url: "https://leetcode.com/problems/implement-queue-using-stacks/",
+            },
+          ]}
+        />
       </section>
     </Container>
   );

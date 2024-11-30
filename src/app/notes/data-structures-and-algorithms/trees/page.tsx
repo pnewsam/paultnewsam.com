@@ -4,8 +4,7 @@ import { Body } from "@/components/typography/Body";
 import { H3 } from "@/components/typography/H3";
 import PageHeader from "@/components/PageHeader";
 import Callout from "../../_components/Callout";
-import Card from "@/components/Card";
-import { H2 } from "@/components/typography/H2";
+import { Summary } from "../../_components/Summary";
 
 const insertSnippet = `class TreeNode {
   value: number;
@@ -91,10 +90,14 @@ export default function BinaryTreeTraversalPage() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <PageHeader
-          title="Binary Tree"
-          tags={["Data Structures", "Typescript"]}
-        />
+        <PageHeader title="Trees" tags={["Data Structures", "Typescript"]} />
+
+        <Callout title="Key Concepts" className="mb-8">
+          <em className="not-italic font-medium">DFS</em>;&nbsp;
+          <em className="not-italic font-medium">BFS</em>;&nbsp;
+          <em className="not-italic font-medium">recursion</em>
+        </Callout>
+
         <Body>A binary tree implementation in Typescript.</Body>
         <div className="mb-8">
           <CodeSnippet code={insertSnippet} language="typescript" />
@@ -108,49 +111,27 @@ export default function BinaryTreeTraversalPage() {
         </Body>
         <CodeSnippet code={traversalSnippet} language="typescript" />
 
-        <Callout title="Key Concepts" className="mb-8">
-          <em className="not-italic font-medium">DFS</em>;&nbsp;
-          <em className="not-italic font-medium">BFS</em>;&nbsp;
-          <em className="not-italic font-medium">recursion</em>
-        </Callout>
-
-        <Card className="p-12">
-          <H2 className="mb-8">Problems to Solve</H2>
-          <ul className="list-disc list-inside text-xl/relaxed md:text-2xl/relaxed">
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/binary-tree-inorder-traversal/"
-              >
-                94. Binary Tree Inorder Traversal
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/maximum-depth-of-binary-tree/"
-              >
-                104. Maximum Depth of Binary Tree
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"
-              >
-                235. Lowest Common Ancestor of a Binary Search Tree
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/validate-binary-search-tree/"
-              >
-                98. Validate Binary Search Tree
-              </a>
-            </li>
-          </ul>
-        </Card>
+        <Summary
+          title="Problems to Solve"
+          problems={[
+            {
+              title: "94. Binary Tree Inorder Traversal",
+              url: "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+            },
+            {
+              title: "104. Maximum Depth of Binary Tree",
+              url: "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+            },
+            {
+              title: "235. Lowest Common Ancestor of a Binary Search Tree",
+              url: "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+            },
+            {
+              title: "98. Validate Binary Search Tree",
+              url: "https://leetcode.com/problems/validate-binary-search-tree/",
+            },
+          ]}
+        />
       </section>
     </Container>
   );

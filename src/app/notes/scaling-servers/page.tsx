@@ -30,18 +30,18 @@ export default function ScalingServersPage() {
             </caption>
             <thead className="bg-neutral-100 dark:bg-neutral-800">
               <tr>
-                <th className="p-4 font-medium border-b border-gray-200">
+                <th className="p-4 font-medium border-b border-neutral-200">
                   Size
                 </th>
-                <th className="p-4 font-medium border-b border-gray-200">
+                <th className="p-4 font-medium border-b border-neutral-200">
                   Infrastructure
                 </th>
-                <th className="p-4 font-medium border-b border-gray-200">
+                <th className="p-4 font-medium border-b border-neutral-200">
                   Metrics
                   <br />
                   (DAUs, MAUs, Traffic)
                 </th>
-                <th className="p-4 font-medium border-b border-gray-200">
+                <th className="p-4 font-medium border-b border-neutral-200">
                   Example Architecture
                 </th>
               </tr>

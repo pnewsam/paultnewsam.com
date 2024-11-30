@@ -1,9 +1,9 @@
 import Container from "@/components/Container";
-import Card from "@/components/Card";
 import PageHeader from "@/components/PageHeader";
 import Callout from "../../_components/Callout";
 import { Body } from "@/components/typography/Body";
 import { H2 } from "@/components/typography/H2";
+import { Summary } from "../../_components/Summary";
 
 export default function Page() {
   return (
@@ -37,43 +37,27 @@ export default function Page() {
           involving arrays or linked lists.
         </Body>
 
-        <Card className="p-12">
-          <H2 className="mb-8">Problems to Solve</H2>
-          <ul className="list-disc list-inside text-xl/relaxed md:text-2xl/relaxed">
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/two-sum/"
-              >
-                1. Two Sum
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/longest-substring-without-repeating-characters/"
-              >
-                3. Longest Substring Without Repeating Characters
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/maximum-subarray/"
-              >
-                53. Maximum Subarray (Kadane’s Algorithm)
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/product-of-array-except-self/"
-              >
-                238. Product of Array Except Self
-              </a>
-            </li>
-          </ul>
-        </Card>
+        <Summary
+          title="Problems to Solve"
+          problems={[
+            {
+              title: "1. Two Sum",
+              url: "https://leetcode.com/problems/two-sum/",
+            },
+            {
+              title: "3. Longest Substring Without Repeating Characters",
+              url: "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+            },
+            {
+              title: "53. Maximum Subarray (Kadane’s Algorithm)",
+              url: "https://leetcode.com/problems/maximum-subarray/",
+            },
+            {
+              title: "238. Product of Array Except Self",
+              url: "https://leetcode.com/problems/product-of-array-except-self/",
+            },
+          ]}
+        />
       </section>
     </Container>
   );

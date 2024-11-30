@@ -121,7 +121,7 @@ export default function LatencyNumbersPage() {
                 <td className="p-4">
                   L1 Cache Reference
                   <br />
-                  <span className="text-sm/snug text-gray-500">
+                  <span className="text-sm/snug text-neutral-500">
                     Fetching a hot variable in a running JavaScript function.
                   </span>
                 </td>{" "}
@@ -134,7 +134,7 @@ export default function LatencyNumbersPage() {
                 <td className="p-4">
                   L2 Cache Reference
                   <br />
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-neutral-500">
                     Accessing slightly less frequent in-memory data.
                   </span>
                 </td>{" "}
@@ -151,7 +151,7 @@ export default function LatencyNumbersPage() {
                 <td className="p-4">
                   L3 Cache Reference
                   <br />
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-neutral-500">
                     Resolving reused middleware configurations in Node.js.
                   </span>
                 </td>{" "}
@@ -168,7 +168,7 @@ export default function LatencyNumbersPage() {
                 <td className="p-4">
                   Main Memory Reference
                   <br />
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-neutral-500">
                     Fetching data from a Redis cache stored in RAM.
                   </span>
                 </td>{" "}
@@ -185,7 +185,7 @@ export default function LatencyNumbersPage() {
                 <td className="p-4">
                   Compress 1KB of Data in Memory
                   <br />
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-neutral-500">
                     Gzip compressing an HTTP response in Express.js.
                   </span>
                 </td>{" "}
@@ -202,7 +202,7 @@ export default function LatencyNumbersPage() {
                 <td className="p-4">
                   Send 1KB over 1 Gbps Network
                   <br />
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-neutral-500">
                     Sending a small JSON response over the network.
                   </span>
                 </td>{" "}
@@ -219,7 +219,7 @@ export default function LatencyNumbersPage() {
                 <td className="p-4">
                   SSD Random Read
                   <br />
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-neutral-500">
                     Querying a session ID from persistent Redis storage.
                   </span>
                 </td>{" "}
@@ -236,7 +236,7 @@ export default function LatencyNumbersPage() {
                 <td className="p-4">
                   Read 1MB Sequentially from Memory
                   <br />
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-neutral-500">
                     Iterating through a large in-memory buffer of user data.
                   </span>
                 </td>{" "}
@@ -253,7 +253,7 @@ export default function LatencyNumbersPage() {
                 <td className="p-4">
                   Read 1MB Sequentially from SSD
                   <br />
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-neutral-500">
                     Retrieving a 1MB file stored on disk for a static site.
                   </span>
                 </td>{" "}
@@ -266,7 +266,7 @@ export default function LatencyNumbersPage() {
                 <td className="p-4">
                   Disk Seek
                   <br />
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-neutral-500">
                     Accessing a log file stored on a spinning disk.
                   </span>
                 </td>{" "}
@@ -283,7 +283,7 @@ export default function LatencyNumbersPage() {
                 <td className="p-4">
                   Send Packet US to Europe and Back
                   <br />
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-neutral-500">
                     Calling an API hosted in a European data center.
                   </span>
                 </td>{" "}

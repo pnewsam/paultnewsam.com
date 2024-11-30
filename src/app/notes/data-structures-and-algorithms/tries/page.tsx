@@ -1,8 +1,7 @@
 import Container from "@/components/Container";
 import PageHeader from "@/components/PageHeader";
 import Callout from "../../_components/Callout";
-import Card from "@/components/Card";
-import { H2 } from "@/components/typography/H2";
+import { Summary } from "../../_components/Summary";
 
 export default function Page() {
   return (
@@ -15,27 +14,19 @@ export default function Page() {
         </em>
       </Callout>
 
-      <Card className="p-12">
-        <H2 className="mb-8">Problems to Solve</H2>
-        <ul className="list-disc list-inside text-xl/relaxed md:text-2xl/relaxed">
-          <li className="mb-4">
-            <a
-              className="text-cyan-500 dark:text-cyan-400 hover:underline"
-              href="https://leetcode.com/problems/implement-trie-prefix-tree/"
-            >
-              208. Implement Trie (Prefix Tree)
-            </a>
-          </li>
-          <li className="mb-4">
-            <a
-              className="text-cyan-500 dark:text-cyan-400 hover:underline"
-              href="https://leetcode.com/problems/word-search-ii/"
-            >
-              212. Word Search II
-            </a>
-          </li>
-        </ul>
-      </Card>
+      <Summary
+        title="Problems to Solve"
+        problems={[
+          {
+            title: "208. Implement Trie (Prefix Tree)",
+            url: "https://leetcode.com/problems/implement-trie-prefix-tree/",
+          },
+          {
+            title: "212. Word Search II",
+            url: "https://leetcode.com/problems/word-search-ii/",
+          },
+        ]}
+      />
     </Container>
   );
 }

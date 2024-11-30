@@ -2,8 +2,7 @@ import Container from "@/components/Container";
 import PageHeader from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
 import Callout from "../../_components/Callout";
-import Card from "@/components/Card";
-import { H2 } from "@/components/typography/H2";
+import { Summary } from "../../_components/Summary";
 
 export default function Backtracking() {
   return (
@@ -22,43 +21,27 @@ export default function Backtracking() {
           <em className="not-italic font-medium">pruning</em>
         </Callout>
 
-        <Card className="p-12">
-          <H2 className="mb-8">Problems to Solve</H2>
-          <ul className="list-disc list-inside text-xl/relaxed md:text-2xl/relaxed">
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/subsets/"
-              >
-                78. Subsets
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/permutations/"
-              >
-                46. Permutations
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/combination-sum/"
-              >
-                39. Combination Sum
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/sudoku-solver/"
-              >
-                37. Sudoku Solver
-              </a>
-            </li>
-          </ul>
-        </Card>
+        <Summary
+          title="Problems to Solve"
+          problems={[
+            {
+              title: "78. Subsets",
+              url: "https://leetcode.com/problems/subsets/",
+            },
+            {
+              title: "46. Permutations",
+              url: "https://leetcode.com/problems/permutations/",
+            },
+            {
+              title: "39. Combination Sum",
+              url: "https://leetcode.com/problems/combination-sum/",
+            },
+            {
+              title: "37. Sudoku Solver",
+              url: "https://leetcode.com/problems/sudoku-solver/",
+            },
+          ]}
+        />
       </section>
     </Container>
   );

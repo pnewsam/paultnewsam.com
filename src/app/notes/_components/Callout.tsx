@@ -1,6 +1,6 @@
 import { Body } from "@/components/typography/Body";
 import { cn } from "@/lib/utils";
-
+import Card from "@/components/Card";
 export default function Callout({
   title,
   children,
@@ -11,9 +11,9 @@ export default function Callout({
   className?: string;
 }) {
   return (
-    <div
+    <Card
       className={cn(
-        "bg-gray-100 dark:bg-neutral-800 p-6 rounded-md border-l-4 border-l-cyan-400 dark:border-l-cyan-600",
+        "p-6 rounded-md border-l-4 border-l-cyan-400 dark:border-l-cyan-600",
         className
       )}
     >
@@ -25,6 +25,6 @@ export default function Callout({
       <Body className="text-neutral-500 dark:text-neutral-400 mb-0">
         {children}
       </Body>
-    </div>
+    </Card>
   );
 }

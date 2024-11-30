@@ -1,8 +1,7 @@
 import Container from "@/components/Container";
 import PageHeader from "@/components/PageHeader";
 import Callout from "../../_components/Callout";
-import Card from "@/components/Card";
-import { H2 } from "@/components/typography/H2";
+import { Summary } from "../../_components/Summary";
 
 export default function Page() {
   return (
@@ -17,43 +16,27 @@ export default function Page() {
           <em className="not-italic font-medium">detecting cycles</em>
         </Callout>
 
-        <Card className="p-12">
-          <H2 className="mb-8">Problems to Solve</H2>
-          <ul className="list-disc list-inside text-xl/relaxed md:text-2xl/relaxed">
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/number-of-islands/"
-              >
-                200. Number of Islands
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/clone-graph/"
-              >
-                133. Clone Graph
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/course-schedule/"
-              >
-                207. Course Schedule
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/word-ladder/"
-              >
-                127. Word Ladder
-              </a>
-            </li>
-          </ul>
-        </Card>
+        <Summary
+          title="Problems to Solve"
+          problems={[
+            {
+              title: "200. Number of Islands",
+              url: "https://leetcode.com/problems/number-of-islands/",
+            },
+            {
+              title: "133. Clone Graph",
+              url: "https://leetcode.com/problems/clone-graph/",
+            },
+            {
+              title: "207. Course Schedule",
+              url: "https://leetcode.com/problems/course-schedule/",
+            },
+            {
+              title: "127. Word Ladder",
+              url: "https://leetcode.com/problems/word-ladder/",
+            },
+          ]}
+        />
       </section>
     </Container>
   );

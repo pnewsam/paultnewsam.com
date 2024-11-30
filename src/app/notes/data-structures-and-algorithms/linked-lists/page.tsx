@@ -1,8 +1,7 @@
 import Container from "@/components/Container";
 import PageHeader from "@/components/PageHeader";
+import { Summary } from "../../_components/Summary";
 import Callout from "../../_components/Callout";
-import Card from "@/components/Card";
-import { H2 } from "@/components/typography/H2";
 
 export default function Page() {
   return (
@@ -19,43 +18,27 @@ export default function Page() {
           <em className="not-italic font-medium">reversing lists</em>
         </Callout>
 
-        <Card className="p-12">
-          <H2 className="mb-8">Problems to Solve</H2>
-          <ul className="list-disc list-inside text-xl/relaxed md:text-2xl/relaxed">
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/reverse-linked-list/"
-              >
-                206. Reverse Linked List
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/merge-two-sorted-lists/"
-              >
-                21. Merge Two Sorted Lists
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/linked-list-cycle/"
-              >
-                141. Linked List Cycle
-              </a>
-            </li>
-            <li className="mb-4">
-              <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
-                href="https://leetcode.com/problems/reorder-list/"
-              >
-                143. Reorder List
-              </a>
-            </li>
-          </ul>
-        </Card>
+        <Summary
+          title="Problems to Solve"
+          problems={[
+            {
+              title: "206. Reverse Linked List",
+              url: "https://leetcode.com/problems/reverse-linked-list/",
+            },
+            {
+              title: "21. Merge Two Sorted Lists",
+              url: "https://leetcode.com/problems/merge-two-sorted-lists/",
+            },
+            {
+              title: "141. Linked List Cycle",
+              url: "https://leetcode.com/problems/linked-list-cycle/",
+            },
+            {
+              title: "143. Reorder List",
+              url: "https://leetcode.com/problems/reorder-list/",
+            },
+          ]}
+        />
       </section>
     </Container>
   );
