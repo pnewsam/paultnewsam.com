@@ -1,10 +1,10 @@
 "use client";
 
-import Card from "@/components/Card";
+import { Card } from "@/components/Card";
 import { Body } from "@/components/typography/Body";
 import { useCallback, useEffect, useState } from "react";
-import Container from "@/components/Container";
-import PageHeader from "@/components/PageHeader";
+import { Container } from "@/components/Container";
+import { PageHeader } from "@/components/PageHeader";
 import InfiniteScroll from "./_components/InfiniteScroll";
 import Button from "@/components/Button";
 import { api } from "../_utils/MockApi";

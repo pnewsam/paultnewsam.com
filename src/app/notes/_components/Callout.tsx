@@ -1,9 +1,9 @@
 import { Body } from "@/components/typography/Body";
 import { Info } from "lucide-react";
 import { cn } from "@/lib/utils";
-import Card from "@/components/Card";
+import { Card } from "@/components/Card";
 
-export default function Callout({
+export function Callout({
   title,
   children,
   className,

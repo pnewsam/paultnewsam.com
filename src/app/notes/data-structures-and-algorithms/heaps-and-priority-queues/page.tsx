@@ -1,6 +1,6 @@
-import CodeSnippet from "@/components/CodeSnippet";
-import Container from "@/components/Container";
-import PageHeader from "@/components/PageHeader";
+import { CodeSnippet } from "@/components/CodeSnippet";
+import { Container } from "@/components/Container";
+import { PageHeader } from "@/components/PageHeader";
 import { Summary } from "../../_components/Summary";
 import { Body } from "@/components/typography/Body";
 import { firstHalf } from "@/utils/array";

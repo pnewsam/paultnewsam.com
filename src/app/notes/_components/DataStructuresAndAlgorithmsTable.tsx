@@ -26,7 +26,7 @@ const Td = ({
   </td>
 );
 
-export default function DataStructuresAndAlgorithmsTable() {
+export function DataStructuresAndAlgorithmsTable() {
   return (
     <table className="w-full rounded-lg">
       <thead>

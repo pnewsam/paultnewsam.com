@@ -4,7 +4,7 @@ import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { cn } from "@/lib/utils";
 
-export default function CodeSnippet({
+export function CodeSnippet({
   code,
   language,
   className,

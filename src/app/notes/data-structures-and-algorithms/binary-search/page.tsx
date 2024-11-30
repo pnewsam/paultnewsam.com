@@ -1,9 +1,9 @@
-import Container from "@/components/Container";
-import PageHeader from "@/components/PageHeader";
-import Callout from "../../_components/Callout";
+import { Container } from "@/components/Container";
+import { PageHeader } from "@/components/PageHeader";
+import { Callout } from "../../_components/Callout";
 import { Body } from "@/components/typography/Body";
 import { Code } from "@/components/typography/Code";
-import CodeSnippet from "@/components/CodeSnippet";
+import { CodeSnippet } from "@/components/CodeSnippet";
 import { Summary } from "../../_components/Summary";
 import { firstHalf } from "@/utils/array";
 import { binarySearch } from "@/constants/problems";

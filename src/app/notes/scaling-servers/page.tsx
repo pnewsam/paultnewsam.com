@@ -1,6 +1,6 @@
-import Card from "@/components/Card";
-import Container from "@/components/Container";
-import PageHeader from "@/components/PageHeader";
+import { Card } from "@/components/Card";
+import { Container } from "@/components/Container";
+import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
 import {
   EC2Instance,

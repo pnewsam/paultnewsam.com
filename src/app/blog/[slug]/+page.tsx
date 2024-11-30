@@ -1,7 +1,7 @@
 import { allPosts } from "contentlayer/generated";
 import { getMDXComponent } from "next-contentlayer/hooks";
 import { notFound } from "next/navigation";
-import Container from "@/components/Container";
+import { Container } from "@/components/Container";
 import { H1 } from "@/components/typography/H1";
 import { Body } from "@/components/typography/Body";
 import "@/app/mdx.css";

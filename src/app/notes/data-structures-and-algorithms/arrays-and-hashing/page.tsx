@@ -1,6 +1,6 @@
-import Container from "@/components/Container";
-import PageHeader from "@/components/PageHeader";
-import Callout from "../../_components/Callout";
+import { Container } from "@/components/Container";
+import { PageHeader } from "@/components/PageHeader";
+import { Callout } from "../../_components/Callout";
 import { Body } from "@/components/typography/Body";
 import { H2 } from "@/components/typography/H2";
 import { Summary } from "../../_components/Summary";

@@ -1,4 +1,4 @@
-import Card from "@/components/Card";
+import { Card } from "@/components/Card";
 import { H3 } from "@/components/typography/H3";
 
 export const Summary = ({

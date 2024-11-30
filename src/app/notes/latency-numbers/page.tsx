@@ -1,7 +1,7 @@
-import Container from "@/components/Container";
-import PageHeader from "@/components/PageHeader";
+import { Container } from "@/components/Container";
+import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
-import Card from "@/components/Card";
+import { Card } from "@/components/Card";
 
 const logScale = (value: number) => {
   const minDimension = 8; // Minimum width/height

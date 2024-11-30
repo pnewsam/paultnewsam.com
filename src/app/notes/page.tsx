@@ -1,12 +1,12 @@
-import Container from "@/components/Container";
-import PageHeader from "@/components/PageHeader";
-import LinkCard from "@/app/notes/_components/LinkCard";
+import { Container } from "@/components/Container";
+import { PageHeader } from "@/components/PageHeader";
+import { LinkCard } from "@/app/notes/_components/LinkCard";
 import { Body } from "@/components/typography/Body";
 import { H2 } from "@/components/typography/H2";
-import DataStructuresAndAlgorithmsTable from "./_components/DataStructuresAndAlgorithmsTable";
-import Card from "@/components/Card";
+import { DataStructuresAndAlgorithmsTable } from "./_components/DataStructuresAndAlgorithmsTable";
+import { Card } from "@/components/Card";
 
-const showDsaNotes = process.env.SHOW_DSA_NOTES === "true";
+const isDevelopment = process.env.IS_DEVELOPMENT === "true";
 
 export default function NotesPage() {
   return (
@@ -39,7 +39,7 @@ export default function NotesPage() {
           />
         </div>
 
-        {showDsaNotes && (
+        {isDevelopment && (
           <div>
             <H2 className="mb-4">Data Structures & Algorithms</H2>
             <Body>These are my notes on data structures and algorithms.</Body>

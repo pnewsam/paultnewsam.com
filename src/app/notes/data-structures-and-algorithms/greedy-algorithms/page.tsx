@@ -1,6 +1,6 @@
-import Container from "@/components/Container";
-import PageHeader from "@/components/PageHeader";
-import Callout from "../../_components/Callout";
+import { Container } from "@/components/Container";
+import { PageHeader } from "@/components/PageHeader";
+import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
 import { firstHalf } from "@/utils/array";
 import { greedyAlgorithms } from "@/constants/problems";

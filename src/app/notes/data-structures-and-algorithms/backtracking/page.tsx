@@ -1,7 +1,7 @@
-import Container from "@/components/Container";
-import PageHeader from "@/components/PageHeader";
+import { Container } from "@/components/Container";
+import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
-import Callout from "../../_components/Callout";
+import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
 import { firstHalf } from "@/utils/array";
 import { backtracking } from "@/constants/problems";

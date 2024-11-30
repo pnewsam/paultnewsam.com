@@ -2,12 +2,12 @@
 
 import { useEffect } from "react";
 import { Brush } from "lucide-react";
-import Container from "@/components/Container";
+import { Container } from "@/components/Container";
 import { Body } from "@/components/typography/Body";
 import { setupCanvas } from "./_scripts/setupCanvas";
 import initializers from "./_scripts/initializers";
-import Card from "@/components/Card";
-import PageHeader from "@/components/PageHeader";
+import { Card } from "@/components/Card";
+import { PageHeader } from "@/components/PageHeader";
 
 export default function WhiteboardPage() {
   useEffect(() => {

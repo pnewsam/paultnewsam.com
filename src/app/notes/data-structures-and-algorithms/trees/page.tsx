@@ -1,9 +1,9 @@
-import CodeSnippet from "@/components/CodeSnippet";
-import Container from "@/components/Container";
+import { CodeSnippet } from "@/components/CodeSnippet";
+import { Container } from "@/components/Container";
 import { Body } from "@/components/typography/Body";
 import { H3 } from "@/components/typography/H3";
-import PageHeader from "@/components/PageHeader";
-import Callout from "../../_components/Callout";
+import { PageHeader } from "@/components/PageHeader";
+import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
 import { firstHalf } from "@/utils/array";
 import { trees } from "@/constants/problems";

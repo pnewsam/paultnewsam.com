@@ -1,13 +1,7 @@
 import { H1 } from "@/components/typography/H1";
-import Badge from "@/components/Badge";
+import { Badge } from "@/components/Badge";
 
-export default function PageHeader({
-  title,
-  tags,
-}: {
-  title: string;
-  tags: string[];
-}) {
+export function PageHeader({ title, tags }: { title: string; tags: string[] }) {
   return (
     <div>
       <H1 className="mb-4 md:mb-6">{title}</H1>

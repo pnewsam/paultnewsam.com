@@ -1,7 +1,7 @@
-import Container from "@/components/Container";
-import PageHeader from "@/components/PageHeader";
+import { Container } from "@/components/Container";
+import { PageHeader } from "@/components/PageHeader";
 import { Summary } from "../../_components/Summary";
-import Callout from "../../_components/Callout";
+import { Callout } from "../../_components/Callout";
 import { firstHalf } from "@/utils/array";
 import { linkedLists } from "@/constants/problems";
 
