@@ -10,7 +10,7 @@ export const H1 = ({
 }) => (
   <h1
     className={cn(
-      "text-5xl font-medium text-neutral-900 dark:text-white",
+      "text-4xl md:text-5xl font-medium text-neutral-900 dark:text-white",
       className
     )}
   >

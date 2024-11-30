@@ -4,6 +4,7 @@ import LinkCard from "@/app/notes/_components/LinkCard";
 import { TextLink } from "@/app/notes/_components/TextLink";
 import { Body } from "@/components/typography/Body";
 import { H2 } from "@/components/typography/H2";
+import Card from "@/components/Card";
 
 const showDsaNotes = process.env.SHOW_DSA_NOTES === "true";
 
@@ -46,8 +47,7 @@ export default function NotesPage() {
           interesting.
         </Body>
 
-        <H2 className="mb-8">Cheatsheets</H2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-16">
           <LinkCard
             href="/notes/latency-numbers"
             tags={["Performance"]}
@@ -72,8 +72,8 @@ export default function NotesPage() {
           <div>
             <H2 className="mb-4">Data Structures & Algorithms</H2>
             <Body>These are my notes on data structures and algorithms.</Body>
-            <div className="mb-16">
-              <table className="w-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-lg">
+            <Card className="mb-16">
+              <table className="w-full rounded-lg">
                 <thead>
                   <tr className="text-left text-xl">
                     <th className="p-4">Topic</th>
@@ -398,7 +398,9 @@ export default function NotesPage() {
                         Graphs
                       </TextLink>
                     </td>
-                    <td className="p-4">DFS; BFS; Adjacency List</td>
+                    <td className="p-4">
+                      BFS; DFS; adjacency lists; detecting cycles
+                    </td>
                     <td className="p-4">
                       <Problems
                         problems={[
@@ -740,7 +742,7 @@ export default function NotesPage() {
                   </tr>
                 </tfoot>
               </table>
-            </div>
+            </Card>
           </div>
         )}
       </section>

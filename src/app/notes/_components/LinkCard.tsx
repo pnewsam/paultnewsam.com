@@ -2,6 +2,8 @@ import Link from "next/link";
 import { H3 } from "@/components/typography/H3";
 import { BodySmall } from "@/components/typography/BodySmall";
 import Badge from "@/components/Badge";
+import { cardStyles } from "@/components/Card";
+import { cn } from "@/lib/utils";
 
 export default function LinkCard({
   href,
@@ -16,7 +18,10 @@ export default function LinkCard({
 }) {
   return (
     <Link
-      className="bg-neutral-100 dark:bg-neutral-900 shadow-md hover:shadow-lg border border-neutral-200 dark:border-neutral-800 rounded-md p-8 hover:bg-neutral-100/50 dark:hover:bg-neutral-900/50 duration-200 flex flex-col justify-between gap-4 hover:-translate-y-1 transition-transform"
+      className={cn(
+        cardStyles,
+        "p-8 hover:bg-neutral-100/50 dark:hover:bg-neutral-900/50 duration-200 flex flex-col justify-between gap-4 hover:-translate-y-1 transition-transform"
+      )}
       href={href}
     >
       <H3>{title}</H3>
