@@ -24,7 +24,7 @@ export const Summary = ({
               key={problem.url}
             >
               <a
-                className="text-cyan-500 dark:text-cyan-400 hover:underline"
+                className="text-cyan-500 dark:text-cyan-400 decoration-2 underline-offset-4 hover:underline"
                 href={problem.url}
               >
                 {problem.title}
