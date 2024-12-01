@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 
 const tableVariants = cva(
-  "w-full rounded-lg border [&_th]:p-4 [&_th]:text-left [&_td]:p-4 [&_tr]:border-t text-lg md:text-xl",
+  "w-full rounded-lg border [&_th]:bg-neutral-100 dark:[&_th]:bg-neutral-900/25 [&_th]:p-4 [&_th]:text-left [&_td]:p-4 [&_tr]:border-t text-lg md:text-xl",
   {
     variants: {
       size: {

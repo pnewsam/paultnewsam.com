@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { H3 } from "@/components/typography/H3";
-import { BodySmall } from "@/components/typography/BodySmall";
+import { Body } from "@/components/typography/Body";
 import { Badge } from "@/components/Badge";
 import { cardStyles } from "@/components/Card";
 import { cn } from "@/lib/utils";
@@ -32,7 +32,7 @@ export function LinkCard({
           </Badge>
         ))}
       </div>
-      <BodySmall>{description}</BodySmall>
+      <Body size="sm">{description}</Body>
     </Link>
   );
 }

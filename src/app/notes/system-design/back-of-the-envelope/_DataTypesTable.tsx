@@ -1,56 +1,110 @@
 import { Table } from "@/components/Table";
-import { OneByte, OneHundredBytes, OneKilobyte } from "@/components/_ByteScale";
+import {
+  OneByte,
+  OneKilobyte,
+  OneHundredKilobytes,
+  OneMegabyte,
+  TenKilobytes,
+  OneHundredBytes,
+} from "@/components/_ByteScale";
+import { Code } from "@/components/typography/Code";
 
 export function DataTypesTable() {
   return (
     <Table size="sm">
       <thead>
         <tr>
-          <th>Category</th>
-          <th>Data Type</th>
+          <th>Type</th>
           <th>Size</th>
+          <th>Postgres Data Types</th>
           <th>Visual Scale</th>
           <th>Notes</th>
         </tr>
       </thead>
       <tbody>
-        <tr className="bg-cyan-100 dark:bg-cyan-900/25">
-          <td>Primitive Types</td>
-          <td>Boolean</td>
-          <td>1 byte</td>
-          <td>
-            <OneByte />
-          </td>
+        <tr>
+          <td>Integer</td>
+          <td>2, 4 or 8 bytes</td>
           <td>
             <ul className="list-disc list-inside">
-              <li>Flags</li>
-              <li>Binary states</li>
+              <li>
+                <Code size="xs">SMALLINT</Code>: 2 bytes
+              </li>
+              <li>
+                <Code size="xs">INTEGER</Code>: 4 bytes
+              </li>
+              <li>
+                <Code size="xs">BIGINT</Code>: 8 bytes
+              </li>
             </ul>
           </td>
-        </tr>
-        <tr className="bg-cyan-100 dark:bg-cyan-900/25">
-          <td></td>
-          <td>Integer (32-bit)</td>
-          <td>4 bytes</td>
           <td>
-            <div className="inline-flex gap-1">
-              <OneByte />
-              <OneByte />
-              <OneByte />
-              <OneByte />
+            <div className="flex flex-col gap-1">
+              <div className="inline-flex gap-1">
+                {Array.from({ length: 2 }).map((_, i) => (
+                  <OneByte key={i} />
+                ))}
+              </div>
+              <div className="inline-flex gap-1">
+                {Array.from({ length: 4 }).map((_, i) => (
+                  <OneByte key={i} />
+                ))}
+              </div>
+              <div className="inline-flex gap-1">
+                {Array.from({ length: 8 }).map((_, i) => (
+                  <OneByte key={i} />
+                ))}
+              </div>
             </div>
           </td>
           <td>
-            <ul className="list-disc list-inside">
-              <li>IDs</li>
-              <li>Counts</li>
-            </ul>
+            Used for numeric fields, IDs, and counters. Larger sizes support
+            larger ranges.
           </td>
         </tr>
         <tr>
-          <td></td>
-          <td>Integer (64-bit)</td>
+          <td>Floating Point</td>
+          <td>4 or 8 bytes</td>
+          <td>
+            <ul className="list-disc list-inside">
+              <li>
+                <Code size="xs">REAL</Code>: Single-precision floating point
+              </li>
+              <li>
+                <Code size="xs">DOUBLE PRECISION</Code>: Double-precision
+                floating point
+              </li>
+            </ul>
+          </td>
+          <td>
+            <div className="flex flex-col gap-1">
+              <div className="inline-flex gap-1">
+                {Array.from({ length: 4 }).map((_, i) => (
+                  <OneByte key={i} />
+                ))}
+              </div>
+              <div className="inline-flex gap-1">
+                {Array.from({ length: 8 }).map((_, i) => (
+                  <OneByte key={i} />
+                ))}
+              </div>
+            </div>
+          </td>
+          <td>Used for scientific calculations or approximate values.</td>
+        </tr>
+        <tr>
+          <td>Timestamp</td>
           <td>8 bytes</td>
+          <td>
+            <ul className="list-disc list-inside">
+              <li>
+                <Code size="xs">TIMESTAMP</Code>: Without timezone
+              </li>
+              <li>
+                <Code size="xs">TIMESTAMPTZ</Code>: With timezone
+              </li>
+            </ul>
+          </td>
           <td>
             <div className="inline-flex gap-1">
               {Array.from({ length: 8 }).map((_, i) => (
@@ -59,126 +113,19 @@ export function DataTypesTable() {
             </div>
           </td>
           <td>
-            <ul className="list-disc list-inside">
-              <li>High-precision</li>
-              <li>Large range</li>
-            </ul>
+            Used for date and time fields, with or without timezone information.
           </td>
         </tr>
         <tr>
-          <td></td>
-          <td>Floating-point (Double)</td>
-          <td>8 bytes</td>
-          <td>
-            <div className="inline-flex gap-1">
-              {Array.from({ length: 8 }).map((_, i) => (
-                <OneByte key={i} />
-              ))}
-            </div>
-          </td>
-          <td>Common in numerical or scientific computations</td>
-        </tr>
-        <tr>
-          <td>Strings</td>
-          <td>Small string</td>
-          <td>~20 bytes</td>
-          <td>
-            <div className="inline-flex gap-1 flex-wrap">
-              {Array.from({ length: 20 }).map((_, i) => (
-                <OneByte key={i} />
-              ))}
-            </div>
-          </td>
-          <td>
-            <ul className="list-disc list-inside">
-              <li>e.g. Username</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>Medium string</td>
-          <td>~100 bytes</td>
-          <td>
-            <OneHundredBytes />
-          </td>
-          <td>
-            <ul className="list-disc list-inside">
-              <li>e.g. Tweet</li>
-              <li>e.g. Short description</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>Large string</td>
-          <td>~1 KB</td>
-          <td>
-            <OneKilobyte />
-          </td>
-          <td>
-            <ul className="list-disc list-inside">
-              <li>e.g. Product description</li>
-              <li>e.g. Blog post summary</li>
-            </ul>
-          </td>
-        </tr>
-        <tr className="bg-cyan-100 dark:bg-cyan-900/25">
-          <td>IDs</td>
           <td>UUID</td>
           <td>16 bytes</td>
           <td>
-            <div className="inline-flex gap-1">
-              {Array.from({ length: 16 }).map((_, i) => (
-                <OneByte key={i} />
-              ))}
-            </div>
+            <ul className="list-disc list-inside">
+              <li>
+                <Code size="xs">UUID</Code>
+              </li>
+            </ul>
           </td>
-          <td>Universally unique, standard across systems</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>Auto-increment ID</td>
-          <td>4-8 bytes</td>
-          <td>
-            <div className="inline-flex gap-1">
-              {Array.from({ length: 8 }).map((_, i) => (
-                <OneByte key={i} />
-              ))}
-            </div>
-          </td>
-          <td>Common for relational databases</td>
-        </tr>
-        <tr className="bg-cyan-100 dark:bg-cyan-900/25">
-          <td>Timestamps</td>
-          <td>Unix timestamp</td>
-          <td>4-8 bytes</td>
-          <td>
-            <div className="inline-flex gap-1">
-              {Array.from({ length: 8 }).map((_, i) => (
-                <OneByte key={i} />
-              ))}
-            </div>
-          </td>
-          <td>Compact format for storing time</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>ISO 8601 timestamp</td>
-          <td>~20 bytes</td>
-          <td>
-            <div className="inline-flex gap-1 flex-wrap">
-              {Array.from({ length: 20 }).map((_, i) => (
-                <OneByte key={i} />
-              ))}
-            </div>
-          </td>
-          <td>Readable format for timestamps</td>
-        </tr>
-        <tr>
-          <td>Hashes</td>
-          <td>MD5</td>
-          <td>16 bytes</td>
           <td>
             <div className="inline-flex gap-1">
               {Array.from({ length: 16 }).map((_, i) => (
@@ -186,20 +133,158 @@ export function DataTypesTable() {
               ))}
             </div>
           </td>
-          <td>Older hash algorithm (not secure)</td>
+          <td>Universally unique identifiers for distributed systems.</td>
         </tr>
         <tr>
-          <td></td>
-          <td>SHA-256</td>
-          <td>32 bytes</td>
+          <td>Enum</td>
+          <td>1-4 bytes</td>
           <td>
-            <div className="inline-flex gap-1 flex-wrap">
-              {Array.from({ length: 32 }).map((_, i) => (
-                <OneByte key={i} />
-              ))}
+            <ul className="list-disc list-inside">
+              <li>
+                <Code size="xs">ENUM</Code>
+              </li>
+            </ul>
+          </td>
+          <td>
+            <div className="flex flex-col gap-2">
+              <OneByte />
+              <div className="inline-flex items-center gap-1">
+                {Array.from({ length: 4 }).map((_, i) => (
+                  <OneByte key={i} />
+                ))}
+              </div>
             </div>
           </td>
-          <td>Commonly used for cryptographic applications</td>
+          <td>
+            <ul className="list-disc list-inside">
+              <li>
+                Small Enum: Represents a set of fewer than 256 distinct values.
+              </li>
+              <li>
+                Larger Enum: Used for larger enumerations or when there are more
+                than 256 values.
+              </li>
+              <li>
+                Examples:
+                <ul className="list-disc list-inside ml-4">
+                  <li>
+                    Small Enum: User roles like <Code size="xs">admin</Code>,{" "}
+                    <Code size="xs">editor</Code>, <Code size="xs">viewer</Code>
+                    .
+                  </li>
+                  <li>
+                    Larger Enum: More extensive lists like country codes or
+                    status values.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>String</td>
+          <td>Variable length</td>
+          <td>
+            <ul className="list-disc list-inside">
+              <li>
+                <Code size="xs">VARCHAR(n)</Code>: Up to{" "}
+                <Code size="xs">n</Code> characters
+              </li>
+              <li>
+                <Code size="xs">TEXT</Code>: Unlimited length
+              </li>
+            </ul>
+          </td>
+          <td>
+            <div className="flex flex-col gap-2">
+              <div className="inline-flex items-center gap-2">
+                <OneHundredBytes /> <span>Short (~100 bytes)</span>
+              </div>
+              <div className="inline-flex items-center gap-2">
+                <OneKilobyte /> <span>Medium (~1 KB)</span>
+              </div>
+              <div className="inline-flex items-center gap-2">
+                <TenKilobytes /> <span>Long (~10 KB)</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <ul className="list-disc list-inside">
+              <li>
+                Short: Short text like usernames, titles, or short sentences.
+              </li>
+              <li>Medium: Descriptions, tweets, or paragraphs of text.</li>
+              <li>Long String: Articles, blog posts, or large text fields.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>JSONB</td>
+          <td>Variable length</td>
+          <td>
+            <ul className="list-disc list-inside">
+              <li>
+                <Code size="xs">JSONB</Code>
+              </li>
+            </ul>
+          </td>
+          <td>
+            <div className="flex flex-col gap-2">
+              <div className="inline-flex items-center gap-2">
+                <OneHundredBytes /> <span>Small (~100 bytes)</span>
+              </div>
+              <div className="inline-flex items-center gap-2">
+                <OneKilobyte /> <span>Medium (~1 KB)</span>
+              </div>
+              <div className="inline-flex items-center gap-2">
+                <TenKilobytes /> <span>Large (~10 KB)</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <ul className="list-disc list-inside">
+              <li>
+                Small: Simple JSON (e.g.,{" "}
+                <Code size="xs">{`{"id":1, "name":"Alice"}`}</Code>).
+              </li>
+              <li>Medium: Nested JSON or API response.</li>
+              <li>
+                Large: Complex data with many fields or deeply nested
+                structures.
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>BYTEA</td>
+          <td>Variable length</td>
+          <td>
+            <ul className="list-disc list-inside">
+              <li>
+                <Code size="xs">BYTEA</Code>
+              </li>
+            </ul>
+          </td>
+          <td>
+            <div className="flex flex-col gap-2">
+              <div className="inline-flex items-center gap-2">
+                <OneKilobyte /> <span>Small (~1 KB)</span>
+              </div>
+              <div className="inline-flex items-center gap-2">
+                <OneHundredKilobytes /> <span>Medium (~100 KB)</span>
+              </div>
+              <div className="inline-flex items-center gap-2">
+                <OneMegabyte /> <span>Large (~1 MB)</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <ul className="list-disc list-inside">
+              <li>Small: Thumbnails or small icons.</li>
+              <li>Medium: Compressed documents or profile pictures.</li>
+              <li>Large: High-resolution images or large document scans.</li>
+            </ul>
+          </td>
         </tr>
       </tbody>
     </Table>
