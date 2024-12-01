@@ -14,7 +14,7 @@ export const Summary = ({
   return (
     <Card className="">
       <div className="border-b border-neutral-300 dark:border-neutral-700 p-6">
-        <H3 className="font-semibold underline-offset-4">{title}</H3>
+        <H3 className="font-semibold decoration-0 no-underline m-0">{title}</H3>
       </div>
       <div className="p-6">
         <ul className="list-disc list-inside text-lg/relaxed md:text-xl/relaxed space-y-2">

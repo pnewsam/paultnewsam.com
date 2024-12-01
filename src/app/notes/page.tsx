@@ -26,9 +26,9 @@ export default function NotesPage() {
             description="A table of latency numbers for various operations."
           />
           <LinkCard
-            href="/notes/system-design/back-of-the-envelope"
+            href="/notes/system-design/data-type-sizes"
             tags={["System Design"]}
-            title="Back of the Envelope"
+            title="Data Type Sizes"
             description="A simple method for estimating the cost of a system."
           />
           <LinkCard

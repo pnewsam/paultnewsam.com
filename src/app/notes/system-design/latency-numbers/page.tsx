@@ -1,6 +1,7 @@
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
+import { Bold } from "@/components/typography/Bold";
 import { Card } from "@/components/Card";
 import {
   HalfNanosecond,
@@ -18,7 +19,14 @@ export default function LatencyNumbersPage() {
     <Container>
       <section className="py-12 md:py-24">
         <PageHeader title="Latency Numbers" tags={["Performance"]} />
-        <Body>Squares are scaled in size logarithmically.</Body>
+        <Body>
+          These numbers vary so hugely that it is difficult to really develop a
+          sense of them. Some quick comparisons: it&apos;s{" "}
+          <Bold>160x faster</Bold> to read from RAM than do a random read from
+          SSD. It&apos;s <Bold>4x faster</Bold> to read 1MB sequentially from
+          RAM than to do the same from SSD. Squares are scaled in size
+          logarithmically.
+        </Body>
 
         <Card className="overflow-x-auto">
           <table className="w-full text-lg">
