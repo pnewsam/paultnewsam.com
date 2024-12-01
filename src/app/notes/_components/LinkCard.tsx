@@ -24,7 +24,7 @@ export function LinkCard({
       )}
       href={href}
     >
-      <H3>{title}</H3>
+      <H3 className="no-underline decoration-none mb-0">{title}</H3>
       <div className="flex items-center gap-2">
         {tags.map((tag) => (
           <Badge size="sm" key={tag}>

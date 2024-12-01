@@ -20,10 +20,16 @@ export default function NotesPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-16">
           <LinkCard
-            href="/notes/latency-numbers"
-            tags={["Performance"]}
+            href="/notes/system-design/latency-numbers"
+            tags={["Performance", "System Design"]}
             title="Latency Numbers"
             description="A table of latency numbers for various operations."
+          />
+          <LinkCard
+            href="/notes/system-design/back-of-the-envelope"
+            tags={["System Design"]}
+            title="Back of the Envelope"
+            description="A simple method for estimating the cost of a system."
           />
           <LinkCard
             href="/notes/whiteboard"
@@ -42,15 +48,15 @@ export default function NotesPage() {
           <div>
             <H2 className="mb-4">System Design</H2>
             <Body>
-              System design is a deep subject. It can be overwhelming sorting
-              through all the learning materials out there.
+              System design is the study of how to build scaleable and resilient
+              distributed systems.
             </Body>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-16">
               <LinkCard
                 href="/notes/system-design/cap-theorem"
                 tags={["System Design"]}
                 title="CAP Theorem"
-                description="A simple explanation of the CAP Theorem."
+                description="A simple explanation of wthe CAP Theorem."
               />
             </div>
           </div>
