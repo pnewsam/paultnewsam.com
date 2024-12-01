@@ -11,7 +11,7 @@ import { Code } from "@/components/typography/Code";
 
 export function DataTypeSizesTable() {
   return (
-    <Table size="sm">
+    <Table>
       <thead>
         <tr>
           <th>Type</th>
@@ -20,7 +20,7 @@ export function DataTypeSizesTable() {
           <th>Notes</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className="text-base">
         <tr>
           <td>Integer</td>
           <td>

@@ -1,24 +1,16 @@
 import { cva } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
 const tableVariants = cva(
-  "w-full rounded-lg border [&_th]:bg-neutral-100 dark:[&_th]:bg-neutral-900/25 [&_th]:p-4 [&_th]:text-left [&_td]:p-4 [&_tr]:border-t text-lg md:text-xl",
-  {
-    variants: {
-      size: {
-        sm: "text-sm md:text-base",
-        md: "text-base md:text-lg",
-        lg: "text-lg md:text-xl",
-      },
-    },
-  }
+  "w-full rounded-lg border [&_th]:bg-neutral-100 dark:[&_th]:bg-neutral-900/25 [&_th]:p-4 [&_th]:text-left [&_td]:p-4 [&_tr]:border-t"
 );
 
 export const Table = ({
   children,
-  size = "md",
+  className,
 }: {
   children: React.ReactNode;
-  size?: "sm" | "md" | "lg";
+  className?: string;
 }) => {
-  return <table className={tableVariants({ size })}>{children}</table>;
+  return <table className={cn(tableVariants(), className)}>{children}</table>;
 };

@@ -21,10 +21,10 @@ export default function Page() {
           <DataTypeSizesTable />
         </Card>
 
-        <H2 className="mt-12">Binary Data</H2>
+        {/* <H2 className="mt-12">Binary Data</H2>
         <Card>
           <BinaryDataTable />
-        </Card>
+        </Card> */}
       </section>
     </Container>
   );
