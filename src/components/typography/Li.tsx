@@ -7,4 +7,8 @@ export const Li = ({
 }: {
   children: React.ReactNode;
   className?: string;
-}) => <li className={cn("ml-2", className)}>{children}</li>;
+}) => (
+  <li className={cn("text-lg/relaxed md:text-xl/relaxed ml-2", className)}>
+    {children}
+  </li>
+);

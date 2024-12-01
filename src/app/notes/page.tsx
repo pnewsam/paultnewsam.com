@@ -38,11 +38,32 @@ export default function NotesPage() {
             description="A simple infinite scroll implementation."
           />
         </div>
+        {isDevelopment && (
+          <div>
+            <H2 className="mb-4">System Design</H2>
+            <Body>
+              System design is a deep subject. It can be overwhelming sorting
+              through all the learning materials out there.
+            </Body>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-16">
+              <LinkCard
+                href="/notes/system-design/cap-theorem"
+                tags={["System Design"]}
+                title="CAP Theorem"
+                description="A simple explanation of the CAP Theorem."
+              />
+            </div>
+          </div>
+        )}
 
         {isDevelopment && (
           <div>
             <H2 className="mb-4">Data Structures & Algorithms</H2>
-            <Body>These are my notes on data structures and algorithms.</Body>
+            <Body>
+              <b>Data Structures and Algorithms</b> is a deep subject. You could
+              spend years learning them. It can be overwhelming sorting through
+              all the learning materials out there.
+            </Body>
             <Card className="mb-16">
               <DataStructuresAndAlgorithmsTable />
             </Card>

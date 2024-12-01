@@ -6,7 +6,7 @@ import { H2 } from "@/components/typography/H2";
 import { Summary } from "../../_components/Summary";
 import { arraysAndHashing } from "@/constants/problems";
 import { firstHalf } from "@/utils/array";
-import { Mark } from "@/components/Mark";
+import { Mark } from "@/components/typography/Mark";
 
 export default function Page() {
   return (

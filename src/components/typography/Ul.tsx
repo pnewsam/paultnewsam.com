@@ -10,7 +10,7 @@ export const Ul = ({
 }) => (
   <ul
     className={cn(
-      "list-disc text-neutral-700 dark:text-neutral-300 leading-relaxed pl-5 space-y-2",
+      "list-disc text-neutral-700 dark:text-neutral-300 leading-relaxed pl-5 space-y-2 mb-8",
       className
     )}
   >
