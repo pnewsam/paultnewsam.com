@@ -32,13 +32,13 @@ export default function NotesPage() {
             description="A simple method for estimating the cost of a system."
           />
           <LinkCard
-            href="/notes/whiteboard"
+            href="/notes/user-interface/whiteboard"
             tags={["HTML", "Typescript"]}
             title="Whiteboard"
             description="A very basic whiteboard with HTML Canvas."
           />
           <LinkCard
-            href="/notes/infinite-scroll"
+            href="/notes/user-interface/infinite-scroll"
             tags={["Typescript"]}
             title="Infinite Scroll"
             description="A simple infinite scroll implementation."

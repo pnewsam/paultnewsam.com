@@ -7,7 +7,7 @@ import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import InfiniteScroll from "./_components/InfiniteScroll";
 import Button from "@/components/Button";
-import { api } from "../_utils/MockApi";
+import { api } from "./_utils/MockApi";
 import { Loader2 } from "lucide-react";
 
 type Person = {
