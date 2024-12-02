@@ -94,7 +94,7 @@ export const OneHundredFiftyMillionNanoseconds = ({
   }
   return (
     <svg height={size} width={size} className="inline-block">
-      <rect className="fill-orange-400" width={size} height={size} />
+      <rect className="fill-amber-400" width={size} height={size} />
     </svg>
   );
 };

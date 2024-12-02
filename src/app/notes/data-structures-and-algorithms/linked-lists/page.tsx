@@ -4,7 +4,7 @@ import { Summary } from "../../_components/Summary";
 import { Callout } from "../../_components/Callout";
 import { firstHalf } from "@/utils/array";
 import { linkedLists } from "@/constants/problems";
-
+import { Bold } from "@/components/typography/Bold";
 export default function Page() {
   return (
     <Container>
@@ -15,9 +15,9 @@ export default function Page() {
         />
 
         <Callout title="Key Concepts" className="mb-8">
-          <em className="not-italic font-medium">Pointer manipulation</em>
+          <Bold>Pointer manipulation</Bold>
           ;&nbsp;
-          <em className="not-italic font-medium">reversing lists</em>
+          <Bold>reversing lists</Bold>
         </Callout>
 
         <Summary title="Problems to Solve" problems={firstHalf(linkedLists)} />

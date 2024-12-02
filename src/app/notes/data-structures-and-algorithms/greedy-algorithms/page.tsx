@@ -4,6 +4,7 @@ import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
 import { firstHalf } from "@/utils/array";
 import { greedyAlgorithms } from "@/constants/problems";
+import { Bold } from "@/components/typography/Bold";
 
 export default function Page() {
   return (
@@ -15,8 +16,8 @@ export default function Page() {
         />
 
         <Callout title="Key Concepts" className="mb-8">
-          <em className="not-italic font-medium">Local optimum</em>;&nbsp;
-          <em className="not-italic font-medium">global optimum</em>
+          <Bold>Local optimum</Bold>;&nbsp;
+          <Bold>global optimum</Bold>
         </Callout>
 
         <Summary

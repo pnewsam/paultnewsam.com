@@ -1,9 +1,11 @@
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
+import { Bold } from "@/components/typography/Bold";
+import { stacksAndQueues } from "@/constants/problems";
+import { firstHalf } from "@/utils/array";
+
 import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
-import { firstHalf } from "@/utils/array";
-import { stacksAndQueues } from "@/constants/problems";
 
 export default function Page() {
   return (
@@ -14,10 +16,10 @@ export default function Page() {
           tags={["Data Structures", "Algorithms"]}
         />
         <Callout title="Key Concepts" className="mb-8">
-          <em className="not-italic font-medium">Stack for backtracking</em>
+          <Bold>Stack for backtracking</Bold>
           ;&nbsp;
-          <em className="not-italic font-medium">monotonic stack</em>;&nbsp;
-          <em className="not-italic font-medium">queue for BFS</em>
+          <Bold>monotonic stack</Bold>;&nbsp;
+          <Bold>queue for BFS</Bold>
         </Callout>
 
         <Summary

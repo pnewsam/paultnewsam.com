@@ -1,12 +1,14 @@
 import { CodeSnippet } from "@/components/CodeSnippet";
 import { Container } from "@/components/Container";
-import { Body } from "@/components/typography/Body";
-import { H3 } from "@/components/typography/H3";
 import { PageHeader } from "@/components/PageHeader";
+import { Body } from "@/components/typography/Body";
+import { Bold } from "@/components/typography/Bold";
+import { H3 } from "@/components/typography/H3";
+import { trees } from "@/constants/problems";
+import { firstHalf } from "@/utils/array";
+
 import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
-import { firstHalf } from "@/utils/array";
-import { trees } from "@/constants/problems";
 
 const insertSnippet = `class TreeNode {
   value: number;
@@ -95,9 +97,9 @@ export default function BinaryTreeTraversalPage() {
         <PageHeader title="Trees" tags={["Data Structures", "Typescript"]} />
 
         <Callout title="Key Concepts" className="mb-8">
-          <em className="not-italic font-medium">DFS</em>;&nbsp;
-          <em className="not-italic font-medium">BFS</em>;&nbsp;
-          <em className="not-italic font-medium">recursion</em>
+          <Bold>DFS</Bold>;&nbsp;
+          <Bold>BFS</Bold>;&nbsp;
+          <Bold>recursion</Bold>
         </Callout>
 
         <Body>A binary tree implementation in Typescript.</Body>

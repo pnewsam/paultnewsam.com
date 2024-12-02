@@ -4,6 +4,7 @@ import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
 import { firstHalf } from "@/utils/array";
 import { graphs } from "@/constants/problems";
+import { Bold } from "@/components/typography/Bold";
 
 export default function Page() {
   return (
@@ -12,10 +13,10 @@ export default function Page() {
         <PageHeader title="Graphs" tags={["Data Structures", "Algorithms"]} />
 
         <Callout title="Key Concepts" className="mb-8">
-          <em className="not-italic font-medium">BFS</em>;&nbsp;
-          <em className="not-italic font-medium">DFS</em>;&nbsp;
-          <em className="not-italic font-medium">adjacency lists</em>;&nbsp;
-          <em className="not-italic font-medium">detecting cycles</em>
+          <Bold>BFS</Bold>;&nbsp;
+          <Bold>DFS</Bold>;&nbsp;
+          <Bold>adjacency lists</Bold>;&nbsp;
+          <Bold>detecting cycles</Bold>
         </Callout>
 
         <Summary title="Problems to Solve" problems={firstHalf(graphs)} />

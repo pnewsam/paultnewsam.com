@@ -5,6 +5,7 @@ import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
 import { firstHalf } from "@/utils/array";
 import { backtracking } from "@/constants/problems";
+import { Bold } from "@/components/typography/Bold";
 
 export default function Backtracking() {
   return (
@@ -18,9 +19,9 @@ export default function Backtracking() {
         </Body>
 
         <Callout title="Key Concepts" className="mb-8">
-          <em className="not-italic font-medium">Recursion with constraints</em>
+          <Bold>Recursion with constraints</Bold>
           ;&nbsp;
-          <em className="not-italic font-medium">pruning</em>
+          <Bold>pruning</Bold>
         </Callout>
 
         <Summary title="Problems to Solve" problems={firstHalf(backtracking)} />

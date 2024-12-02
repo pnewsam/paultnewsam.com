@@ -7,6 +7,7 @@ import { Summary } from "../../_components/Summary";
 import { arraysAndHashing } from "@/constants/problems";
 import { firstHalf } from "@/utils/array";
 import { Mark } from "@/components/typography/Mark";
+import { Bold } from "@/components/typography/Bold";
 
 export default function Page() {
   return (
@@ -17,10 +18,10 @@ export default function Page() {
           tags={["Data Structures", "Algorithms"]}
         />
         <Callout title="Key Concepts" className="mb-8">
-          <em className="not-italic font-medium">Sliding window</em>;&nbsp;
-          <em className="not-italic font-medium">two-pointer technique</em>
+          <Bold>Sliding window</Bold>;&nbsp;
+          <Bold>two-pointer technique</Bold>
           ;&nbsp;
-          <em className="not-italic font-medium">hashing for fast lookups</em>
+          <Bold>hashing for fast lookups</Bold>
         </Callout>
 
         <Body>

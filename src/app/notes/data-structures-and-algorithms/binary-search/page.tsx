@@ -1,12 +1,14 @@
+import { CodeSnippet } from "@/components/CodeSnippet";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
-import { Callout } from "../../_components/Callout";
 import { Body } from "@/components/typography/Body";
+import { Bold } from "@/components/typography/Bold";
 import { Code } from "@/components/typography/Code";
-import { CodeSnippet } from "@/components/CodeSnippet";
-import { Summary } from "../../_components/Summary";
-import { firstHalf } from "@/utils/array";
 import { binarySearch } from "@/constants/problems";
+import { firstHalf } from "@/utils/array";
+
+import { Callout } from "../../_components/Callout";
+import { Summary } from "../../_components/Summary";
 
 const snippet = `function binarySearch(nums: number[], target: number) {
   let low = 0;
@@ -33,10 +35,8 @@ export default function Page() {
         />
 
         <Callout title="Key Concepts" className="mb-8">
-          <em className="not-italic font-medium">Divide and conquer</em>;&nbsp;
-          <em className="not-italic font-medium">
-            variations of binary search
-          </em>
+          <Bold>Divide and conquer</Bold>;&nbsp;
+          <Bold>variations of binary search</Bold>
         </Callout>
 
         <Body>
@@ -68,10 +68,10 @@ export default function Page() {
 
         <Body>
           The main thing you&apos;ve got to be careful with is&nbsp;
-          <em className="font-medium">off-by-one-errors</em>. If your array
-          length is even, then you won&apos;t actually have a midpoint -- so
-          you&apos;ll have to choose the <Code>Math.ceil</Code> or the{" "}
-          <Code>Math.floor</Code> and stick with it.
+          <Bold>off-by-one-errors</Bold>. If your array length is even, then you
+          won&apos;t actually have a midpoint -- so you&apos;ll have to choose
+          the <Code>Math.ceil</Code> or the <Code>Math.floor</Code> and stick
+          with it.
         </Body>
 
         <Summary title="Problems to Solve" problems={firstHalf(binarySearch)} />
