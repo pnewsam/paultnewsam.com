@@ -1,11 +1,12 @@
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
+import { Bold } from "@/components/typography/Bold";
+import { backtracking } from "@/constants/problems";
+import { firstHalf } from "@/utils/array";
+
 import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
-import { firstHalf } from "@/utils/array";
-import { backtracking } from "@/constants/problems";
-import { Bold } from "@/components/typography/Bold";
 
 export default function Backtracking() {
   return (
@@ -24,7 +25,7 @@ export default function Backtracking() {
           <Bold>pruning</Bold>
         </Callout>
 
-        <Summary title="Problems to Solve" problems={firstHalf(backtracking)} />
+        <Summary problems={firstHalf(backtracking)} />
       </section>
     </Container>
   );

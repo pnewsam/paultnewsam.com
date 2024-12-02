@@ -1,10 +1,10 @@
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
+import { Bold } from "@/components/typography/Bold";
+import { graphs } from "@/constants/problems";
+
 import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
-import { firstHalf } from "@/utils/array";
-import { graphs } from "@/constants/problems";
-import { Bold } from "@/components/typography/Bold";
 
 export default function Page() {
   return (
@@ -13,13 +13,10 @@ export default function Page() {
         <PageHeader title="Graphs" tags={["Data Structures", "Algorithms"]} />
 
         <Callout title="Key Concepts" className="mb-8">
-          <Bold>BFS</Bold>;&nbsp;
-          <Bold>DFS</Bold>;&nbsp;
-          <Bold>adjacency lists</Bold>;&nbsp;
-          <Bold>detecting cycles</Bold>
+          BFS; DFS; adjacency lists; detecting cycles
         </Callout>
 
-        <Summary title="Problems to Solve" problems={firstHalf(graphs)} />
+        <Summary problems={graphs} />
       </section>
     </Container>
   );

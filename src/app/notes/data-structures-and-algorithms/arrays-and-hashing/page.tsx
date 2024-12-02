@@ -19,10 +19,7 @@ export default function Page() {
           tags={["Data Structures", "Algorithms"]}
         />
         <Callout title="Key Concepts" className="mb-8">
-          <Bold>Sliding window</Bold>;&nbsp;
-          <Bold>two-pointer technique</Bold>
-          ;&nbsp;
-          <Bold>hashing for fast lookups</Bold>
+          Sliding window; two-pointer technique; hashing for fast lookups
         </Callout>
 
         <Body>
@@ -45,10 +42,7 @@ export default function Page() {
           involving arrays or linked lists.
         </Body>
 
-        <Summary
-          title="Problems to Solve"
-          problems={firstHalf(arraysAndHashing)}
-        />
+        <Summary problems={arraysAndHashing} />
       </section>
     </Container>
   );

@@ -3,6 +3,7 @@ import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
+import { Bold } from "@/components/typography/Bold";
 import { H2 } from "@/components/typography/H2";
 import {
   systemDesignPages,
@@ -39,9 +40,9 @@ export default function NotesPage() {
           <div>
             <H2 className="mb-4">Data Structures & Algorithms</H2>
             <Body>
-              <b>Data Structures and Algorithms</b> is a deep subject. You could
-              spend years learning them. It can be overwhelming sorting through
-              all the learning materials out there.
+              <Bold>Data Structures and Algorithms</Bold> is a deep subject. You
+              could spend years learning them. It can be overwhelming sorting
+              through all the learning materials out there.
             </Body>
             <Card className="mb-16">
               <DataStructuresAndAlgorithmsTable />

@@ -35,8 +35,7 @@ export default function Page() {
         />
 
         <Callout title="Key Concepts" className="mb-8">
-          <Bold>Divide and conquer</Bold>;&nbsp;
-          <Bold>variations of binary search</Bold>
+          Divide and conquer; variations of binary search
         </Callout>
 
         <Body>
@@ -74,7 +73,7 @@ export default function Page() {
           with it.
         </Body>
 
-        <Summary title="Problems to Solve" problems={firstHalf(binarySearch)} />
+        <Summary problems={binarySearch} />
       </section>
     </Container>
   );

@@ -1,10 +1,10 @@
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
+import { Bold } from "@/components/typography/Bold";
+import { dynamicProgramming } from "@/constants/problems";
+
 import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
-import { firstHalf } from "@/utils/array";
-import { dynamicProgramming } from "@/constants/problems";
-import { Bold } from "@/components/typography/Bold";
 
 export default function Page() {
   return (
@@ -15,15 +15,10 @@ export default function Page() {
           tags={["Data Structures", "Algorithms"]}
         />
         <Callout title="Key Concepts" className="mb-8">
-          <Bold>Bottom-up vs top-down</Bold>
-          ;&nbsp;
-          <Bold>memoization</Bold>
+          Bottom-up vs top-down; memoization
         </Callout>
 
-        <Summary
-          title="Problems to Solve"
-          problems={firstHalf(dynamicProgramming)}
-        />
+        <Summary problems={dynamicProgramming} />
       </section>
     </Container>
   );

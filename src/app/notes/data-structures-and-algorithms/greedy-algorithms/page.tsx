@@ -1,10 +1,11 @@
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
+import { Bold } from "@/components/typography/Bold";
+import { greedyAlgorithms } from "@/constants/problems";
+import { firstHalf } from "@/utils/array";
+
 import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
-import { firstHalf } from "@/utils/array";
-import { greedyAlgorithms } from "@/constants/problems";
-import { Bold } from "@/components/typography/Bold";
 
 export default function Page() {
   return (
@@ -16,14 +17,10 @@ export default function Page() {
         />
 
         <Callout title="Key Concepts" className="mb-8">
-          <Bold>Local optimum</Bold>;&nbsp;
-          <Bold>global optimum</Bold>
+          Local optimum; global optimum
         </Callout>
 
-        <Summary
-          title="Problems to Solve"
-          problems={firstHalf(greedyAlgorithms)}
-        />
+        <Summary problems={greedyAlgorithms} />
       </section>
     </Container>
   );

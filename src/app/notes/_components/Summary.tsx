@@ -1,38 +1,44 @@
-import { Card } from "@/components/Card";
-import { H3 } from "@/components/typography/H3";
+import { ExternalLink } from "lucide-react";
 
-export const Summary = ({
-  title,
-  problems,
-}: {
-  title: string;
-  problems: {
-    title: string;
-    url: string;
-  }[];
-}) => {
+import { Card } from "@/components/Card";
+import { Table } from "@/components/Table";
+import { Problem } from "@/constants/problems";
+
+import { StatusText } from "./StatusText";
+
+export const Summary = ({ problems }: { problems: Problem[] }) => {
   return (
     <Card className="">
-      <div className="border-b border-neutral-300 dark:border-neutral-700 p-6">
-        <H3 className="font-semibold decoration-0 no-underline m-0">{title}</H3>
-      </div>
-      <div className="p-6">
-        <ul className="list-disc list-inside text-lg/relaxed md:text-xl/relaxed space-y-2">
-          {problems.map((problem) => (
-            <li
-              className="text-lg/relaxed md:text-xl/relaxed font-medium"
-              key={problem.url}
-            >
-              <a
-                className="text-cyan-500 dark:text-cyan-400 decoration-2 underline-offset-4 hover:underline"
-                href={problem.url}
-              >
-                {problem.title}
-              </a>
-            </li>
+      <Table>
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Problem</th>
+            <th>URL</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {problems.map((problem, index) => (
+            <tr key={problem.url}>
+              <td>{problem.number}</td>
+              <td>{problem.title}</td>
+              <td>
+                <a
+                  className="inline-flex items-center gap-1 text-cyan-500 dark:text-cyan-400 dark:hover:text-cyan-500 underline decoration-transparent hover:decoration-cyan-400"
+                  href={problem.url}
+                >
+                  View
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </td>
+              <td>
+                <StatusText status={problem.status} />
+              </td>
+            </tr>
           ))}
-        </ul>
-      </div>
+        </tbody>
+      </Table>
     </Card>
   );
 };

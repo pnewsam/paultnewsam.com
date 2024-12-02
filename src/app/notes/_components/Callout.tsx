@@ -1,7 +1,8 @@
-import { Body } from "@/components/typography/Body";
 import { Info } from "lucide-react";
-import { cn } from "@/lib/utils";
+
 import { Card } from "@/components/Card";
+import { Body } from "@/components/typography/Body";
+import { cn } from "@/lib/utils";
 
 export function Callout({
   title,
@@ -18,7 +19,7 @@ export function Callout({
     <Card
       className={cn(
         "p-6 rounded-md border-l-4 border-l-cyan-400 dark:border-l-cyan-600",
-        className
+        className,
       )}
     >
       {title && (

@@ -1,10 +1,11 @@
 import { CodeSnippet } from "@/components/CodeSnippet";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
-import { Summary } from "../../_components/Summary";
 import { Body } from "@/components/typography/Body";
-import { firstHalf } from "@/utils/array";
 import { heapsAndPriorityQueues } from "@/constants/problems";
+import { firstHalf } from "@/utils/array";
+
+import { Summary } from "../../_components/Summary";
 
 const snippet = `function buildMinHeap(heap: number[]) {
   const len = heap.length;
@@ -51,10 +52,7 @@ export default function HeapsAndPriorityQueuesPage() {
         <Body>A min heap implementation in Typescript.</Body>
         <CodeSnippet code={snippet} language="typescript" />
 
-        <Summary
-          title="Problems to Solve"
-          problems={firstHalf(heapsAndPriorityQueues)}
-        />
+        <Summary problems={heapsAndPriorityQueues} />
       </section>
     </Container>
   );

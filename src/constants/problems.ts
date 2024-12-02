@@ -1,443 +1,532 @@
-export const arraysAndHashing = [
+export type Problem = {
+  number: number;
+  title: string;
+  url: string;
+  status: string;
+  category: string;
+};
+
+export const arraysAndHashing: Problem[] = [
   {
-    title: "1. Two Sum",
+    number: 1,
+    title: "Two Sum",
     url: "https://leetcode.com/problems/two-sum/",
     status: "done",
   },
   {
-    title: "3. Longest Substring Without Repeating Characters",
+    number: 3,
+    title: "Longest Substring Without Repeating Characters",
     url: "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
     status: "done",
   },
   {
-    title: "53. Maximum Subarray",
+    number: 53,
+    title: "Maximum Subarray",
     url: "https://leetcode.com/problems/maximum-subarray/",
     status: "done",
   },
   {
-    title: "238. Product of Array Except Self",
+    number: 238,
+    title: "Product of Array Except Self",
     url: "https://leetcode.com/problems/product-of-array-except-self/",
     status: "done",
   },
   {
-    title: "36. Valid Sudoku",
+    number: 36,
+    title: "Valid Sudoku",
     url: "https://leetcode.com/problems/valid-sudoku/",
     status: "unknown",
   },
   {
-    title: "1. Contains Duplicate",
+    number: 217,
+    title: "Contains Duplicate",
     url: "https://leetcode.com/problems/contains-duplicate/",
     status: "unknown",
   },
   {
-    title: "49. Group Anagrams",
+    number: 49,
+    title: "Group Anagrams",
     url: "https://leetcode.com/problems/group-anagrams/",
     status: "unknown",
   },
   {
-    title: "560. Subarray Sum Equals K",
+    number: 560,
+    title: "Subarray Sum Equals K",
     url: "https://leetcode.com/problems/subarray-sum-equals-k/",
     status: "unknown",
   },
 ].map((problem) => ({ ...problem, category: "Arrays and Hashing" }));
 
-export const binarySearch = [
+export const binarySearch: Problem[] = [
   {
-    title: "704. Binary Search",
+    number: 704,
+    title: "Binary Search",
     url: "https://leetcode.com/problems/binary-search/",
     status: "done",
   },
   {
-    title: "74. Search a 2D Matrix",
+    number: 74,
+    title: "Search a 2D Matrix",
     url: "https://leetcode.com/problems/search-a-2d-matrix/",
     status: "not done",
   },
   {
-    title: "153. Find Minimum in Rotated Sorted Array",
+    number: 153,
+    title: "Find Minimum in Rotated Sorted Array",
     url: "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
     status: "done",
   },
   {
-    title: "4. Median of Two Sorted Arrays",
+    number: 4,
+    title: "Median of Two Sorted Arrays",
     url: "https://leetcode.com/problems/median-of-two-sorted-arrays/",
     status: "not done",
   },
   {
-    title: "162. Find Peak Element",
+    number: 162,
+    title: "Find Peak Element",
     url: "https://leetcode.com/problems/find-peak-element/",
     status: "unknown",
   },
   {
-    title: "33. Search in Rotated Sorted Array",
+    number: 33,
+    title: "Search in Rotated Sorted Array",
     url: "https://leetcode.com/problems/search-in-rotated-sorted-array/",
     status: "unknown",
   },
   {
-    title:
-      "702. Search in a Sorted Array of Unknown Size (binary search on an unbounded array)",
+    number: 702,
+    title: "Search in a Sorted Array of Unknown Size",
     url: "https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size/",
     status: "unknown",
   },
   {
-    title: "240. Search a 2D Matrix II",
+    number: 240,
+    title: "Search a 2D Matrix II",
     url: "https://leetcode.com/problems/search-a-2d-matrix-ii/",
     status: "unknown",
   },
 ].map((problem) => ({ ...problem, category: "Binary Search" }));
 
-export const linkedLists = [
+export const linkedLists: Problem[] = [
   {
-    title: "206. Reverse Linked List",
+    number: 206,
+    title: "Reverse Linked List",
     url: "https://leetcode.com/problems/reverse-linked-list/",
     status: "done",
   },
   {
-    title: "83. Merge Two Sorted Lists",
+    number: 83,
+    title: "Merge Two Sorted Lists",
     url: "https://leetcode.com/problems/merge-two-sorted-lists/",
     status: "done",
   },
   {
-    title: "141. Linked List Cycle",
+    number: 141,
+    title: "Linked List Cycle",
     url: "https://leetcode.com/problems/linked-list-cycle/",
     status: "done",
   },
   {
-    title: "143. Reorder List",
+    number: 143,
+    title: "Reorder List",
     url: "https://leetcode.com/problems/reorder-list/",
     status: "not done",
   },
 
   {
-    title: "23. Merge k Sorted Lists",
+    number: 23,
+    title: "Merge k Sorted Lists",
     url: "https://leetcode.com/problems/merge-k-sorted-lists/",
     status: "unknown",
   },
   {
-    title: "160. Intersection of Two Linked Lists",
+    number: 160,
+    title: "Intersection of Two Linked Lists",
     url: "https://leetcode.com/problems/intersection-of-two-linked-lists/",
     status: "unknown",
   },
   {
-    title: "19. Remove Nth Node From End of List",
+    number: 19,
+    title: "Remove Nth Node From End of List",
     url: "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
     status: "unknown",
   },
 ].map((problem) => ({ ...problem, category: "Linked Lists" }));
 
-export const stacksAndQueues = [
+export const stacksAndQueues: Problem[] = [
   {
-    title: "20. Valid Parentheses",
+    number: 20,
+    title: "Valid Parentheses",
     url: "https://leetcode.com/problems/valid-parentheses/",
     status: "done",
   },
   {
-    title: "155. Min Stack",
+    number: 155,
+    title: "Min Stack",
     url: "https://leetcode.com/problems/min-stack/",
     status: "attempted",
   },
   {
-    title: "739. Daily Temperatures",
+    number: 739,
+    title: "Daily Temperatures",
     url: "https://leetcode.com/problems/daily-temperatures/",
     status: "attempted",
   },
   {
-    title: "232. Implement Queue using Stacks",
+    number: 232,
+    title: "Implement Queue using Stacks",
     url: "https://leetcode.com/problems/implement-queue-using-stacks/",
     status: "not done",
   },
   {
-    title: "225. Implement Stack using Queues",
+    number: 225,
+    title: "Implement Stack using Queues",
     url: "https://leetcode.com/problems/implement-stack-using-queues/",
     status: "unknown",
   },
   {
-    title: "394. Decode String",
+    number: 394,
+    title: "Decode String",
     url: "https://leetcode.com/problems/decode-string/",
     status: "unknown",
   },
   {
-    title: "316. Remove Duplicate Letters",
+    number: 316,
+    title: "Remove Duplicate Letters",
     url: "https://leetcode.com/problems/remove-duplicate-letters/",
     status: "unknown",
   },
   {
-    title: "844. Backspace String Compare",
+    number: 844,
+    title: "Backspace String Compare",
     url: "https://leetcode.com/problems/backspace-string-compare/",
     status: "unknown",
   },
 ].map((problem) => ({ ...problem, category: "Stacks and Queues" }));
 
-export const trees = [
+export const trees: Problem[] = [
   {
-    title: "94. Binary Tree Inorder Traversal",
+    number: 94,
+    title: "Binary Tree Inorder Traversal",
     url: "https://leetcode.com/problems/binary-tree-inorder-traversal/",
     status: "done",
   },
   {
-    title: "104. Maximum Depth of Binary Tree",
+    number: 104,
+    title: "Maximum Depth of Binary Tree",
     url: "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
     status: "done",
   },
   {
-    title: "235. Lowest Common Ancestor of a Binary Search Tree",
+    number: 235,
+    title: "Lowest Common Ancestor of a Binary Search Tree",
     url: "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
     status: "not done",
   },
   {
-    title: "98. Validate Binary Search Tree",
+    number: 98,
+    title: "Validate Binary Search Tree",
     url: "https://leetcode.com/problems/validate-binary-search-tree/",
     status: "done",
   },
   {
-    title: "101. Symmetric Tree",
+    number: 101,
+    title: "Symmetric Tree",
     url: "https://leetcode.com/problems/symmetric-tree/",
     status: "unknown",
   },
   {
-    title: "102. Binary Tree Level Order Traversal",
+    number: 102,
+    title: "Binary Tree Level Order Traversal",
     url: "https://leetcode.com/problems/binary-tree-level-order-traversal/",
     status: "unknown",
   },
   {
-    title: "105. Construct Binary Tree from Preorder and Inorder Traversal",
+    number: 105,
+    title: "Construct Binary Tree from Preorder and Inorder Traversal",
     url: "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
     status: "unknown",
   },
   {
-    title: "236. Lowest Common Ancestor of a Binary Tree",
+    number: 236,
+    title: "Lowest Common Ancestor of a Binary Tree",
     url: "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
     status: "unknown",
   },
 ].map((problem) => ({ ...problem, category: "Trees" }));
 
-export const graphs = [
+export const graphs: Problem[] = [
   {
-    title: "200. Number of Islands",
+    number: 200,
+    title: "Number of Islands",
     url: "https://leetcode.com/problems/number-of-islands/",
     status: "done",
   },
   {
-    title: "133. Clone Graph",
+    number: 133,
+    title: "Clone Graph",
     url: "https://leetcode.com/problems/clone-graph/",
     status: "done",
   },
   {
-    title: "207. Course Schedule",
+    number: 207,
+    title: "Course Schedule",
     url: "https://leetcode.com/problems/course-schedule/",
     status: "not done",
   },
   {
-    title: "127. Word Ladder",
+    number: 127,
+    title: "Word Ladder",
     url: "https://leetcode.com/problems/word-ladder/",
     status: "not done",
   },
   {
-    title: "323. Number of Connected Components in an Undirected Graph",
+    number: 323,
+    title: "Number of Connected Components in an Undirected Graph",
     url: "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/",
     status: "unknown",
   },
   {
-    title: "695. Max Area of Island",
+    number: 695,
+    title: "Max Area of Island",
     url: "https://leetcode.com/problems/max-area-of-island/",
     status: "unknown",
   },
   {
-    title: "417. Pacific Atlantic Water Flow",
+    number: 417,
+    title: "Pacific Atlantic Water Flow",
     url: "https://leetcode.com/problems/pacific-atlantic-water-flow/",
     status: "unknown",
   },
   {
-    title: "210. Course Schedule II",
+    number: 210,
+    title: "Course Schedule II",
     url: "https://leetcode.com/problems/course-schedule-ii/",
     status: "unknown",
   },
 ].map((problem) => ({ ...problem, category: "Graphs" }));
 
-export const dynamicProgramming = [
+export const dynamicProgramming: Problem[] = [
   {
-    title: "70. Climbing Stairs",
+    number: 70,
+    title: "Climbing Stairs",
     url: "https://leetcode.com/problems/climbing-stairs/",
     status: "done",
   },
   {
-    title: "198. House Robber",
+    number: 198,
+    title: "House Robber",
     url: "https://leetcode.com/problems/house-robber/",
     status: "done",
   },
   {
-    title: "322. Coin Change",
+    number: 322,
+    title: "Coin Change",
     url: "https://leetcode.com/problems/coin-change/",
     status: "attempted",
   },
   {
-    title: "1143. Longest Common Subsequence",
+    number: 1143,
+    title: "Longest Common Subsequence",
     url: "https://leetcode.com/problems/longest-common-subsequence/",
     status: "not done",
   },
   {
-    title: "53. Maximum Subarray",
+    number: 53,
+    title: "Maximum Subarray",
     url: "https://leetcode.com/problems/maximum-subarray/",
     status: "unknown",
   },
   {
-    title: "300. Longest Increasing Subsequence",
+    number: 300,
+    title: "Longest Increasing Subsequence",
+    url: "https://leetcode.com/problems/longest-increasing-subsequence/",
+    status: "unknown",
+  },
+  {
+    number: 647,
+    title: "Palindromic Substrings",
     url: "https://leetcode.com/problems/palindromic-substrings/",
     status: "unknown",
   },
   {
-    title: "647. Palindromic Substrings",
-    url: "https://leetcode.com/problems/palindromic-substrings/",
-    status: "unknown",
-  },
-  {
-    title: "518. Coin Change II",
+    number: 518,
+    title: "Coin Change II",
     url: "https://leetcode.com/problems/coin-change-ii/",
     status: "unknown",
   },
 ].map((problem) => ({ ...problem, category: "Dynamic Programming" }));
 
-export const greedyAlgorithms = [
+export const greedyAlgorithms: Problem[] = [
   {
-    title: "56. Merge Intervals",
+    number: 56,
+    title: "Merge Intervals",
     url: "https://leetcode.com/problems/merge-intervals/",
     status: "not done",
   },
   {
-    title: "435. Non-overlapping Intervals",
+    number: 435,
+    title: "Non-overlapping Intervals",
     url: "https://leetcode.com/problems/non-overlapping-intervals/",
     status: "not done",
   },
   {
-    title: "452. Minimum Number of Arrows to Burst Balloons",
+    number: 452,
+    title: "Minimum Number of Arrows to Burst Balloons",
     url: "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/",
     status: "not done",
   },
   {
-    title: "406. Queue Reconstruction by Height",
+    number: 406,
+    title: "Queue Reconstruction by Height",
     url: "https://leetcode.com/problems/queue-reconstruction-by-height/",
     status: "unknown",
   },
   {
-    title: "763. Partition Labels",
+    number: 763,
+    title: "Partition Labels",
+    url: "https://leetcode.com/problems/partition-labels/",
+    status: "unknown",
+  },
+  {
+    number: 134,
+    title: "Gas Station",
     url: "https://leetcode.com/problems/gas-station/",
     status: "unknown",
   },
   {
-    title: "134. Gas Station",
-    url: "https://leetcode.com/problems/gas-station/",
-    status: "unknown",
-  },
-  {
-    title: "621. Task Scheduler",
+    number: 621,
+    title: "Task Scheduler",
     url: "https://leetcode.com/problems/task-scheduler/",
     status: "unknown",
   },
 ].map((problem) => ({ ...problem, category: "Greedy Algorithms" }));
 
-export const backtracking = [
+export const backtracking: Problem[] = [
   {
-    title: "78. Subsets",
+    number: 78,
+    title: "Subsets",
     url: "https://leetcode.com/problems/subsets/",
     status: "not done",
   },
   {
-    title: "46. Permutations",
+    number: 46,
+    title: "Permutations",
     url: "https://leetcode.com/problems/permutations/",
     status: "not done",
   },
   {
-    title: "39. Combination Sum",
+    number: 39,
+    title: "Combination Sum",
     url: "https://leetcode.com/problems/combination-sum/",
     status: "not done",
   },
   {
-    title: "37. Sudoku Solver",
+    number: 37,
+    title: "Sudoku Solver",
     url: "https://leetcode.com/problems/sudoku-solver/",
     status: "not done",
   },
   {
-    title: "77. Combinations",
+    number: 77,
+    title: "Combinations",
     url: "https://leetcode.com/problems/combinations/",
     status: "unknown",
   },
   {
-    title: "79. Word Search",
+    number: 79,
+    title: "Word Search",
+    url: "https://leetcode.com/problems/word-search/",
+    status: "unknown",
+  },
+  {
+    number: 90,
+    title: "Subsets II",
     url: "https://leetcode.com/problems/subsets-ii/",
     status: "unknown",
   },
   {
-    title: "90. Subsets II",
-    url: "https://leetcode.com/problems/subsets-ii/",
-    status: "unknown",
-  },
-  {
-    title: "51. N-Queens",
+    number: 51,
+    title: "N-Queens",
     url: "https://leetcode.com/problems/n-queens/",
     status: "unknown",
   },
 ].map((problem) => ({ ...problem, category: "Backtracking" }));
 
-export const tries = [
+export const tries: Problem[] = [
   {
-    title: "208. Implement Trie",
+    number: 208,
+    title: "Implement Trie",
     url: "https://leetcode.com/problems/implement-trie-prefix-tree/",
     status: "not done",
   },
   {
-    title: "212. Word Search II",
+    number: 212,
+    title: "Word Search II",
     url: "https://leetcode.com/problems/word-search-ii/",
     status: "not done",
   },
   {
-    title: "211. Design Add and Search Words Data Structure",
+    number: 211,
+    title: "Design Add and Search Words Data Structure",
     url: "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
     status: "unknown",
   },
   {
-    title: "14. Longest Common Prefix",
+    number: 14,
+    title: "Longest Common Prefix",
     url: "https://leetcode.com/problems/longest-common-prefix/",
     status: "unknown",
   },
   {
-    title: "1268. Search Suggestions System",
+    number: 1268,
+    title: "Search Suggestions System",
     url: "https://leetcode.com/problems/search-suggestions-system/",
     status: "unknown",
   },
   {
-    title: "676. Implement Magic Dictionary",
+    number: 676,
+    title: "Implement Magic Dictionary",
     url: "https://leetcode.com/problems/implement-magic-dictionary/",
     status: "unknown",
   },
 ].map((problem) => ({ ...problem, category: "Tries" }));
 
-export const heapsAndPriorityQueues = [
+export const heapsAndPriorityQueues: Problem[] = [
   {
-    title: "215. Kth Largest Element",
+    number: 215,
+    title: "Kth Largest Element",
     url: "https://leetcode.com/problems/kth-largest-element-in-an-array/",
     status: "done",
   },
   {
-    title: "23. Merge K Sorted Lists",
+    number: 23,
+    title: "Merge K Sorted Lists",
     url: "https://leetcode.com/problems/merge-k-sorted-lists/",
     status: "not done",
   },
   {
-    title: "347. Top K Frequent Elements",
+    number: 347,
+    title: "Top K Frequent Elements",
     url: "https://leetcode.com/problems/top-k-frequent-elements/",
     status: "unknown",
   },
   {
-    title: "973. K Closest Points to Origin",
+    number: 973,
+    title: "K Closest Points to Origin",
     url: "https://leetcode.com/problems/k-closest-points-to-origin/",
     status: "unknown",
   },
   {
-    title: "295. Find Median from Data Stream",
+    number: 295,
+    title: "Find Median from Data Stream",
     url: "https://leetcode.com/problems/find-median-from-data-stream/",
     status: "unknown",
   },
   {
-    title: "658. Find K Closest Elements",
+    number: 658,
+    title: "Find K Closest Elements",
     url: "https://leetcode.com/problems/find-k-closest-elements/",
     status: "unknown",
   },

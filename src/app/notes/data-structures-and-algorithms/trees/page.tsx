@@ -97,9 +97,7 @@ export default function BinaryTreeTraversalPage() {
         <PageHeader title="Trees" tags={["Data Structures", "Typescript"]} />
 
         <Callout title="Key Concepts" className="mb-8">
-          <Bold>DFS</Bold>;&nbsp;
-          <Bold>BFS</Bold>;&nbsp;
-          <Bold>recursion</Bold>
+          DFS; BFS; recursion
         </Callout>
 
         <Body>A binary tree implementation in Typescript.</Body>
@@ -115,7 +113,7 @@ export default function BinaryTreeTraversalPage() {
         </Body>
         <CodeSnippet code={traversalSnippet} language="typescript" />
 
-        <Summary title="Problems to Solve" problems={firstHalf(trees)} />
+        <Summary problems={trees} />
       </section>
     </Container>
   );

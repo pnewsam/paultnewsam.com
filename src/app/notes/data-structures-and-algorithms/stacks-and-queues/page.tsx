@@ -3,7 +3,6 @@ import { PageHeader } from "@/components/PageHeader";
 import { Bold } from "@/components/typography/Bold";
 import { Category } from "@/constants/pageMetadata";
 import { stacksAndQueues } from "@/constants/problems";
-import { firstHalf } from "@/utils/array";
 
 import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
@@ -17,16 +16,10 @@ export default function Page() {
           tags={[Category.DataStructuresAndAlgorithms]}
         />
         <Callout title="Key Concepts" className="mb-8">
-          <Bold>Stack for backtracking</Bold>
-          ;&nbsp;
-          <Bold>monotonic stack</Bold>;&nbsp;
-          <Bold>queue for BFS</Bold>
+          Stack for backtracking; monotonic stack; queue for BFS
         </Callout>
 
-        <Summary
-          title="Problems to Solve"
-          problems={firstHalf(stacksAndQueues)}
-        />
+        <Summary problems={stacksAndQueues} />
       </section>
     </Container>
   );
