@@ -14,7 +14,7 @@ export const OneByte = ({ size }: { size?: number }) => {
   }
   return (
     <svg height={size} width={size}>
-      <rect className="fill-red-400" width={size} height={size} />
+      <rect className="fill-rose-400" width={size} height={size} />
     </svg>
   );
 };
@@ -25,7 +25,7 @@ export const OneHundredBytes = ({ size }: { size?: number }) => {
   }
   return (
     <svg height={size} width={size}>
-      <rect className="fill-yellow-400" width={size} height={size} />
+      <rect className="fill-fuchsia-400" width={size} height={size} />
     </svg>
   );
 };
@@ -36,7 +36,7 @@ export const OneKilobyte = ({ size }: { size?: number }) => {
   }
   return (
     <svg height={size} width={size}>
-      <rect className="fill-green-400" width={size} height={size} />
+      <rect className="fill-violet-400" width={size} height={size} />
     </svg>
   );
 };
@@ -47,7 +47,7 @@ export const TenKilobytes = ({ size }: { size?: number }) => {
   }
   return (
     <svg height={size} width={size}>
-      <rect className="fill-teal-400" width={size} height={size} />
+      <rect className="fill-blue-400" width={size} height={size} />
     </svg>
   );
 };
@@ -58,7 +58,7 @@ export const OneHundredKilobytes = ({ size }: { size?: number }) => {
   }
   return (
     <svg height={size} width={size}>
-      <rect className="fill-blue-400" width={size} height={size} />
+      <rect className="fill-cyan-400" width={size} height={size} />
     </svg>
   );
 };
@@ -69,7 +69,7 @@ export const OneMegabyte = ({ size }: { size?: number }) => {
   }
   return (
     <svg height={size} width={size}>
-      <rect className="fill-purple-400" width={size} height={size} />
+      <rect className="fill-emerald-400" width={size} height={size} />
     </svg>
   );
 };

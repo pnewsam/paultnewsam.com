@@ -1,3 +1,4 @@
+import { Table } from "@/components/Table";
 import { ProblemsList } from "./ProblemsList";
 import { TextLink } from "./TextLink";
 import {
@@ -15,193 +16,193 @@ import {
 } from "@/constants/problems";
 import { firstHalf, secondHalf } from "@/utils/array";
 
-const Td = ({
-  children,
-  ...props
-}: {
-  children: React.ReactNode;
-} & React.HTMLAttributes<HTMLTableCellElement>) => (
-  <td className="p-4" {...props}>
-    {children}
-  </td>
-);
+// const td = ({
+//   children,
+//   ...props
+// }: {
+//   children: React.ReactNode;
+// } & React.HTMLAttributes<HTMLTableCellElement>) => (
+//   <td className="p-4" {...props}>
+//     {children}
+//   </td>
+// );
 
 export function DataStructuresAndAlgorithmsTable() {
   return (
-    <table className="w-full rounded-lg">
+    <Table>
       <thead>
-        <tr className="text-left text-xl">
-          <th className="p-4">Topic</th>
-          <th className="p-4">Key Concepts</th>
-          <th className="p-4">Problems</th>
-          <th className="p-4">Review</th>
+        <tr>
+          <th>Topic</th>
+          <th>Key Concepts</th>
+          <th>Problems</th>
+          <th>Review</th>
         </tr>
       </thead>
       <tbody>
-        <tr className="border-t">
-          <Td>
+        <tr>
+          <td>
             <TextLink href="/notes/data-structures-and-algorithms/arrays-and-hashing">
               Arrays and Hashing
             </TextLink>
-          </Td>
-          <Td>
+          </td>
+          <td>
             Sliding window; two-pointer technique; hashing for fast lookups
-          </Td>
-          <Td>
+          </td>
+          <td>
             <ProblemsList problems={firstHalf(arraysAndHashing)} />
-          </Td>
-          <Td>
+          </td>
+          <td>
             <ProblemsList problems={secondHalf(arraysAndHashing)} />
-          </Td>
+          </td>
         </tr>
-        <tr className="border-t">
-          <Td>
+        <tr>
+          <td>
             <TextLink href="/notes/data-structures-and-algorithms/binary-search">
               Binary Search
             </TextLink>
-          </Td>
-          <Td>Divide and conquer; variations of binary search</Td>
-          <Td>
+          </td>
+          <td>Divide and conquer; variations of binary search</td>
+          <td>
             <ProblemsList problems={firstHalf(binarySearch)} />
-          </Td>
-          <Td>
+          </td>
+          <td>
             <ProblemsList problems={secondHalf(binarySearch)} />
-          </Td>
+          </td>
         </tr>
-        <tr className="border-t">
-          <Td>
+        <tr>
+          <td>
             <TextLink href="/notes/data-structures-and-algorithms/linked-lists">
               Linked Lists
             </TextLink>
-          </Td>
-          <Td>Pointer manipulation; reversing lists</Td>
-          <Td>
+          </td>
+          <td>Pointer manipulation; reversing lists</td>
+          <td>
             <ProblemsList problems={firstHalf(linkedLists)} />
-          </Td>
-          <Td>
+          </td>
+          <td>
             <ProblemsList problems={secondHalf(linkedLists)} />
-          </Td>
+          </td>
         </tr>
-        <tr className="border-t">
-          <Td>
+        <tr>
+          <td>
             <TextLink href="/notes/data-structures-and-algorithms/stacks-and-queues">
               Stacks and Queues
             </TextLink>
-          </Td>
-          <Td>Stack for backtracking; monotonic stack; queue for BFS</Td>
-          <Td>
+          </td>
+          <td>Stack for backtracking; monotonic stack; queue for BFS</td>
+          <td>
             <ProblemsList problems={firstHalf(stacksAndQueues)} />
-          </Td>
-          <Td>
+          </td>
+          <td>
             <ProblemsList problems={secondHalf(stacksAndQueues)} />
-          </Td>
+          </td>
         </tr>
-        <tr className="border-t">
-          <Td>
+        <tr>
+          <td>
             <TextLink href="/notes/data-structures-and-algorithms/trees">
               Trees
             </TextLink>
-          </Td>
-          <Td>DFS; BFS; recursion</Td>
-          <Td>
+          </td>
+          <td>DFS; BFS; recursion</td>
+          <td>
             <ProblemsList problems={firstHalf(trees)} />
-          </Td>
-          <Td>
+          </td>
+          <td>
             <ProblemsList problems={secondHalf(trees)} />
-          </Td>
+          </td>
         </tr>
-        <tr className="border-t">
-          <Td>
+        <tr>
+          <td>
             <TextLink href="/notes/data-structures-and-algorithms/graphs">
               Graphs
             </TextLink>
-          </Td>
-          <Td>BFS; DFS; adjacency lists; detecting cycles</Td>
-          <Td>
+          </td>
+          <td>BFS; DFS; adjacency lists; detecting cycles</td>
+          <td>
             <ProblemsList problems={firstHalf(graphs)} />
-          </Td>
-          <Td>
+          </td>
+          <td>
             <ProblemsList problems={secondHalf(graphs)} />
-          </Td>
+          </td>
         </tr>
-        <tr className="border-t">
-          <Td>
+        <tr>
+          <td>
             <TextLink href="/notes/data-structures-and-algorithms/dynamic-programming">
               Dynamic Programming
             </TextLink>
-          </Td>
-          <Td>Bottom-up vs top-down; memoization</Td>
-          <Td>
+          </td>
+          <td>Bottom-up vs top-down; memoization</td>
+          <td>
             <ProblemsList problems={firstHalf(dynamicProgramming)} />
-          </Td>
-          <Td>
+          </td>
+          <td>
             <ProblemsList problems={secondHalf(dynamicProgramming)} />
-          </Td>
+          </td>
         </tr>
-        <tr className="border-t">
-          <Td>
+        <tr>
+          <td>
             <TextLink href="/notes/data-structures-and-algorithms/greedy-algorithms">
               Greedy Algorithms
             </TextLink>
-          </Td>
-          <Td>Local optimum; global optimum</Td>
-          <Td>
+          </td>
+          <td>Local optimum; global optimum</td>
+          <td>
             <ProblemsList problems={firstHalf(greedyAlgorithms)} />
-          </Td>
-          <Td>
+          </td>
+          <td>
             <ProblemsList problems={secondHalf(greedyAlgorithms)} />
-          </Td>
+          </td>
         </tr>
-        <tr className="border-t">
-          <Td>
+        <tr>
+          <td>
             <TextLink href="/notes/data-structures-and-algorithms/backtracking">
               Backtracking
             </TextLink>
-          </Td>
-          <Td>Recursion with constraints; pruning</Td>
-          <Td>
+          </td>
+          <td>Recursion with constraints; pruning</td>
+          <td>
             <ProblemsList problems={firstHalf(backtracking)} />
-          </Td>
-          <Td>
+          </td>
+          <td>
             <ProblemsList problems={secondHalf(backtracking)} />
-          </Td>
+          </td>
         </tr>
-        <tr className="border-t">
-          <Td>
+        <tr>
+          <td>
             <TextLink href="/notes/data-structures-and-algorithms/tries">
               Tries
             </TextLink>
-          </Td>
-          <Td>Prefix trees; character-by-character search</Td>
-          <Td>
+          </td>
+          <td>Prefix trees; character-by-character search</td>
+          <td>
             <ProblemsList problems={firstHalf(tries)} />
-          </Td>
-          <Td>
+          </td>
+          <td>
             <ProblemsList problems={secondHalf(tries)} />
-          </Td>
+          </td>
         </tr>
-        <tr className="border-t">
-          <Td>
+        <tr>
+          <td>
             <TextLink href="/notes/data-structures-and-algorithms/heaps-and-priority-queues">
               Heaps and Priority Queues
             </TextLink>
-          </Td>
-          <Td>Binary Heap, Priority Queue</Td>
-          <Td>
+          </td>
+          <td>Binary Heap, Priority Queue</td>
+          <td>
             <ProblemsList problems={firstHalf(heapsAndPriorityQueues)} />
-          </Td>
-          <Td>
+          </td>
+          <td>
             <ProblemsList problems={secondHalf(heapsAndPriorityQueues)} />
-          </Td>
+          </td>
         </tr>
       </tbody>
-      <tfoot className="border-t">
+      <tfoot>
         <tr>
           {/* @ts-ignore */}
-          <Td colSpan={2} />
-          <Td>Completed: 17/40</Td>
+          <td colSpan={2} />
+          <td>Completed: 17/40</td>
         </tr>
       </tfoot>
-    </table>
+    </Table>
   );
 }
