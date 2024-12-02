@@ -1,11 +1,10 @@
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
-import { Bold } from "@/components/typography/Bold";
 import { H2 } from "@/components/typography/H2";
 import { Mark } from "@/components/typography/Mark";
+import { Category } from "@/constants/pageMetadata";
 import { arraysAndHashing } from "@/constants/problems";
-import { firstHalf } from "@/utils/array";
 
 import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
@@ -16,7 +15,7 @@ export default function Page() {
       <section className="py-12 md:py-24">
         <PageHeader
           title="Arrays and Hashing"
-          tags={["Data Structures", "Algorithms"]}
+          tags={[Category.DataStructuresAndAlgorithms]}
         />
         <Callout title="Key Concepts" className="mb-8">
           Sliding window; two-pointer technique; hashing for fast lookups

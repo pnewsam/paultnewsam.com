@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
-import { Bold } from "@/components/typography/Bold";
+import { Category } from "@/constants/pageMetadata";
 import { dynamicProgramming } from "@/constants/problems";
 
 import { Callout } from "../../_components/Callout";
@@ -12,7 +12,7 @@ export default function Page() {
       <section className="py-12 md:py-24">
         <PageHeader
           title="Dynamic Programming"
-          tags={["Data Structures", "Algorithms"]}
+          tags={[Category.DataStructuresAndAlgorithms]}
         />
         <Callout title="Key Concepts" className="mb-8">
           Bottom-up vs top-down; memoization

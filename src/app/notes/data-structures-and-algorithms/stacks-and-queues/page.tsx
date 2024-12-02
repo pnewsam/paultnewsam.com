@@ -1,6 +1,5 @@
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
-import { Bold } from "@/components/typography/Bold";
 import { Category } from "@/constants/pageMetadata";
 import { stacksAndQueues } from "@/constants/problems";
 

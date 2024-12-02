@@ -7,7 +7,7 @@ const statusVariants = cva("inline-flex items-center gap-1", {
       done: "text-green-500 dark:text-green-400",
       attempted: "text-yellow-500 dark:text-yellow-400",
       "not done": "text-red-500 dark:text-red-400",
-      unknown: "text-gray-500 dark:text-gray-400",
+      unknown: "text-neutral-500 dark:text-neutral-400",
     },
   },
 });

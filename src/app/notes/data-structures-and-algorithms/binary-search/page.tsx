@@ -4,8 +4,8 @@ import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
 import { Bold } from "@/components/typography/Bold";
 import { Code } from "@/components/typography/Code";
+import { Category } from "@/constants/pageMetadata";
 import { binarySearch } from "@/constants/problems";
-import { firstHalf } from "@/utils/array";
 
 import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
@@ -31,7 +31,7 @@ export default function Page() {
       <section className="py-12 md:py-24">
         <PageHeader
           title="Binary Search"
-          tags={["Data Structures", "Algorithms"]}
+          tags={[Category.DataStructuresAndAlgorithms]}
         />
 
         <Callout title="Key Concepts" className="mb-8">
