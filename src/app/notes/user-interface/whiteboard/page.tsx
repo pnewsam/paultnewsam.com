@@ -1,13 +1,15 @@
 "use client";
 
-import { useEffect } from "react";
-import { Brush } from "lucide-react";
-import { Container } from "@/components/Container";
-import { Body } from "@/components/typography/Body";
-import { setupCanvas } from "./_scripts/setupCanvas";
-import initializers from "./_scripts/initializers";
 import { Card } from "@/components/Card";
+import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
+import { Body } from "@/components/typography/Body";
+import { Category } from "@/constants/pageMetadata";
+import { Brush } from "lucide-react";
+import { useEffect } from "react";
+
+import initializers from "./_scripts/initializers";
+import { setupCanvas } from "./_scripts/setupCanvas";
 
 export default function WhiteboardPage() {
   useEffect(() => {
@@ -22,7 +24,7 @@ export default function WhiteboardPage() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <PageHeader title="Whiteboard" tags={["HTML", "Typescript"]} />
+        <PageHeader title="Whiteboard" tags={[Category.UserInterface]} />
         <Body>
           {`A basic whiteboard using HTML <canvas />. Click and drag to draw.`}
         </Body>

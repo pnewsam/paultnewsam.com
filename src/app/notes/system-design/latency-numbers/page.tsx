@@ -1,24 +1,25 @@
+import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
-import { Body } from "@/components/typography/Body";
-import { Bold } from "@/components/typography/Bold";
-import { Card } from "@/components/Card";
 import {
   HalfNanosecond,
-  Nanosecond,
   HundredNanoseconds,
-  ThousandNanoseconds,
-  TenThousandNanoseconds,
+  Nanosecond,
+  OneHundredFiftyMillionNanoseconds,
   OneMillionNanoseconds,
   TenMillionNanoseconds,
-  OneHundredFiftyMillionNanoseconds,
+  TenThousandNanoseconds,
+  ThousandNanoseconds,
 } from "@/components/_TimeScale";
+import { Body } from "@/components/typography/Body";
+import { Bold } from "@/components/typography/Bold";
+import { Category } from "@/constants/pageMetadata";
 
 export default function LatencyNumbersPage() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <PageHeader title="Latency Numbers" tags={["Performance"]} />
+        <PageHeader title="Latency Numbers" tags={[Category.SystemDesign]} />
         <Body>
           These numbers vary so hugely that it is difficult to really develop a
           sense of them. Some quick comparisons: it&apos;s{" "}

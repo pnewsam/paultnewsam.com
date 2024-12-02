@@ -1,14 +1,16 @@
 "use client";
 
+import Button from "@/components/Button";
 import { Card } from "@/components/Card";
-import { Body } from "@/components/typography/Body";
-import { useCallback, useEffect, useState } from "react";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
-import InfiniteScroll from "./_components/InfiniteScroll";
-import Button from "@/components/Button";
-import { api } from "./_utils/MockApi";
+import { Body } from "@/components/typography/Body";
+import { Category } from "@/constants/pageMetadata";
 import { Loader2 } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
+
+import InfiniteScroll from "./_components/InfiniteScroll";
+import { api } from "./_utils/MockApi";
 
 type Person = {
   id: number;
@@ -28,7 +30,7 @@ export default function InfiniteScrollPage() {
       setLoading(false);
       setPage((prevPage) => prevPage + 1);
     },
-    [setPeople]
+    [setPeople],
   );
 
   useEffect(() => {
@@ -42,7 +44,7 @@ export default function InfiniteScrollPage() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <PageHeader title="Infinite Scroll" tags={["Typescript"]} />
+        <PageHeader title="Infinite Scroll" tags={[Category.UserInterface]} />
         <Body>
           Infinite scroll is a common UI pattern used to load content as the
           user scrolls. It&apos;s often used on blogs, news sites, and social

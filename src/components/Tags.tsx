@@ -1,6 +1,8 @@
+import { Category, Tag } from "@/constants/pageMetadata";
 import { cn } from "@/lib/utils";
+import { Code, Component, Database, LayoutDashboard } from "lucide-react";
+
 import { Badge } from "./Badge";
-import { Code, Gauge, Component } from "lucide-react";
 
 const variantByName: Record<
   string,
@@ -14,14 +16,14 @@ const variantByName: Record<
   | "lime"
   | "orange"
 > = {
-  HTML: "orange",
-  CSS: "cyan",
-  JavaScript: "emerald",
-  Typescript: "blue",
-  React: "cyan",
-  NextJS: "violet",
-  "System Design": "rose",
-  Performance: "orange",
+  [Tag.HTML]: "orange",
+  [Tag.CSS]: "cyan",
+  [Tag.Javascript]: "emerald",
+  [Tag.Typescript]: "blue",
+  [Tag.React]: "cyan",
+  [Tag.NextJS]: "violet",
+  [Category.SystemDesign]: "rose",
+  [Category.DataStructuresAndAlgorithms]: "orange",
 };
 
 const getVariant = (tag: string) => {
@@ -30,14 +32,15 @@ const getVariant = (tag: string) => {
 };
 
 const iconByName: Record<string, React.ReactNode> = {
-  HTML: <Code className="w-4 h-4" />,
-  CSS: <Code className="w-4 h-4" />,
-  JavaScript: <Code className="w-4 h-4" />,
-  Typescript: <Code className="w-4 h-4" />,
-  React: <Code className="w-4 h-4" />,
-  NextJS: <Code className="w-4 h-4" />,
-  "System Design": <Component className="w-4 h-4" />,
-  Performance: <Gauge className="w-4 h-4" />,
+  [Tag.HTML]: <Code className="w-4 h-4" />,
+  [Tag.CSS]: <Code className="w-4 h-4" />,
+  [Tag.Javascript]: <Code className="w-4 h-4" />,
+  [Tag.Typescript]: <Code className="w-4 h-4" />,
+  [Tag.React]: <Code className="w-4 h-4" />,
+  [Tag.NextJS]: <Code className="w-4 h-4" />,
+  [Category.SystemDesign]: <Component className="w-4 h-4" />,
+  [Category.DataStructuresAndAlgorithms]: <Database className="w-4 h-4" />,
+  [Category.UserInterface]: <LayoutDashboard className="w-4 h-4" />,
 };
 
 export function Tags({

@@ -1,6 +1,7 @@
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Bold } from "@/components/typography/Bold";
+import { Category } from "@/constants/pageMetadata";
 import { stacksAndQueues } from "@/constants/problems";
 import { firstHalf } from "@/utils/array";
 
@@ -13,7 +14,7 @@ export default function Page() {
       <section className="py-12 md:py-24">
         <PageHeader
           title="Stacks and Queues"
-          tags={["Data Structures", "Algorithms"]}
+          tags={[Category.DataStructuresAndAlgorithms]}
         />
         <Callout title="Key Concepts" className="mb-8">
           <Bold>Stack for backtracking</Bold>

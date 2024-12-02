@@ -1,10 +1,15 @@
+import { LinkCard } from "@/app/notes/_components/LinkCard";
+import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
-import { LinkCard } from "@/app/notes/_components/LinkCard";
 import { Body } from "@/components/typography/Body";
 import { H2 } from "@/components/typography/H2";
+import {
+  systemDesignPages,
+  userInterfacePages,
+} from "@/constants/pageMetadata";
+
 import { DataStructuresAndAlgorithmsTable } from "./_components/DataStructuresAndAlgorithmsTable";
-import { Card } from "@/components/Card";
 
 const isDevelopment = process.env.IS_DEVELOPMENT === "true";
 
@@ -19,48 +24,16 @@ export default function NotesPage() {
         </Body>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-16">
-          <LinkCard
-            href="/notes/system-design/latency-numbers"
-            tags={["Performance", "System Design"]}
-            title="Latency Numbers"
-            description="A table of latency numbers for various operations."
-          />
-          <LinkCard
-            href="/notes/system-design/data-type-sizes"
-            tags={["System Design"]}
-            title="Data Type Sizes"
-            description="A simple method for estimating the cost of a system."
-          />
-          <LinkCard
-            href="/notes/user-interface/whiteboard"
-            tags={["HTML", "Typescript"]}
-            title="Whiteboard"
-            description="A very basic whiteboard with HTML Canvas."
-          />
-          <LinkCard
-            href="/notes/user-interface/infinite-scroll"
-            tags={["Typescript"]}
-            title="Infinite Scroll"
-            description="A simple infinite scroll implementation."
-          />
+          {[...systemDesignPages, ...userInterfacePages].map((page) => (
+            <LinkCard
+              key={page.path}
+              href={page.path}
+              tags={page.tags}
+              title={page.title}
+              description={page.description}
+            />
+          ))}
         </div>
-        {isDevelopment && (
-          <div>
-            <H2 className="mb-4">System Design</H2>
-            <Body>
-              System design is the study of how to build scaleable and resilient
-              distributed systems.
-            </Body>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-16">
-              <LinkCard
-                href="/notes/system-design/cap-theorem"
-                tags={["System Design"]}
-                title="CAP Theorem"
-                description="A simple explanation of wthe CAP Theorem."
-              />
-            </div>
-          </div>
-        )}
 
         {isDevelopment && (
           <div>
