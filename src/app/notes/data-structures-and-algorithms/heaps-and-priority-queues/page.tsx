@@ -1,10 +1,9 @@
-import { CodeSnippet } from "@/components/CodeSnippet";
+import { CodeBlock } from "@/components/CodeBlock";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
 import { Category } from "@/constants/pageMetadata";
 import { heapsAndPriorityQueues } from "@/constants/problems";
-import { firstHalf } from "@/utils/array";
 
 import { Summary } from "../../_components/Summary";
 
@@ -51,8 +50,7 @@ export default function HeapsAndPriorityQueuesPage() {
           tags={[Category.DataStructuresAndAlgorithms]}
         />
         <Body>A min heap implementation in Typescript.</Body>
-        <CodeSnippet code={snippet} language="typescript" />
-
+        <CodeBlock code={snippet} language="typescript" />
         <Summary problems={heapsAndPriorityQueues} />
       </section>
     </Container>

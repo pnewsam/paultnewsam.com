@@ -14,7 +14,7 @@ export const Summary = ({ problems }: { problems: Problem[] }) => {
           <tr>
             <th>Number</th>
             <th>Problem</th>
-            <th>URL</th>
+            <th>Link</th>
             <th>Status</th>
           </tr>
         </thead>
@@ -33,7 +33,7 @@ export const Summary = ({ problems }: { problems: Problem[] }) => {
                 </a>
               </td>
               <td>
-                <StatusText status={problem.status} />
+                <StatusText status={problem.status ?? "unknown"} />
               </td>
             </tr>
           ))}

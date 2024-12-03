@@ -1,4 +1,4 @@
-import { CodeSnippet } from "@/components/CodeSnippet";
+import { CodeBlock } from "@/components/CodeBlock";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
@@ -104,7 +104,7 @@ export default function BinaryTreeTraversalPage() {
 
         <Body>A binary tree implementation in Typescript.</Body>
         <div className="mb-8">
-          <CodeSnippet code={insertSnippet} language="typescript" />
+          <CodeBlock code={insertSnippet} language="typescript" />
         </div>
 
         <H3 className="mb-4">Traversal</H3>
@@ -113,7 +113,7 @@ export default function BinaryTreeTraversalPage() {
           <b>binary search tree</b>, in-order traversal will return the items in
           the proper order.
         </Body>
-        <CodeSnippet code={traversalSnippet} language="typescript" />
+        <CodeBlock code={traversalSnippet} language="typescript" />
 
         <Summary problems={trees} />
       </section>

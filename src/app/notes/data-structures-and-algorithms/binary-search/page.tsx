@@ -1,4 +1,4 @@
-import { CodeSnippet } from "@/components/CodeSnippet";
+import { CodeBlock } from "@/components/CodeBlock";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
@@ -63,7 +63,7 @@ export default function Page() {
           for, and you return it.
         </Body>
 
-        <CodeSnippet className="mb-8" code={snippet} language="typescript" />
+        <CodeBlock className="mb-8" code={snippet} language="typescript" />
 
         <Body>
           The main thing you&apos;ve got to be careful with is&nbsp;

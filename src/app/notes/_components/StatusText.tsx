@@ -1,38 +1,39 @@
 import { cva } from "class-variance-authority";
 import { Check, CircleSlash, HelpCircle, X } from "lucide-react";
 
+import { Status } from "@/constants/problems";
+
 const statusVariants = cva("inline-flex items-center gap-1", {
   variants: {
     status: {
-      done: "text-green-500 dark:text-green-400",
-      attempted: "text-yellow-500 dark:text-yellow-400",
-      "not done": "text-red-500 dark:text-red-400",
-      unknown: "text-neutral-500 dark:text-neutral-400",
+      [Status.Done]: "text-green-500 dark:text-green-400",
+      [Status.Attempted]: "text-yellow-500 dark:text-yellow-400",
+      [Status.NotDone]: "text-red-500 dark:text-red-400",
+      [Status.Unknown]: "text-neutral-500 dark:text-neutral-400",
     },
   },
 });
 
 const text = {
-  done: "Done",
-  attempted: "Attempted",
-  "not done": "Not Done",
-  unknown: "Unknown",
+  [Status.Done]: "Done",
+  [Status.Attempted]: "Attempted",
+  [Status.NotDone]: "Not Done",
+  [Status.Unknown]: "Unknown",
 };
 
-export const StatusText = ({ status }: { status: string }) => {
-  const statusText =
-    text[status as "done" | "attempted" | "not done" | "unknown"];
+export const StatusText = ({ status }: { status: Status }) => {
+  const statusText = text[status];
   return (
     <div
       className={statusVariants({
-        status: status as "done" | "attempted" | "not done" | "unknown",
+        status,
       })}
     >
       {statusText}
-      {status === "unknown" && <CircleSlash className="w-4 h-4" />}
-      {status === "done" && <Check className="w-4 h-4" />}
-      {status === "attempted" && <HelpCircle className="w-4 h-4" />}
-      {status === "not done" && <X className="w-4 h-4" />}
+      {status === Status.Unknown && <CircleSlash className="w-4 h-4" />}
+      {status === Status.Done && <Check className="w-4 h-4" />}
+      {status === Status.Attempted && <HelpCircle className="w-4 h-4" />}
+      {status === Status.NotDone && <X className="w-4 h-4" />}
     </div>
   );
 };
