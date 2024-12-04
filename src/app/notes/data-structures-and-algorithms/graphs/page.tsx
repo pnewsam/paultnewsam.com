@@ -41,43 +41,110 @@ export default function Page() {
 
         <Body>
           <p>
-            A graph can be represented in code using an{" "}
-            <Bold>adjacency list</Bold>. In the same way that a Linked List node
-            has a <Code>next</Code>
-            property that stores its adjacent node, a graph node might have an
-            <Code>adjList</Code> property that stores its (potentially many)
-            adjacent nodes. Or, the adjacency list may be stored under a parent
-            class as a <Code>Map</Code>.
+            A graph can be represented in code in different ways. The most
+            common ways are to use <Bold>adjacency lists</Bold>, an{" "}
+            <Bold>adjacency matrix</Bold>, or <Bold>edge lists</Bold>.&nbsp;
+            <Bold>Adjacency lists</Bold> map each node to a list of its
+            neighbors.
           </p>
         </Body>
 
         <CodeBlock
+          className="mb-8"
+          label="Adjacency List"
           language="typescript"
           code={`type Node = string;
 type AdjacencyList = Map<Node, Node[]>;
 
-class Graph {
-  adjacencyList: AdjacencyList;
+// Example Graph: A -- B, A -- C, B -- D, C -- E
+const adjacencyList: AdjacencyList = new Map([
+  ["A", ["B", "C"]],
+  ["B", ["A", "D"]],
+  ["C", ["A", "E"]],
+  ["D", ["B"]],
+  ["E", ["C"]],
+]);
 
-  constructor() {
-    this.adjacencyList = new Map();
-  }
-}
+console.log(adjacencyList);
 
-// Example usage
-const graph = new Graph();
-graph.adjacencyList.set("A", ["B", "C"]);
-graph.adjacencyList.set("B", ["A", "C"]);
-graph.adjacencyList.set("C", ["A", "B"]);
-
-console.log(graph.adjacencyList);`}
+// Map(5) {
+//   'A' => [ 'B', 'C' ],
+//   'B' => [ 'A', 'D' ],
+//   'C' => [ 'A', 'E' ],
+//   'D' => [ 'B' ],
+//   'E' => [ 'C' ]
+// }`}
         />
 
-        <H3 className="mb-4">Traversal</H3>
         <Body>
-          Graph traversal can be done using <Bold>BFS</Bold> or <Bold>DFS</Bold>
-          .
+          <p>
+            <Bold>Adjacency matrices</Bold> map each node to a list of its
+            neighbors.
+          </p>
         </Body>
+
+        <CodeBlock
+          className="mb-8"
+          label="Adjacency Matrix"
+          language="typescript"
+          code={`const nodes = ["A", "B", "C", "D", "E"];
+const adjacencyMatrix: number[][] = [
+  //  A  B  C  D  E
+  [0, 1, 1, 0, 0], // A
+  [1, 0, 0, 1, 0], // B
+  [1, 0, 0, 0, 1], // C
+  [0, 1, 0, 0, 0], // D
+  [0, 0, 1, 0, 0], // E
+];
+
+console.log(adjacencyMatrix);
+
+// [
+//   [ 0, 1, 1, 0, 0 ],
+//   [ 1, 0, 0, 1, 0 ],
+//   [ 1, 0, 0, 0, 1 ],
+//   [ 0, 1, 0, 0, 0 ],
+//   [ 0, 0, 1, 0, 0 ]
+// ]`}
+        />
+
+        <Body>
+          <p>
+            <Bold>Edge lists</Bold> map each edge to a list of its nodes.
+          </p>
+        </Body>
+
+        <CodeBlock
+          className="mb-8"
+          label="Edge List"
+          language="typescript"
+          code={`type Node = string;
+
+type Edge = [Node, Node];
+
+// Example Graph: A -- B, A -- C, B -- D, C -- E
+const edgeList: Edge[] = [
+  ["A", "B"],
+  ["A", "C"],
+  ["B", "D"],
+  ["C", "E"],
+];
+
+console.log(edgeList);
+
+// [ [ 'A', 'B' ], [ 'A', 'C' ], [ 'B', 'D' ], [ 'C', 'E' ] ]`}
+        />
+
+        <H3 className="mt-20 mb-4">Traversal</H3>
+        <Body>
+          Graph traversal can be done using{" "}
+          <Bold>Depth-First Search (DFS)</Bold> or&nbsp;
+          <Bold>Breadth-First Search (BFS)</Bold>. DFS is generally simpler.
+        </Body>
+
+        <div className="mb-8">
+          <CodeBlock language="typescript" code={``} />
+        </div>
 
         <Summary problems={graphs} />
       </section>
