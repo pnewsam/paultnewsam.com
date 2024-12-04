@@ -77,10 +77,11 @@ console.log(adjacencyList);
         />
 
         <Body>
-          <p>
-            <Bold>Adjacency matrices</Bold> map each node to a list of its
-            neighbors.
-          </p>
+          <Bold>Adjacency matrices</Bold> instead store a matrix of booleans
+          that represent whether an edge exists between two nodes. For
+          undirected graphs, the matrix will always be symmetric. For directed
+          graphs, it may not be. The booleans may be replaced with weights if
+          the graph is weighted.
         </Body>
 
         <CodeBlock
@@ -109,9 +110,10 @@ console.log(adjacencyMatrix);
         />
 
         <Body>
-          <p>
-            <Bold>Edge lists</Bold> map each edge to a list of its nodes.
-          </p>
+          <Bold>Edge lists</Bold> map each edge to a list of its nodes. This
+          representation is useful for graphs with few edges, but not as useful
+          for graphs with many edges. This is because it requires O(E) space,
+          where E is the number of edges.
         </Body>
 
         <CodeBlock
@@ -137,14 +139,98 @@ console.log(edgeList);
 
         <H3 className="mt-20 mb-4">Traversal</H3>
         <Body>
-          Graph traversal can be done using{" "}
-          <Bold>Depth-First Search (DFS)</Bold> or&nbsp;
-          <Bold>Breadth-First Search (BFS)</Bold>. DFS is generally simpler.
+          Traversing graphs will depend a little bit based on the representation
+          of the graph. But the general idea is the same, and there are two
+          algorithms that are commonly used:{" "}
+          <Bold>Depth-First Search (DFS)</Bold> and&nbsp;
+          <Bold>Breadth-First Search (BFS)</Bold>. DFS is generally simpler, so
+          we&apos;ll start with that. We&apos;ll use an adjacency list for our
+          examples.
         </Body>
 
         <div className="mb-8">
-          <CodeBlock language="typescript" code={``} />
+          <CodeBlock
+            language="typescript"
+            label="DFS"
+            code={`type Node = string;
+type AdjacencyList = Map<Node, Node[]>;
+
+function dfs(start: Node, graph: AdjacencyList) {
+  const visited = new Set();
+
+  function doDfs(node: Node) {
+    if (visited.has(node)) return;
+    visited.add(node);
+    console.log(node); // Do something with node
+    for (const neighbor of graph.get(node) || []) {
+      doDfs(neighbor);
+    }
+  }
+
+  doDfs(start);
+}`}
+          />
         </div>
+
+        <Body>
+          The important thing to note is that we&apos;re using a{" "}
+          <Bold>Set</Bold> to keep track of visited nodes. This will ensure that
+          we don&apos;t visit the same node twice, and prevent infinite loops in
+          cyclic graphs. DFS can also be implemented iteratively.
+        </Body>
+
+        <CodeBlock
+          className="mb-8"
+          label="DFS Iterative"
+          language="typescript"
+          code={`type Node = string;
+type AdjacencyList = Map<Node, Node[]>;
+  
+function dfsIterative(start: Node, graph: AdjacencyList) {  
+  const visited = new Set();
+  const stack: Node[] = [start];
+
+  while (stack.length > 0) {
+    const node = stack.pop();
+    if (visited.has(node)) continue;
+    visited.add(node);
+    console.log(node); // Do something with node
+    for (const neighbor of graph.get(node as Node) || []) {
+      stack.push(neighbor);
+    }
+  }
+}`}
+        />
+
+        <Body>
+          Note that for both DFS implementations, the iteration over neighbors
+          ensures that we visit the deepest nodes first.
+        </Body>
+
+        <Body>
+          Breadth-First Search (BFS) is similar to DFS, but instead uses a queue
+          to keep track of the nodes to visit.
+        </Body>
+
+        <CodeBlock
+          className="mb-8"
+          label="BFS"
+          language="typescript"
+          code={`function bfs(start: Node, graph: AdjacencyList) {
+  const visited = new Set();
+  const queue: Node[] = [start];
+
+  while (queue.length > 0) {
+    const node = queue.shift();
+    if (visited.has(node)) continue;
+    visited.add(node);
+    console.log(node);
+    for (const neighbor of graph.get(node as Node) || []) {
+      queue.push(neighbor);
+    }
+  }
+}`}
+        />
 
         <Summary problems={graphs} />
       </section>
