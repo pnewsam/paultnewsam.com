@@ -2,8 +2,9 @@ import { ExternalLink } from "lucide-react";
 
 import { Card } from "@/components/Card";
 import { Table } from "@/components/Table";
-import { Problem } from "@/constants/problems";
+import { Importance, Problem } from "@/constants/problems";
 
+import { ImportanceBadge } from "./ImportanceBadge";
 import { StatusText } from "./StatusText";
 
 export const Summary = ({ problems }: { problems: Problem[] }) => {
@@ -22,7 +23,15 @@ export const Summary = ({ problems }: { problems: Problem[] }) => {
           {problems.map((problem, index) => (
             <tr key={problem.url}>
               <td>{problem.number}</td>
-              <td>{problem.title}</td>
+
+              <td>
+                <div className="flex items-center gap-3">
+                  {problem.title}
+                  <ImportanceBadge
+                    importance={problem.importance ?? Importance.Essential}
+                  />
+                </div>
+              </td>
               <td>
                 <a
                   className="inline-flex items-center gap-1 text-cyan-500 dark:text-cyan-400 dark:hover:text-cyan-500 underline decoration-transparent hover:decoration-cyan-400"

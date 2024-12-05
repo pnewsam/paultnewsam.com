@@ -5,6 +5,7 @@ import { Body } from "@/components/typography/Body";
 import { Category } from "@/constants/pageMetadata";
 import { heapsAndPriorityQueues } from "@/constants/problems";
 
+import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
 
 const snippet = `function buildMinHeap(heap: number[]) {
@@ -49,7 +50,9 @@ export default function HeapsAndPriorityQueuesPage() {
           title="Heaps and Priority Queues"
           tags={[Category.DataStructuresAndAlgorithms]}
         />
-        <Body>A min heap implementation in Typescript.</Body>
+        <Callout type="info" title="Key Concepts">
+          <Body>A min heap implementation in Typescript.</Body>
+        </Callout>
         <CodeBlock code={snippet} language="typescript" />
         <Summary problems={heapsAndPriorityQueues} />
       </section>
