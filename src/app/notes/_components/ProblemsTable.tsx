@@ -19,26 +19,41 @@ import { Table } from "@/components/Table";
 import { ExternalLink } from "@/components/typography/ExternalLink";
 import {
   Category,
+  Importance,
   Problem,
   numCompleted,
   numProblems,
 } from "@/constants/problems";
 
+import { ImportanceBadge } from "./ImportanceBadge";
+import { StatusText } from "./StatusText";
+
 const PAGE_SIZE = 10;
 
 export function ProblemsTable({ problems }: { problems: Problem[] }) {
   const [search, setSearch] = useState("");
+  const [importance, setImportance] = useState<Importance | "None">("None");
   const [category, setCategory] = useState<Category | "None">("None");
   const [page, setPage] = useState(1);
 
   const filteredProblems = problems.filter(
     (problem) =>
       problem.title.toLowerCase().includes(search.toLowerCase()) &&
-      (category && category !== "None" ? problem.category === category : true),
+      (category && category !== "None"
+        ? problem.category === category
+        : true) &&
+      (importance && importance !== "None"
+        ? problem.importance === importance
+        : true),
   );
 
   const onSelectCategory = (value: string) => {
     setCategory(value as Category);
+    setPage(1);
+  };
+
+  const onSelectImportance = (value: string) => {
+    setImportance(value as Importance);
     setPage(1);
   };
 
@@ -67,6 +82,21 @@ export function ProblemsTable({ problems }: { problems: Problem[] }) {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
+        <Select onValueChange={onSelectImportance}>
+          <SelectTrigger className="w-60" size="lg">
+            <SelectValue>{importance ?? "Select an importance"}</SelectValue>
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value={"None"}>None</SelectItem>
+            <SelectSeparator />
+            {Object.values(Importance).map((importance) => (
+              <SelectItem key={importance} value={importance}>
+                {importance}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
         <Select onValueChange={onSelectCategory}>
           <SelectTrigger className="w-60" size="lg">
             <SelectValue>{category ?? "Select a category"}</SelectValue>
@@ -96,6 +126,8 @@ export function ProblemsTable({ problems }: { problems: Problem[] }) {
               <th>Number</th>
               <th>Title</th>
               <th>Category</th>
+              <th>Importance</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody>
@@ -110,6 +142,12 @@ export function ProblemsTable({ problems }: { problems: Problem[] }) {
                     </ExternalLink>
                   </td>
                   <td>{problem.category}</td>
+                  <td>
+                    <ImportanceBadge importance={problem.importance} />
+                  </td>
+                  <td>
+                    <StatusText status={problem.status} />
+                  </td>
                 </tr>
               ))}
           </tbody>

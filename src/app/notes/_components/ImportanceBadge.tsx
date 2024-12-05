@@ -1,5 +1,5 @@
 import { cva } from "class-variance-authority";
-import { CircleAlert, CircleMinus } from "lucide-react";
+import { Star, StarHalf, StarOff } from "lucide-react";
 
 import { Importance } from "@/constants/problems";
 import { cn } from "@/lib/utils";
@@ -9,9 +9,12 @@ const badgeVariants = cva(
   {
     variants: {
       importance: {
-        [Importance.Essential]: "border-cyan-500 text-cyan-500",
-        [Importance.Important]: "border-yellow-500 text-yellow-500",
-        [Importance.Optional]: "border-neutral-500 text-neutral-500",
+        [Importance.Important]:
+          "border-yellow-500 dark:border-yellow-600 bg-yellow-300 dark:bg-yellow-400 text-yellow-600 dark:text-yellow-600",
+        [Importance.Recommended]:
+          "border-yellow-500 dark:border-yellow-600 bg-yellow-300/50 dark:bg-yellow-400/50 text-yellow-600 dark:text-yellow-400",
+        [Importance.Optional]:
+          "bg-neutral-200 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-600",
       },
     },
   },
@@ -20,12 +23,13 @@ const badgeVariants = cva(
 export const ImportanceBadge = ({ importance }: { importance: Importance }) => {
   return (
     <span className={cn(badgeVariants({ importance }))}>
-      {importance === Importance.Optional && (
-        <CircleMinus className="w-4 h-4" />
+      {importance === Importance.Important && (
+        <Star className="w-4 h-4 fill-yellow-800" />
       )}
-      {importance === Importance.Essential && (
-        <CircleAlert className="w-4 h-4" />
+      {importance === Importance.Recommended && (
+        <StarHalf className="w-4 h-4" />
       )}
+      {importance === Importance.Optional && <StarOff className="w-4 h-4" />}
       {importance}
     </span>
   );

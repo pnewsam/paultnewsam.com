@@ -20,11 +20,14 @@ export default function DataStructuresAndAlgorithmsPage() {
           tags={[Category.DataStructuresAndAlgorithms]}
         />
         <Body>
-          When you're doing web development, deep knowledge of data structures
-          and algorithms rarely comes into play. The most pressing problems for
-          a business or application almost always lie in other domains. However,
-          the deeper you get into the field, the more you&apos;ll find that data
-          structures and algorithms are everywhere.
+          When you're doing web development, deep algorithmic thinking rarely
+          comes into play. The most pressing problems for a business or
+          application almost always lie in other domains. However, data
+          structures and algorithms are core to how computers and programs
+          function. And having a strong foundational understanding of them will
+          make you more aware of the real constraints that software operates
+          against, and open your mind to what may be possible with your own
+          projects and tooling.
         </Body>
         <Body>
           This section is a collection of data structures and algorithms that I

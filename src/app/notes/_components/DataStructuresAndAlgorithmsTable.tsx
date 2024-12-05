@@ -1,7 +1,7 @@
 import { Table } from "@/components/Table";
 import {
-  numEssentialCompleted,
-  numEssentialProblems,
+  numImportantCompleted,
+  numImportantProblems,
 } from "@/constants/problems";
 
 import { rows } from "./DataStructuresAndAlgorithms.constants";
@@ -38,9 +38,9 @@ export function DataStructuresAndAlgorithmsTable() {
           {/* @ts-ignore */}
           <td colSpan={3} />
           <td>
-            Completed: {numEssentialCompleted}/{numEssentialProblems}&nbsp;(
+            Completed: {numImportantCompleted}/{numImportantProblems}&nbsp;(
             {Math.round(
-              (numEssentialCompleted / numEssentialProblems) * 100,
+              (numImportantCompleted / numImportantProblems) * 100,
             )}%)
           </td>
         </tr>

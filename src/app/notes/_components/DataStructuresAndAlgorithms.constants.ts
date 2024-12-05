@@ -23,7 +23,7 @@ export const rows = [
     title: "Arrays and Hashing",
     concepts: "Sliding window; two-pointer technique; hashing for fast lookups",
     problems: arraysAndHashing.filter(
-      (problem) => problem.importance === Importance.Essential,
+      (problem) => problem.importance === Importance.Important,
     ),
   },
   {
@@ -32,7 +32,7 @@ export const rows = [
     title: "Sliding Window",
     concepts: "",
     problems: slidingWindow.filter(
-      (problem) => problem.importance === Importance.Essential,
+      (problem) => problem.importance === Importance.Important,
     ),
   },
   {
@@ -41,7 +41,7 @@ export const rows = [
     title: "Two Pointers",
     concepts: "",
     problems: twoPointers.filter(
-      (problem) => problem.importance === Importance.Essential,
+      (problem) => problem.importance === Importance.Important,
     ),
   },
   {
@@ -50,7 +50,7 @@ export const rows = [
     title: "Binary Search",
     concepts: "Divide and conquer; variations of binary search",
     problems: binarySearch.filter(
-      (problem) => problem.importance === Importance.Essential,
+      (problem) => problem.importance === Importance.Important,
     ),
   },
   {
@@ -59,7 +59,7 @@ export const rows = [
     title: "Linked Lists",
     concepts: "Pointer manipulation; ",
     problems: linkedLists.filter(
-      (problem) => problem.importance === Importance.Essential,
+      (problem) => problem.importance === Importance.Important,
     ),
   },
   {
@@ -68,7 +68,7 @@ export const rows = [
     title: "Stacks and Queues",
     concepts: "Stack for backtracking; monotonic stack; queue for BFS",
     problems: stacksAndQueues.filter(
-      (problem) => problem.importance === Importance.Essential,
+      (problem) => problem.importance === Importance.Important,
     ),
   },
   {
@@ -77,7 +77,7 @@ export const rows = [
     title: "Trees",
     concepts: "DFS; BFS; recursion",
     problems: trees.filter(
-      (problem) => problem.importance === Importance.Essential,
+      (problem) => problem.importance === Importance.Important,
     ),
   },
   {
@@ -86,7 +86,7 @@ export const rows = [
     title: "Tries",
     concepts: "Prefix trees; character-by-character search",
     problems: tries.filter(
-      (problem) => problem.importance === Importance.Essential,
+      (problem) => problem.importance === Importance.Important,
     ),
   },
   {
@@ -95,7 +95,7 @@ export const rows = [
     title: "Heaps and Priority Queues",
     concepts: "",
     problems: heapsAndPriorityQueues.filter(
-      (problem) => problem.importance === Importance.Essential,
+      (problem) => problem.importance === Importance.Important,
     ),
   },
   {
@@ -104,7 +104,7 @@ export const rows = [
     title: "Graphs",
     concepts: "BFS; DFS; adjacency lists; detecting cycles",
     problems: graphs.filter(
-      (problem) => problem.importance === Importance.Essential,
+      (problem) => problem.importance === Importance.Important,
     ),
   },
   {
@@ -113,7 +113,7 @@ export const rows = [
     title: "Backtracking",
     concepts: "Recursion with constraints; pruning",
     problems: backtracking.filter(
-      (problem) => problem.importance === Importance.Essential,
+      (problem) => problem.importance === Importance.Important,
     ),
   },
   {
@@ -122,7 +122,7 @@ export const rows = [
     title: "Dynamic Programming",
     concepts: "Bottom-up vs top-down; memoization",
     problems: dynamicProgramming.filter(
-      (problem) => problem.importance === Importance.Essential,
+      (problem) => problem.importance === Importance.Important,
     ),
   },
   {
@@ -131,7 +131,7 @@ export const rows = [
     title: "Greedy Algorithms",
     concepts: "Local optimum; global optimum",
     problems: greedyAlgorithms.filter(
-      (problem) => problem.importance === Importance.Essential,
+      (problem) => problem.importance === Importance.Important,
     ),
   },
   {
@@ -140,7 +140,7 @@ export const rows = [
     title: "Bit Manipulation",
     concepts: "Bit manipulation",
     problems: bitManipulation.filter(
-      (problem) => problem.importance === Importance.Essential,
+      (problem) => problem.importance === Importance.Important,
     ),
   },
 ];

@@ -24,8 +24,8 @@ export enum Status {
 }
 
 export enum Importance {
-  Essential = "Essential",
   Important = "Important",
+  Recommended = "Recommended",
   Optional = "Optional",
 }
 
@@ -44,21 +44,21 @@ export const arraysAndHashing: Problem[] = [
     title: "Two Sum",
     url: "https://leetcode.com/problems/two-sum/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 242,
     title: "Valid Anagram",
     url: "https://leetcode.com/problems/valid-anagram/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 49,
     title: "Group Anagrams",
     url: "https://leetcode.com/problems/group-anagrams/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 53,
@@ -103,21 +103,21 @@ export const slidingWindow: Problem[] = [
     title: "Best Time to Buy and Sell Stock",
     url: "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 3,
     title: "Longest Substring Without Repeating Characters",
     url: "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 209,
     title: "Minimum Size Subarray Sum",
     url: "https://leetcode.com/problems/minimum-size-subarray-sum/",
     status: Status.NotDone,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
 ].map((problem) => ({ ...problem, category: Category.SlidingWindow }));
 
@@ -127,21 +127,21 @@ export const twoPointers: Problem[] = [
     title: "Valid Palindrome",
     url: "https://leetcode.com/problems/valid-palindrome/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 167,
     title: "Two Sum II (sorted array)",
     url: "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
     status: Status.NotDone,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 11,
     title: "Container With Most Water",
     url: "https://leetcode.com/problems/container-with-most-water/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
 ].map((problem) => ({ ...problem, category: Category.TwoPointers }));
 
@@ -151,21 +151,21 @@ export const binarySearch: Problem[] = [
     title: "Binary Search",
     url: "https://leetcode.com/problems/binary-search/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 278,
     title: "First Bad Version",
     url: "https://leetcode.com/problems/first-bad-version/",
     status: Status.NotDone,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 33,
     title: "Search in Rotated Sorted Array",
     url: "https://leetcode.com/problems/search-in-rotated-sorted-array/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 153,
@@ -210,21 +210,21 @@ export const linkedLists: Problem[] = [
     title: "Reverse Linked List",
     url: "https://leetcode.com/problems/reverse-linked-list/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 83,
     title: "Merge Two Sorted Lists",
     url: "https://leetcode.com/problems/merge-two-sorted-lists/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 141,
     title: "Linked List Cycle",
     url: "https://leetcode.com/problems/linked-list-cycle/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 143,
@@ -255,21 +255,21 @@ export const stacksAndQueues: Problem[] = [
     title: "Valid Parentheses",
     url: "https://leetcode.com/problems/valid-parentheses/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 232,
     title: "Implement Queue using Stacks",
     url: "https://leetcode.com/problems/implement-queue-using-stacks/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 739,
     title: "Daily Temperatures",
     url: "https://leetcode.com/problems/daily-temperatures/",
     status: Status.Attempted,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 225,
@@ -307,28 +307,28 @@ export const trees: Problem[] = [
     title: "Maximum Depth of Binary Tree",
     url: "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 100,
     title: "Same Tree",
     url: "https://leetcode.com/problems/same-tree/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 226,
     title: "Invert Binary Tree",
     url: "https://leetcode.com/problems/invert-binary-tree/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 102,
     title: "Binary Tree Level Order Traversal",
     url: "https://leetcode.com/problems/binary-tree-level-order-traversal/",
     status: Status.NotDone,
-    importance: Importance.Important,
+    importance: Importance.Recommended,
   },
   {
     id: 94,
@@ -380,21 +380,21 @@ export const graphs: Problem[] = [
     title: "Number of Islands",
     url: "https://leetcode.com/problems/number-of-islands/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 133,
     title: "Clone Graph",
     url: "https://leetcode.com/problems/clone-graph/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 207,
     title: "Course Schedule",
     url: "https://leetcode.com/problems/course-schedule/",
     status: Status.NotDone,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 127,
@@ -439,21 +439,21 @@ export const dynamicProgramming: Problem[] = [
     title: "Climbing Stairs",
     url: "https://leetcode.com/problems/climbing-stairs/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 198,
     title: "House Robber",
     url: "https://leetcode.com/problems/house-robber/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 322,
     title: "Coin Change",
     url: "https://leetcode.com/problems/coin-change/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 300,
@@ -491,21 +491,21 @@ export const greedyAlgorithms: Problem[] = [
     title: "Jump Game",
     url: "https://leetcode.com/problems/jump-game/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 621,
     title: "Task Scheduler",
     url: "https://leetcode.com/problems/task-scheduler/",
     status: Status.NotDone,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 56,
     title: "Merge Intervals",
     url: "https://leetcode.com/problems/merge-intervals/",
     status: Status.NotDone,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 435,
@@ -550,28 +550,28 @@ export const backtracking: Problem[] = [
     title: "Subsets",
     url: "https://leetcode.com/problems/subsets/",
     status: Status.NotDone,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 46,
     title: "Permutations",
     url: "https://leetcode.com/problems/permutations/",
     status: Status.NotDone,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 39,
     title: "Combination Sum",
     url: "https://leetcode.com/problems/combination-sum/",
     status: Status.NotDone,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 51,
     title: "N-Queens",
     url: "https://leetcode.com/problems/n-queens/",
     status: Status.NotDone,
-    importance: Importance.Important,
+    importance: Importance.Recommended,
   },
   {
     id: 37,
@@ -609,21 +609,21 @@ export const tries: Problem[] = [
     title: "Implement Trie",
     url: "https://leetcode.com/problems/implement-trie-prefix-tree/",
     status: Status.NotDone,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 211,
     title: "Design Add and Search Words Data Structure",
     url: "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
     status: Status.NotDone,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 212,
     title: "Word Search II",
     url: "https://leetcode.com/problems/word-search-ii/",
     status: Status.NotDone,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 14,
@@ -654,21 +654,21 @@ export const heapsAndPriorityQueues: Problem[] = [
     title: "Kth Largest Element",
     url: "https://leetcode.com/problems/kth-largest-element-in-an-array/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 23,
     title: "Merge K Sorted Lists",
     url: "https://leetcode.com/problems/merge-k-sorted-lists/",
     status: Status.NotDone,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 347,
     title: "Top K Frequent Elements",
     url: "https://leetcode.com/problems/top-k-frequent-elements/",
     status: Status.NotDone,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 1046,
@@ -706,21 +706,21 @@ export const bitManipulation: Problem[] = [
     title: "Number of 1 Bits",
     url: "https://leetcode.com/problems/number-of-1-bits/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 338,
     title: "Counting Bits",
     url: "https://leetcode.com/problems/counting-bits/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
   {
     id: 268,
     title: "Missing Number",
     url: "https://leetcode.com/problems/missing-number/",
     status: Status.Done,
-    importance: Importance.Essential,
+    importance: Importance.Important,
   },
 ].map((problem) => ({ ...problem, category: Category.BitManipulation }));
 
@@ -747,10 +747,10 @@ export const numCompleted = problems.filter(
 ).length;
 
 const essentialProblems = problems.filter(
-  (problem) => problem.importance === Importance.Essential,
+  (problem) => problem.importance === Importance.Important,
 );
 
-export const numEssentialProblems = essentialProblems.length;
-export const numEssentialCompleted = essentialProblems.filter(
+export const numImportantProblems = essentialProblems.length;
+export const numImportantCompleted = essentialProblems.filter(
   (problem) => problem.status === Status.Done,
 ).length;

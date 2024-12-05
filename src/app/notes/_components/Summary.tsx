@@ -28,7 +28,7 @@ export const Summary = ({ problems }: { problems: Problem[] }) => {
                 <div className="flex items-center gap-3">
                   {problem.title}
                   <ImportanceBadge
-                    importance={problem.importance ?? Importance.Essential}
+                    importance={problem.importance ?? Importance.Important}
                   />
                 </div>
               </td>
