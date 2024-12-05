@@ -22,7 +22,7 @@ export const Summary = ({ problems }: { problems: Problem[] }) => {
         <tbody>
           {problems.map((problem, index) => (
             <tr key={problem.url}>
-              <td>{problem.number}</td>
+              <td>{problem.id}</td>
 
               <td>
                 <div className="flex items-center gap-3">
