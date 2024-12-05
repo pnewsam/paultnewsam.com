@@ -184,13 +184,13 @@ export const stacksAndQueues: Problem[] = [
     number: 232,
     title: "Implement Queue using Stacks",
     url: "https://leetcode.com/problems/implement-queue-using-stacks/",
-    status: Status.NotDone,
+    status: Status.Done,
   },
   {
     number: 225,
     title: "Implement Stack using Queues",
     url: "https://leetcode.com/problems/implement-stack-using-queues/",
-    status: Status.Unknown,
+    status: Status.Done,
   },
   {
     number: 394,
@@ -552,3 +552,8 @@ export const problems = [
   ...tries,
   ...heapsAndPriorityQueues,
 ];
+
+export const numProblems = problems.length;
+export const numCompleted = problems.filter(
+  (problem) => problem.status === Status.Done,
+).length;

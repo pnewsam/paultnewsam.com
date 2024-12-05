@@ -1,13 +1,14 @@
 "use client";
 
-import Button from "@/components/Button";
+import { Loader2 } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
+
+import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
 import { Category } from "@/constants/pageMetadata";
-import { Loader2 } from "lucide-react";
-import { useCallback, useEffect, useState } from "react";
 
 import InfiniteScroll from "./_components/InfiniteScroll";
 import { api } from "./_utils/MockApi";

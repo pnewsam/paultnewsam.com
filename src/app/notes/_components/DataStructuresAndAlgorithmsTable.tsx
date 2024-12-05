@@ -8,6 +8,8 @@ import {
   greedyAlgorithms,
   heapsAndPriorityQueues,
   linkedLists,
+  numCompleted,
+  numProblems,
   stacksAndQueues,
   trees,
   tries,
@@ -155,7 +157,9 @@ export function DataStructuresAndAlgorithmsTable() {
         <tr>
           {/* @ts-ignore */}
           <td colSpan={2} />
-          <td>Completed: 17/40</td>
+          <td>
+            Completed: {numCompleted}/{numProblems}
+          </td>
         </tr>
       </tfoot>
     </Table>

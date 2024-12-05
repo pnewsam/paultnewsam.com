@@ -1,5 +1,6 @@
-import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
+
+import { cn } from "@/lib/utils";
 
 export const buttonVariants = cva(
   "rounded-md inline-flex items-center gap-2 font-medium text-base px-4 py-2 transition-colors",
@@ -12,10 +13,10 @@ export const buttonVariants = cva(
           "bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700",
       },
     },
-  }
+  },
 );
 
-export default function Button({
+export function Button({
   className,
   children,
   variant = "default",

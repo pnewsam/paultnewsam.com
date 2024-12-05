@@ -4,11 +4,11 @@ import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
 import { Bold } from "@/components/typography/Bold";
-import { Code } from "@/components/typography/Code";
 import { H3 } from "@/components/typography/H3";
 import { Category } from "@/constants/pageMetadata";
 import { graphs } from "@/constants/problems";
 
+import { ArtBoard } from "../../_components/ArtBoard";
 import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
 import { GraphSvg } from "./_GraphSvg";
@@ -35,9 +35,11 @@ export default function Page() {
           </p>
         </Body>
 
-        <Card className="mb-8 overflow-hidden flex justify-center">
+        <Card>
           <GraphSvg />
         </Card>
+        {/* TODO: Add back in */}
+        {/* <ArtBoard /> */}
 
         <Body>
           <p>
