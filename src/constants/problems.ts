@@ -737,6 +737,11 @@ export const problems = [
   ...bitManipulation,
 ];
 
+export const numProblems = problems.length;
+export const numCompleted = problems.filter(
+  (problem) => problem.status === Status.Done,
+).length;
+
 const essentialProblems = problems.filter(
   (problem) => problem.importance === Importance.Essential,
 );

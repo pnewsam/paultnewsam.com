@@ -18,7 +18,7 @@ import {
 
 export const rows = [
   {
-    number: 1,
+    order: 1,
     path: "/notes/data-structures-and-algorithms/arrays-and-hashing",
     title: "Arrays and Hashing",
     concepts: "Sliding window; two-pointer technique; hashing for fast lookups",
@@ -27,7 +27,7 @@ export const rows = [
     ),
   },
   {
-    number: 2,
+    order: 2,
     path: "/notes/data-structures-and-algorithms/sliding-window",
     title: "Sliding Window",
     concepts: "",
@@ -36,7 +36,7 @@ export const rows = [
     ),
   },
   {
-    number: 3,
+    order: 3,
     path: "/notes/data-structures-and-algorithms/two-pointers",
     title: "Two Pointers",
     concepts: "",
@@ -45,7 +45,7 @@ export const rows = [
     ),
   },
   {
-    number: 4,
+    order: 4,
     path: "/notes/data-structures-and-algorithms/binary-search",
     title: "Binary Search",
     concepts: "Divide and conquer; variations of binary search",
@@ -54,7 +54,7 @@ export const rows = [
     ),
   },
   {
-    number: 5,
+    order: 5,
     path: "/notes/data-structures-and-algorithms/linked-lists",
     title: "Linked Lists",
     concepts: "Pointer manipulation; ",
@@ -63,7 +63,7 @@ export const rows = [
     ),
   },
   {
-    number: 6,
+    order: 6,
     path: "/notes/data-structures-and-algorithms/stacks-and-queues",
     title: "Stacks and Queues",
     concepts: "Stack for backtracking; monotonic stack; queue for BFS",
@@ -72,7 +72,7 @@ export const rows = [
     ),
   },
   {
-    number: 7,
+    order: 7,
     path: "/notes/data-structures-and-algorithms/trees",
     title: "Trees",
     concepts: "DFS; BFS; recursion",
@@ -81,7 +81,7 @@ export const rows = [
     ),
   },
   {
-    number: 8,
+    order: 8,
     path: "/notes/data-structures-and-algorithms/tries",
     title: "Tries",
     concepts: "Prefix trees; character-by-character search",
@@ -90,7 +90,7 @@ export const rows = [
     ),
   },
   {
-    number: 9,
+    order: 9,
     path: "/notes/data-structures-and-algorithms/heaps-and-priority-queues",
     title: "Heaps and Priority Queues",
     concepts: "",
@@ -99,7 +99,7 @@ export const rows = [
     ),
   },
   {
-    number: 10,
+    order: 10,
     path: "/notes/data-structures-and-algorithms/graphs",
     title: "Graphs",
     concepts: "BFS; DFS; adjacency lists; detecting cycles",
@@ -108,7 +108,7 @@ export const rows = [
     ),
   },
   {
-    number: 11,
+    order: 11,
     path: "/notes/data-structures-and-algorithms/backtracking",
     title: "Backtracking",
     concepts: "Recursion with constraints; pruning",
@@ -117,7 +117,7 @@ export const rows = [
     ),
   },
   {
-    number: 12,
+    order: 12,
     path: "/notes/data-structures-and-algorithms/dynamic-programming",
     title: "Dynamic Programming",
     concepts: "Bottom-up vs top-down; memoization",
@@ -126,7 +126,7 @@ export const rows = [
     ),
   },
   {
-    number: 13,
+    order: 13,
     path: "/notes/data-structures-and-algorithms/greedy-algorithms",
     title: "Greedy Algorithms",
     concepts: "Local optimum; global optimum",
@@ -135,7 +135,7 @@ export const rows = [
     ),
   },
   {
-    number: 14,
+    order: 14,
     path: "/notes/data-structures-and-algorithms/bit-manipulation",
     title: "Bit Manipulation",
     concepts: "Bit manipulation",

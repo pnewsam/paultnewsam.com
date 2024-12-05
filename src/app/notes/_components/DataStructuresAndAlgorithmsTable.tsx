@@ -21,8 +21,8 @@ export function DataStructuresAndAlgorithmsTable() {
       </thead>
       <tbody>
         {rows.map((row) => (
-          <tr>
-            <td>{row.number}</td>
+          <tr key={row.order}>
+            <td>{row.order}</td>
             <td>
               <TextLink href={row.path}>{row.title}</TextLink>
             </td>
