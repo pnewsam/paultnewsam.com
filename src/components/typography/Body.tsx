@@ -1,6 +1,7 @@
-import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 import React from "react";
+
+import { cn } from "@/lib/utils";
 
 const bodyVariants = cva("mb-8 text-neutral-700 dark:text-neutral-300", {
   variants: {

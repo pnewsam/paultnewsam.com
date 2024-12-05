@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 import { LinkCard } from "@/app/notes/_components/LinkCard";
 import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
@@ -11,6 +13,11 @@ import {
 } from "@/constants/pageMetadata";
 
 import { DataStructuresAndAlgorithmsTable } from "./_components/DataStructuresAndAlgorithmsTable";
+
+export const metadata: Metadata = {
+  title: "Paul T. Newsam | Notes",
+  description: "Notes on various topics",
+};
 
 const isDevelopment = process.env.IS_DEVELOPMENT === "true";
 

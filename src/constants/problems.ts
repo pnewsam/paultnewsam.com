@@ -5,12 +5,18 @@ export enum Status {
   Unknown = "Unknown",
 }
 
+export enum Importance {
+  Fundamental = "Fundamental",
+  Supplemental = "Supplemental",
+}
+
 export type Problem = {
   number: number;
   title: string;
   url: string;
   status: Status;
   category: string;
+  importance?: Importance;
 };
 
 export const arraysAndHashing: Problem[] = [
@@ -48,7 +54,7 @@ export const arraysAndHashing: Problem[] = [
     number: 217,
     title: "Contains Duplicate",
     url: "https://leetcode.com/problems/contains-duplicate/",
-    status: Status.Unknown,
+    status: Status.Done,
   },
   {
     number: 49,
@@ -320,18 +326,21 @@ export const dynamicProgramming: Problem[] = [
     title: "Climbing Stairs",
     url: "https://leetcode.com/problems/climbing-stairs/",
     status: Status.Done,
+    importance: Importance.Fundamental,
   },
   {
     number: 198,
     title: "House Robber",
     url: "https://leetcode.com/problems/house-robber/",
     status: Status.Done,
+    importance: Importance.Fundamental,
   },
   {
     number: 322,
     title: "Coin Change",
     url: "https://leetcode.com/problems/coin-change/",
-    status: Status.Attempted,
+    status: Status.Done,
+    importance: Importance.Fundamental,
   },
   {
     number: 1143,

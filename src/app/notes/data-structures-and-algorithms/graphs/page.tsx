@@ -8,7 +8,7 @@ import { H3 } from "@/components/typography/H3";
 import { Category } from "@/constants/pageMetadata";
 import { graphs } from "@/constants/problems";
 
-import { ArtBoard } from "../../_components/ArtBoard";
+// import { ArtBoard } from "../../_components/ArtBoard";
 import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
 import { GraphSvg } from "./_GraphSvg";
