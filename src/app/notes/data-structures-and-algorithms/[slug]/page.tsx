@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
-import { dataStructuresAndAlgorithmsPagesBySlug } from "@/constants/pages";
+import { dsaPagesBySlug } from "@/constants/pages/dsaPages";
 import { Subject } from "@/types/subject";
 
 import { Callout } from "../../_components/Callout";
@@ -15,7 +15,7 @@ export default function Page({
     slug: string;
   };
 }) {
-  const page = dataStructuresAndAlgorithmsPagesBySlug[params.slug];
+  const page = dsaPagesBySlug[params.slug];
 
   if (!page) {
     notFound();
@@ -29,7 +29,7 @@ export default function Page({
           tags={[Subject.DataStructuresAndAlgorithms]}
         />
         <Callout title="Key Concepts" className="mb-8">
-          {page.concepts}
+          {page.description}
         </Callout>
 
         {page.Content && <page.Content />}

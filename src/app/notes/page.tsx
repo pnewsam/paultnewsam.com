@@ -7,10 +7,8 @@ import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
 import { Bold } from "@/components/typography/Bold";
 import { H2 } from "@/components/typography/H2";
-import {
-  systemDesignPages,
-  userInterfacePages,
-} from "@/constants/pageMetadata";
+import { systemDesignPages } from "@/constants/pages/systemDesignPages";
+import { userInterfacePages } from "@/constants/pages/userInterfacePages";
 
 import { DataStructuresAndAlgorithmsTable } from "./_components/DataStructuresAndAlgorithmsTable";
 

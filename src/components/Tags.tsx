@@ -1,8 +1,8 @@
 import { Code, Component, Database, LayoutDashboard } from "lucide-react";
 
-import { Tag } from "@/constants/pageMetadata";
 import { cn } from "@/lib/utils";
 import { Subject } from "@/types/subject";
+import { Tag } from "@/types/tag";
 
 import { Badge } from "./Badge";
 

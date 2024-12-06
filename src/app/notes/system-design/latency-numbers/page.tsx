@@ -13,13 +13,13 @@ import {
 } from "@/components/_TimeScale";
 import { Body } from "@/components/typography/Body";
 import { Bold } from "@/components/typography/Bold";
-import { Category } from "@/constants/pageMetadata";
+import { Subject } from "@/types/subject";
 
 export default function LatencyNumbersPage() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <PageHeader title="Latency Numbers" tags={[Category.SystemDesign]} />
+        <PageHeader title="Latency Numbers" tags={[Subject.SystemDesign]} />
         <Body>
           These numbers vary so hugely that it is difficult to really develop a
           sense of them. Some quick comparisons: it&apos;s{" "}

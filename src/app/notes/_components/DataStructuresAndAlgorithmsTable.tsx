@@ -1,6 +1,6 @@
 import { Table } from "@/components/Table";
 import { InternalLink } from "@/components/typography/InternalLink";
-import { dataStructuresAndAlgorithmsPages } from "@/constants/pages";
+import { dsaPages } from "@/constants/pages/dsaPages";
 import {
   numImportantCompleted,
   numImportantLeetcodeProblems,
@@ -20,7 +20,7 @@ export function DataStructuresAndAlgorithmsTable() {
         </tr>
       </thead>
       <tbody>
-        {dataStructuresAndAlgorithmsPages.map((page) => (
+        {dsaPages.map((page) => (
           <tr key={page.order}>
             <td>{page.order}</td>
             <td>
@@ -28,7 +28,7 @@ export function DataStructuresAndAlgorithmsTable() {
                 {page.title}
               </InternalLink>
             </td>
-            <td>{page.concepts}</td>
+            <td>{page.description}</td>
             <td>
               <ProblemsList problems={page.problems} />
             </td>

@@ -8,7 +8,7 @@ import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
-import { Category } from "@/constants/pageMetadata";
+import { Subject } from "@/types/subject";
 
 import InfiniteScroll from "./_components/InfiniteScroll";
 import { api } from "./_utils/MockApi";
@@ -45,7 +45,7 @@ export default function InfiniteScrollPage() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <PageHeader title="Infinite Scroll" tags={[Category.UserInterface]} />
+        <PageHeader title="Infinite Scroll" tags={[Subject.UserInterface]} />
         <Body>
           Infinite scroll is a common UI pattern used to load content as the
           user scrolls. It&apos;s often used on blogs, news sites, and social
