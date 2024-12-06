@@ -119,7 +119,7 @@ export function ProblemsTable({ problems }: { problems: Problem[] }) {
         <span>{numProblems} total</span>
       </div>
 
-      <Card>
+      <Card className="overflow-scroll">
         <Table>
           <thead>
             <tr>
@@ -153,7 +153,7 @@ export function ProblemsTable({ problems }: { problems: Problem[] }) {
           </tbody>
           <tfoot>
             <tr>
-              <td colSpan={2} />
+              <td colSpan={4} />
               <td>
                 Completed: {numCompleted}/{numProblems}&nbsp;(
                 {Math.round((numCompleted / numProblems) * 100)}%)
