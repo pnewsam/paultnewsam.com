@@ -2,12 +2,12 @@ import { ExternalLink as ExternalLinkIcon } from "lucide-react";
 
 import { Table } from "@/components/Table";
 import { ExternalLink } from "@/components/typography/ExternalLink";
-import { Importance, Problem } from "@/constants/problems";
+import { Importance, LeetcodeProblem } from "@/types/leetcodeProblem";
 
 import { ImportanceBadge } from "./ImportanceBadge";
 import { StatusText } from "./StatusText";
 
-export const Summary = ({ problems }: { problems: Problem[] }) => {
+export const Summary = ({ problems }: { problems: LeetcodeProblem[] }) => {
   return (
     <Table>
       <thead>
