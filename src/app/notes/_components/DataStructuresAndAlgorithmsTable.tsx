@@ -5,7 +5,7 @@ import {
   numImportantProblems,
 } from "@/constants/problems";
 
-import { rows } from "./DataStructuresAndAlgorithms.constants";
+import { dataStructuresAndAlgorithmsPages } from "../_constants/pages";
 import { ProblemsList } from "./ProblemsList";
 
 export function DataStructuresAndAlgorithmsTable() {
@@ -20,17 +20,17 @@ export function DataStructuresAndAlgorithmsTable() {
         </tr>
       </thead>
       <tbody>
-        {rows.map((row) => (
-          <tr key={row.order}>
-            <td>{row.order}</td>
+        {dataStructuresAndAlgorithmsPages.map((page) => (
+          <tr key={page.order}>
+            <td>{page.order}</td>
             <td>
-              <InternalLink className="font-medium text-xl" href={row.path}>
-                {row.title}
+              <InternalLink className="font-medium text-xl" href={page.path}>
+                {page.title}
               </InternalLink>
             </td>
-            <td>{row.concepts}</td>
+            <td>{page.concepts}</td>
             <td>
-              <ProblemsList problems={row.problems} />
+              <ProblemsList problems={page.problems} />
             </td>
           </tr>
         ))}

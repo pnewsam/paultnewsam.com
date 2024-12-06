@@ -22,21 +22,23 @@ export default function DataStructuresAndAlgorithmsPage() {
         />
         <Body>
           When you&apos;re doing everyday web development, you rarely have to
-          think too deeply about data structures and algorithms. The most
-          pressing problems almost always lie in other domains, and as long as
-          you have a good grasp of the basic concepts, you&apos;ll generally be
-          fine. However, data structures and algorithms are core to how
-          computers and programs function, and having a strong understanding of
-          them will make you more aware of the real constraints that software
-          operates against, and open your mind to what&apos;s possible with your
-          own projects and tooling.
+          think very deeply about data structures and algorithms. You need to
+          know a little about caching, how to store data efficiently, maybe how
+          to traverse a tree or implement a basic recursive function. But you
+          rarely have to, say, implement a hash table.
         </Body>
         <Body>
-          There are lots of great resources out there for learning about data
+          But if your knowledge of data structures and algorithms remains
+          surface-level, you&apos;re doing yourself a disservice. They underpin
+          all of computer systems. And having a strong understanding of them
+          will make you a better developer.
+        </Body>
+        <Body>
+          There are lots of great resources out there for learning data
           structures and algorithms. Of course, you&apos;re going to want to do
           problems on{" "}
           <ExternalLink href="https://leetcode.com">Leetcode</ExternalLink>.
-          It&apos;s the authoritative source for top interview questions.
+          It&apos;s the best, most comprehensive source of practice problems.
           Curated lists like the{" "}
           <ExternalLink href="https://leetcode.com/studyplan/top-interview-150/">
             Top Interview 150
@@ -45,10 +47,9 @@ export default function DataStructuresAndAlgorithmsPage() {
           <ExternalLink href="https://leetcode.com/studyplan/leetcode-75/">
             Leetcode 75
           </ExternalLink>{" "}
-          help narrow down the list of problems you need to solve. But I would
-          argue that, even before diving into one of those curated lists,
-          it&apos;s helpful to get some exposure to the key concepts and
-          strategies you&apos;ll need to know.
+          help narrow down the list of problems you need to solve. But even
+          before diving into one of those curated lists, you might want to get
+          exposure to some of the key concepts.
         </Body>
         <Body>
           There are a couple of resources I would especially recommend for that:

@@ -1,31 +1,40 @@
+import { notFound } from "next/navigation";
+
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
-import { Body } from "@/components/typography/Body";
 import { Category } from "@/constants/pageMetadata";
-import { backtracking } from "@/constants/problems";
 
 import { Callout } from "../../_components/Callout";
 import { Summary } from "../../_components/Summary";
+import { dataStructuresAndAlgorithmsPagesBySlug } from "../../_constants/pages";
 
-export default function Backtracking() {
+export default function Page({
+  params,
+}: {
+  params: {
+    slug: string;
+  };
+}) {
+  const page = dataStructuresAndAlgorithmsPagesBySlug[params.slug];
+
+  if (!page) {
+    notFound();
+  }
+
   return (
     <Container>
       <section className="py-12 md:py-24">
         <PageHeader
-          title="Backtracking"
+          title={page.title}
           tags={[Category.DataStructuresAndAlgorithms]}
         />
-        <Body>
-          Backtracking is an algorithmic technique that systematically explores
-          possible solutions, abandoning paths that fail and returning to try
-          alternatives.
-        </Body>
-
         <Callout title="Key Concepts" className="mb-8">
-          Recursion with constraints; pruning
+          {page.concepts}
         </Callout>
 
-        <Summary problems={backtracking} />
+        {page.Content && <page.Content />}
+
+        <Summary problems={page.problems} />
       </section>
     </Container>
   );
