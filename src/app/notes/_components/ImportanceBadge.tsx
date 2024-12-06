@@ -1,8 +1,8 @@
 import { cva } from "class-variance-authority";
 import { Star, StarHalf, StarOff } from "lucide-react";
 
-import { Importance } from "@/constants/problems";
 import { cn } from "@/lib/utils";
+import { Importance } from "@/types/leetcodeProblem";
 
 const badgeVariants = cva(
   "inline-flex items-center font-medium gap-2 px-1 py-[2px] rounded-sm text-xs border",

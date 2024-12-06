@@ -1,9 +1,9 @@
 import { ExternalLink } from "@/components/typography/ExternalLink";
-import { Problem, Status } from "@/constants/problems";
+import { LeetcodeProblem, Status } from "@/types/leetcodeProblem";
 
 import { StatusText } from "./StatusText";
 
-export const ProblemsList = ({ problems }: { problems: Problem[] }) => (
+export const ProblemsList = ({ problems }: { problems: LeetcodeProblem[] }) => (
   <ul className="list-disc list-inside">
     {problems.map((problem) => (
       <li key={problem.url}>

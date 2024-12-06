@@ -1,5 +1,4 @@
 import {
-  Importance,
   arraysAndHashing,
   backtracking,
   binarySearch,
@@ -16,18 +15,18 @@ import {
   twoPointers,
 } from "@/constants/problems";
 
-import { ArraysAndHashingContent } from "../data-structures-and-algorithms/_components/ArraysAndHashingContent";
-import { BacktrackingContent } from "../data-structures-and-algorithms/_components/BacktrackingContent";
-import { BinarySearchContent } from "../data-structures-and-algorithms/_components/BinarySearchContent";
-import { BitManipulationContent } from "../data-structures-and-algorithms/_components/BitManipulationContent";
-import { DynamicProgrammingContent } from "../data-structures-and-algorithms/_components/DynamicProgrammingContent";
-import { GraphsContent } from "../data-structures-and-algorithms/_components/GraphsContent";
-import { GreedyAlgorithmsContent } from "../data-structures-and-algorithms/_components/GreedyAlgorithmsContent";
-import { LinkedListsContent } from "../data-structures-and-algorithms/_components/LinkedListsContent";
-import { SlidingWindowContent } from "../data-structures-and-algorithms/_components/SlidingWindowContent";
-import { StacksAndQueuesContent } from "../data-structures-and-algorithms/_components/StacksAndQueuesContent";
-import { TriesContent } from "../data-structures-and-algorithms/_components/TriesContent";
-import { TwoPointersContent } from "../data-structures-and-algorithms/_components/TwoPointersContent";
+import { ArraysAndHashingContent } from "../app/notes/data-structures-and-algorithms/_components/ArraysAndHashingContent";
+import { BacktrackingContent } from "../app/notes/data-structures-and-algorithms/_components/BacktrackingContent";
+import { BinarySearchContent } from "../app/notes/data-structures-and-algorithms/_components/BinarySearchContent";
+import { BitManipulationContent } from "../app/notes/data-structures-and-algorithms/_components/BitManipulationContent";
+import { DynamicProgrammingContent } from "../app/notes/data-structures-and-algorithms/_components/DynamicProgrammingContent";
+import { GraphsContent } from "../app/notes/data-structures-and-algorithms/_components/GraphsContent";
+import { GreedyAlgorithmsContent } from "../app/notes/data-structures-and-algorithms/_components/GreedyAlgorithmsContent";
+import { LinkedListsContent } from "../app/notes/data-structures-and-algorithms/_components/LinkedListsContent";
+import { SlidingWindowContent } from "../app/notes/data-structures-and-algorithms/_components/SlidingWindowContent";
+import { StacksAndQueuesContent } from "../app/notes/data-structures-and-algorithms/_components/StacksAndQueuesContent";
+import { TriesContent } from "../app/notes/data-structures-and-algorithms/_components/TriesContent";
+import { TwoPointersContent } from "../app/notes/data-structures-and-algorithms/_components/TwoPointersContent";
 
 export const dataStructuresAndAlgorithmsPages = [
   {
@@ -37,9 +36,7 @@ export const dataStructuresAndAlgorithmsPages = [
     title: "Arrays and Hashing",
     concepts:
       "Hash tables for O(1) lookups; In-place array manipulation; Frequency counting",
-    problems: arraysAndHashing.filter(
-      (problem) => problem.importance === Importance.Important,
-    ),
+    problems: arraysAndHashing,
     Content: ArraysAndHashingContent,
   },
   {
@@ -49,9 +46,7 @@ export const dataStructuresAndAlgorithmsPages = [
     title: "Sliding Window",
     concepts:
       "Fixed vs variable size windows; Window state management; Window boundaries",
-    problems: slidingWindow.filter(
-      (problem) => problem.importance === Importance.Important,
-    ),
+    problems: slidingWindow,
     Content: SlidingWindowContent,
   },
   {
@@ -61,9 +56,7 @@ export const dataStructuresAndAlgorithmsPages = [
     title: "Two Pointers",
     concepts:
       "Start/end pointer movement; Fast/slow pointer technique; Meeting in middle",
-    problems: twoPointers.filter(
-      (problem) => problem.importance === Importance.Important,
-    ),
+    problems: twoPointers,
     Content: TwoPointersContent,
   },
   {
@@ -73,9 +66,7 @@ export const dataStructuresAndAlgorithmsPages = [
     title: "Binary Search",
     concepts:
       "Binary search variations; Search space reduction; Boundary conditions",
-    problems: binarySearch.filter(
-      (problem) => problem.importance === Importance.Important,
-    ),
+    problems: binarySearch,
     Content: BinarySearchContent,
   },
   {
@@ -85,9 +76,7 @@ export const dataStructuresAndAlgorithmsPages = [
     title: "Linked Lists",
     concepts:
       "Pointer manipulation; Multiple pointer traversal; Cycle detection",
-    problems: linkedLists.filter(
-      (problem) => problem.importance === Importance.Important,
-    ),
+    problems: linkedLists,
     Content: LinkedListsContent,
   },
   {
@@ -97,9 +86,7 @@ export const dataStructuresAndAlgorithmsPages = [
     title: "Stacks and Queues",
     concepts:
       "LIFO/FIFO principles; Monotonic stack patterns; Nested structure validation",
-    problems: stacksAndQueues.filter(
-      (problem) => problem.importance === Importance.Important,
-    ),
+    problems: stacksAndQueues,
     Content: StacksAndQueuesContent,
   },
   {
@@ -109,9 +96,7 @@ export const dataStructuresAndAlgorithmsPages = [
     title: "Trees",
     concepts:
       "Tree traversal strategies; Recursion vs iteration; Path tracking",
-    problems: trees.filter(
-      (problem) => problem.importance === Importance.Important,
-    ),
+    problems: trees,
   },
   {
     order: 8,
@@ -120,9 +105,7 @@ export const dataStructuresAndAlgorithmsPages = [
     title: "Tries",
     concepts:
       "Prefix-based search; Character-by-character traversal; Word dictionary operations",
-    problems: tries.filter(
-      (problem) => problem.importance === Importance.Important,
-    ),
+    problems: tries,
     Content: TriesContent,
   },
   {
@@ -131,9 +114,7 @@ export const dataStructuresAndAlgorithmsPages = [
     slug: "heaps-and-priority-queues",
     title: "Heaps and Priority Queues",
     concepts: "Binary heap properties; K-way processing; Stream operations",
-    problems: heapsAndPriorityQueues.filter(
-      (problem) => problem.importance === Importance.Important,
-    ),
+    problems: heapsAndPriorityQueues,
   },
   {
     order: 10,
@@ -142,9 +123,7 @@ export const dataStructuresAndAlgorithmsPages = [
     title: "Graphs",
     concepts:
       "Graph traversal (BFS/DFS); Graph representation; Cycle detection",
-    problems: graphs.filter(
-      (problem) => problem.importance === Importance.Important,
-    ),
+    problems: graphs,
     Content: GraphsContent,
   },
   {
@@ -153,9 +132,7 @@ export const dataStructuresAndAlgorithmsPages = [
     slug: "backtracking",
     title: "Backtracking",
     concepts: "State space exploration; Constraint handling; Solution building",
-    problems: backtracking.filter(
-      (problem) => problem.importance === Importance.Important,
-    ),
+    problems: backtracking,
     Content: BacktrackingContent,
   },
   {
@@ -165,9 +142,7 @@ export const dataStructuresAndAlgorithmsPages = [
     title: "Dynamic Programming",
     concepts:
       "State transition; Memoization vs tabulation; Optimal substructure",
-    problems: dynamicProgramming.filter(
-      (problem) => problem.importance === Importance.Important,
-    ),
+    problems: dynamicProgramming,
     Content: DynamicProgrammingContent,
   },
   {
@@ -177,9 +152,7 @@ export const dataStructuresAndAlgorithmsPages = [
     title: "Greedy Algorithms",
     concepts:
       "Local vs global optimization; Interval processing; Sorting-based greedy",
-    problems: greedyAlgorithms.filter(
-      (problem) => problem.importance === Importance.Important,
-    ),
+    problems: greedyAlgorithms,
     Content: GreedyAlgorithmsContent,
   },
   {
@@ -188,9 +161,7 @@ export const dataStructuresAndAlgorithmsPages = [
     slug: "bit-manipulation",
     title: "Bit Manipulation",
     concepts: "Bitwise operations; Bit flags; Bit counting techniques",
-    problems: bitManipulation.filter(
-      (problem) => problem.importance === Importance.Important,
-    ),
+    problems: bitManipulation,
     Content: BitManipulationContent,
   },
 ];

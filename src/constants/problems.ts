@@ -1,44 +1,7 @@
-export enum Category {
-  ArraysAndHashing = "Arrays and Hashing",
-  SlidingWindow = "Sliding Window",
-  TwoPointers = "Two Pointers",
-  BinarySearch = "Binary Search",
-  LinkedLists = "Linked Lists",
-  StacksAndQueues = "Stacks and Queues",
-  Trees = "Trees",
-  Graphs = "Graphs",
-  BitManipulation = "Bit Manipulation",
-  Intervals = "Intervals",
-  DynamicProgramming = "Dynamic Programming",
-  GreedyAlgorithms = "Greedy Algorithms",
-  Backtracking = "Backtracking",
-  HeapsAndPriorityQueues = "Heaps and Priority Queues",
-  Tries = "Tries",
-}
+import { Importance, LeetcodeProblem, Status } from "@/types/leetcodeProblem";
+import { Topic } from "@/types/topic";
 
-export enum Status {
-  Done = "Done",
-  Attempted = "Attempted",
-  NotDone = "Not Done",
-  Unknown = "Unknown",
-}
-
-export enum Importance {
-  Important = "Important",
-  Recommended = "Recommended",
-  Optional = "Optional",
-}
-
-export type Problem = {
-  id: number;
-  title: string;
-  url: string;
-  status: Status;
-  category: Category;
-  importance: Importance;
-};
-
-export const arraysAndHashing: Problem[] = [
+export const arraysAndHashing: LeetcodeProblem[] = [
   {
     id: 1,
     title: "Two Sum",
@@ -95,9 +58,9 @@ export const arraysAndHashing: Problem[] = [
     status: Status.Unknown,
     importance: Importance.Optional,
   },
-].map((problem) => ({ ...problem, category: Category.ArraysAndHashing }));
+].map((problem) => ({ ...problem, topic: Topic.ArraysAndHashing }));
 
-export const slidingWindow: Problem[] = [
+export const slidingWindow: LeetcodeProblem[] = [
   {
     id: 121,
     title: "Best Time to Buy and Sell Stock",
@@ -119,9 +82,9 @@ export const slidingWindow: Problem[] = [
     status: Status.NotDone,
     importance: Importance.Important,
   },
-].map((problem) => ({ ...problem, category: Category.SlidingWindow }));
+].map((problem) => ({ ...problem, topic: Topic.SlidingWindow }));
 
-export const twoPointers: Problem[] = [
+export const twoPointers: LeetcodeProblem[] = [
   {
     id: 125,
     title: "Valid Palindrome",
@@ -143,9 +106,9 @@ export const twoPointers: Problem[] = [
     status: Status.Done,
     importance: Importance.Important,
   },
-].map((problem) => ({ ...problem, category: Category.TwoPointers }));
+].map((problem) => ({ ...problem, topic: Topic.TwoPointers }));
 
-export const binarySearch: Problem[] = [
+export const binarySearch: LeetcodeProblem[] = [
   {
     id: 704,
     title: "Binary Search",
@@ -202,9 +165,9 @@ export const binarySearch: Problem[] = [
     status: Status.Unknown,
     importance: Importance.Optional,
   },
-].map((problem) => ({ ...problem, category: Category.BinarySearch }));
+].map((problem) => ({ ...problem, topic: Topic.BinarySearch }));
 
-export const linkedLists: Problem[] = [
+export const linkedLists: LeetcodeProblem[] = [
   {
     id: 206,
     title: "Reverse Linked List",
@@ -247,9 +210,9 @@ export const linkedLists: Problem[] = [
     status: Status.Unknown,
     importance: Importance.Optional,
   },
-].map((problem) => ({ ...problem, category: Category.LinkedLists }));
+].map((problem) => ({ ...problem, topic: Topic.LinkedLists }));
 
-export const stacksAndQueues: Problem[] = [
+export const stacksAndQueues: LeetcodeProblem[] = [
   {
     id: 20,
     title: "Valid Parentheses",
@@ -299,9 +262,9 @@ export const stacksAndQueues: Problem[] = [
     status: Status.Unknown,
     importance: Importance.Optional,
   },
-].map((problem) => ({ ...problem, category: Category.StacksAndQueues }));
+].map((problem) => ({ ...problem, topic: Topic.StacksAndQueues }));
 
-export const trees: Problem[] = [
+export const trees: LeetcodeProblem[] = [
   {
     id: 104,
     title: "Maximum Depth of Binary Tree",
@@ -372,9 +335,9 @@ export const trees: Problem[] = [
     status: Status.Unknown,
     importance: Importance.Optional,
   },
-].map((problem) => ({ ...problem, category: Category.Trees }));
+].map((problem) => ({ ...problem, topic: Topic.Trees }));
 
-export const graphs: Problem[] = [
+export const graphs: LeetcodeProblem[] = [
   {
     id: 200,
     title: "Number of Islands",
@@ -431,9 +394,9 @@ export const graphs: Problem[] = [
     status: Status.Unknown,
     importance: Importance.Optional,
   },
-].map((problem) => ({ ...problem, category: Category.Graphs }));
+].map((problem) => ({ ...problem, topic: Topic.Graphs }));
 
-export const dynamicProgramming: Problem[] = [
+export const dynamicProgramming: LeetcodeProblem[] = [
   {
     id: 70,
     title: "Climbing Stairs",
@@ -483,9 +446,9 @@ export const dynamicProgramming: Problem[] = [
     status: Status.Unknown,
     importance: Importance.Optional,
   },
-].map((problem) => ({ ...problem, category: Category.DynamicProgramming }));
+].map((problem) => ({ ...problem, topic: Topic.DynamicProgramming }));
 
-export const greedyAlgorithms: Problem[] = [
+export const greedyAlgorithms: LeetcodeProblem[] = [
   {
     id: 55,
     title: "Jump Game",
@@ -542,9 +505,9 @@ export const greedyAlgorithms: Problem[] = [
     status: Status.NotDone,
     importance: Importance.Optional,
   },
-].map((problem) => ({ ...problem, category: Category.GreedyAlgorithms }));
+].map((problem) => ({ ...problem, topic: Topic.GreedyAlgorithms }));
 
-export const backtracking: Problem[] = [
+export const backtracking: LeetcodeProblem[] = [
   {
     id: 78,
     title: "Subsets",
@@ -601,9 +564,9 @@ export const backtracking: Problem[] = [
     status: Status.NotDone,
     importance: Importance.Optional,
   },
-].map((problem) => ({ ...problem, category: Category.Backtracking }));
+].map((problem) => ({ ...problem, topic: Topic.Backtracking }));
 
-export const tries: Problem[] = [
+export const tries: LeetcodeProblem[] = [
   {
     id: 208,
     title: "Implement Trie",
@@ -646,9 +609,9 @@ export const tries: Problem[] = [
     status: Status.NotDone,
     importance: Importance.Optional,
   },
-].map((problem) => ({ ...problem, category: Category.Tries }));
+].map((problem) => ({ ...problem, topic: Topic.Tries }));
 
-export const heapsAndPriorityQueues: Problem[] = [
+export const heapsAndPriorityQueues: LeetcodeProblem[] = [
   {
     id: 215,
     title: "Kth Largest Element",
@@ -698,9 +661,9 @@ export const heapsAndPriorityQueues: Problem[] = [
     status: Status.NotDone,
     importance: Importance.Optional,
   },
-].map((problem) => ({ ...problem, category: Category.HeapsAndPriorityQueues }));
+].map((problem) => ({ ...problem, topic: Topic.HeapsAndPriorityQueues }));
 
-export const bitManipulation: Problem[] = [
+export const bitManipulation: LeetcodeProblem[] = [
   {
     id: 191,
     title: "Number of 1 Bits",
@@ -722,7 +685,7 @@ export const bitManipulation: Problem[] = [
     status: Status.Done,
     importance: Importance.Important,
   },
-].map((problem) => ({ ...problem, category: Category.BitManipulation }));
+].map((problem) => ({ ...problem, topic: Topic.BitManipulation }));
 
 export const problems = [
   ...arraysAndHashing,
@@ -741,16 +704,16 @@ export const problems = [
   ...bitManipulation,
 ];
 
-export const numProblems = problems.length;
+export const numLeetcodeProblems = problems.length;
 export const numCompleted = problems.filter(
   (problem) => problem.status === Status.Done,
 ).length;
 
-const essentialProblems = problems.filter(
+const essentialLeetcodeProblems = problems.filter(
   (problem) => problem.importance === Importance.Important,
 );
 
-export const numImportantProblems = essentialProblems.length;
-export const numImportantCompleted = essentialProblems.filter(
+export const numImportantLeetcodeProblems = essentialLeetcodeProblems.length;
+export const numImportantCompleted = essentialLeetcodeProblems.filter(
   (problem) => problem.status === Status.Done,
 ).length;

@@ -2,8 +2,8 @@ import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
 import { ExternalLink } from "@/components/typography/ExternalLink";
-import { Category } from "@/constants/pageMetadata";
 import { problems } from "@/constants/problems";
+import { Subject } from "@/types/subject";
 
 import { ProblemsTable } from "../_components/ProblemsTable";
 
@@ -18,7 +18,7 @@ export default function DataStructuresAndAlgorithmsPage() {
       <section className="py-12 md:py-24">
         <PageHeader
           title="Data Structures and Algorithms"
-          tags={[Category.DataStructuresAndAlgorithms]}
+          tags={[Subject.DataStructuresAndAlgorithms]}
         />
         <Body>
           When you&apos;re doing everyday web development, you rarely have to

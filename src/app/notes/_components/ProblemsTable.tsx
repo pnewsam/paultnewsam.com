@@ -4,7 +4,6 @@ import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import { useState } from "react";
 
 import { Button } from "@/components/Button";
-import { Card } from "@/components/Card";
 import { Input } from "@/components/Input";
 import {
   Select,
@@ -17,38 +16,32 @@ import {
 } from "@/components/Select";
 import { Table } from "@/components/Table";
 import { ExternalLink } from "@/components/typography/ExternalLink";
-import {
-  Category,
-  Importance,
-  Problem,
-  numCompleted,
-  numProblems,
-} from "@/constants/problems";
+import { numCompleted, numLeetcodeProblems } from "@/constants/problems";
+import { Importance, LeetcodeProblem, Status } from "@/types/leetcodeProblem";
+import { Topic } from "@/types/topic";
 
 import { ImportanceBadge } from "./ImportanceBadge";
 import { StatusText } from "./StatusText";
 
 const PAGE_SIZE = 10;
 
-export function ProblemsTable({ problems }: { problems: Problem[] }) {
+export function ProblemsTable({ problems }: { problems: LeetcodeProblem[] }) {
   const [search, setSearch] = useState("");
   const [importance, setImportance] = useState<Importance | "None">("None");
-  const [category, setCategory] = useState<Category | "None">("None");
+  const [topic, setTopic] = useState<Topic | "None">("None");
   const [page, setPage] = useState(1);
 
   const filteredProblems = problems.filter(
     (problem) =>
       problem.title.toLowerCase().includes(search.toLowerCase()) &&
-      (category && category !== "None"
-        ? problem.category === category
-        : true) &&
+      (topic && topic !== "None" ? problem.topic === topic : true) &&
       (importance && importance !== "None"
         ? problem.importance === importance
         : true),
   );
 
-  const onSelectCategory = (value: string) => {
-    setCategory(value as Category);
+  const onSelectTopic = (value: string) => {
+    setTopic(value as Topic);
     setPage(1);
   };
 
@@ -97,17 +90,17 @@ export function ProblemsTable({ problems }: { problems: Problem[] }) {
           </SelectContent>
         </Select>
 
-        <Select onValueChange={onSelectCategory}>
+        <Select onValueChange={onSelectTopic}>
           <SelectTrigger className="w-60" size="lg">
-            <SelectValue>{category ?? "Select a category"}</SelectValue>
+            <SelectValue>{topic ?? "Select a topic"}</SelectValue>
           </SelectTrigger>
           <SelectContent>
             <SelectItem value={"None"}>None</SelectItem>
             <SelectSeparator />
             <SelectGroup>
-              {Object.values(Category).map((category) => (
-                <SelectItem key={category} value={category}>
-                  {category}
+              {Object.values(Topic).map((topic) => (
+                <SelectItem key={topic} value={topic}>
+                  {topic}
                 </SelectItem>
               ))}
             </SelectGroup>
@@ -116,7 +109,7 @@ export function ProblemsTable({ problems }: { problems: Problem[] }) {
       </div>
       <div className="flex justify-between gap-4 py-4">
         <span></span>
-        <span>{numProblems} total</span>
+        <span>{numLeetcodeProblems} total</span>
       </div>
 
       <Table>
@@ -124,7 +117,7 @@ export function ProblemsTable({ problems }: { problems: Problem[] }) {
           <tr>
             <th>Number</th>
             <th>Title</th>
-            <th>Category</th>
+            <th>Topic</th>
             <th>Importance</th>
             <th>Status</th>
           </tr>
@@ -132,7 +125,7 @@ export function ProblemsTable({ problems }: { problems: Problem[] }) {
         <tbody>
           {filteredProblems
             .slice((page - 1) * 10, page * 10)
-            .map((problem: Problem) => (
+            .map((problem: LeetcodeProblem) => (
               <tr key={problem.id}>
                 <td>{problem.id}</td>
                 <td>
@@ -140,7 +133,7 @@ export function ProblemsTable({ problems }: { problems: Problem[] }) {
                     {problem.title}
                   </ExternalLink>
                 </td>
-                <td>{problem.category}</td>
+                <td>{problem.topic}</td>
                 <td>
                   <ImportanceBadge importance={problem.importance} />
                 </td>
@@ -154,8 +147,10 @@ export function ProblemsTable({ problems }: { problems: Problem[] }) {
           <tr>
             <td colSpan={4} />
             <td>
-              Completed: {numCompleted}/{numProblems}&nbsp;(
-              {Math.round((numCompleted / numProblems) * 100)}%)
+              Completed: {numCompleted}/{numLeetcodeProblems}&nbsp;(
+              {Math.round(
+                (numCompleted / numLeetcodeProblems) * 100,
+              )}%)
             </td>
           </tr>
         </tfoot>

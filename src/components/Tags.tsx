@@ -1,6 +1,8 @@
-import { Category, Tag } from "@/constants/pageMetadata";
-import { cn } from "@/lib/utils";
 import { Code, Component, Database, LayoutDashboard } from "lucide-react";
+
+import { Tag } from "@/constants/pageMetadata";
+import { cn } from "@/lib/utils";
+import { Subject } from "@/types/subject";
 
 import { Badge } from "./Badge";
 
@@ -22,8 +24,8 @@ const variantByName: Record<
   [Tag.Typescript]: "blue",
   [Tag.React]: "cyan",
   [Tag.NextJS]: "violet",
-  [Category.SystemDesign]: "rose",
-  [Category.DataStructuresAndAlgorithms]: "orange",
+  [Subject.SystemDesign]: "rose",
+  [Subject.DataStructuresAndAlgorithms]: "orange",
 };
 
 const getVariant = (tag: string) => {
@@ -38,9 +40,9 @@ const iconByName: Record<string, React.ReactNode> = {
   [Tag.Typescript]: <Code className="w-4 h-4" />,
   [Tag.React]: <Code className="w-4 h-4" />,
   [Tag.NextJS]: <Code className="w-4 h-4" />,
-  [Category.SystemDesign]: <Component className="w-4 h-4" />,
-  [Category.DataStructuresAndAlgorithms]: <Database className="w-4 h-4" />,
-  [Category.UserInterface]: <LayoutDashboard className="w-4 h-4" />,
+  [Subject.SystemDesign]: <Component className="w-4 h-4" />,
+  [Subject.DataStructuresAndAlgorithms]: <Database className="w-4 h-4" />,
+  [Subject.UserInterface]: <LayoutDashboard className="w-4 h-4" />,
 };
 
 export function Tags({

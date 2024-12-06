@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 import { Check, CircleSlash, HelpCircle, X } from "lucide-react";
 
-import { Status } from "@/constants/problems";
+import { Status } from "@/types/leetcodeProblem";
 
 const statusVariants = cva("inline-flex items-center gap-1", {
   variants: {

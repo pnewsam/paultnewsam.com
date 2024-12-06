@@ -1,11 +1,11 @@
 import { Table } from "@/components/Table";
 import { InternalLink } from "@/components/typography/InternalLink";
+import { dataStructuresAndAlgorithmsPages } from "@/constants/pages";
 import {
   numImportantCompleted,
-  numImportantProblems,
+  numImportantLeetcodeProblems,
 } from "@/constants/problems";
 
-import { dataStructuresAndAlgorithmsPages } from "../_constants/pages";
 import { ProblemsList } from "./ProblemsList";
 
 export function DataStructuresAndAlgorithmsTable() {
@@ -40,10 +40,12 @@ export function DataStructuresAndAlgorithmsTable() {
           {/* @ts-ignore */}
           <td colSpan={3} />
           <td>
-            Completed: {numImportantCompleted}/{numImportantProblems}&nbsp;(
+            Completed: {numImportantCompleted}/{numImportantLeetcodeProblems}
+            &nbsp;(
             {Math.round(
-              (numImportantCompleted / numImportantProblems) * 100,
-            )}%)
+              (numImportantCompleted / numImportantLeetcodeProblems) * 100,
+            )}
+            %)
           </td>
         </tr>
       </tfoot>

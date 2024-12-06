@@ -1,0 +1,17 @@
+export enum Topic {
+  ArraysAndHashing = "Arrays and Hashing",
+  SlidingWindow = "Sliding Window",
+  TwoPointers = "Two Pointers",
+  BinarySearch = "Binary Search",
+  LinkedLists = "Linked Lists",
+  StacksAndQueues = "Stacks and Queues",
+  Trees = "Trees",
+  Graphs = "Graphs",
+  BitManipulation = "Bit Manipulation",
+  Intervals = "Intervals",
+  DynamicProgramming = "Dynamic Programming",
+  GreedyAlgorithms = "Greedy Algorithms",
+  Backtracking = "Backtracking",
+  HeapsAndPriorityQueues = "Heaps and Priority Queues",
+  Tries = "Tries",
+}
