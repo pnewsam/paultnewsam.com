@@ -6,13 +6,13 @@ export const userInterfacePages: PageMetadata[] = [
     title: "Infinite Scroll",
     path: "/notes/user-interface/infinite-scroll",
     description: "Infinite Scroll.",
-    published: false,
+    published: true,
   },
   {
     title: "Whiteboard",
     path: "/notes/user-interface/whiteboard",
     description: "Whiteboard.",
-    published: false,
+    published: true,
   },
 ].map((page) => ({
   ...page,

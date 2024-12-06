@@ -6,13 +6,13 @@ export const systemDesignPages: PageMetadata[] = [
     title: "Latency Numbers",
     path: "/notes/system-design/latency-numbers",
     description: "A table of latency numbers for various operations.",
-    published: false,
+    published: true,
   },
   {
     title: "Data Type Sizes",
     path: "/notes/system-design/data-type-sizes",
     description: "A simple method for estimating the cost of a system.",
-    published: false,
+    published: true,
   },
   {
     title: "CAP Theorem",
