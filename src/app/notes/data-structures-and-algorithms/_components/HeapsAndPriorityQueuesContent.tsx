@@ -1,12 +1,5 @@
 import { CodeBlock } from "@/components/CodeBlock";
-import { Container } from "@/components/Container";
-import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
-import { Category } from "@/constants/pageMetadata";
-import { heapsAndPriorityQueues } from "@/constants/problems";
-
-import { Callout } from "../../_components/Callout";
-import { Summary } from "../../_components/Summary";
 
 const snippet = `function buildMinHeap(heap: number[]) {
   const len = heap.length;
@@ -41,21 +34,13 @@ function siftUp(heap: number[], index: number) {
   }
 }
 `;
-
-export default function HeapsAndPriorityQueuesPage() {
+export function HeapsAndPriorityQueuesContent() {
   return (
-    <Container>
-      <section className="py-12 md:py-24">
-        <PageHeader
-          title="Heaps and Priority Queues"
-          tags={[Category.DataStructuresAndAlgorithms]}
-        />
-        <Callout type="info" title="Key Concepts">
-          <Body>A min heap implementation in Typescript.</Body>
-        </Callout>
-        <CodeBlock code={snippet} language="typescript" />
-        <Summary problems={heapsAndPriorityQueues} />
-      </section>
-    </Container>
+    <>
+      <Body>
+        Heaps and priority queues are data structures that store data in a
+      </Body>
+      <CodeBlock code={snippet} language="typescript" />
+    </>
   );
 }

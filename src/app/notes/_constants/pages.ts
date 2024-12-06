@@ -19,6 +19,15 @@ import {
 import { ArraysAndHashingContent } from "../data-structures-and-algorithms/_components/ArraysAndHashingContent";
 import { BacktrackingContent } from "../data-structures-and-algorithms/_components/BacktrackingContent";
 import { BinarySearchContent } from "../data-structures-and-algorithms/_components/BinarySearchContent";
+import { BitManipulationContent } from "../data-structures-and-algorithms/_components/BitManipulationContent";
+import { DynamicProgrammingContent } from "../data-structures-and-algorithms/_components/DynamicProgrammingContent";
+import { GraphsContent } from "../data-structures-and-algorithms/_components/GraphsContent";
+import { GreedyAlgorithmsContent } from "../data-structures-and-algorithms/_components/GreedyAlgorithmsContent";
+import { LinkedListsContent } from "../data-structures-and-algorithms/_components/LinkedListsContent";
+import { SlidingWindowContent } from "../data-structures-and-algorithms/_components/SlidingWindowContent";
+import { StacksAndQueuesContent } from "../data-structures-and-algorithms/_components/StacksAndQueuesContent";
+import { TriesContent } from "../data-structures-and-algorithms/_components/TriesContent";
+import { TwoPointersContent } from "../data-structures-and-algorithms/_components/TwoPointersContent";
 
 export const dataStructuresAndAlgorithmsPages = [
   {
@@ -43,6 +52,7 @@ export const dataStructuresAndAlgorithmsPages = [
     problems: slidingWindow.filter(
       (problem) => problem.importance === Importance.Important,
     ),
+    Content: SlidingWindowContent,
   },
   {
     order: 3,
@@ -54,6 +64,7 @@ export const dataStructuresAndAlgorithmsPages = [
     problems: twoPointers.filter(
       (problem) => problem.importance === Importance.Important,
     ),
+    Content: TwoPointersContent,
   },
   {
     order: 4,
@@ -77,6 +88,7 @@ export const dataStructuresAndAlgorithmsPages = [
     problems: linkedLists.filter(
       (problem) => problem.importance === Importance.Important,
     ),
+    Content: LinkedListsContent,
   },
   {
     order: 6,
@@ -88,6 +100,7 @@ export const dataStructuresAndAlgorithmsPages = [
     problems: stacksAndQueues.filter(
       (problem) => problem.importance === Importance.Important,
     ),
+    Content: StacksAndQueuesContent,
   },
   {
     order: 7,
@@ -110,6 +123,7 @@ export const dataStructuresAndAlgorithmsPages = [
     problems: tries.filter(
       (problem) => problem.importance === Importance.Important,
     ),
+    Content: TriesContent,
   },
   {
     order: 9,
@@ -131,6 +145,7 @@ export const dataStructuresAndAlgorithmsPages = [
     problems: graphs.filter(
       (problem) => problem.importance === Importance.Important,
     ),
+    Content: GraphsContent,
   },
   {
     order: 11,
@@ -153,6 +168,7 @@ export const dataStructuresAndAlgorithmsPages = [
     problems: dynamicProgramming.filter(
       (problem) => problem.importance === Importance.Important,
     ),
+    Content: DynamicProgrammingContent,
   },
   {
     order: 13,
@@ -164,6 +180,7 @@ export const dataStructuresAndAlgorithmsPages = [
     problems: greedyAlgorithms.filter(
       (problem) => problem.importance === Importance.Important,
     ),
+    Content: GreedyAlgorithmsContent,
   },
   {
     order: 14,
@@ -174,6 +191,7 @@ export const dataStructuresAndAlgorithmsPages = [
     problems: bitManipulation.filter(
       (problem) => problem.importance === Importance.Important,
     ),
+    Content: BitManipulationContent,
   },
 ];
 

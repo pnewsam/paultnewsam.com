@@ -1,4 +1,8 @@
-class TreeNode {
+import { CodeBlock } from "@/components/CodeBlock";
+import { Body } from "@/components/typography/Body";
+import { H3 } from "@/components/typography/H3";
+
+const insertSnippet = `class TreeNode {
   value: number;
   left: TreeNode | null;
   right: TreeNode | null;
@@ -52,9 +56,9 @@ function insert(tree: Tree, value: number) {
 const tree = new Tree(null);
 insert(tree, 5);
 insert(tree, 8);
-insert(tree, 3);
+insert(tree, 3);`;
 
-function inOrder(node: TreeNode | null): void {
+const traversalSnippet = `function inOrder(node: TreeNode | null): void {
   if (node !== null) {
     inOrder(node.left);
     console.log(node.value);
@@ -65,15 +69,34 @@ function inOrder(node: TreeNode | null): void {
 function preOrder(node: TreeNode | null): void {
   if (node !== null) {
     console.log(node.value);
-    preOrder(node.left);
-    preOrder(node.right);
+    inOrder(node.left);
+    inOrder(node.right);
   }
 }
 
 function postOrder(node: TreeNode | null): void {
   if (node !== null) {
-    postOrder(node.left);
-    postOrder(node.right);
+    inOrder(node.left);
+    inOrder(node.right);
     console.log(node.value);
   }
+}`;
+
+export function TreesContent() {
+  return (
+    <>
+      <Body>A binary tree implementation in Typescript.</Body>
+      <div className="mb-8">
+        <CodeBlock code={insertSnippet} language="typescript" />
+      </div>
+
+      <H3 className="mb-4">Traversal</H3>
+      <Body>
+        Traversal can happen in in-order, pre-order, or post-order. In a&nbsp;
+        <b>binary search tree</b>, in-order traversal will return the items in
+        the proper order.
+      </Body>
+      <CodeBlock code={traversalSnippet} language="typescript" />
+    </>
+  );
 }
