@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 import { cn } from "@/lib/utils";
 
-export function ExternalLink({
+export function InternalLink({
   href,
   children,
   className,
@@ -10,16 +12,14 @@ export function ExternalLink({
   className?: string;
 }) {
   return (
-    <a
+    <Link
       className={cn(
         "text-cyan-500 dark:text-cyan-400 hover:text-cyan-600 dark:hover:text-cyan-300 underline transition-colors",
         className,
       )}
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
     >
       {children}
-    </a>
+    </Link>
   );
 }

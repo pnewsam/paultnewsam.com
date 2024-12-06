@@ -10,7 +10,7 @@ const badgeVariants = cva(
     variants: {
       importance: {
         [Importance.Important]:
-          "border-yellow-500 dark:border-yellow-600 bg-yellow-300 dark:bg-yellow-400 text-yellow-600 dark:text-yellow-600",
+          "border-yellow-400 dark:border-yellow-500 bg-yellow-300/90 dark:bg-yellow-400/90 text-yellow-600 dark:text-yellow-800",
         [Importance.Recommended]:
           "border-yellow-500 dark:border-yellow-600 bg-yellow-300/50 dark:bg-yellow-400/50 text-yellow-600 dark:text-yellow-400",
         [Importance.Optional]:

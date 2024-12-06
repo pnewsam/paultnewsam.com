@@ -19,7 +19,7 @@ export function CodeBlock({
   return (
     <div
       className={cn(
-        "relative border bg-neutral-100 dark:bg-neutral-800 rounded-lg",
+        "relative border bg-neutral-100 dark:bg-neutral-800 rounded-lg shadow-lg",
         className,
       )}
     >

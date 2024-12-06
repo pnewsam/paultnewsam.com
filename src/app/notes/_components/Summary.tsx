@@ -1,7 +1,7 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink as ExternalLinkIcon } from "lucide-react";
 
-import { Card } from "@/components/Card";
 import { Table } from "@/components/Table";
+import { ExternalLink } from "@/components/typography/ExternalLink";
 import { Importance, Problem } from "@/constants/problems";
 
 import { ImportanceBadge } from "./ImportanceBadge";
@@ -32,13 +32,13 @@ export const Summary = ({ problems }: { problems: Problem[] }) => {
               </div>
             </td>
             <td>
-              <a
-                className="inline-flex items-center gap-1 text-cyan-500 dark:text-cyan-400 dark:hover:text-cyan-500 underline decoration-transparent hover:decoration-cyan-400"
+              <ExternalLink
+                className="inline-flex items-center gap-1"
                 href={problem.url}
               >
                 View
-                <ExternalLink className="w-4 h-4" />
-              </a>
+                <ExternalLinkIcon className="w-4 h-4" />
+              </ExternalLink>
             </td>
             <td>
               <StatusText status={problem.status ?? "unknown"} />

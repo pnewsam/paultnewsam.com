@@ -1,4 +1,5 @@
 import { Table } from "@/components/Table";
+import { InternalLink } from "@/components/typography/InternalLink";
 import {
   numImportantCompleted,
   numImportantProblems,
@@ -6,7 +7,6 @@ import {
 
 import { rows } from "./DataStructuresAndAlgorithms.constants";
 import { ProblemsList } from "./ProblemsList";
-import { TextLink } from "./TextLink";
 
 export function DataStructuresAndAlgorithmsTable() {
   return (
@@ -24,7 +24,9 @@ export function DataStructuresAndAlgorithmsTable() {
           <tr key={row.order}>
             <td>{row.order}</td>
             <td>
-              <TextLink href={row.path}>{row.title}</TextLink>
+              <InternalLink className="font-medium text-xl" href={row.path}>
+                {row.title}
+              </InternalLink>
             </td>
             <td>{row.concepts}</td>
             <td>
