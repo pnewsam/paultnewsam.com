@@ -1,16 +1,12 @@
 import { Metadata } from "next";
 
 import { LinkCard } from "@/app/notes/_components/LinkCard";
-import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
-import { Bold } from "@/components/typography/Bold";
-import { H2 } from "@/components/typography/H2";
+import { dsaPage } from "@/constants/pages/dsaPages";
 import { systemDesignPages } from "@/constants/pages/systemDesignPages";
 import { userInterfacePages } from "@/constants/pages/userInterfacePages";
-
-import { DataStructuresAndAlgorithmsTable } from "./_components/DataStructuresAndAlgorithmsTable";
 
 export const metadata: Metadata = {
   title: "Paul T. Newsam | Notes",
@@ -30,28 +26,20 @@ export default function NotesPage() {
         </Body>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-16">
-          {[...systemDesignPages, ...userInterfacePages].map((page) => (
+          {[
+            ...systemDesignPages,
+            ...userInterfacePages,
+            ...(isDevelopment ? [dsaPage] : []),
+          ].map((page) => (
             <LinkCard
               key={page.path}
               href={page.path}
-              tags={page.tags}
+              tags={[page.subject]}
               title={page.title}
               description={page.description}
             />
           ))}
         </div>
-
-        {isDevelopment && (
-          <div>
-            <H2 className="mb-4">Data Structures & Algorithms</H2>
-            <Body>
-              <Bold>Data Structures and Algorithms</Bold> is a deep subject. You
-              could spend years learning them. It can be overwhelming sorting
-              through all the learning materials out there.
-            </Body>
-            <DataStructuresAndAlgorithmsTable />
-          </div>
-        )}
       </section>
     </Container>
   );

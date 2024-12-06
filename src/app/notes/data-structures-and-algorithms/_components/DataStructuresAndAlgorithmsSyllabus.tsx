@@ -8,7 +8,7 @@ import {
 
 import { ProblemsList } from "./ProblemsList";
 
-export function DataStructuresAndAlgorithmsTable() {
+export function DataStructuresAndAlgorithmsSyllabus() {
   return (
     <Table>
       <thead>

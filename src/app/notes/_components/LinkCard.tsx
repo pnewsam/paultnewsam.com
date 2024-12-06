@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { H3 } from "@/components/typography/H3";
-import { Body } from "@/components/typography/Body";
-import { Tags } from "@/components/Tags";
+
 import { cardStyles } from "@/components/Card";
+import { Tags } from "@/components/Tags";
+import { Body } from "@/components/typography/Body";
+import { H3 } from "@/components/typography/H3";
 import { cn } from "@/lib/utils";
 
 export function LinkCard({
@@ -20,7 +21,7 @@ export function LinkCard({
     <Link
       className={cn(
         cardStyles,
-        "p-8 hover:bg-neutral-100/50 dark:hover:bg-neutral-900/50 duration-200 flex flex-col justify-start gap-4 hover:-translate-y-1 transition-transform"
+        "p-8 hover:bg-neutral-100/50 dark:hover:bg-neutral-900/50 duration-200 flex flex-col justify-start gap-4 hover:-translate-y-1 transition-transform",
       )}
       href={href}
     >

@@ -1,4 +1,5 @@
 import { H1 } from "@/components/typography/H1";
+
 import { Tags } from "./Tags";
 
 export function PageHeader({ title, tags }: { title: string; tags: string[] }) {

@@ -4,7 +4,7 @@ import { Body } from "@/components/typography/Body";
 import { Bold } from "@/components/typography/Bold";
 import { H3 } from "@/components/typography/H3";
 
-import { GraphSvg } from "./_GraphSvg";
+import { GraphSvg } from "../_GraphSvg";
 
 export function GraphsContent() {
   return (

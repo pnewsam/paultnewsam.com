@@ -5,13 +5,11 @@ export const userInterfacePages: PageMetadata[] = [
   {
     title: "Infinite Scroll",
     path: "/notes/user-interface/infinite-scroll",
-    tags: [Subject.UserInterface],
     description: "Infinite Scroll.",
   },
   {
     title: "Whiteboard",
     path: "/notes/user-interface/whiteboard",
-    tags: [Subject.UserInterface],
     description: "Whiteboard.",
   },
 ].map((page) => ({

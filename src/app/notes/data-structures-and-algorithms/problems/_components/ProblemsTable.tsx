@@ -20,8 +20,8 @@ import { numCompleted, numLeetcodeProblems } from "@/constants/problems";
 import { Importance, LeetcodeProblem, Status } from "@/types/leetcodeProblem";
 import { Topic } from "@/types/topic";
 
-import { ImportanceBadge } from "./ImportanceBadge";
-import { StatusText } from "./StatusText";
+import { ImportanceBadge } from "../../_components/ImportanceBadge";
+import { StatusText } from "../../_components/StatusText";
 
 const PAGE_SIZE = 10;
 

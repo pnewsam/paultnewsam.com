@@ -1,15 +1,15 @@
-import { ArraysAndHashingContent } from "@/app/notes/data-structures-and-algorithms/_components/ArraysAndHashingContent";
-import { BacktrackingContent } from "@/app/notes/data-structures-and-algorithms/_components/BacktrackingContent";
-import { BinarySearchContent } from "@/app/notes/data-structures-and-algorithms/_components/BinarySearchContent";
-import { BitManipulationContent } from "@/app/notes/data-structures-and-algorithms/_components/BitManipulationContent";
-import { DynamicProgrammingContent } from "@/app/notes/data-structures-and-algorithms/_components/DynamicProgrammingContent";
-import { GraphsContent } from "@/app/notes/data-structures-and-algorithms/_components/GraphsContent";
-import { GreedyAlgorithmsContent } from "@/app/notes/data-structures-and-algorithms/_components/GreedyAlgorithmsContent";
-import { LinkedListsContent } from "@/app/notes/data-structures-and-algorithms/_components/LinkedListsContent";
-import { SlidingWindowContent } from "@/app/notes/data-structures-and-algorithms/_components/SlidingWindowContent";
-import { StacksAndQueuesContent } from "@/app/notes/data-structures-and-algorithms/_components/StacksAndQueuesContent";
-import { TriesContent } from "@/app/notes/data-structures-and-algorithms/_components/TriesContent";
-import { TwoPointersContent } from "@/app/notes/data-structures-and-algorithms/_components/TwoPointersContent";
+import { ArraysAndHashingContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/ArraysAndHashingContent";
+import { BacktrackingContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/BacktrackingContent";
+import { BinarySearchContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/BinarySearchContent";
+import { BitManipulationContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/BitManipulationContent";
+import { DynamicProgrammingContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/DynamicProgrammingContent";
+import { GraphsContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/GraphsContent";
+import { GreedyAlgorithmsContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/GreedyAlgorithmsContent";
+import { LinkedListsContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/LinkedListsContent";
+import { SlidingWindowContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/SlidingWindowContent";
+import { StacksAndQueuesContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/StacksAndQueuesContent";
+import { TriesContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/TriesContent";
+import { TwoPointersContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/TwoPointersContent";
 import {
   arraysAndHashing,
   backtracking,
@@ -26,13 +26,21 @@ import {
   tries,
   twoPointers,
 } from "@/constants/problems";
+import { PageMetadata } from "@/types/pageMetadata";
 import { Subject } from "@/types/subject";
+
+export const dsaPage: PageMetadata = {
+  path: "/notes/data-structures-and-algorithms",
+  title: "Data Structures and Algorithms",
+  description:
+    "A structured approach to learning the core data structures and algorithms",
+  subject: Subject.DataStructuresAndAlgorithms,
+};
 
 export const dsaPages = [
   {
     order: 1,
     path: "/notes/data-structures-and-algorithms/arrays-and-hashing",
-    slug: "arrays-and-hashing",
     title: "Arrays and Hashing",
     description:
       "Hash tables for O(1) lookups; In-place array manipulation; Frequency counting",
@@ -45,14 +53,12 @@ export const dsaPages = [
     path: "/notes/data-structures-and-algorithms/sliding-window",
     description:
       "Fixed vs variable size windows; Window state management; Window boundaries",
-    slug: "sliding-window",
     problems: slidingWindow,
     Content: SlidingWindowContent,
   },
   {
     order: 3,
     path: "/notes/data-structures-and-algorithms/two-pointers",
-    slug: "two-pointers",
     title: "Two Pointers",
     description:
       "Start/end pointer movement; Fast/slow pointer technique; Meeting in middle",
@@ -62,7 +68,6 @@ export const dsaPages = [
   {
     order: 4,
     path: "/notes/data-structures-and-algorithms/binary-search",
-    slug: "binary-search",
     title: "Binary Search",
     description:
       "Binary search variations; Search space reduction; Boundary conditions",
@@ -72,7 +77,6 @@ export const dsaPages = [
   {
     order: 5,
     path: "/notes/data-structures-and-algorithms/linked-lists",
-    slug: "linked-lists",
     title: "Linked Lists",
     description:
       "Pointer manipulation; Multiple pointer traversal; Cycle detection",
@@ -82,7 +86,6 @@ export const dsaPages = [
   {
     order: 6,
     path: "/notes/data-structures-and-algorithms/stacks-and-queues",
-    slug: "stacks-and-queues",
     title: "Stacks and Queues",
     description:
       "LIFO/FIFO principles; Monotonic stack patterns; Nested structure validation",
@@ -92,7 +95,6 @@ export const dsaPages = [
   {
     order: 7,
     path: "/notes/data-structures-and-algorithms/trees",
-    slug: "trees",
     title: "Trees",
     description:
       "Tree traversal strategies; Recursion vs iteration; Path tracking",
@@ -101,7 +103,6 @@ export const dsaPages = [
   {
     order: 8,
     path: "/notes/data-structures-and-algorithms/tries",
-    slug: "tries",
     title: "Tries",
     description:
       "Prefix-based search; Character-by-character traversal; Word dictionary operations",
@@ -111,7 +112,6 @@ export const dsaPages = [
   {
     order: 9,
     path: "/notes/data-structures-and-algorithms/heaps-and-priority-queues",
-    slug: "heaps-and-priority-queues",
     title: "Heaps and Priority Queues",
     description: "Binary heap properties; K-way processing; Stream operations",
     problems: heapsAndPriorityQueues,
@@ -119,7 +119,6 @@ export const dsaPages = [
   {
     order: 10,
     path: "/notes/data-structures-and-algorithms/graphs",
-    slug: "graphs",
     title: "Graphs",
     description:
       "Graph traversal (BFS/DFS); Graph representation; Cycle detection",
@@ -129,7 +128,6 @@ export const dsaPages = [
   {
     order: 11,
     path: "/notes/data-structures-and-algorithms/backtracking",
-    slug: "backtracking",
     title: "Backtracking",
     description:
       "State space exploration; Constraint handling; Solution building",
@@ -139,7 +137,6 @@ export const dsaPages = [
   {
     order: 12,
     path: "/notes/data-structures-and-algorithms/dynamic-programming",
-    slug: "dynamic-programming",
     title: "Dynamic Programming",
     description:
       "State transition; Memoization vs tabulation; Optimal substructure",
@@ -149,7 +146,6 @@ export const dsaPages = [
   {
     order: 13,
     path: "/notes/data-structures-and-algorithms/greedy-algorithms",
-    slug: "greedy-algorithms",
     title: "Greedy Algorithms",
     description:
       "Local vs global optimization; Interval processing; Sorting-based greedy",
@@ -159,7 +155,6 @@ export const dsaPages = [
   {
     order: 14,
     path: "/notes/data-structures-and-algorithms/bit-manipulation",
-    slug: "bit-manipulation",
     title: "Bit Manipulation",
     description: "Bitwise operations; Bit flags; Bit counting techniques",
     problems: bitManipulation,
@@ -170,9 +165,9 @@ export const dsaPages = [
   subject: Subject.DataStructuresAndAlgorithms,
 }));
 
-export const dsaPagesBySlug = dsaPages.reduce(
+export const dsaPagesByPath = dsaPages.reduce(
   (acc, page) => {
-    acc[page.slug] = page;
+    acc[page.path] = page;
     return acc;
   },
   {} as Record<string, (typeof dsaPages)[number]>,

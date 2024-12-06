@@ -2,10 +2,9 @@ import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
 import { ExternalLink } from "@/components/typography/ExternalLink";
-import { problems } from "@/constants/problems";
 import { Subject } from "@/types/subject";
 
-import { ProblemsTable } from "../_components/ProblemsTable";
+import { DataStructuresAndAlgorithmsSyllabus } from "./_components/DataStructuresAndAlgorithmsSyllabus";
 
 export const metadata = {
   title: "Paul T. Newsam | Notes | Data Structures and Algorithms",
@@ -69,7 +68,7 @@ export default function DataStructuresAndAlgorithmsPage() {
           I&apos;ve started collecting my own thoughts and notes here, just in
           case none of those other resources are helpful.
         </Body>
-        <ProblemsTable problems={problems} />
+        <DataStructuresAndAlgorithmsSyllabus />
       </section>
     </Container>
   );
