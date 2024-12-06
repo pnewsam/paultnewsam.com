@@ -5,9 +5,11 @@ import { BitManipulationContent } from "@/app/notes/data-structures-and-algorith
 import { DynamicProgrammingContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/DynamicProgrammingContent";
 import { GraphsContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/GraphsContent";
 import { GreedyAlgorithmsContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/GreedyAlgorithmsContent";
+import { HeapsAndPriorityQueuesContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/HeapsAndPriorityQueuesContent";
 import { LinkedListsContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/LinkedListsContent";
 import { SlidingWindowContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/SlidingWindowContent";
 import { StacksAndQueuesContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/StacksAndQueuesContent";
+import { TreesContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/TreesContent";
 import { TriesContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/TriesContent";
 import { TwoPointersContent } from "@/app/notes/data-structures-and-algorithms/_components/pageContent/TwoPointersContent";
 import {
@@ -35,6 +37,7 @@ export const dsaPage: PageMetadata = {
   description:
     "A structured approach to learning the core data structures and algorithms",
   subject: Subject.DataStructuresAndAlgorithms,
+  published: false,
 };
 
 export const dsaPages = [
@@ -46,6 +49,7 @@ export const dsaPages = [
       "Hash tables for O(1) lookups; In-place array manipulation; Frequency counting",
     problems: arraysAndHashing,
     Content: ArraysAndHashingContent,
+    published: false,
   },
   {
     order: 2,
@@ -55,6 +59,7 @@ export const dsaPages = [
       "Fixed vs variable size windows; Window state management; Window boundaries",
     problems: slidingWindow,
     Content: SlidingWindowContent,
+    published: false,
   },
   {
     order: 3,
@@ -64,6 +69,7 @@ export const dsaPages = [
       "Start/end pointer movement; Fast/slow pointer technique; Meeting in middle",
     problems: twoPointers,
     Content: TwoPointersContent,
+    published: false,
   },
   {
     order: 4,
@@ -73,6 +79,7 @@ export const dsaPages = [
       "Binary search variations; Search space reduction; Boundary conditions",
     problems: binarySearch,
     Content: BinarySearchContent,
+    published: false,
   },
   {
     order: 5,
@@ -82,6 +89,7 @@ export const dsaPages = [
       "Pointer manipulation; Multiple pointer traversal; Cycle detection",
     problems: linkedLists,
     Content: LinkedListsContent,
+    published: false,
   },
   {
     order: 6,
@@ -91,6 +99,7 @@ export const dsaPages = [
       "LIFO/FIFO principles; Monotonic stack patterns; Nested structure validation",
     problems: stacksAndQueues,
     Content: StacksAndQueuesContent,
+    published: false,
   },
   {
     order: 7,
@@ -99,6 +108,8 @@ export const dsaPages = [
     description:
       "Tree traversal strategies; Recursion vs iteration; Path tracking",
     problems: trees,
+    Content: TreesContent,
+    published: false,
   },
   {
     order: 8,
@@ -108,6 +119,7 @@ export const dsaPages = [
       "Prefix-based search; Character-by-character traversal; Word dictionary operations",
     problems: tries,
     Content: TriesContent,
+    published: false,
   },
   {
     order: 9,
@@ -115,6 +127,8 @@ export const dsaPages = [
     title: "Heaps and Priority Queues",
     description: "Binary heap properties; K-way processing; Stream operations",
     problems: heapsAndPriorityQueues,
+    Content: HeapsAndPriorityQueuesContent,
+    published: false,
   },
   {
     order: 10,
@@ -124,6 +138,7 @@ export const dsaPages = [
       "Graph traversal (BFS/DFS); Graph representation; Cycle detection",
     problems: graphs,
     Content: GraphsContent,
+    published: false,
   },
   {
     order: 11,
@@ -133,6 +148,7 @@ export const dsaPages = [
       "State space exploration; Constraint handling; Solution building",
     problems: backtracking,
     Content: BacktrackingContent,
+    published: false,
   },
   {
     order: 12,
@@ -142,6 +158,7 @@ export const dsaPages = [
       "State transition; Memoization vs tabulation; Optimal substructure",
     problems: dynamicProgramming,
     Content: DynamicProgrammingContent,
+    published: false,
   },
   {
     order: 13,
@@ -151,6 +168,7 @@ export const dsaPages = [
       "Local vs global optimization; Interval processing; Sorting-based greedy",
     problems: greedyAlgorithms,
     Content: GreedyAlgorithmsContent,
+    published: false,
   },
   {
     order: 14,
@@ -159,6 +177,7 @@ export const dsaPages = [
     description: "Bitwise operations; Bit flags; Bit counting techniques",
     problems: bitManipulation,
     Content: BitManipulationContent,
+    published: false,
   },
 ].map((page) => ({
   ...page,

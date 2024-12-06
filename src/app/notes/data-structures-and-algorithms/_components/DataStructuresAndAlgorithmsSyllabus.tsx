@@ -5,6 +5,7 @@ import {
   numImportantCompleted,
   numImportantLeetcodeProblems,
 } from "@/constants/problems";
+import { Importance } from "@/types/leetcodeProblem";
 
 import { ProblemsList } from "./ProblemsList";
 
@@ -30,7 +31,11 @@ export function DataStructuresAndAlgorithmsSyllabus() {
             </td>
             <td>{page.description}</td>
             <td>
-              <ProblemsList problems={page.problems} />
+              <ProblemsList
+                problems={page.problems.filter(
+                  (problem) => problem.importance === Importance.Important,
+                )}
+              />
             </td>
           </tr>
         ))}

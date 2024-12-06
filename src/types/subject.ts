@@ -3,4 +3,5 @@ export enum Subject {
   DataStructuresAndAlgorithms = "Data Structures and Algorithms",
   UserInterface = "User Interface",
   Frameworks = "Frameworks",
+  Javascript = "Javascript",
 }

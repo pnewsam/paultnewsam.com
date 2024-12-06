@@ -11,7 +11,7 @@ export const H3 = ({
 }) => (
   <h3
     className={cn(
-      "text-2xl mb-4 font-medium text-neutral-900 dark:text-white",
+      "text-2xl leading-7 mb-4 font-medium text-neutral-900 dark:text-white",
       className,
     )}
   >

@@ -4,6 +4,7 @@ import { LinkCard } from "@/app/notes/_components/LinkCard";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
+import { browserPages } from "@/constants/pages/browserPages";
 import { dsaPage } from "@/constants/pages/dsaPages";
 import { systemDesignPages } from "@/constants/pages/systemDesignPages";
 import { userInterfacePages } from "@/constants/pages/userInterfacePages";
@@ -29,16 +30,19 @@ export default function NotesPage() {
           {[
             ...systemDesignPages,
             ...userInterfacePages,
-            ...(isDevelopment ? [dsaPage] : []),
-          ].map((page) => (
-            <LinkCard
-              key={page.path}
-              href={page.path}
-              tags={[page.subject]}
-              title={page.title}
-              description={page.description}
-            />
-          ))}
+            ...browserPages,
+            dsaPage,
+          ]
+            .filter((page) => isDevelopment || page.published)
+            .map((page) => (
+              <LinkCard
+                key={page.path}
+                href={page.path}
+                tags={[page.subject]}
+                title={page.title}
+                description={page.description}
+              />
+            ))}
         </div>
       </section>
     </Container>

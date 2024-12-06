@@ -1,13 +1,18 @@
 "use client";
 
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
 
 const isSubpage = (pathname: string, page: string) =>
   pathname.includes(page) && pathname !== page;
 
 const getLinkProps = (pathname: string) => {
+  if (isSubpage(pathname, "/notes/data-structures-and-algorithms"))
+    return {
+      href: "/notes/data-structures-and-algorithms",
+      label: "Data Structures and Algorithms",
+    };
   if (isSubpage(pathname, "/notes")) return { href: "/notes", label: "Notes" };
 
   return {};

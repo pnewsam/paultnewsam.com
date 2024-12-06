@@ -1,5 +1,6 @@
-import { cn } from "@/lib/utils";
 import React from "react";
+
+import { cn } from "@/lib/utils";
 
 export const Bold = ({
   children,
@@ -8,5 +9,14 @@ export const Bold = ({
   className?: string;
   children: React.ReactNode;
 }) => {
-  return <b className={cn("font-semibold", className)}>{children}</b>;
+  return (
+    <b
+      className={cn(
+        "font-semibold text-cyan-900 dark:text-cyan-100",
+        className,
+      )}
+    >
+      {children}
+    </b>
+  );
 };

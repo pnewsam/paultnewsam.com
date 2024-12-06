@@ -5,4 +5,5 @@ export type PageMetadata = {
   path: string;
   description: string;
   subject: Subject;
+  published: boolean;
 };
