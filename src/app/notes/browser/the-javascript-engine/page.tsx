@@ -153,14 +153,14 @@ Call r1, r2, r3        // Call add(1,2)`}
         <H3>x86-64 Machine Code (Simplified)</H3>
         <CodeBlock
           className="mb-8"
-          language="text"
-          code={`Function prologue
+          language="x86asm"
+          code={`; Function prologue
 push    rbp
 mov     rbp, rsp
 
 ; Load parameters
-mov     rax, QWORD PTR [rbp+16]    ; Load first parameter
-mov     rcx, QWORD PTR [rbp+24]    ; Load second parameter
+mov     rax, QWORD PTR [rbp+8]     ; Load first parameter
+mov     rcx, QWORD PTR [rbp+16]    ; Load second parameter
 
 ; Add numbers
 add     rax, rcx                   ; Add the numbers
@@ -170,8 +170,8 @@ pop     rbp
 ret
 
 ; Calling code
-mov     edi, 1                     ; First argument
-mov     esi, 2                     ; Second argument
+mov     rdi, 1                     ; First argument (using 64-bit register)
+mov     rsi, 2                     ; Second argument (using 64-bit register)
 call    add                        ; Call the function`}
         />
       </section>
