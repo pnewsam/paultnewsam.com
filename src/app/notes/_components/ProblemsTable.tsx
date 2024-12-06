@@ -119,49 +119,47 @@ export function ProblemsTable({ problems }: { problems: Problem[] }) {
         <span>{numProblems} total</span>
       </div>
 
-      <Card className="overflow-scroll">
-        <Table>
-          <thead>
-            <tr>
-              <th>Number</th>
-              <th>Title</th>
-              <th>Category</th>
-              <th>Importance</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredProblems
-              .slice((page - 1) * 10, page * 10)
-              .map((problem: Problem) => (
-                <tr key={problem.id}>
-                  <td>{problem.id}</td>
-                  <td>
-                    <ExternalLink href={problem.url}>
-                      {problem.title}
-                    </ExternalLink>
-                  </td>
-                  <td>{problem.category}</td>
-                  <td>
-                    <ImportanceBadge importance={problem.importance} />
-                  </td>
-                  <td>
-                    <StatusText status={problem.status} />
-                  </td>
-                </tr>
-              ))}
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colSpan={4} />
-              <td>
-                Completed: {numCompleted}/{numProblems}&nbsp;(
-                {Math.round((numCompleted / numProblems) * 100)}%)
-              </td>
-            </tr>
-          </tfoot>
-        </Table>
-      </Card>
+      <Table>
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Importance</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredProblems
+            .slice((page - 1) * 10, page * 10)
+            .map((problem: Problem) => (
+              <tr key={problem.id}>
+                <td>{problem.id}</td>
+                <td>
+                  <ExternalLink href={problem.url}>
+                    {problem.title}
+                  </ExternalLink>
+                </td>
+                <td>{problem.category}</td>
+                <td>
+                  <ImportanceBadge importance={problem.importance} />
+                </td>
+                <td>
+                  <StatusText status={problem.status} />
+                </td>
+              </tr>
+            ))}
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colSpan={4} />
+            <td>
+              Completed: {numCompleted}/{numProblems}&nbsp;(
+              {Math.round((numCompleted / numProblems) * 100)}%)
+            </td>
+          </tr>
+        </tfoot>
+      </Table>
 
       <div className="flex justify-between items-center gap-4 py-4">
         <Button variant="default" onClick={previousPage} disabled={page === 1}>

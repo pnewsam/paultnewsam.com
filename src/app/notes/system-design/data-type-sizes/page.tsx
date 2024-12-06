@@ -1,10 +1,9 @@
+import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
-import { H2 } from "@/components/typography/H2";
 import { Body } from "@/components/typography/Body";
+
 import { DataTypeSizesTable } from "./_DataTypeSizesTable";
-import { BinaryDataTable } from "./_BinaryDataTable";
-import { Card } from "@/components/Card";
 
 export default function Page() {
   return (
@@ -17,9 +16,8 @@ export default function Page() {
           different database systems, but the relative sizes will be similar.
           Squares are scaled in size logarithmically.
         </Body>
-        <Card className="overflow-x-auto">
-          <DataTypeSizesTable />
-        </Card>
+
+        <DataTypeSizesTable />
 
         {/* <H2 className="mt-12">Binary Data</H2>
         <Card>

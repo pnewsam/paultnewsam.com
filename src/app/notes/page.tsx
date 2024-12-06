@@ -51,9 +51,7 @@ export default function NotesPage() {
               could spend years learning them. It can be overwhelming sorting
               through all the learning materials out there.
             </Body>
-            <Card className="mb-16">
-              <DataStructuresAndAlgorithmsTable />
-            </Card>
+            <DataStructuresAndAlgorithmsTable />
           </div>
         )}
       </section>
