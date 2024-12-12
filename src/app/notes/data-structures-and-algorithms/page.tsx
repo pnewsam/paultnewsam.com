@@ -27,10 +27,10 @@ export default function DataStructuresAndAlgorithmsPage() {
           rarely have to, say, implement a hash table.
         </Body>
         <Body>
-          But if your knowledge of data structures and algorithms remains
-          surface-level, you&apos;re doing yourself a disservice. They underpin
-          all of computer systems. And having a strong understanding of them
-          will make you a better developer.
+          Nonetheless, knowing them well is a big advantage. Studying algorithms
+          helps you think more rigorously, and because they ultimately underpin
+          all computer systems, they&apos;ll give you better insight into the
+          constraints and capabilites of your applications.
         </Body>
         <Body>
           There are lots of great resources out there for learning data
