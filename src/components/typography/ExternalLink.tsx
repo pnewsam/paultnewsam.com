@@ -12,7 +12,7 @@ export function ExternalLink({
   return (
     <a
       className={cn(
-        "text-cyan-500 dark:text-cyan-400 hover:text-cyan-600 dark:hover:text-cyan-300 underline transition-colors",
+        "text-cyan-500 dark:text-cyan-400 hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors",
         className,
       )}
       href={href}

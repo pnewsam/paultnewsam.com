@@ -1,10 +1,12 @@
+import { File, Github, Linkedin, Twitter } from "lucide-react";
+
 import { ButtonLink } from "@/components/ButtonLink";
 import { Container } from "@/components/Container";
 import { React } from "@/components/icons/React";
 import { Typescript } from "@/components/icons/Typescript";
 import { Body } from "@/components/typography/Body";
+import { ExternalLink } from "@/components/typography/ExternalLink";
 import { H1 } from "@/components/typography/H1";
-import { File, Github, Linkedin, Twitter } from "lucide-react";
 
 export default function Home() {
   return (
@@ -17,17 +19,17 @@ export default function Home() {
           <Typescript className="w-8 h-8 inline -translate-y-1 mr-1" /> and
           React <React className="w-8 h-8 inline -translate-y-1 mr-1" />.
           Sometimes I build websites with my business{" "}
-          <a
-            className="text-cyan-400 dark:text-cyan-400 hover:text-cyan-500 dark:hover:text-cyan-300 transition-colors"
-            href="https://uxadvantage.com"
-          >
+          <ExternalLink href="https://uxadvantage.com">
             UX Advantage
-          </a>
+          </ExternalLink>
           .
         </Body>
         <Body>
-          In my spare time I like to read, go hiking, and spend time with my
-          family and two cats.
+          In my spare time I like to read, go hiking,{" "}
+          <ExternalLink href="https://photos.paultnewsam.com">
+            take photos
+          </ExternalLink>{" "}
+          and spend time with my family and two cats.
         </Body>
         <div className="flex flex-wrap gap-3 items-center">
           {[
