@@ -48,11 +48,11 @@ export default function Home() {
               icon: Twitter,
               text: "Twitter",
             },
-            {
-              href: "https://storage.paultnewsam.com/Paul-Newsam_Resume-October-2024.pdf",
-              icon: File,
-              text: "Download resume",
-            },
+            // {
+            //   href: "https://storage.paultnewsam.com/Paul-Newsam_Resume-October-2024.pdf",
+            //   icon: File,
+            //   text: "Download resume",
+            // },
           ].map((item) => (
             <ButtonLink key={item.href} href={item.href}>
               <item.icon className="w-5 h-5 stroke-[1.5px]" />
