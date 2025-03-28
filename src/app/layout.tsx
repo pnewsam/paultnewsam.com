@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en" className="dark h-full" suppressHydrationWarning>
       <body className={erode.className}>
         <Navbar />
-        <main>{children}</main>
+        <main className="py-12">{children}</main>
       </body>
     </html>
   );
