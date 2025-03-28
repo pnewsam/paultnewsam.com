@@ -1,6 +1,7 @@
-import ThemeToggle from "./ThemeToggle";
-import BackLink from "./BackLink";
 import Link from "next/link";
+
+import BackLink from "./BackLink";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   return (
@@ -11,13 +12,13 @@ export default function Navbar() {
         </div>
         <div className="flex items-center gap-4">
           <Link
-            className="hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-md px-2 py-1"
+            className="text-lg hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-md px-2 py-1"
             href="/"
           >
             Home
           </Link>
           <Link
-            className="hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-md px-2 py-1"
+            className="text-lg hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-md px-2 py-1"
             href="/notes"
           >
             Notes
