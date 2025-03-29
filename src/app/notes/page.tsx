@@ -4,10 +4,7 @@ import { LinkCard } from "@/app/notes/_components/LinkCard";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
-import { browserPages } from "@/constants/pages/browserPages";
 import { dsaPage } from "@/constants/pages/dsaPages";
-import { systemDesignPages } from "@/constants/pages/systemDesignPages";
-import { userInterfacePages } from "@/constants/pages/userInterfacePages";
 
 export const metadata: Metadata = {
   title: "Paul T. Newsam | Notes",
@@ -27,17 +24,12 @@ export default function NotesPage() {
         </Body>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-16">
-          {[
-            ...systemDesignPages,
-            ...userInterfacePages,
-            ...browserPages,
-            dsaPage,
-          ]
-            .filter((page) => isDevelopment || page.published)
+          {[dsaPage]
+            .filter((page) => isDevelopment || page.publishedAt)
             .map((page) => (
               <LinkCard
-                key={page.path}
-                href={page.path}
+                key={page.slug}
+                href={`/notes/${page.slug}`}
                 tags={[page.subject]}
                 title={page.title}
                 description={page.description}
