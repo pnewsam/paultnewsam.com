@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   return (
-    <div className="sticky top-0 z-50 backdrop-blur-sm bg-background/80">
+    <div className="sticky top-0 z-50 bg-background">
       <nav className="container max-w-screen-lg mx-auto px-4 py-4 lg:py-6 lg:px-8 flex justify-between gap-4 border-b">
         <div className="flex items-center gap-4">
           <Link
