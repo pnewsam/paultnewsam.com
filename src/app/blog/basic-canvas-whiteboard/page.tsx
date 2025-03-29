@@ -5,14 +5,13 @@ import { useEffect } from "react";
 
 import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
-import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
-import { Subject } from "@/types/subject";
 
+import { BlogPageHeader } from "../_components/BlogPageHeader";
 import initializers from "./_scripts/initializers";
 import { setupCanvas } from "./_scripts/setupCanvas";
 
-export default function WhiteboardPage() {
+export default function BasicCanvasWhiteboardPage() {
   useEffect(() => {
     const canvas = setupCanvas();
     if (canvas) {
@@ -25,7 +24,7 @@ export default function WhiteboardPage() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <PageHeader title="Whiteboard" tags={[Subject.UserInterface]} />
+        <BlogPageHeader slug="basic-canvas-whiteboard" />
         <Body>
           {`A basic whiteboard using HTML <canvas />. Click and drag to draw.`}
         </Body>

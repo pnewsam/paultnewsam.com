@@ -1,19 +1,16 @@
 import { CodeBlock } from "@/components/CodeBlock";
 import { Container } from "@/components/Container";
-import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
 import { Bold } from "@/components/typography/Bold";
 import { H3 } from "@/components/typography/H3";
-import { Subject } from "@/types/subject";
 
-export default function HeapAndStack() {
+import { BlogPageHeader } from "../_components/BlogPageHeader";
+
+export default function NotesOnMemoryManagementInJavascript() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <PageHeader
-          title="Heap and Stack in Javascript Memory Management"
-          tags={[Subject.Javascript]}
-        />
+        <BlogPageHeader slug="notes-on-memory-management-in-javascript" />
         <Body>
           When we code in Javascript, we don&apos;t have to think too much about
           memory. That&apos;s one of Javascripts main advantages -- memory

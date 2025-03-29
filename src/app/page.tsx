@@ -1,8 +1,7 @@
-import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 
-import { Badge } from "@/components/Badge";
 import { Container } from "@/components/Container";
+import { Tags } from "@/components/Tags";
 import { React } from "@/components/icons/React";
 import { Typescript } from "@/components/icons/Typescript";
 import { Body } from "@/components/typography/Body";
@@ -10,6 +9,7 @@ import { ExternalLink } from "@/components/typography/ExternalLink";
 import { H1 } from "@/components/typography/H1";
 import { H2 } from "@/components/typography/H2";
 import { H4 } from "@/components/typography/H4";
+import { blogPages } from "@/constants/blog";
 
 export default function Home() {
   return (
@@ -36,37 +36,27 @@ export default function Home() {
           and spend time with my family and two cats.
         </Body>
 
-        <H2 className="">Projects</H2>
+        <H2 className="border-b pb-4">Blog</H2>
+
+        <Body>
+          Occasionally I write about my experiences and learnings here.
+          It&apos;s a mix of notes-to-self, toy apps, and other musings. One of
+          these days, I&apos;ll get around to getting a little more rigorous
+          about it!
+        </Body>
         <div className="grid gap-4 rounded-md">
-          {[
-            {
-              title: "Bag-of-Words Search in the Browser",
-              date: "2024-09-10",
-            },
-            {
-              title: "Tree View Component in React",
-              date: "2024-09-10",
-            },
-            {
-              title: "Building a Tree View Component in React",
-              date: "2024-09-10",
-            },
-            {
-              title: "Building a Tree View Component in React",
-              date: "2024-09-10",
-            },
-          ].map((item) => (
+          {blogPages.map((item) => (
             <Link
-              href={`/blog/${item.title}`}
+              href={`/blog/${item.slug}`}
               key={item.title}
               className="group py-3 -mx-4 px-4 rounded-md flex items-center justify-between gap-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
             >
-              <div className="flex items-center gap-2">
+              <div>
                 <H4 className="!mb-0 font-normal text-neutral-900 dark:text-white">
                   {item.title}
                 </H4>
                 <Body className="mb-0 font-normal !text-neutral-500" size="xs">
-                  {new Date(item.date).toLocaleDateString("en-US", {
+                  {new Date(item.publishedAt).toLocaleDateString("en-US", {
                     month: "long",
                     day: "numeric",
                     year: "numeric",
@@ -74,8 +64,7 @@ export default function Home() {
                 </Body>
               </div>
               <div className="hidden md:flex items-center gap-2">
-                <Badge size="sm">Typescript</Badge>
-                <Badge size="sm">React</Badge>
+                <Tags tags={[item.subject]} size="sm" />
               </div>
             </Link>
           ))}

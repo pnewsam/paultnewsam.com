@@ -1,5 +1,6 @@
-import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
+
+import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
   "inline-flex gap-2 items-center uppercase tracking-widest font-medium text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 rounded-md whitespace-nowrap",
@@ -20,13 +21,15 @@ const badgeVariants = cva(
         lime: "bg-lime-200 dark:bg-lime-700 text-lime-900 dark:text-lime-100 border-lime-300 dark:border-lime-600",
         orange:
           "bg-orange-200 dark:bg-orange-700 text-orange-900 dark:text-orange-100 border-orange-300 dark:border-orange-600",
+        yellow:
+          "bg-yellow-200 dark:bg-yellow-400 text-yellow-900 dark:text-yellow-900 border-yellow-300 dark:border-yellow-600",
       },
       size: {
         sm: "px-[6px] py-[3px] text-xs",
         default: "px-2 py-1 text-sm",
       },
     },
-  }
+  },
 );
 
 export function Badge({
