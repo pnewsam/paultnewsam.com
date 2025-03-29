@@ -1,14 +1,16 @@
 "use client";
 
-import { Loader2 } from "lucide-react";
+import { Brush, Loader2 } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
 import { Body } from "@/components/typography/Body";
+import { H2 } from "@/components/typography/H2";
 
 import { BlogPageHeader } from "../_components/BlogPageHeader";
+import { Canvas } from "./_components/Canvas";
 import InfiniteScroll from "./_components/InfiniteScroll";
 import { api } from "./_utils/MockApi";
 
@@ -17,7 +19,7 @@ type Person = {
   name: string;
 };
 
-export default function BasicInfiniteScrollPage() {
+export default function ABasicWhiteboardAndInfiniteScrollPage() {
   const [page, setPage] = useState(1);
   const [people, setPeople] = useState<Person[]>([]);
   const [loading, setLoading] = useState(false);
@@ -44,9 +46,28 @@ export default function BasicInfiniteScrollPage() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <BlogPageHeader slug="basic-infinite-scroll" />
+        <BlogPageHeader slug="a-basic-whiteboard-and-infinite-scroll" />
+
+        <H2>Whiteboard</H2>
+
         <Body>
-          This is a very basic implementation of infinite scroll in React.
+          {`A basic whiteboard using HTML <canvas />. Click and drag to draw.`}
+        </Body>
+        <Card className="relative">
+          <span className="absolute top-0 right-0 text-base uppercase tracking-widest font-medium p-4 text-neutral-500 dark:text-neutral-400 flex items-center gap-2 bg-neutral-100 dark:bg-neutral-800 rounded-tr-md rounded-bl-md border-t border-r border-neutral-200 dark:border-neutral-800">
+            Canvas
+            <Brush className="w-4 h-4" />
+          </span>
+          <Canvas />
+        </Card>
+
+        <H2 className="mt-20">Infinite Scroll</H2>
+
+        <Body>
+          Infinite scroll is a common UX pattern in web development, and
+          it&apos;s a fairly common problem given in frontend interviews. It had
+          been a while since I&apos;d coded one, so I thought I&apos;d write a
+          write a simple implementation to refresh my memory.
         </Body>
         <Card>
           <div className="bg-neutral-200 dark:bg-neutral-700 border-b p-4 flex gap-4 rounded-t-md items-center justify-between">
