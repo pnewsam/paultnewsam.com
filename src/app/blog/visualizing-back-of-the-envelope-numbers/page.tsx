@@ -13,20 +13,38 @@ import {
 } from "@/components/_TimeScale";
 import { Body } from "@/components/typography/Body";
 import { Bold } from "@/components/typography/Bold";
-import { Subject } from "@/types/subject";
+import { H2 } from "@/components/typography/H2";
 
-export default function LatencyNumbersPage() {
+import { BlogPageHeader } from "../_components/BlogPageHeader";
+import { DataTypeSizesTable } from "./_DataTypeSizesTable";
+
+export default function BackOfTheEnvelopeVisualsPage() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <PageHeader title="Latency Numbers" tags={[Subject.SystemDesign]} />
+        <BlogPageHeader slug="visualizing-back-of-the-envelope-numbers" />
         <Body>
-          These numbers vary so hugely that it is difficult to really develop a
-          sense of them. Some quick comparisons: it&apos;s{" "}
-          <Bold>160x faster</Bold> to read from RAM than do a random read from
-          SSD. It&apos;s <Bold>4x faster</Bold> to read 1MB sequentially from
-          RAM than to do the same from SSD. Squares are scaled in size
-          logarithmically.
+          It can be difficult developing a intuition for the numbers thrown
+          around in system design interviews. For my own sake, I thought
+          I&apos;d try to visualize them.
+        </Body>
+
+        <H2>Data Type Sizes</H2>
+        <Body>
+          First, a table of data type sizes. These are Postgres data types, but
+          they should be similar for other systems. The squares are scaled in
+          size logarithmically, which means that the differences are really much
+          bigger than they seem here.
+        </Body>
+        <DataTypeSizesTable />
+
+        <H2 className="mt-20">Time Scales</H2>
+        <Body>
+          Second, this is a table of time scales. Some quick comparisons:
+          it&apos;s <Bold>160x faster</Bold> to read from RAM than do a random
+          read from SSD. It&apos;s <Bold>4x faster</Bold> to read 1MB
+          sequentially from RAM than to do the same from SSD. Squares are scaled
+          in size logarithmically.
         </Body>
 
         <Card className="overflow-x-auto">

@@ -4,4 +4,6 @@ export enum Subject {
   UserInterface = "User Interface",
   Frameworks = "Frameworks",
   Javascript = "Javascript",
+  Typescript = "Typescript",
+  React = "React",
 }

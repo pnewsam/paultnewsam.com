@@ -25,7 +25,10 @@ export function DataStructuresAndAlgorithmsSyllabus() {
           <tr key={page.order}>
             <td>{page.order}</td>
             <td>
-              <InternalLink className="font-medium text-xl" href={page.path}>
+              <InternalLink
+                className="font-medium text-xl"
+                href={`/notes/${page.slug}`}
+              >
                 {page.title}
               </InternalLink>
             </td>

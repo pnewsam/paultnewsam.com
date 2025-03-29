@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
-import { dsaPagesByPath } from "@/constants/pages/dsaPages";
+import { dsaPagesBySlug } from "@/constants/pages/dsaPages";
 import { Subject } from "@/types/subject";
 
 import { Callout } from "../../_components/Callout";
@@ -16,7 +16,7 @@ export default function Page({
   };
 }) {
   const path = `/notes/data-structures-and-algorithms/${params.slug}`;
-  const page = dsaPagesByPath[path];
+  const page = dsaPagesBySlug[path];
 
   if (!page) {
     notFound();

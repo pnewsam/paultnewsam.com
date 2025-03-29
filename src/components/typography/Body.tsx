@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 const bodyVariants = cva("mb-8 text-neutral-700 dark:text-neutral-300", {
   variants: {
     size: {
+      xs: "text-base/relaxed md:text-lg/relaxed",
       sm: "text-lg/relaxed md:text-xl/relaxed",
       md: "text-xl/relaxed md:text-2xl/relaxed",
       lg: "text-2xl/relaxed md:text-3xl/relaxed",
@@ -20,5 +21,5 @@ export const Body = ({
 }: {
   children: React.ReactNode;
   className?: string;
-  size?: "sm" | "md" | "lg";
+  size?: "xs" | "sm" | "md" | "lg";
 }) => <p className={cn(bodyVariants({ size }), className)}>{children}</p>;

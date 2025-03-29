@@ -1,20 +1,16 @@
 import { CodeBlock } from "@/components/CodeBlock";
 import { Container } from "@/components/Container";
-import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
 import { Bold } from "@/components/typography/Bold";
 import { H3 } from "@/components/typography/H3";
-import { Subject } from "@/types/subject";
 
-export default function TheJavascriptEngine() {
+import { BlogPageHeader } from "../_components/BlogPageHeader";
+
+export default function NotesOnTheJavascriptEngine() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <PageHeader title="The Javascript Engine" tags={[Subject.Javascript]} />
-        <Body>
-          Javascript is a high-level interpreted language. What does that mean
-          in practice?
-        </Body>
+        <BlogPageHeader slug="notes-on-the-javascript-engine" />
         <Body>
           Javascript is a high-level, interpreted language. Before it can be
           run, it must be compiled to <Bold>bytecode</Bold> and then to{" "}

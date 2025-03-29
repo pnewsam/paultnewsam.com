@@ -1,17 +1,17 @@
 import { Table } from "@/components/Table";
 import {
   OneByte,
-  OneKilobyte,
+  OneHundredBytes,
   OneHundredKilobytes,
+  OneKilobyte,
   OneMegabyte,
   TenKilobytes,
-  OneHundredBytes,
 } from "@/components/_ByteScale";
 import { Code } from "@/components/typography/Code";
 
-export function DataTypeSizesTable() {
+export function DataTypeSizesTable({ className }: { className?: string }) {
   return (
-    <Table>
+    <Table className={className}>
       <thead>
         <tr>
           <th>Type</th>

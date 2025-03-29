@@ -1,31 +1,17 @@
-import { Code, Component, Database, LayoutDashboard } from "lucide-react";
+import { Code } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { Subject } from "@/types/subject";
 import { Tag } from "@/types/tag";
 
 import { Badge } from "./Badge";
 
-const variantByName: Record<
-  string,
-  | "default"
-  | "rose"
-  | "fuchsia"
-  | "violet"
-  | "blue"
-  | "cyan"
-  | "emerald"
-  | "lime"
-  | "orange"
-> = {
+const variantByName = {
   [Tag.HTML]: "orange",
   [Tag.CSS]: "cyan",
-  [Tag.Javascript]: "emerald",
+  [Tag.Javascript]: "yellow",
   [Tag.Typescript]: "blue",
   [Tag.React]: "cyan",
   [Tag.NextJS]: "violet",
-  [Subject.SystemDesign]: "rose",
-  [Subject.DataStructuresAndAlgorithms]: "orange",
 };
 
 const getVariant = (tag: string) => {
@@ -40,9 +26,6 @@ const iconByName: Record<string, React.ReactNode> = {
   [Tag.Typescript]: <Code className="w-4 h-4" />,
   [Tag.React]: <Code className="w-4 h-4" />,
   [Tag.NextJS]: <Code className="w-4 h-4" />,
-  [Subject.SystemDesign]: <Component className="w-4 h-4" />,
-  [Subject.DataStructuresAndAlgorithms]: <Database className="w-4 h-4" />,
-  [Subject.UserInterface]: <LayoutDashboard className="w-4 h-4" />,
 };
 
 export function Tags({
@@ -55,9 +38,9 @@ export function Tags({
   className?: string;
 }) {
   return (
-    <div className={cn("flex justify-start gap-2 flex-wrap", className)}>
+    <div className={cn("inline-flex justify-start gap-2 flex-wrap", className)}>
       {tags.map((tag) => (
-        <Badge key={tag} variant={getVariant(tag)} size={size}>
+        <Badge key={tag} variant={getVariant(tag) as any} size={size}>
           {size !== "sm" && iconByName[tag]}
           {tag}
         </Badge>

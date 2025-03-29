@@ -13,7 +13,13 @@ export const HalfNanosecond = ({ size }: { size?: number }) => {
   }
   return (
     <svg height={size} width={size}>
-      <rect className="fill-rose-400" width={size} height={size} />
+      <rect
+        className="fill-rose-400"
+        width={size}
+        height={size}
+        rx={size / 20}
+        ry={size / 20}
+      />
     </svg>
   );
 };
@@ -24,7 +30,13 @@ export const Nanosecond = ({ size }: { size?: number }) => {
   }
   return (
     <svg height={size} width={size}>
-      <rect className="fill-fuchsia-400" width={size} height={size} />
+      <rect
+        className="fill-fuchsia-400"
+        width={size}
+        height={size}
+        rx={size / 20}
+        ry={size / 20}
+      />
     </svg>
   );
 };
@@ -35,7 +47,13 @@ export const HundredNanoseconds = ({ size }: { size?: number }) => {
   }
   return (
     <svg height={size} width={size}>
-      <rect className="fill-violet-400" width={size} height={size} />
+      <rect
+        className="fill-violet-400"
+        width={size}
+        height={size}
+        rx={size / 20}
+        ry={size / 20}
+      />
     </svg>
   );
 };
@@ -46,7 +64,13 @@ export const ThousandNanoseconds = ({ size }: { size?: number }) => {
   }
   return (
     <svg height={size} width={size}>
-      <rect className="fill-blue-400" width={size} height={size} />
+      <rect
+        className="fill-blue-400"
+        width={size}
+        height={size}
+        rx={size / 20}
+        ry={size / 20}
+      />
     </svg>
   );
 };
@@ -57,7 +81,13 @@ export const TenThousandNanoseconds = ({ size }: { size?: number }) => {
   }
   return (
     <svg height={size} width={size}>
-      <rect className="fill-cyan-400" width={size} height={size} />
+      <rect
+        className="fill-cyan-400"
+        width={size}
+        height={size}
+        rx={size / 20}
+        ry={size / 20}
+      />
     </svg>
   );
 };
@@ -68,7 +98,13 @@ export const OneMillionNanoseconds = ({ size }: { size?: number }) => {
   }
   return (
     <svg height={size} width={size} className="inline-block">
-      <rect className="fill-emerald-400" width={size} height={size} />
+      <rect
+        className="fill-emerald-400"
+        width={size}
+        height={size}
+        rx={size / 20}
+        ry={size / 20}
+      />
     </svg>
   );
 };
@@ -79,7 +115,13 @@ export const TenMillionNanoseconds = ({ size }: { size?: number }) => {
   }
   return (
     <svg height={size} width={size} className="inline-block">
-      <rect className="fill-lime-400" width={size} height={size} />
+      <rect
+        className="fill-lime-400"
+        width={size}
+        height={size}
+        rx={size / 20}
+        ry={size / 20}
+      />
     </svg>
   );
 };
@@ -94,7 +136,13 @@ export const OneHundredFiftyMillionNanoseconds = ({
   }
   return (
     <svg height={size} width={size} className="inline-block">
-      <rect className="fill-amber-400" width={size} height={size} />
+      <rect
+        className="fill-amber-400"
+        width={size}
+        height={size}
+        rx={size / 20}
+        ry={size / 20}
+      />
     </svg>
   );
 };

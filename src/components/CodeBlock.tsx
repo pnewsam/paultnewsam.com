@@ -38,6 +38,8 @@ export function CodeBlock({
           marginTop: 0,
           marginBottom: 0,
           borderRadius: "0.625rem",
+          fontSize: "1.125rem",
+          lineHeight: "1.75rem",
         }}
       >
         {code}

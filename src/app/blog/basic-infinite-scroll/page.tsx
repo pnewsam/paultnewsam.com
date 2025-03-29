@@ -6,10 +6,9 @@ import { useCallback, useEffect, useState } from "react";
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
-import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
-import { Subject } from "@/types/subject";
 
+import { BlogPageHeader } from "../_components/BlogPageHeader";
 import InfiniteScroll from "./_components/InfiniteScroll";
 import { api } from "./_utils/MockApi";
 
@@ -18,7 +17,7 @@ type Person = {
   name: string;
 };
 
-export default function InfiniteScrollPage() {
+export default function BasicInfiniteScrollPage() {
   const [page, setPage] = useState(1);
   const [people, setPeople] = useState<Person[]>([]);
   const [loading, setLoading] = useState(false);
@@ -45,11 +44,9 @@ export default function InfiniteScrollPage() {
   return (
     <Container>
       <section className="py-12 md:py-24">
-        <PageHeader title="Infinite Scroll" tags={[Subject.UserInterface]} />
+        <BlogPageHeader slug="basic-infinite-scroll" />
         <Body>
-          Infinite scroll is a common UI pattern used to load content as the
-          user scrolls. It&apos;s often used on blogs, news sites, and social
-          media platforms.
+          This is a very basic implementation of infinite scroll in React.
         </Body>
         <Card>
           <div className="bg-neutral-200 dark:bg-neutral-700 border-b p-4 flex gap-4 rounded-t-md items-center justify-between">
