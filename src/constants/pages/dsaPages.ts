@@ -184,7 +184,7 @@ export const dsaPages = [
   subject: Subject.DataStructuresAndAlgorithms,
 }));
 
-export const dsaPagesByPath = dsaPages.reduce(
+export const dsaPagesBySlug = dsaPages.reduce(
   (acc, page) => {
     acc[page.slug] = page;
     return acc;

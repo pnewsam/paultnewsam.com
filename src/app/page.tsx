@@ -56,11 +56,13 @@ export default function Home() {
                   {item.title}
                 </H4>
                 <Body className="mb-0 font-normal !text-neutral-500" size="xs">
-                  {new Date(item.publishedAt).toLocaleDateString("en-US", {
-                    month: "long",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
+                  {item.publishedAt
+                    ? new Date(item.publishedAt).toLocaleDateString("en-US", {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric",
+                      })
+                    : ""}
                 </Body>
               </div>
               <div className="hidden md:flex items-center gap-2">
