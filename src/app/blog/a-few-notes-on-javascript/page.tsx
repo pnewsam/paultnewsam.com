@@ -12,6 +12,11 @@ export default function AFewNotesOnJavascript() {
     <Container>
       <section className="py-12 md:py-24">
         <BlogPageHeader slug="a-few-notes-on-javascript" />
+        <Body>
+          I&apos;ve worked with Javascript for a long time, but there are still
+          plenty of things that I don&apos;t know about it. This is a collection
+          of notes on some of those things.
+        </Body>
 
         <H2>Javascript Engine</H2>
 

@@ -9,7 +9,7 @@ const variantByName = {
   [Tag.HTML]: "orange",
   [Tag.CSS]: "cyan",
   [Tag.Javascript]: "yellow",
-  [Tag.Typescript]: "blue",
+  [Tag.Typescript]: "sky",
   [Tag.React]: "cyan",
   [Tag.NextJS]: "violet",
 };

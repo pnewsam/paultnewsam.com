@@ -14,7 +14,7 @@ const badgeVariants = cva(
           "bg-fuchsia-200 dark:bg-fuchsia-700 text-fuchsia-900 dark:text-fuchsia-100 border-fuchsia-300 dark:border-fuchsia-600",
         violet:
           "bg-violet-200 dark:bg-violet-700 text-violet-900 dark:text-violet-100 border-violet-300 dark:border-violet-600",
-        blue: "bg-blue-200 dark:bg-blue-700 text-blue-900 dark:text-blue-100 border-blue-300 dark:border-blue-600",
+        sky: "bg-sky-200 dark:bg-sky-700 text-sky-900 dark:text-sky-100 border-sky-300 dark:border-sky-600",
         cyan: "bg-cyan-200 dark:bg-cyan-700 text-cyan-900 dark:text-cyan-100 border-cyan-300 dark:border-cyan-600",
         emerald:
           "bg-emerald-200 dark:bg-emerald-700 text-emerald-900 dark:text-emerald-100 border-emerald-300 dark:border-emerald-600",
@@ -44,7 +44,7 @@ export function Badge({
     | "rose"
     | "fuchsia"
     | "violet"
-    | "blue"
+    | "sky"
     | "cyan"
     | "emerald"
     | "lime"
