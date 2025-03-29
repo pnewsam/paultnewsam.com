@@ -62,7 +62,6 @@ export default function ABasicWhiteboardAndInfiniteScrollPage() {
         </Card>
 
         <H2 className="mt-20">Infinite Scroll</H2>
-
         <Body>
           Infinite scroll is a common UX pattern in web development. This is a
           very basic one built in React.

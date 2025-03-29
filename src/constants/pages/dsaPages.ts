@@ -32,7 +32,7 @@ import { PageMetadata } from "@/types/pageMetadata";
 import { Subject } from "@/types/subject";
 
 export const dsaPage: PageMetadata = {
-  slug: "/notes/data-structures-and-algorithms",
+  slug: "/data-structures-and-algorithms",
   title: "Data Structures and Algorithms",
   description:
     "A structured approach to learning the core data structures and algorithms",
@@ -43,7 +43,7 @@ export const dsaPage: PageMetadata = {
 export const dsaPages = [
   {
     order: 1,
-    slug: "/notes/data-structures-and-algorithms/arrays-and-hashing",
+    slug: "/data-structures-and-algorithms/arrays-and-hashing",
     title: "Arrays and Hashing",
     description:
       "Hash tables for O(1) lookups; In-place array manipulation; Frequency counting",
@@ -54,7 +54,7 @@ export const dsaPages = [
   {
     order: 2,
     title: "Sliding Window",
-    slug: "/notes/data-structures-and-algorithms/sliding-window",
+    slug: "/data-structures-and-algorithms/sliding-window",
     description:
       "Fixed vs variable size windows; Window state management; Window boundaries",
     problems: slidingWindow,
@@ -63,7 +63,7 @@ export const dsaPages = [
   },
   {
     order: 3,
-    slug: "/notes/data-structures-and-algorithms/two-pointers",
+    slug: "/data-structures-and-algorithms/two-pointers",
     title: "Two Pointers",
     description:
       "Start/end pointer movement; Fast/slow pointer technique; Meeting in middle",
@@ -73,7 +73,7 @@ export const dsaPages = [
   },
   {
     order: 4,
-    slug: "/notes/data-structures-and-algorithms/binary-search",
+    slug: "/data-structures-and-algorithms/binary-search",
     title: "Binary Search",
     description:
       "Binary search variations; Search space reduction; Boundary conditions",
@@ -83,7 +83,7 @@ export const dsaPages = [
   },
   {
     order: 5,
-    slug: "/notes/data-structures-and-algorithms/linked-lists",
+    slug: "/data-structures-and-algorithms/linked-lists",
     title: "Linked Lists",
     description:
       "Pointer manipulation; Multiple pointer traversal; Cycle detection",
@@ -93,7 +93,7 @@ export const dsaPages = [
   },
   {
     order: 6,
-    slug: "/notes/data-structures-and-algorithms/stacks-and-queues",
+    slug: "/data-structures-and-algorithms/stacks-and-queues",
     title: "Stacks and Queues",
     description:
       "LIFO/FIFO principles; Monotonic stack patterns; Nested structure validation",
@@ -103,7 +103,7 @@ export const dsaPages = [
   },
   {
     order: 7,
-    slug: "/notes/data-structures-and-algorithms/trees",
+    slug: "/data-structures-and-algorithms/trees",
     title: "Trees",
     description:
       "Tree traversal strategies; Recursion vs iteration; Path tracking",
@@ -113,7 +113,7 @@ export const dsaPages = [
   },
   {
     order: 8,
-    slug: "/notes/data-structures-and-algorithms/tries",
+    slug: "/data-structures-and-algorithms/tries",
     title: "Tries",
     description:
       "Prefix-based search; Character-by-character traversal; Word dictionary operations",
@@ -123,7 +123,7 @@ export const dsaPages = [
   },
   {
     order: 9,
-    slug: "/notes/data-structures-and-algorithms/heaps-and-priority-queues",
+    slug: "/data-structures-and-algorithms/heaps-and-priority-queues",
     title: "Heaps and Priority Queues",
     description: "Binary heap properties; K-way processing; Stream operations",
     problems: heapsAndPriorityQueues,
@@ -132,7 +132,7 @@ export const dsaPages = [
   },
   {
     order: 10,
-    slug: "/notes/data-structures-and-algorithms/graphs",
+    slug: "/data-structures-and-algorithms/graphs",
     title: "Graphs",
     description:
       "Graph traversal (BFS/DFS); Graph representation; Cycle detection",
@@ -142,7 +142,7 @@ export const dsaPages = [
   },
   {
     order: 11,
-    slug: "/notes/data-structures-and-algorithms/backtracking",
+    slug: "/data-structures-and-algorithms/backtracking",
     title: "Backtracking",
     description:
       "State space exploration; Constraint handling; Solution building",
@@ -152,7 +152,7 @@ export const dsaPages = [
   },
   {
     order: 12,
-    slug: "/notes/data-structures-and-algorithms/dynamic-programming",
+    slug: "/data-structures-and-algorithms/dynamic-programming",
     title: "Dynamic Programming",
     description:
       "State transition; Memoization vs tabulation; Optimal substructure",
@@ -162,7 +162,7 @@ export const dsaPages = [
   },
   {
     order: 13,
-    slug: "/notes/data-structures-and-algorithms/greedy-algorithms",
+    slug: "/data-structures-and-algorithms/greedy-algorithms",
     title: "Greedy Algorithms",
     description:
       "Local vs global optimization; Interval processing; Sorting-based greedy",
@@ -172,7 +172,7 @@ export const dsaPages = [
   },
   {
     order: 14,
-    slug: "/notes/data-structures-and-algorithms/bit-manipulation",
+    slug: "/data-structures-and-algorithms/bit-manipulation",
     title: "Bit Manipulation",
     description: "Bitwise operations; Bit flags; Bit counting techniques",
     problems: bitManipulation,

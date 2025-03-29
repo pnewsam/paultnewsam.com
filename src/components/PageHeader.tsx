@@ -15,10 +15,7 @@ export function PageHeader({
   return (
     <div className="mb-8 border-b pb-8">
       <H1 className="mb-4">{title}</H1>
-      <Body
-        className="mb-4 text-neutral-500 dark:text-neutral-400 font-light italic"
-        size="sm"
-      >
+      <Body className="mb-4 text-neutral-500 dark:text-neutral-400" size="sm">
         {date
           ? new Date(date).toLocaleDateString("en-US", {
               year: "numeric",

@@ -15,7 +15,7 @@ export default function Page({
     slug: string;
   };
 }) {
-  const path = `/notes/data-structures-and-algorithms/${params.slug}`;
+  const path = `/data-structures-and-algorithms/${params.slug}`;
   const page = dsaPagesBySlug[path];
 
   if (!page) {
