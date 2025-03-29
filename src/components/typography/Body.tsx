@@ -3,7 +3,7 @@ import React from "react";
 
 import { cn } from "@/lib/utils";
 
-const bodyVariants = cva("mb-8 text-neutral-700 dark:text-neutral-300", {
+const bodyVariants = cva("mb-8 text-neutral-600 dark:text-neutral-400", {
   variants: {
     size: {
       xs: "text-base/relaxed md:text-lg/relaxed",
