@@ -1,7 +1,7 @@
-import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import { Body } from "@/components/typography/Body";
+import { Card } from "@/components/ui/card";
 
 import {
   EC2Instance,

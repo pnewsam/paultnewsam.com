@@ -3,11 +3,11 @@
 import { Brush, Loader2 } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 
-import { Button } from "@/components/Button";
-import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
 import { Body } from "@/components/typography/Body";
 import { H2 } from "@/components/typography/H2";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 
 import { BlogPageHeader } from "../_components/BlogPageHeader";
 import { Canvas } from "./_components/Canvas";

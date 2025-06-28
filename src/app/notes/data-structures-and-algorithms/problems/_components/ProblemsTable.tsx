@@ -3,8 +3,6 @@
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "@/components/Button";
-import { Input } from "@/components/Input";
 import {
   Select,
   SelectContent,
@@ -16,6 +14,8 @@ import {
 } from "@/components/Select";
 import { Table } from "@/components/Table";
 import { ExternalLink } from "@/components/typography/ExternalLink";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { numCompleted, numLeetcodeProblems } from "@/constants/problems";
 import { Importance, LeetcodeProblem, Status } from "@/types/leetcodeProblem";
 import { Topic } from "@/types/topic";

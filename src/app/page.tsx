@@ -17,8 +17,9 @@ export default function Home() {
       <section className="py-12 md:py-24">
         <H1 className="mb-8">Hey, I&apos;m Paul.</H1>
         <Body>
-          I&apos;m a frontend developer based in San Francisco, CA. Currently I&apos;m helping
-	  build AI for Enterprise for at <ExternalLink href="https://mindsdb.com">MindsDB</ExternalLink>.
+          I&apos;m a frontend developer based in San Francisco, CA. Currently
+          I&apos;m helping build AI for Enterprise for at{" "}
+          <ExternalLink href="https://mindsdb.com">MindsDB</ExternalLink>.
           Mostly I work with Typescript{" "}
           <Typescript className="w-8 h-8 inline -translate-y-1 mr-1" /> and
           React <React className="w-8 h-8 inline -translate-y-1 mr-1" />.

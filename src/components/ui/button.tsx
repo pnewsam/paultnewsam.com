@@ -22,7 +22,7 @@ export function Button({
   variant = "default",
   ...props
 }: {
-  variant?: "default";
+  variant?: "default" | "secondary";
   className?: string;
   children: React.ReactNode;
   [key: string]: unknown;

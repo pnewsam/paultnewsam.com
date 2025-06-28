@@ -24,7 +24,7 @@ export function Input({
 }: {
   type: string;
   placeholder: string;
-  size: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg";
   className?: string;
 } & Omit<
   React.InputHTMLAttributes<HTMLInputElement>,

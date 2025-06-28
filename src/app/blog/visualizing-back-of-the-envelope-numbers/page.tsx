@@ -1,4 +1,3 @@
-import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
 import { PageHeader } from "@/components/PageHeader";
 import {
@@ -14,6 +13,7 @@ import {
 import { Body } from "@/components/typography/Body";
 import { Bold } from "@/components/typography/Bold";
 import { H2 } from "@/components/typography/H2";
+import { Card } from "@/components/ui/card";
 
 import { BlogPageHeader } from "../_components/BlogPageHeader";
 import { DataTypeSizesTable } from "./_DataTypeSizesTable";

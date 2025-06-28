@@ -1,8 +1,8 @@
-import { Card } from "@/components/Card";
 import { CodeBlock } from "@/components/CodeBlock";
 import { Body } from "@/components/typography/Body";
 import { Bold } from "@/components/typography/Bold";
 import { H3 } from "@/components/typography/H3";
+import { Card } from "@/components/ui/card";
 
 import { GraphSvg } from "../_GraphSvg";
 

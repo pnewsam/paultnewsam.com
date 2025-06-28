@@ -1,7 +1,7 @@
 import { Info } from "lucide-react";
 
-import { Card } from "@/components/Card";
 import { Body } from "@/components/typography/Body";
+import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 export function Callout({

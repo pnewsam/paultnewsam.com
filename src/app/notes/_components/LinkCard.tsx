@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-import { cardStyles } from "@/components/Card";
 import { Tags } from "@/components/Tags";
 import { Body } from "@/components/typography/Body";
 import { H3 } from "@/components/typography/H3";
+import { cardStyles } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 export function LinkCard({
