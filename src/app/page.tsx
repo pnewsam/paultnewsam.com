@@ -23,19 +23,13 @@ export default function Home() {
           Mostly I work with Typescript{" "}
           <Typescript className="w-8 h-8 inline -translate-y-1 mr-1" /> and
           React <React className="w-8 h-8 inline -translate-y-1 mr-1" />.
-          Sometimes I build websites with my business{" "}
-          <ExternalLink href="https://uxadvantage.com">
-            UX Advantage
-          </ExternalLink>
-          .
         </Body>
         <Body className="mb-20">
-          Before getting into softare, I worked in conservation and wildlife
-          management research. In my spare time I like to read, go hiking,{" "}
+          Before getting into software, I worked in conservation and wildlife
+          management research. In my spare time I like to read, go hiking,{" "}and{" "}
           <ExternalLink href="https://photos.paultnewsam.com">
             take photos
-          </ExternalLink>{" "}
-          and spend time with my family and two cats.
+          </ExternalLink>{" "}.
         </Body>
 
         <H2 className="border-b pb-4">Blog</H2>
@@ -60,10 +54,10 @@ export default function Home() {
                 <Body className="mb-0 font-normal !text-neutral-500" size="xs">
                   {item.publishedAt
                     ? new Date(item.publishedAt).toLocaleDateString("en-US", {
-                        month: "long",
-                        day: "numeric",
-                        year: "numeric",
-                      })
+                      month: "long",
+                      day: "numeric",
+                      year: "numeric",
+                    })
                     : ""}
                 </Body>
               </div>
